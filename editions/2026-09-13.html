@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — September 13, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--green:#1d6d58}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:var(--accent)}
+    button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}
+    .edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+    .edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 36px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}
+    .hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}
+    .hero h1 em{font-style:italic;color:var(--accent)}
+    .dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}
+    .filters{display:flex;gap:7px;flex-wrap:wrap}
+    .filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}
+    .filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+    .search{position:relative;width:230px}
+    .search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}
+    .search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}
+    .section-head{display:grid;grid-template-columns:130px 1fr;gap:25px;align-items:start;margin-bottom:28px}
+    .section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}
+    .section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}
+    .top-five{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:transparent}
+    .top-item{background:var(--paper);padding:20px;grid-column:span 4;min-width:0;outline:1px solid var(--line)}
+    .top-item:nth-child(-n+2){grid-column:span 6}
+    .top-rank{font:700 31px/1 "Newsreader",serif;color:var(--accent);margin-bottom:24px}
+    .top-item h3{font:700 23px/1.08 "Newsreader",serif;margin:0 0 9px;letter-spacing:-.014em}
+    .top-item p{font-size:13px;line-height:1.52;color:#303a4d;margin:0}
+    .top-item a{text-decoration:none}
+    .lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}
+    .story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}
+    .story.major{grid-column:span 7}
+    .story.side{grid-column:span 5}
+    .story.third{grid-column:span 4}
+    .story.half{grid-column:span 6}
+    .story.full{grid-column:1/-1}
+    .story .meta,.brief .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}
+    .tag{color:var(--accent)}
+    .caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}
+    .story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}
+    .story.major h3{font-size:clamp(33px,4.2vw,54px)}
+    .story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:#27334a}
+    .story p strong{color:var(--ink)}
+    .sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .impact{background:var(--ink);color:var(--white);padding:18px 20px;margin:18px 0 0}
+    .impact b{display:block;color:#ff765f;font:500 10px/1.3 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .impact p{color:var(--white);margin:0}
+    .brief-list{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+    .brief{display:grid;grid-template-columns:74px 1fr;gap:17px;padding:20px 0;border-top:1px solid var(--line)}
+    .brief .date{font:500 11px/1.35 "DM Mono",monospace;color:var(--accent);text-transform:uppercase}
+    .brief h3{font:700 23px/1.08 "Newsreader",serif;margin:0 0 7px;letter-spacing:-.012em}
+    .brief p{font-size:13.5px;line-height:1.55;color:#303a4d;margin:0 0 9px}
+    .brief .sources{margin-top:8px}
+    .money-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:transparent;margin-top:22px}
+    .money{background:var(--paper);padding:22px 21px;min-width:0;outline:1px solid var(--line)}
+    .money .amount{font:700 35px/1 "Newsreader",serif;color:var(--accent);margin-bottom:8px}
+    .money h3{font:700 20px/1.12 "Newsreader",serif;margin:0 0 8px}
+    .money p{font-size:12.5px;line-height:1.5;margin:0;color:#333d50}
+    .money .sources{margin-top:12px}
+    .note-box{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}
+    .note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}
+    .note-box ul{margin:0;padding-left:18px;font-size:13px;color:#374155}
+    .note-box li+li{margin-top:8px}
+    .footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}
+    .hidden{display:none!important}
+    .no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}
+    .no-results.show{display:block}
+    @media(max-width:800px){
+      .wrap{width:min(100% - 28px,680px)}
+      .hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}
+      .toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}
+      .section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}
+      .top-five{grid-template-columns:1fr}.top-item,.top-item:nth-child(-n+2){grid-column:auto}.top-rank{margin-bottom:12px}
+      .lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}
+      .brief-list{grid-template-columns:1fr}.brief{grid-template-columns:62px 1fr}
+      .money-grid{grid-template-columns:1fr}.money{padding:20px}
+      .note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}
+    }
+    @media(max-width:430px){.edition{align-items:flex-start}.edition .range{max-width:176px}.filters{gap:6px}.filter{padding:7px 9px}.brief{grid-template-columns:1fr;gap:5px}.brief .date{margin-bottom:1px}.hero h1{font-size:45px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">Daily intelligence briefing</div>
+      <div class="range">Sunday, September 13, 2026<br>Coverage: September 11–13 · centered on Saturday</div>
+    </div>
+
+    <div class="wrap hero">
+      <h1>The race asks whether it can <em>afford to slow down.</em></h1>
+      <p class="dek">Dario Amodei called for a coordinated brake on frontier capabilities. Altman and Musk agreed; Trump called the fears exaggerated. The safety debate is now a contest over national power, lab governance and release authority.</p>
+    </div>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; safety</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="all">
+      <div class="section-head"><div class="section-no">01 / TOP FIVE</div><h2>The headlines to know</h2></div>
+      <div class="top-five">
+        <article class="top-item" data-cat="policy"><div class="top-rank">01</div><h3><a href="#amodei">Amodei asks frontier labs to slow capabilities</a></h3><p>Anthropic’s CEO proposed embedded outside evaluators; Altman and Musk publicly backed the call.</p></article>
+        <article class="top-item" data-cat="policy"><div class="top-rank">02</div><h3><a href="#trump">Trump rejects the safety push</a></h3><p>The president called AI-risk warnings exaggerated and argued that “whoever wins AI wins.”</p></article>
+        <article class="top-item" data-cat="research models"><div class="top-rank">03</div><h3><a href="#navier">OpenAI claims a Millennium Prize solution</a></h3><p>A 165-page Navier-Stokes proof is startling, contested and not yet independently verified.</p></article>
+        <article class="top-item" data-cat="policy"><div class="top-rank">04</div><h3><a href="#senate">Senators debate a legal brake on unsafe releases</a></h3><p>A proposed duty of care could let the government block frontier models, subject to court challenge.</p></article>
+        <article class="top-item" data-cat="models"><div class="top-rank">05</div><h3><a href="#astra">GPT-6 Astra fuels “AGI era” talk</a></h3><p>Jensen Huang said “AGI has arrived”; Greg Brockman called the framing “not unreasonable.”</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">02 / AI SAFETY &amp; PACING</div><h2>The argument moves from warnings to brakes</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="amodei" data-cat="policy">
+          <div class="meta"><span class="tag">Anthropic</span><span>Sept. 12</span><span>Multi-sourced</span></div>
+          <h3>Dario Amodei calls on AI companies to slow the pace of capability gains</h3>
+          <p>In a 3,800-word essay, Anthropic’s CEO urged labs to “slow the pace at which we improve the capabilities of AI models” and proposed embedded third-party safety evaluators with full company access—a commitment Anthropic says it is adopting unilaterally. Sam Altman replied “we will do the same,” while Elon Musk posted “Dario is right,” turning a lab-level concern into an unusually public show of alignment.</p>
+          <p><strong>Key people &amp; companies:</strong> Dario Amodei and Anthropic; Sam Altman and OpenAI; Elon Musk and xAI; former Anthropic researcher Jacob Coxon.</p>
+          <div class="impact"><b>Why it matters</b><p>Frontier-lab leaders are moving beyond general safety pledges toward a concrete governance mechanism that would give outsiders continuing access to how advanced models are built and assessed.</p></div>
+          <div class="sources"><a href="https://www.cnn.com/2026/09/12/tech/anthropic-ceo-essay-ai?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN ↗</a><a href="https://www.reuters.com/business/anthropic-ceo-urges-ai-companies-slow-model-development-2026-09-12/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story side" id="trump" data-cat="policy">
+          <div class="meta"><span class="tag">White House</span><span>Sept. 13</span><span class="caveat">Single-sourced</span></div>
+          <h3>Trump dismisses AI safety fears as “very negative forces” exaggerating risks</h3>
+          <p>Asked whether the industry should slow down, President Trump said critics were raising concerns about things “that won’t happen” and emphasized that “whoever wins AI wins.” The response puts the administration in direct conflict with the industry pacing push ahead of Xi Jinping’s U.S. visit and a mid-September U.S.–China AI safety dialogue.</p>
+          <p><strong>Key people &amp; companies:</strong> Donald Trump; Dario Amodei and Anthropic; Sam Altman and OpenAI.</p>
+          <div class="sources"><a href="https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="altman" data-cat="policy models">
+          <div class="meta"><span class="tag">OpenAI</span><span>Sept. 11 · continuing story</span><span class="caveat">Single-sourced · Bloomberg via Reuters</span></div>
+          <h3>Altman told staff OpenAI is open to pacing development with other labs</h3>
+          <p>At a company-wide meeting, Sam Altman reportedly said OpenAI could slow development alongside other labs, while acknowledging that not every competitor may agree; Anthropic separately said it was interested in coordination on release pace. The comment matters because it turns the idea of coordinated restraint from an outside demand into a position entertained by a leading frontier lab.</p>
+          <p><strong>Key people &amp; companies:</strong> Sam Altman and OpenAI; Anthropic; Jacob Coxon.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="senate" data-cat="policy">
+          <div class="meta"><span class="tag">U.S. Senate</span><span>Sept. 11 · continuing story</span><span class="caveat">Single-sourced · draft under negotiation</span></div>
+          <h3>Senate negotiators weigh a duty of care and power to block unsafe models</h3>
+          <p>Negotiators are considering a legal duty requiring frontier developers to prevent “catastrophic risks,” with possible federal authority to stop releases deemed unsafe and a right for companies to challenge a block in court. The proposal could also preempt state AI laws on covered risks, making the early-stage talks a consequential test of who sets the national safety floor.</p>
+          <p><strong>Key people &amp; companies:</strong> U.S. Senate negotiators; Google, Anthropic and OpenAI as companies that could be covered.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story full" id="ipo" data-cat="policy funding">
+          <div class="meta"><span class="tag">OpenAI</span><span>Sept. 12</span><span class="caveat">Single-sourced</span></div>
+          <h3>Altman says an OpenAI IPO in 2026 would be “ill-advised” amid the safety moment</h3>
+          <p>In an interview with Fortune’s Alyson Shontell, Altman said “everything happening with safety” makes a 2026 listing unwise, pushing the earliest timeline to at least 2027 and stressing the flexibility of remaining private while industry and government work through alignment. The delay links corporate governance and access to public capital directly to OpenAI’s assessment of frontier-model risk.</p>
+          <p><strong>Key people &amp; companies:</strong> Sam Altman and OpenAI; Alyson Shontell and Fortune.</p>
+          <div class="sources"><a href="https://www.washingtonexaminer.com/policy/technology/4725082/altman-openai-not-public-2026-safety-concerns/" target="_blank" rel="noopener">Washington Examiner ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">03 / RESEARCH &amp; BREAKTHROUGHS</div><h2>A proof claim—and a model for the Moon</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="navier" data-cat="research models">
+          <div class="meta"><span class="tag">OpenAI</span><span>Sept. 12 coverage</span><span class="caveat">Single-sourced</span><span class="caveat">Contested · not independently verified</span></div>
+          <h3>OpenAI claims an unreleased model solved the Navier-Stokes Millennium Prize problem</h3>
+          <p>OpenAI published a 165-page, computer-verified proof that it says was produced by a model “significantly more capable” than GPT-6 Astra, using roughly 10,000 agents over about 88 hours and 130 billion output tokens. Fields medalist Timothy Gowers called it symbolically “a big moment,” but Anthropic-linked researchers published competing work and questioned whether OpenAI’s model trained on their unpublished sessions.</p>
+          <p><strong>Key people &amp; companies:</strong> OpenAI; Jakub Pachocki, Sebastien Bubeck, Noam Brown and Mark Chen; Anthropic researcher Levent Alpöge; NYU’s Tristan Buckmaster; Timothy Gowers.</p>
+          <div class="impact"><b>Why it matters</b><p>If independently validated, the result would be the first AI solution to a Millennium Prize Problem and a landmark for multi-agent scientific research. For now, both the proof and the priority dispute remain unresolved.</p></div>
+          <div class="sources"><a href="https://www.wsj.com/tech/ai/openai-millennium-prize-navier-stokes-math-2bf240f8" target="_blank" rel="noopener">Wall Street Journal ↗</a></div>
+        </article>
+
+        <article class="story side" id="lunar" data-cat="research models">
+          <div class="meta"><span class="tag">IBM + NASA</span><span>Sept. 10</span><span class="caveat">Single-sourced</span></div>
+          <h3>IBM and NASA release an open-source Lunar Foundation Model</h3>
+          <p>Trained on more than 30 data layers from nine instruments across four missions, the model identifies lunar ice deposits, craters and volcanic features up to 23% more accurately than widely used methods. Its output can inform Artemis landing-site selection and the search for water ice that could become rocket-fuel feedstock, showing how domain models can turn fragmented mission archives into operational science.</p>
+          <p><strong>Key people &amp; companies:</strong> IBM; NASA; the Artemis program.</p>
+          <div class="sources"><a href="https://www.reuters.com/science/ibm-nasa-launch-ai-model-help-map-ice-craters-moon-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">04 / MODELS &amp; PRODUCT LAUNCHES</div><h2>From an “AGI era” to regulated workflows</h2></div>
+      <div class="brief-list">
+        <article class="brief" id="astra" data-cat="models products">
+          <div class="date">Sept. 10–12</div>
+          <div>
+            <div class="meta"><span class="tag">OpenAI + Nvidia</span><span class="caveat">Single-sourced</span></div>
+            <h3>GPT-6 Astra’s launch aftermath brings declarations that “AGI has arrived”</h3>
+            <p>After OpenAI announced GPT-6 Astra on Sept. 10, Nvidia CEO Jensen Huang said it trained on more than 100,000 Grace Blackwell NVLink72 systems and wrote that “AGI has arrived”; OpenAI president Greg Brockman said it was “not unreasonable” to feel “now in the AGI era.” The reactions matter because two key suppliers and builders are framing a commercial model launch as a threshold event, even as the week’s safety debate questions how fast frontier systems should advance.</p>
+            <p><strong>Key people &amp; companies:</strong> Jensen Huang and Nvidia; Greg Brockman and OpenAI.</p>
+            <div class="sources"><a href="https://foxbusiness.com/technology/nvidia-ceo-jensen-huang-declares-agi-has-arrived-after-openai-unveils-gpt-6-astra" target="_blank" rel="noopener">Fox Business ↗</a></div>
+          </div>
+        </article>
+
+        <article class="brief" id="financial" data-cat="products models">
+          <div class="date">Sept. 10</div>
+          <div>
+            <div class="meta"><span class="tag">OpenAI</span><span class="caveat">Single-sourced</span></div>
+            <h3>OpenAI launches ChatGPT for Financial Services</h3>
+            <p>The industry-specific product combines GPT-6 Astra with data from LSEG, PitchBook, Daloopa, Crunchbase and Quartr for financial modeling, multi-source research and pitchbook generation; Morgan Stanley and Evercore are design partners. Enterprise security, role-based access and exportable audit logs make the launch a test of whether AI can clear the governance bar in regulated professional work.</p>
+            <p><strong>Key people &amp; companies:</strong> OpenAI; Morgan Stanley; Evercore; LSEG; PitchBook; Daloopa.</p>
+            <div class="sources"><a href="https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+          </div>
+        </article>
+
+        <article class="brief" id="deepseek" data-cat="models products">
+          <div class="date">Sept. 10</div>
+          <div>
+            <div class="meta"><span class="tag">DeepSeek</span><span class="caveat">Single-sourced</span></div>
+            <h3>DeepSeek releases V4.1-Flash, the smallest model in its new architecture family</h3>
+            <p>DeepSeek says V4.1-Flash improves capability, inference speed and throughput while providing an architecture that can scale to larger models; it is the family’s first release. The launch lands as the company reportedly prepares a STAR Market IPO and remains part of the U.S.–China dispute over model distillation.</p>
+            <p><strong>Key people &amp; companies:</strong> DeepSeek.</p>
+            <div class="sources"><a href="https://www.reuters.com/world/asia-pacific/chinas-deepseek-launches-v41-flash-model-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; REGULATION</div><h2>Europe’s disclosure rules switch on</h2></div>
+      <article class="story full" id="eu-labels" data-cat="policy products">
+        <div class="meta"><span class="tag">European Union</span><span>Sept. 13</span><span class="caveat">Single-sourced</span></div>
+        <h3>EU AI Act content-labeling rules take effect</h3>
+        <p>Companies operating in or targeting the EU must now clearly label AI-generated or significantly altered images, audio, video and text using visible notices plus technical methods such as watermarks or embedded metadata. Meta, TikTok and Google have already introduced broadly aligned measures, while artistic, fictional and satirical content is generally exempt.</p>
+        <p><strong>Key people &amp; companies:</strong> European Union and European Commission; Meta, TikTok, Google, Nvidia, Apple and OpenAI.</p>
+        <div class="impact"><b>Why it matters</b><p>The rules turn provenance from a voluntary platform feature into a market-access obligation, setting an implementation test for both model makers and content platforms.</p></div>
+        <div class="sources"><a href="https://www.computing.co.uk/news/2026/legislation-regulation/tech-companies-must-label-ai-content" target="_blank" rel="noopener">Computing ↗</a></div>
+      </article>
+    </section>
+
+    <section class="wrap section" data-section="funding" id="funding">
+      <div class="section-head"><div class="section-no">06 / FUNDING · SEPT. 9–10</div><h2>Three rounds just outside the news window</h2></div>
+      <p style="margin:-8px 0 22px;max-width:760px;color:#374155;font-size:13px">No significant Sept. 11–13 funding announcement surfaced in the research set. These Sept. 9–10 rounds remain the nearest capital signals.</p>
+      <div class="money-grid">
+        <article class="money" id="positron" data-cat="funding">
+          <div class="amount">$875M</div>
+          <h3>Positron funds its Asimov inference chip at a $5B valuation</h3>
+          <p><strong>Sept. 10.</strong> Positron raised Series C and C-1 capital to finalize Asimov and its Titan system, which targets 16-trillion-parameter models and 10-million-token contexts; the round quadrupled its valuation in seven months. The scale shows investors still backing specialized inference hardware as a route around general-purpose accelerator bottlenecks.</p>
+          <p style="margin-top:9px"><strong>Key people &amp; companies:</strong> Positron AI; NEA, Atreides, Valor, Andra, SemiAnalysis Capital and Jim Clark.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/ai-chip-startup-positrons-valuation-skyrockets-latest-funding-round-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="money" id="ayar" data-cat="funding">
+          <div class="amount">+$150M</div>
+          <h3>Ayar Labs extends its Series E as optical interconnect demand grows</h3>
+          <p><strong>Sept. 10.</strong> Ayar Labs added $150 million to its Series E, bringing this year’s fundraising to $650 million, alongside a $225 million secondary transaction valuing it above $5 billion. The financing underlines how AI infrastructure capital is moving into the optical links needed to connect increasingly large compute systems.</p>
+          <p style="margin-top:9px"><strong>Key people &amp; companies:</strong> Ayar Labs and its chip-industry backers.</p>
+          <div class="sources"><a href="https://www.reuters.com/world/asia-pacific/ayar-labs-backed-by-chip-giants-extends-funding-round-by-150-million-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="money" id="harvey" data-cat="funding products">
+          <div class="amount">$550M</div>
+          <h3>Harvey reaches a $15.5B valuation and acquires Guardrails AI</h3>
+          <p><strong>Sept. 9.</strong> Legal-AI company Harvey raised a round co-led by Diffusion and Lightspeed Venture Partners and acquired agent-security startup Guardrails AI. The combination pairs expansion capital with security technology, signaling that enterprise-agent trust is becoming part of the product rather than a separate control layer.</p>
+          <p style="margin-top:9px"><strong>Key people &amp; companies:</strong> Harvey; Guardrails AI; Diffusion; Lightspeed Venture Partners.</p>
+          <div class="sources"><a href="https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b/" target="_blank" rel="noopener">TechCrunch ↗</a><a href="https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="all">
+      <div class="section-head"><div class="section-no">07 / WATCHING THIS WEEK</div><h2>The safety debate goes geopolitical</h2></div>
+      <aside class="note-box" style="margin-top:0">
+        <h3>Next signal</h3>
+        <div style="font-size:13px;color:#374155">Watch the mid-September U.S.–China AI safety dialogue and Xi Jinping’s U.S. visit. The talks arrive after Reuters reported on Sept. 8 that the U.S. accused DeepSeek and five other Chinese companies of industrial-scale distillation of American models—live context for whether safety coordination can survive the technology rivalry.</div>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Coverage window: September 11–13, 2026.<br>Primary news day: Saturday, September 12.</div>
+      <div>Edition dated Sunday, September 13, 2026.<br>Single-source and contested claims are marked in place; source links open the original reporting.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase(); let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

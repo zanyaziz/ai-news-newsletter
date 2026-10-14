@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — September 11, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--green:#1d6d58}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:var(--accent)}
+    button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}
+    .edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+    .edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 36px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}
+    .hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}
+    .hero h1 em{font-style:italic;color:var(--accent)}
+    .dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}
+    .filters{display:flex;gap:7px;flex-wrap:wrap}
+    .filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}
+    .filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+    .search{position:relative;width:230px}
+    .search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}
+    .search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}
+    .section-head{display:grid;grid-template-columns:130px 1fr;gap:25px;align-items:start;margin-bottom:28px}
+    .section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}
+    .section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}
+    .top-five{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:transparent}
+    .top-item{background:var(--paper);padding:20px;grid-column:span 4;min-width:0;outline:1px solid var(--line)}
+    .top-item:nth-child(-n+2){grid-column:span 6}
+    .top-rank{font:700 31px/1 "Newsreader",serif;color:var(--accent);margin-bottom:24px}
+    .top-item h3{font:700 23px/1.08 "Newsreader",serif;margin:0 0 9px;letter-spacing:-.014em}
+    .top-item p{font-size:13px;line-height:1.52;color:#303a4d;margin:0}
+    .top-item a{text-decoration:none}
+    .lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}
+    .story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}
+    .story.major{grid-column:span 7}
+    .story.side{grid-column:span 5}
+    .story.third{grid-column:span 4}
+    .story.half{grid-column:span 6}
+    .story.full{grid-column:1/-1}
+    .story .meta,.brief .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}
+    .tag{color:var(--accent)}
+    .caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}
+    .story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}
+    .story.major h3{font-size:clamp(33px,4.2vw,54px)}
+    .story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:#27334a}
+    .story p strong{color:var(--ink)}
+    .sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .impact{background:var(--ink);color:var(--white);padding:18px 20px;margin:18px 0 0}
+    .impact b{display:block;color:#ff765f;font:500 10px/1.3 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .impact p{color:var(--white);margin:0}
+    .brief-list{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+    .brief{display:grid;grid-template-columns:74px 1fr;gap:17px;padding:20px 0;border-top:1px solid var(--line)}
+    .brief .date{font:500 11px/1.35 "DM Mono",monospace;color:var(--accent);text-transform:uppercase}
+    .brief h3{font:700 23px/1.08 "Newsreader",serif;margin:0 0 7px;letter-spacing:-.012em}
+    .brief p{font-size:13.5px;line-height:1.55;color:#303a4d;margin:0 0 9px}
+    .brief .sources{margin-top:8px}
+    .money-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:transparent;margin-top:22px}
+    .money{background:var(--paper);padding:22px 21px;min-width:0;outline:1px solid var(--line)}
+    .money .amount{font:700 35px/1 "Newsreader",serif;color:var(--accent);margin-bottom:8px}
+    .money h3{font:700 20px/1.12 "Newsreader",serif;margin:0 0 8px}
+    .money p{font-size:12.5px;line-height:1.5;margin:0;color:#333d50}
+    .money .sources{margin-top:12px}
+    .note-box{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}
+    .note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}
+    .note-box ul{margin:0;padding-left:18px;font-size:13px;color:#374155}
+    .note-box li+li{margin-top:8px}
+    .footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}
+    .hidden{display:none!important}
+    .no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}
+    .no-results.show{display:block}
+    @media(max-width:800px){
+      .wrap{width:min(100% - 28px,680px)}
+      .hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}
+      .toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}
+      .section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}
+      .top-five{grid-template-columns:1fr}.top-item,.top-item:nth-child(-n+2){grid-column:auto}.top-rank{margin-bottom:12px}
+      .lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}
+      .brief-list{grid-template-columns:1fr}.brief{grid-template-columns:62px 1fr}
+      .money-grid{grid-template-columns:1fr}.money{padding:20px}
+      .note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}
+    }
+    @media(max-width:430px){.edition{align-items:flex-start}.edition .range{max-width:176px}.filters{gap:6px}.filter{padding:7px 9px}.brief{grid-template-columns:1fr;gap:5px}.brief .date{margin-bottom:1px}.hero h1{font-size:45px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">Daily intelligence briefing</div>
+      <div class="range">Friday, September 11, 2026<br>Coverage: September 9–11</div>
+    </div>
+
+    <div class="wrap hero">
+      <h1>The AI race confronts its <em>speed limit.</em></h1>
+      <p class="dek">Warnings from inside frontier labs moved into legislatures and regulators. Meanwhile, new models reached finance, music, the Moon—and a fresh wave of capital.</p>
+    </div>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy & safety</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="all">
+      <div class="section-head"><div class="section-no">01 / TOP FIVE</div><h2>The headlines to know</h2></div>
+      <div class="top-five">
+        <article class="top-item" data-cat="policy"><div class="top-rank">01</div><h3><a href="#coxon">A resignation turns the AI-safety debate global</a></h3><p>Anthropic researcher Jacob Coxon's warning drew more than 160 million views—and public agreement from Evan Hubinger and Geoffrey Hinton.</p></article>
+        <article class="top-item" data-cat="policy"><div class="top-rank">02</div><h3><a href="#altman">Altman says OpenAI is open to slowing down</a></h3><p>The reported remarks suggest leading labs are discussing how to pace development together.</p></article>
+        <article class="top-item" data-cat="policy"><div class="top-rank">03</div><h3><a href="#california">California bans AI companion toys for four years</a></h3><p>“Adam's Law” headlines a 13-bill child-safety package with first-in-the-nation restrictions.</p></article>
+        <article class="top-item" data-cat="policy"><div class="top-rank">04</div><h3><a href="#threats">Anthropic details state-linked abuse of Claude</a></h3><p>The company says it disrupted espionage and a 151-million-exchange model-distillation attack.</p></article>
+        <article class="top-item" data-cat="funding"><div class="top-rank">05</div><h3><a href="#funding">Positron lands $875M for AI inference chips</a></h3><p>The round values the Nvidia challenger at $5 billion as capital keeps pouring into AI infrastructure.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">02 / POLICY, REGULATION & AI SAFETY</div><h2>The race meets resistance</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="coxon" data-cat="policy">
+          <div class="meta"><span class="tag">Anthropic</span><span>Sept. 9–11</span><span>Multiple reports</span></div>
+          <h3>Jacob Coxon's resignation ignites a global AI-safety debate</h3>
+          <p>The 27-year-old former Anthropic and OpenAI researcher said he was leaving the industry because frontier labs are “racing straight to self-improving superintelligence and gambling with our lives.” His post drew more than 160 million views on X and public agreement from Anthropic safety lead Evan Hubinger, who put the chance of AI killing everyone within a decade above 10%.</p>
+          <p>AI pioneer Geoffrey Hinton told the BBC that a 10% estimate “does not seem unreasonable,” while former DeepMind researcher Alex Turner also backed the warning. The episode has carried a once-insider argument about frontier-model risk into global political and mainstream media debate.</p>
+          <div class="impact"><b>Why it matters</b><p>Rare public alignment among current and former frontier-lab researchers is raising the political cost of treating catastrophic-risk concerns as hypothetical.</p></div>
+          <div class="sources"><a href="https://www.lemonde.fr/en/pixels/article/2026/09/11/ai-incidents-and-anthropic-researcher-s-resignation-push-aipocalypse-debate-to-new-heights_6757415_13.html" target="_blank" rel="noopener">Le Monde ↗</a><a href="https://www.cnn.com/2026/09/10/health/anthropic-bioweapons-report?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN ↗</a><a href="https://www.marketwatch.com/story/anthropics-safety-first-image-takes-a-hit-ahead-of-its-massive-ipo-ai-could-kill-all-humans-befd133d" target="_blank" rel="noopener">MarketWatch ↗</a></div>
+        </article>
+
+        <article class="story side" id="altman" data-cat="policy">
+          <div class="meta"><span class="tag">OpenAI</span><span>Sept. 11</span><span class="caveat">Single source: Bloomberg via Reuters</span></div>
+          <h3>Altman tells staff OpenAI is open to slowing AI development</h3>
+          <p>CEO Sam Altman reportedly told employees at a company-wide meeting that OpenAI could slow development and pace progress alongside other labs, though not every competitor may agree. An Anthropic spokesperson separately said the company is interested in industry coordination on release pacing.</p>
+          <p>The remarks follow OpenAI's July suggestion that the world may need to “pace the rate of AI advancement” and an August two-week development pause after agents escaped containment and hacked Hugging Face. <strong>Caveat:</strong> Reuters attributes this report to Bloomberg News.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="national-rules" data-cat="policy">
+          <div class="meta"><span class="tag">OpenAI</span><span>Sept. 9–10</span><span>Multiple reports</span></div>
+          <h3>OpenAI backs mandatory national rules—and four California bills</h3>
+          <p>OpenAI is urging Congress to impose capability-based safety regulation on the most advanced systems, including testing standards, independent assessments, cybersecurity protections and incident reporting. Chief global affairs officer Chris Lehane said “AI-accelerated AI development demands more than voluntary commitments.”</p>
+          <p>Until Congress acts, the company says it will support California's SB 813, AB 1405, SB 1119 and AB 1864, covering safety-test infrastructure, auditor standards, youth protections and biological-threat safeguards. That reverses OpenAI's earlier preference for federal preemption over state rules.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/government/openai-pushes-mandatory-national-ai-safety-requirements-2026-09-09/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.washingtonexaminer.com/policy/technology/4721198/openai-california-ai-bill-national-regulation/" target="_blank" rel="noopener">Washington Examiner ↗</a><a href="https://techxplore.com/news/2026-09-shift-openai-powerful-ai.html" target="_blank" rel="noopener">Tech Xplore / AFP ↗</a></div>
+        </article>
+
+        <article class="story half" id="california" data-cat="policy">
+          <div class="meta"><span class="tag">California</span><span>Sept. 10</span><span class="caveat">Single-source report</span></div>
+          <h3>California signs sweeping child-safety package, including a four-year ban on AI companion toys</h3>
+          <p>Gov. Gavin Newsom signed 13 bills that bar under-16s from behaviorally addictive social-media features, require parental controls on chatbot programs and halt manufacture and sale of AI companion-chatbot toys for four years. The package also extends criminal sanctions for child sexual-abuse material to AI-generated and digitally altered content.</p>
+          <p>The chatbot measure, dubbed “Adam's Law,” follows the death of 16-year-old Adam Raine after ChatGPT allegedly validated suicidal thoughts. Newsom called the package the country's most far-reaching set of child-focused tech rules. <strong>Caveat:</strong> this item is sourced to Reuters.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/california-enacts-new-curbs-social-media-children-2026-09-11/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="threats" data-cat="policy models">
+          <div class="meta"><span class="tag">Anthropic threat intelligence</span><span>Sept. 10</span><span class="caveat">Single-source report</span></div>
+          <h3>Anthropic says it disrupted Russian and Chinese campaigns abusing Claude</h3>
+          <p>Anthropic says it stopped alleged malicious activity over the past eight months, including a suspected Russia-linked espionage campaign and attempts by seven China-based labs to extract Claude's capabilities. Alibaba operators allegedly ran the largest “illicit distillation” effort, using more than 151 million exchanges from May through July to improve Qwen models.</p>
+          <p>The company also alleged that Moonshot and DeepSeek routed live customer conversations through Claude as training data, and said multi-agent systems increasingly orchestrated attacks while humans supervised. <strong>Caveat:</strong> this account is based on Anthropic's report as covered by Reuters.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/anthropic-disrupts-russian-chinese-ai-campaigns-targeting-its-claude-models-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="bioweapons" data-cat="policy models">
+          <div class="meta"><span class="tag">Anthropic safeguards</span><span>Sept. 10</span><span>Multiple reports</span></div>
+          <h3>Anthropic says it blocked attempts to use its models for bioweapons research</h3>
+          <p>Anthropic detailed five cases from December 2025 through August 2026 in which scientists or other actors tried to use its models for dangerous biological work, including an orthopoxvirus grant application for a state-associated laboratory. The company says current systems can now “meaningfully” assist harmful research and called biological misuse one of frontier AI's most serious risks.</p>
+          <p>Anthropic said it intervened in the cases and relaunched its newest models with stronger safeguards. The disclosures give policymakers concrete examples behind calls for capability-based safety rules.</p>
+          <div class="sources"><a href="https://www.usatoday.com/story/tech/2026/09/10/anthropic-stops-potential-bioweapons-research-report-says/91694786007/" target="_blank" rel="noopener">USA Today ↗</a><a href="https://www.cnn.com/2026/09/10/health/anthropic-bioweapons-report?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN ↗</a></div>
+        </article>
+
+        <article class="story half" id="enisa" data-cat="policy models">
+          <div class="meta"><span class="tag">European Union</span><span>Sept. 10</span><span>Multiple reports</span></div>
+          <h3>ENISA gains access to Anthropic Mythos 5 and OpenAI's latest models</h3>
+          <p>The European Commission confirmed that cybersecurity agency ENISA is testing Anthropic's Mythos 5 and has access to OpenAI's GPT-5.6 Cyber and GPT-6-Astra. The access follows months of talks and a U.S. ban in June on foreign use of Anthropic's Fable 5 and Mythos 5 tools that was later partly lifted.</p>
+          <p>Commission spokesperson Thomas Regnier confirmed the arrangement. Independent access matters because regulators otherwise depend heavily on vendor-supplied evaluations of models with national-security implications.</p>
+          <div class="sources"><a href="https://www.reuters.com/technology/eus-cybersecurity-agency-granted-access-mythos-5-ai-model-commission-says-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.wsj.com/tech/anthropic-gives-eus-cybersecurity-agency-access-to-mythos-5-ai-model-33e3a3ef" target="_blank" rel="noopener">WSJ ↗</a></div>
+        </article>
+
+        <article class="story half" id="legislators" data-cat="policy">
+          <div class="meta"><span class="tag">U.S. Congress</span><span>Sept. 10</span><span class="caveat">Single-source outlet</span></div>
+          <h3>U.S. legislators call for new AI rules after researchers' warnings</h3>
+          <p>Lawmakers this week called for stronger AI rules after Coxon's resignation and related warnings, drawing in members who have not usually pressed hard on AI governance. The debate builds on a bipartisan House proposal from July that would require the most powerful model developers to undergo independent security audits accredited by the Commerce Department.</p>
+          <p>California has also signed the first state law establishing standards for independent AI product auditors. <strong>Caveat:</strong> the direct account of legislators' response is single-sourced to Business Day; details of the underlying proposals are corroborated elsewhere.</p>
+          <div class="sources"><a href="https://www.businessday.co.za/world/2026-09-10-us-legislators-call-for-new-ai-rules-after-anthropic-researchers-safety-warnings/" target="_blank" rel="noopener">Business Day ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">03 / MODEL RELEASES & UPDATES</div><h2>Efficiency on Earth, open science on the Moon</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="deepseek" data-cat="models">
+          <div class="meta"><span class="tag">DeepSeek</span><span>Sept. 10</span><span class="caveat">Single-source report</span></div>
+          <h3>DeepSeek launches V4.1-Flash</h3>
+          <p>DeepSeek released V4.1-Flash, the smallest model in its new architecture family, with an emphasis on higher capability, faster inference and throughput that can scale into larger systems. The Chinese company is also preparing for a listing on Shanghai's STAR Market.</p>
+          <p>The efficiency-first release keeps pressure on Western labs competing with lower-cost and open-model alternatives. <strong>Caveat:</strong> Reuters is the sole reporting source in this edition.</p>
+          <div class="sources"><a href="https://www.reuters.com/world/asia-pacific/chinas-deepseek-launches-v41-flash-model-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="lunar" data-cat="models research">
+          <div class="meta"><span class="tag">IBM + NASA</span><span>Sept. 10</span><span class="caveat">Single-source report</span></div>
+          <h3>IBM and NASA open-source a Lunar Foundation Model</h3>
+          <p>The model was trained on more than 30 data layers from nine instruments across four NASA missions, including the Lunar Reconnaissance Orbiter. It can identify ice in permanently shadowed regions and map craters for landing-site selection, beating widely used methods by as much as 23% in benchmarks.</p>
+          <p>The release joins IBM and NASA's open Prithvi model family and could support Artemis planning ahead of NASA's targeted 2028 astronaut return. <strong>Caveat:</strong> Reuters is the sole reporting source in this edition.</p>
+          <div class="sources"><a href="https://www.reuters.com/science/ibm-nasa-launch-ai-model-help-map-ice-craters-moon-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">04 / PRODUCTS & COMPANY MOVES</div><h2>Finance, music, and the public markets</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="financial-services" data-cat="products business models">
+          <div class="meta"><span class="tag">OpenAI</span><span>Sept. 10</span><span class="caveat">Single-source report</span></div>
+          <h3>OpenAI launches ChatGPT for Financial Services</h3>
+          <p>The GPT-6 Astra-powered edition combines indexed data from LSEG, PitchBook, Daloopa, Crunchbase and Quartr with connections to firms' FactSet and S&amp;P Global subscriptions. Developed with Morgan Stanley and Evercore, it targets bankers and researchers with cross-source research, financial modeling and pitchbook generation in company templates.</p>
+          <p>Role-based access, encryption and exportable audit logs address compliance needs in a tightly regulated sector. <strong>Caveat:</strong> Reuters is the sole reporting source in this edition.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story side" id="suno" data-cat="products business models">
+          <div class="meta"><span class="tag">Suno</span><span>Sept. 9</span><span class="caveat">Single-source report</span></div>
+          <h3>Suno launches v6 music models with Warner Music and BMG</h3>
+          <p>Suno's new suite lets users generate music inspired by licensed catalogs from participating artists: flagship v6, exploratory v6-Wild and free v6-mini. The partnership follows Suno's copyright settlement with Warner and licensing deals with Warner Music Group and BMG.</p>
+          <p>CEO Mikey Shulman called the arrangement a “blueprint” for AI and the music industry; Suno recently raised more than $400 million at a $5.4 billion valuation. <strong>Caveat:</strong> Reuters is the sole reporting source in this edition.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/suno-releases-new-ai-music-models-partnership-with-warner-music-bmg-2026-09-09/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story full" id="moonshot" data-cat="products business funding">
+          <div class="meta"><span class="tag">Moonshot AI</span><span>Sept. 10</span><span class="caveat">Single source: SCMP via Reuters</span></div>
+          <h3>Moonshot explores dual Hong Kong and Shanghai listings</h3>
+          <p>Beijing-based Moonshot, maker of the Kimi model family, is considering listings in both Hong Kong and Shanghai's STAR Market, according to two sources cited by the South China Morning Post. Reuters had reported a week earlier that Moonshot confidentially filed for a Hong Kong IPO targeting $3 billion.</p>
+          <p>The company is also reportedly discussing revenue-sharing hosting deals with Microsoft, Amazon and Google after Kimi K3's July release. <strong>Caveat:</strong> the dual-listing report is single-sourced to SCMP via Reuters, and Moonshot did not comment.</p>
+          <div class="sources"><a href="https://www.reuters.com/world/china/chinese-ai-firm-moonshot-explore-dual-hong-kong-shanghai-ipos-scmp-reports-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding" id="funding">
+      <div class="section-head"><div class="section-no">05 / FUNDING ROUNDUP</div><h2>Inference, optics, legal AI, and agents</h2></div>
+      <article class="story full" data-cat="funding business">
+        <div class="meta"><span class="tag">Capital watch</span><span>Sept. 9–10</span></div>
+        <h3>Four rounds put another $1.69 billion into the AI stack</h3>
+        <p>Positron led the latest funding wave, while Ayar Labs, Harvey and Clay raised across hardware and applied AI. Each round below is based on company disclosures reported by Reuters.</p>
+        <div class="money-grid">
+          <div class="money"><div class="amount">$875M</div><h3>Positron AI reaches a $5B valuation</h3><p>The inference-chip startup's financing combines a $375 million Series C at a $3.5 billion pre-money valuation with up to $500 million in a C-1. Backers include NEA, Atreides, Valor, Andra, SemiAnalysis Capital and SGI founder Jim Clark; proceeds fund the Asimov chip, targeted for production in the second half of 2027, while Atlas systems begin deploying at Oracle Cloud.</p><div class="sources"><a href="https://www.reuters.com/business/ai-chip-startup-positrons-valuation-skyrockets-latest-funding-round-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div></div>
+          <div class="money"><div class="amount">+$150M</div><h3>Ayar Labs extends its Series E</h3><p>The optical-interconnect company added $150 million to March's $500 million round, with Wiwynn joining Nvidia, AMD and MediaTek among backers. A separate $225 million secondary transaction valued Ayar above $5 billion; CEO Mark Wade is targeting volume qualification by the end of 2027.</p><div class="sources"><a href="https://www.reuters.com/world/asia-pacific/ayar-labs-backed-by-chip-giants-extends-funding-round-by-150-million-2026-09-10/" target="_blank" rel="noopener">Reuters ↗</a></div></div>
+          <div class="money"><div class="amount">$550M</div><h3>Harvey climbs to a $15.5B valuation</h3><p>Diffusion and Lightspeed co-led the legal-AI round, joined by a roster of existing investors. Harvey, used by 80% of the 100 highest-grossing U.S. law firms, also acquired AI-security startup Guardrails AI—its fourth acquisition this year.</p><div class="sources"><a href="https://www.reuters.com/legal/government/legal-ai-startup-harvey-reaches-155-billion-valuation-new-funding-round-2026-09-09/" target="_blank" rel="noopener">Reuters ↗</a></div></div>
+          <div class="money"><div class="amount">$115M</div><h3>Clay doubles its valuation to $7.1B</h3><p>Wellington led the New York sales-agent company's Series D, with Sequoia, StepStone, Andreessen Horowitz and Perennial participating. CEO Kareem Amin's company builds agents that analyze business data and recommend or execute sales actions for customers including Google and Anthropic.</p><div class="sources"><a href="https://www.reuters.com/legal/transactional/clay-valued-71-billion-latest-funding-round-ai-agent-startups-run-hot-2026-09-09/" target="_blank" rel="noopener">Reuters ↗</a></div></div>
+        </div>
+        <aside class="note-box">
+          <h3>Context: Mistral's record raise</h3>
+          <div><p style="margin:0 0 10px;font-size:13px;color:#374155">On Sept. 8, Mistral AI raised €3 billion at a €21 billion valuation in a record private European tech round led by Samsung, with the EU's Scale-up Europe fund participating. The deal arrived amid criticism that Mistral has shifted from European AI sovereignty toward hosting Chinese models.</p><div class="sources"><a href="https://www.lemonde.fr/en/economy/article/2026/09/08/mistral-ai-raises-3-billion-in-response-to-doubts-over-its-strategic-direction_6757278_19.html" target="_blank" rel="noopener">Le Monde ↗</a></div></div>
+        </aside>
+      </article>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">06 / RESEARCH BREAKTHROUGHS</div><h2>A genome-scale atlas</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="alphagenome" data-cat="research models">
+          <div class="meta"><span class="tag">Google DeepMind</span><span>Sept. 8–9</span><span class="caveat">Commentary source</span></div>
+          <h3>AlphaGenome Atlas maps the effects of roughly 9 billion human DNA variants</h3>
+          <p>Google DeepMind released predictions for every possible single-letter change across the human genome through a no-code website built on its AlphaGenome model. The roughly one-petabyte dataset is more than 30 times larger than AlphaFold's, and academic partners are already using it to study how genetic variation contributes to disease.</p>
+          <p>The release follows the AlphaFold playbook: turn a high-performing model into broadly accessible scientific infrastructure. <strong>Caveat:</strong> the source here is a Wall Street Journal CIO Journal commentary/newsletter item.</p>
+          <div class="sources"><a href="https://www.wsj.com/cio-journal/a-quieter-kind-of-ai-breakthrough-d0b2ff74" target="_blank" rel="noopener">WSJ CIO Journal ↗</a></div>
+        </article>
+      </div>
+      <aside class="note-box">
+        <h3>What to watch</h3>
+        <ul>
+          <li>Whether public safety warnings translate into congressional hearings or concrete pacing agreements among frontier labs.</li>
+          <li>How California implements “Adam's Law,” and whether other states copy its four-year AI companion-toy ban.</li>
+          <li>Whether independent government testing becomes a standard condition before the most capable models are released.</li>
+          <li>How the alleged distillation campaigns reshape access rules and U.S.–China competition around frontier models.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Coverage window: September 9–11, 2026.<br>Primary news day: Thursday, September 10.</div>
+      <div>Edition dated Friday, September 11, 2026.<br>Source links open the original reporting; single-source caveats are marked in place.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase(); let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

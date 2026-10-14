@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — October 9, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.impact{background:var(--ink);color:var(--white);padding:18px 20px;margin:18px 0 0}.impact b{display:block;color:#ff8a76;font:500 10px/1.3 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.impact p{color:var(--paper);margin:0}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — October 9, 2026</div>
+      <div class="range">Coverage: Thursday, October 8 + significant late-breaking items from October 7–9</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h2 class="hero-title">Interfaces, agents, and the <em>money behind them</em></h2>
+      <div><p class="dek">Thursday’s news moved the AI race off benchmarks and onto surfaces — OpenAI made ChatGPT an interface, while Google and Sierra/Meta fought over how agents sign in to businesses. The week closed with governments and markets writing checks: Trump’s $2.4B compute pledges, Denmark’s deepfake bill, and Gartner’s $2.6T spend forecast.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>This edition covers Thursday, October 8, with significant late-breaking items from October 7–9. Stories are ranked by significance; single-sourced items are flagged.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gpt6-ui">GPT-6 turns ChatGPT into an interface</a></li>
+        <li><span class="num">02</span><a href="#gemini-agent">Google Cloud launches one agent for work</a></li>
+        <li><span class="num">03</span><a href="#genesis-mission">$2.4B pledged to the Genesis Mission</a></li>
+        <li><span class="num">04</span><a href="#gartner-spend">Gartner puts 2026 AI spend at $2.59T</a></li>
+        <li><span class="num">05</span><a href="#openai-math">OpenAI releases 722 math manuscripts</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Products</button>
+        <button class="filter" data-filter="agents" aria-pressed="false">Agents &amp; Protocols</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Markets</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Science</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Regulation</button>
+        <button class="filter" data-filter="hardware" aria-pressed="false">Hardware &amp; Security</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODELS &amp; PRODUCTS</div><h2>The interface wars: GPT-6’s Intelligent UI meets a cheaper Claude Haiku</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gpt6-ui" data-cat="models">
+          <div class="meta"><span class="tag">#1 · OpenAI · Intelligent UI</span><span>October 8</span></div>
+          <h3>OpenAI rolls out GPT-6 “Intelligent UI” to ChatGPT’s ~1.2 billion users</h3>
+          <p>ChatGPT stops being a text box and starts generating interactive tools — product manager Aarush Selvan’s pitch is that the most helpful answers aren’t just text. Hacker News debate splits on whether generative UI is a new primitive or just Anthropic-style artifacts baked into the model.</p>
+          <p class="people"><strong>Key people and companies:</strong> OpenAI, Aarush Selvan.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a><a href="https://www.usecarly.com/blog/ai-news-2026-10-08/" target="_blank" rel="noopener">Carly AI News ↗</a><a href="https://www.rebabel.net/en/openai-delivers-on-day-3-challenge-full-rollout-of-gpt-6-ai-daily-2026-10-09/" target="_blank" rel="noopener">rebabel ↗</a></div>
+        </article>
+
+        <article class="story side" id="haiku-55" data-cat="models">
+          <div class="meta"><span class="tag">#2 · Anthropic · Claude Haiku</span><span>October 8</span></div>
+          <h3>Anthropic ships Claude Haiku 5.5: 75% cheaper, with a price cliff at 100K tokens</h3>
+          <p>New Haiku pricing is <strong>$0.10 per million input tokens and $0.50 per million output</strong> — but both rates jump fivefold past a 100,000-token prompt, to $0.50 and $2.50. It’s the first Haiku-class model with an adjustable effort setting; Sonnet 5.5 cache reads were halved to $0.10/M.</p>
+          <p>The day’s biggest Hacker News thread spent itself on that cliff, called absurdly low for agent work, applying to Haiku but not Sonnet or Opus.</p>
+          <p class="people"><strong>Key company:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-08/" target="_blank" rel="noopener">Carly AI News ↗</a><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="agents">
+      <div class="section-head"><div class="section-no">02 / AGENTS &amp; PROTOCOLS</div><h2>Agents go to work: Google’s Gemini agent and a protocol war for commerce</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="gemini-agent" data-cat="agents models">
+          <div class="meta"><span class="tag">#1 · Google Cloud · Work agent</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Google Cloud launches the Gemini agent, a single AI agent for work</h3>
+          <p>The agent plans work, uses tools, connects to business systems and returns finished work in Docs, email and developer environments. It works inside Google Workspace and also Microsoft 365 and Slack, picks the best model per task — Gemini now, Claude models too, more later — and supports “coworker agents” with their own email addresses and scoped access.</p>
+          <p>Financial-services and legal versions are in preview; government, healthcare and retail are coming.</p>
+          <p class="people"><strong>Key company:</strong> Google / Alphabet.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/google-cloud-introduces-gemini-agent-work-ai-race-heats-up-2026-10-08/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="personal-agent-protocol" data-cat="agents">
+          <div class="meta"><span class="tag">#2 · Sierra + Meta · Commerce protocols</span><span>October 6 proposal</span><span class="caveat">Single-source · Vendor claims for protocol details</span></div>
+          <h3>Sierra and Meta publish the Personal Agent Protocol; Visa’s rival already has Stripe and Shopify too</h3>
+          <p>The Oct. 6 proposal from Sierra’s Bret Taylor and Clay Bavor and Meta is an OAuth-based open standard for how personal agents authenticate with businesses — guest access for stock checks, read-only or write access after customer sign-in, and sessions carried across channels, with v0.1 due later in October.</p>
+          <p>Partners include Walmart, Stripe, Shopify, Genesys, Instinct and Rocket — but payments aren’t in the first spec, and OpenAI and Anthropic aren’t on board. Visa’s Trusted Agent Protocol, introduced in June, already serves roughly 175 million merchants, with Stripe and Shopify in both camps.</p>
+          <p class="people"><strong>Key people and companies:</strong> Sierra, Meta, Bret Taylor, Clay Bavor, Walmart, Stripe, Shopify, Genesys, Instinct, Rocket, Visa.</p>
+          <div class="sources"><a href="https://aiweekly.co/alerts/sierra-meta-publish-personal-agent-protocol-backed-by-walmart" target="_blank" rel="noopener">aiweekly ↗</a><a href="https://cellcog.ai/blog/personal-agent-protocol/" target="_blank" rel="noopener">CellCog ↗</a><a href="https://www.unite.ai/sierra-unveils-personal-agent-protocol-built-with-meta-and-partners/" target="_blank" rel="noopener">Unite.AI ↗</a><a href="https://forkast.news/sierra-and-metas-personal-agent-protocol-gives-commerce-a-common-front-door-for-those-willing-to-open-it/" target="_blank" rel="noopener">Forkast ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">03 / FUNDING &amp; MARKETS</div><h2>Money and power: $2.4B in compute pledges, $2.6T in spend, and a chip debt race</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="genesis-mission" data-cat="funding policy">
+          <div class="meta"><span class="tag">#1 · US government · Compute</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Trump unveils $2.4B in tech compute pledges for the Genesis Mission — and rebrands AI as “super intelligence”</h3>
+          <p>Nvidia ($1B), AMD ($500M), OpenAI ($200M), Anthropic and Google ($150M each), plus AMP and Emerald AI ($100M each) and AWS, Armada, Crusoe and Micron ($50M each) pledged compute to bring the Genesis Mission to 14 federal agencies across energy, health and space.</p>
+          <p>Announced at the White House “Science: A New Golden Age” summit, Trump also doubled down on the “super intelligence” rebrand, with Jensen Huang echoing it.</p>
+          <p class="people"><strong>Key people and companies:</strong> Donald Trump, Nvidia, Jensen Huang, AMD, OpenAI, Anthropic, Google.</p>
+          <div class="sources"><a href="https://nypost.com/2026/10/08/business/trump-unveils-2-4b-investment-from-tech-giants-including-nvidia-openai-to-fund-federal-ai-mission/" target="_blank" rel="noopener">New York Post ↗</a></div>
+        </article>
+
+        <article class="story half" id="gartner-spend" data-cat="funding">
+          <div class="meta"><span class="tag">#2 · Gartner · Spending forecast</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Gartner: worldwide AI spending hits $2.59T in 2026, up 47%</h3>
+          <p>Infrastructure is the biggest slice at <strong>$1.43 trillion, more than 45%</strong>; the forecast climbs to $3.49 trillion in 2027. The biggest platforms are committing over $100 billion a year each in capital expenditure. The open question is how long the pace lasts.</p>
+          <p class="people"><strong>Key people and companies:</strong> Gartner, John-David Lovelock, Microsoft, Meta, Broadcom, AMD.</p>
+          <div class="sources"><a href="https://www.morningstar.com/news/pr-newswire/20261008ln66674/26-trillion-and-climbing-where-the-ai-spending-is-going" target="_blank" rel="noopener">Morningstar / PR Newswire ↗</a></div>
+        </article>
+
+        <article class="story half" id="manus-round" data-cat="funding">
+          <div class="meta"><span class="tag">#3 · Manus · Capital</span><span>October 8</span></div>
+          <h3>Manus raises $500M+ after Beijing blocked Meta’s ~$2B acquisition</h3>
+          <p>The round was led by Boyu Capital and IDG Capital with Tencent, HSG and ZhenFund following. It follows China’s planning regulator moving to “prohibit foreign investment in the Manus project,” reversing Meta’s roughly $2 billion acquisition after Meta had begun integrating the team.</p>
+          <p class="people"><strong>Key companies:</strong> Manus, Meta, Boyu Capital, IDG Capital, Tencent.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a><a href="https://www.usecarly.com/blog/ai-news-2026-10-08/" target="_blank" rel="noopener">Carly AI News ↗</a></div>
+        </article>
+
+        <article class="story half" id="chip-industrial-base" data-cat="funding hardware">
+          <div class="meta"><span class="tag">#4 · Semiconductors · Debt</span><span>September revenue · October 8 reports</span><span class="caveat">Single-source</span></div>
+          <h3>TSMC’s September revenue jumps 54.6%; GlobalFoundries lands a 5-year advanced-packaging deal for TSMC in New York; Tencent weighs a $5B debt raise</h3>
+          <p>The chip industrial base keeps printing — TSMC’s September revenue surge, a five-year GlobalFoundries agreement to make advanced chip-packaging components for TSMC in New York, and Tencent considering another $5 billion debt raise for AI ambitions. Oracle, Broadcom and SpaceX are also reportedly lining up more than $50 billion in debt for AI chips.</p>
+          <p class="people"><strong>Key companies:</strong> TSMC, GlobalFoundries, Tencent, Oracle, Broadcom, SpaceX.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a><a href="https://www.youtube.com/watch?v=5VbJU4FUT64" target="_blank" rel="noopener">TLDR Daily Briefing ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">04 / RESEARCH &amp; SCIENCE</div><h2>Science in the crossfire: 722 machine-written math papers</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="openai-math" data-cat="research">
+          <div class="meta"><span class="tag">#1 · OpenAI · Mathematics</span><span>October 7</span><span class="caveat">Single-source · Vendor claims</span></div>
+          <h3>OpenAI releases 722 manuscripts covering 372 topics from an unreleased internal math model</h3>
+          <p>OpenAI dropped 722 manuscripts across algebra, number theory, theoretical computer science, logic and topology, generated by an internal frontier model it isn’t releasing, claiming progress on the Riemann hypothesis and the kakeya conjecture. Three papers were retracted within a day; only some proofs were certified by the Lean automated-verification platform, and OpenAI’s own researchers hadn’t read through them all.</p>
+          <p>The release follows the Sept. 11 declaration by 28 Fields Medalists warning against treating unsolved problems as benchmarks.</p>
+          <p class="people"><strong>Key company:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://en.wikipedia.org/wiki/OpenAI_October_2026_release_of_mathematical_papers" target="_blank" rel="noopener">Wikipedia ↗</a><a href="https://www.usecarly.com/blog/ai-news-2026-10-08/" target="_blank" rel="noopener">Carly AI News ↗</a></div>
+        </article>
+
+        <article class="story side" id="research-notes" data-cat="research agents">
+          <div class="meta"><span class="tag">#2 · Research notes · Agents</span><span>October 9 briefing</span><span class="caveat">Single-source</span></div>
+          <h3>Research notes: AECP multi-agent protocol, Recurrent Recurrent Transformer, EngramEdit knowledge editing</h3>
+          <p>AWS AI Labs’ Artifact-Exclusive Communication Protocol forces multi-agent collaboration through structured artifacts, reporting a 28.2% increase in test pass rates and a drop in prompt-injection lateral movement from 95% to 0%. The Recurrent Recurrent Transformer decouples encoding and feedback decoding for compute paths that scale with sequence difficulty; EngramEdit enables precise single-point factual edits with three-times generalization stability.</p>
+          <p class="people"><strong>Key organizations:</strong> AWS AI Labs, Hugging Face Daily Papers.</p>
+          <div class="sources"><a href="https://www.rebabel.net/en/openai-delivers-on-day-3-challenge-full-rollout-of-gpt-6-ai-daily-2026-10-09/" target="_blank" rel="noopener">rebabel ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; REGULATION</div><h2>Policy and physical limits</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="denmark-deepfakes" data-cat="policy">
+          <div class="meta"><span class="tag">#1 · Denmark · Deepfakes</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Denmark moves to ban non-consensual AI likeness copies</h3>
+          <p>Culture Minister Zenia Stampe will propose a bill banning digital copying and sharing of lifelike representations of a person — appearance and voice — to crack down on deepfakes, pushing tech giants to take manipulated content down fast. Caricature, parody and satire are excepted.</p>
+          <p>Parliamentary approval is still needed, with a hoped-for entry into force around the turn of the year.</p>
+          <p class="people"><strong>Key person:</strong> Zenia Stampe.</p>
+          <div class="sources"><a href="https://www.reuters.com/world/denmark-plans-ban-sharing-ai-deepfakes-without-consent-2026-10-08/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="physical-limits" data-cat="policy hardware">
+          <div class="meta"><span class="tag">#2 · Google + Yandex · Infrastructure</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Finland orders Google to halt data-center prep over environmental concerns; drone attack suspends Yandex compute operations</h3>
+          <p>Finnish authorities halted preparatory work at two planned Google data centers on environmental grounds, while a drone attack forced Russia’s Yandex to suspend operations at a major computing facility.</p>
+          <p class="people"><strong>Key companies:</strong> Google, Yandex.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="hardware">
+      <div class="section-head"><div class="section-no">06 / HARDWARE &amp; SECURITY</div><h2>Hardware, funding, and the security fringe</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="surface-ultra" data-cat="hardware models">
+          <div class="meta"><span class="tag">#1 · Microsoft · Local AI</span><span>Preorders October 8 · Ships October 16</span><span class="caveat">Single-source</span></div>
+          <h3>Microsoft opens preorders for the $2,599 Surface Laptop Ultra: “a petaflop in a laptop”</h3>
+          <p>The machine combines an Nvidia Arm-based RTX Spark chip, up to 128GB of unified memory and one petaflop of FP4 AI performance. Windows EVP Pavan Davuluri pitches models that “simply don’t fit on a traditional machine”; it ships Oct. 16, with a $6,000 Dev Box variant for local large-model developers.</p>
+          <p>Nadella’s line: orchestration needs memory outside the model.</p>
+          <p class="people"><strong>Key people and companies:</strong> Microsoft, Nvidia, Pavan Davuluri, Satya Nadella.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-08/" target="_blank" rel="noopener">Carly AI News ↗</a></div>
+        </article>
+
+        <article class="story third" id="agent-capital" data-cat="hardware funding agents">
+          <div class="meta"><span class="tag">#2 · Venture capital · Robotics</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Agent capital moves: Valon raises $150M at $2.3B; $60M for robotics learning data; $100M for a British quantum company</h3>
+          <p>Valon’s $150 million round at a $2.3 billion valuation leads the day’s agent-money moves, alongside a robotics data startup raising $60 million for machines learning from human behavior and a British quantum company raising $100 million.</p>
+          <div class="sources"><a href="https://www.youtube.com/watch?v=5VbJU4FUT64" target="_blank" rel="noopener">TLDR Daily Briefing ↗</a><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a><a href="https://www.linkedin.com/pulse/weekly-ai-blast-thursday-october-8-2026-john-kump-fixcc" target="_blank" rel="noopener">After The Update ↗</a></div>
+        </article>
+
+        <article class="story third" id="infosec-notes" data-cat="hardware agents">
+          <div class="meta"><span class="tag">#3 · Infosec · Agent attack surface</span><span>October 8</span><span class="caveat">Single-source</span></div>
+          <h3>Infosec notes: Copilot CLI tricked into delivering malware; fake TLS certs via domain hijack; 45 zero-days at Pwn2Own Ireland</h3>
+          <p>Attackers are working the agentic surface — Microsoft’s Copilot CLI was social-engineered into malware delivery, forged TLS certificates were issued through domain hijacks, and 45 new zero-days were disclosed at Pwn2Own Ireland.</p>
+          <div class="sources"><a href="https://www.youtube.com/watch?v=5VbJU4FUT64" target="_blank" rel="noopener">TLDR Daily Briefing ↗</a><a href="https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/" target="_blank" rel="noopener">Tech Startups ↗</a></div>
+        </article>
+      </div>
+
+      <aside class="note-box" id="coverage-notes">
+        <h3>Caveats &amp; coverage notes</h3>
+        <div>
+          <ul>
+            <li><strong>Single-source:</strong> labels identify items supported by only one publication in this edition, or items the supplied research marked as single-source. Treat them cautiously until corroborated.</li>
+            <li><strong>Vendor claims:</strong> protocol details, model performance figures and research claims have not been independently audited unless the story says otherwise.</li>
+            <li><strong>Dates:</strong> dates reflect the publication, announcement, proposal, revenue period or briefing timing shown on each card.</li>
+          </ul>
+          <div class="legend"><span class="caveat">Single-source</span> Read the inline source list and caveat before relying on the claim.</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Researched from Reuters, Tech Startups, Morningstar/PR Newswire, NY Post, TLDR newsletters, Unite.AI, Forkast, CellCog, aiweekly, Radardigital, rebabel, and Carly AI News; single-sourced items flagged inline. Coverage window: Oct 7–9, 2026.</div>
+      <div>AI News Newsletter — October 9, 2026.<br>15 stories ranked by significance.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

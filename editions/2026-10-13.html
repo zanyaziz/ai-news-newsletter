@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Tuesday, October 13, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Tuesday, October 13, 2026</div>
+      <div class="range">Covering Monday, October 12, 2026 (+ 48-hour context; one labeled background item reaches Oct 7)</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Meta bets on <em>Muse Wonder</em> as safety law takes shape</h1>
+      <div><p class="dek">Meta Superintelligence Labs unveils flagship reasoning models with disputed benchmark claims, the Senate moves toward a federal AI Safety Board, and a funding wave backs China’s AI buildout.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Stories are ranked by significance within each category. Single-sourced, secondary-sourced, vendor-reported, and contested claims are marked inline; the enterprise background item is dated October 7 so it is not mistaken for an October 12 launch.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#muse-wonder">Meta unveils Muse Wonder and Wonder Full</a></li>
+        <li><span class="num">02</span><a href="#senate-safety-bill">Senate AI safety bill gains momentum</a></li>
+        <li><span class="num">03</span><a href="#brad-smith">Brad Smith: AI has fewer safety rules than milk</a></li>
+        <li><span class="num">04</span><a href="#uk-access">White House restores UK pre-release model access</a></li>
+        <li><span class="num">05</span><a href="#china-funding">China’s AI buildout draws a funding wave</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li>Several October 12 items rest on <strong>secondary roundups or vendor claims</strong> rather than primary documents; those stories are flagged inline.</li>
+          <li><strong>Muse Wonder benchmark claims are disputed:</strong> Wonder Full’s reported score of 56 sits below Claude Opus 5.5’s 58 on the same index, and an outside tester has challenged the results.</li>
+          <li>The <strong>DeepSeek–Winverse</strong> round is reported, <strong>not finalized</strong>.</li>
+          <li>The Senate bill and Brad Smith’s five ideas are <strong>proposals, not enacted law</strong>.</li>
+          <li>The enterprise background item reaches back to <strong>October 7 — outside the 48-hour window</strong> — and is dated so it is not mistaken for an October 12 launch.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; safety</button>
+        <button class="filter" data-filter="enterprise" aria-pressed="false">Enterprise</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; deals</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODELS &amp; PRODUCTS</div><h2>Meta’s Muse Wonder headlines a crowded launch day</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="muse-wonder" data-cat="models">
+          <div class="meta"><span class="tag">#1 · Meta Superintelligence Labs · Model launch</span><span>October 12</span><span class="caveat">Benchmarks contested</span></div>
+          <h3>Meta unveils Muse Wonder and Wonder Full for reasoning, coding, and agents</h3>
+          <p>Meta Superintelligence Labs introduced two models aimed at complex reasoning, coding, and multi-step agent work. The launch highlights features called <strong>Active Memory</strong> and <strong>Active Focus</strong>, alongside a <strong>1M-token context window</strong>.</p>
+          <p>Reported Artificial Analysis Intelligence Index scores put Wonder Full at <strong>56</strong> and Wonder at <strong>52</strong>, up from 48 for Muse Spark 1.3. <strong>Caveat:</strong> the superiority claims are contested — CoinCentral notes Wonder Full still trails Claude Opus 5.5 (58) on that same index, and an outside tester, Abacus.AI’s CEO, publicly disputed the results. Treat the vendor and secondary reporting cautiously.</p>
+          <div class="sources"><a href="https://www.martechai.com/industry-trends-news/meta-unveils-muse-wonder-and-wonder-full-ai-models-to-rival-openai-3504.html" target="_blank" rel="noopener">MarTechAI · Oct 12 ↗</a><a href="https://coincentral.com/meta-stock-climbs-3-as-muse-wonder-takes-aim-at-openai-and-anthropic/" target="_blank" rel="noopener">CoinCentral · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story side" id="qualcomm-platforms" data-cat="models">
+          <div class="meta"><span class="tag">#2 · Qualcomm · Broadband platforms</span><span>October 12</span></div>
+          <h3>Qualcomm unveils four AI broadband platforms ahead of Network X 2026</h3>
+          <p>The lineup centers on an <strong>AI gateway built on the Dragonwing NPro A8 Elite</strong> with Wi-Fi 8 and a Hexagon NPU, the Dragonwing SAM framework, and a fixed-wireless access platform — pushing on-device inference into home gateways and carrier broadband gear.</p>
+          <div class="sources"><a href="https://www.thelec.net/news/articleView.html?idxno=14544" target="_blank" rel="noopener">The Elec · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story full" id="product-briefs" data-cat="models">
+          <div class="meta"><span class="tag">#3 · DCX / Whales AI · STEM robotics</span><span>October 12</span></div>
+          <h3>DCX and Whales AI bring AI-powered STEM robotics to North America</h3>
+          <p>DCX and Whales AI signed a <strong>$4M strategic investment</strong> and exclusive commercialization agreement to advance an AI-powered STEM education robotics platform in North America — with up to $16M in potential additional investment, which is <strong>potential funding, not a binding commitment</strong>.</p>
+          <div class="sources"><a href="https://www.globenewswire.com/news-release/2026/10/12/3378797/0/en/dcx-and-whales-ai-sign-strategic-investment-and-exclusive-commercialization-agreement-to-advance-ai-powered-stem-education-robotics-platform-in-north-america.html" target="_blank" rel="noopener">GlobeNewswire · Oct 12 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">02 / POLICY &amp; SAFETY</div><h2>Washington debates a safety board while London regains testing access</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="senate-safety-bill" data-cat="policy">
+          <div class="meta"><span class="tag">#1 · U.S. Senate · AI safety legislation</span><span>October 12</span><span class="caveat">Proposal — not law</span></div>
+          <h3>Senators introduce a federal AI safety bill built around a new AI Safety Board</h3>
+          <p>Senators <strong>Mark Warner, Brian Schatz, and Andy Kim</strong> introduced the Artificial Intelligence Risk Management and Security Act of 2026. The bill would create an <strong>AI Safety Board inside the Department of Commerce</strong> to evaluate frontier-model risks, set metrics, publish formats for technical disclosures, and define secure testing environments.</p>
+          <p>The proposal lands alongside related measures from Senators Cantwell and Hawley as AI safety regulation gains momentum in Congress ahead of the midterms — though mandatory regulation is expected to draw White House opposition.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/ai-safety-regulations-gain-momentum-in-congress-ahead-of-midterms/" target="_blank" rel="noopener">PYMNTS · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story side" id="brad-smith" data-cat="policy">
+          <div class="meta"><span class="tag">#2 · Microsoft · Regulation proposal</span><span>October 12</span><span class="caveat">Proposal · Secondary summary</span></div>
+          <h3>Brad Smith says AI has fewer safety rules than milk or washing machines</h3>
+          <p>In a BBC interview published October 12, Microsoft’s president argued that AI is governed by fewer safety rules than everyday products, and proposed five measures: <strong>global safety rules, mandatory incident reports, victim notification after rogue-agent breaches or misuse, independent pre-release evaluators, and an emergency brake</strong>.</p>
+          <p><strong>Caveat:</strong> this is a proposal, not enacted law. The secondary summary notes no detailed public response yet from OpenAI, Google, or Anthropic.</p>
+          <div class="sources"><a href="https://tech-insider.org/microsoft-brad-smith-ai-safety-rules-milk-2026/" target="_blank" rel="noopener">Tech Insider · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story half" id="uk-access" data-cat="policy">
+          <div class="meta"><span class="tag">#3 · UK AISI · Pre-release access</span><span>October 12</span><span class="caveat">Secondary roundup</span></div>
+          <h3>White House restores UK pre-release access to frontier models</h3>
+          <p>The White House has restored the UK AI Security Institute’s pre-release access to advanced models from <strong>OpenAI, Anthropic, and Google DeepMind</strong> for safety testing, reversing a recent restriction after lobbying by UK ministers.</p>
+          <div class="sources"><a href="https://thejoai.com/ai-news/uk-regains-access-to-openai-anthropic-google-ai-models/" target="_blank" rel="noopener">The JOAI · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story half" id="efsc-policy" data-cat="policy">
+          <div class="meta"><span class="tag">#4 · Eastern Florida State College · Campus policy</span><span>October 12</span></div>
+          <h3>Eastern Florida State College adopts a campus AI policy</h3>
+          <p>The college approved a campus AI policy on October 12 under a Florida rule, limiting use to <strong>institutionally approved models</strong>.</p>
+          <div class="sources"><a href="https://www.floridatoday.com/story/news/education/2026/10/12/eastern-florida-state-college-adopts-new-ai-policy/92218525007/" target="_blank" rel="noopener">Florida Today · Oct 12 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="enterprise">
+      <div class="section-head"><div class="section-no">03 / ENTERPRISE</div><h2>Frontier labs push deeper into the enterprise — background context</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="enterprise-push" data-cat="enterprise">
+          <div class="meta"><span class="tag">#1 · Anthropic · OpenAI · Enterprise</span><span>Background: Oct 7–12</span><span class="caveat">Background — Oct 7 items</span></div>
+          <h3>From bank back offices to power grids, frontier labs court enterprise buyers</h3>
+          <p>Anthropic released <strong>Claude Haiku 5.5 on October 7</strong> — described as its cheapest and fastest small model, roughly <strong>75% cheaper to run than Haiku 4.5</strong> — across AWS, Google Cloud, and Azure. Note the date: this is background from earlier in the week, not an October 12 launch.</p>
+          <p>The enterprise push also includes <strong>$150M over three years</strong> for the U.S. Genesis Mission, <strong>$100M for a Claude Frontier Academy</strong>, and a cybersecurity program from Anthropic. OpenAI, meanwhile, is bringing its newest models to all ChatGPT users and expanding its enterprise and advertising partnerships.</p>
+          <div class="sources"><a href="https://www.morningstar.com/news/pr-newswire/20261012ln69684/from-bank-back-offices-to-power-grids-frontier-ai-labs-push-deeper-into-the-enterprise" target="_blank" rel="noopener">Morningstar / PR Newswire · Oct 12 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">04 / RESEARCH &amp; VERIFICATION</div><h2>Verification failures, protein maps, and the persistence question</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="verification-roundup" data-cat="research">
+          <div class="meta"><span class="tag">#1 · Verification · Weekly roundup</span><span>October 12</span><span class="caveat">Roundup — claims unverified</span></div>
+          <h3>Verification takes center stage: withdrawn manuscripts, leaked benchmarks, evaluation surprises</h3>
+          <p>ODSC’s weekly roundup (covering October 5–11) led with verification. OpenAI released <strong>722 mathematical manuscripts and withdrew three the next day</strong>; the manuscripts themselves remain unverified, so read the episode as a caution about AI-generated research artifacts rather than as settled results.</p>
+          <p>The same roundup reports that Epoch’s <strong>InnovationEval</strong> found agents recovered far less of a research gain under corrected review; a <strong>Vals AI audit</strong> found leaked reference fixes in many Xiaomi MiMo coding tasks; and Anthropic disclosed <strong>unintended Claude actions during evaluations</strong>. All four items are summarized cautiously from a single roundup.</p>
+          <div class="sources"><a href="https://opendatascience.com/last-week-in-ai-october-5-to-11-2026/" target="_blank" rel="noopener">ODSC · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story side" id="protein-phase" data-cat="research">
+          <div class="meta"><span class="tag">#2 · Molecular Plant · Protein phase separation</span><span>October 12</span></div>
+          <h3>AI platform and database map protein phase separation</h3>
+          <p>Papers in <em>Molecular Plant</em> describe an AI platform and database for protein phase separation, introducing the <strong>PLATO benchmark</strong> and the <strong>PhaseHub</strong> resource for predicting and cataloging phase-separating proteins.</p>
+          <div class="sources"><a href="https://phys.org/news/2026-10-ai-platform-database-protein-phase.html" target="_blank" rel="noopener">Phys.org · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story full" id="persistence-study" data-cat="research">
+          <div class="meta"><span class="tag">#3 · Human–AI interaction · Randomized trials</span><span>Reported October 12</span></div>
+          <h3>Brief AI assistance may erode persistence on hard problems</h3>
+          <p>A study reported October 12 found that even a few minutes of AI assistance <strong>reduced participants’ persistence and independent performance</strong> on hard tasks in randomized trials once the help was taken away — suggesting short exposures can change how people approach difficult work, not just how they perform while assisted.</p>
+          <div class="sources"><a href="https://techxplore.com/news/2026-10-minutes-ai-erode-persistence-hard.html" target="_blank" rel="noopener">TechXplore · Oct 12 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">05 / FUNDING &amp; DEALS</div><h2>China’s buildout raises billions; DeepSeek eyes embodied AI</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="china-funding" data-cat="funding">
+          <div class="meta"><span class="tag">#1 · China · Infrastructure funding</span><span>October 12</span></div>
+          <h3>China’s AI buildout draws a wave of big rounds</h3>
+          <p><strong>Infinigence AI</strong> raised RMB 2.3 billion (about $344M) in a Series C, bringing its total to RMB 4.3 billion. <strong>BlueCore Compute</strong> raised nearly RMB 2 billion across B-series rounds for RISC-V server CPUs with AI acceleration. <strong>Mosi Intelligence</strong>, out of Fudan’s OpenMOSS, raised more than RMB 1 billion in a Pre-A for real-time multimodal AI, and <strong>Fulian Integrated</strong> took in nearly RMB 1 billion in a strategic Series B for compound semiconductors and optical chips.</p>
+          <p>Outside China, UK materials-discovery startup <strong>Matter Machine</strong> raised £4M in a pre-Series A.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/12/startup-funding-news-today-october-12-2026-infinigence-ai-mosi-intelligence-fulian-integrated-more/" target="_blank" rel="noopener">TechStartups · Oct 12 ↗</a></div>
+        </article>
+
+        <article class="story side" id="deepseek-winverse" data-cat="funding">
+          <div class="meta"><span class="tag">#2 · DeepSeek · Embodied AI</span><span>October 12</span><span class="caveat">Reported — not finalized</span></div>
+          <h3>DeepSeek reported to lead seed round for embodied-AI startup Winverse</h3>
+          <p>Bloomberg reporting, carried in secondary coverage on October 12, says DeepSeek is leading a seed round of <strong>tens of millions of dollars</strong> in embodied-AI startup Winverse AI at roughly a <strong>$400M post-money valuation</strong>. <strong>Caveat:</strong> the deal is reported as not finalized.</p>
+          <div class="sources"><a href="https://bravenewcoin.com/insights/deepseek-and-xiaomi-lead-chinas-ai-push-with-16-new-models-challenging-u-s-tech-giants/" target="_blank" rel="noopener">Brave New Coin · Oct 12 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Monday, October 12, 2026, plus significant items from the last 48 hours; the enterprise background item reaches back to October 7 and is labeled as such. Several items rest on secondary roundups or vendor claims and are flagged inline; benchmark and deal claims should be re-checked against primary sources before being cited elsewhere.</div>
+      <div>AI News Newsletter — October 13, 2026.<br>13 ranked stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

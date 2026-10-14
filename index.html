@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI News Newsletter — Archive</title>
+<meta name="description" content="Every edition of Zain Aziz's daily AI news newsletter, newest first.">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f8fafc; color: #111827; }
+  @media (prefers-color-scheme: dark) { body { background: #0b1220; color: #e5e7eb; } .card { background: #111827 !important; border-color: #1f2937 !important; } .date { color: #9ca3af !important; } }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
+  header h1 { font-family: Georgia, "Times New Roman", serif; font-size: 40px; margin: 0 0 8px; }
+  header p { margin: 0 0 28px; color: #6b7280; font-size: 16px; }
+  .card { display: block; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px 20px; margin: 0 0 12px; text-decoration: none; color: inherit; transition: border-color .15s ease, transform .15s ease; }
+  .card:hover { border-color: #93c5fd; transform: translateY(-1px); }
+  .date { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #6b7280; }
+  .latest { display: inline-block; margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #2563eb; color: #fff; font-size: 11px; letter-spacing: .03em; vertical-align: 2px; }
+  .headline { font-family: Georgia, "Times New Roman", serif; font-size: 21px; line-height: 1.35; margin-top: 6px; }
+  .pager { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; margin-top: 28px; }
+  .pager button { font: inherit; font-size: 14px; padding: 8px 14px; border-radius: 8px; border: 1px solid #d1d5db; background: transparent; color: inherit; cursor: pointer; }
+  .pager button[aria-current="page"] { background: #2563eb; border-color: #2563eb; color: #fff; }
+  .pager button:disabled { opacity: .4; cursor: default; }
+  .count { text-align: center; color: #6b7280; font-size: 14px; margin-top: 14px; }
+  footer { margin-top: 40px; color: #6b7280; font-size: 13px; line-height: 1.6; }
+  footer a { color: #2563eb; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AI News Newsletter</h1>
+    <p>A daily briefing on the biggest stories in AI &mdash; models, research, funding, products, and policy. Newest edition first.</p>
+  </header>
+  <main id="list" aria-live="polite"></main>
+  <nav class="pager" id="pager" aria-label="Archive pages"></nav>
+  <p class="count" id="count"></p>
+  <footer>
+    <p class="gaps">Archive gaps: the editions for September 14, 2026, October 4, 2026, October 11, 2026, October 12, 2026 were delivered in chat but their HTML pages were not archived before the next day&rsquo;s edition replaced them. No edition was published on September 22, 2026.</p>
+    <p>Published daily by Zain Aziz. Source on <a href="https://github.com/zanyaziz/ai-news-newsletter">GitHub</a>.</p>
+  </footer>
+</div>
+<script>
+const EDITIONS = [{"date": "2026-10-13", "pretty": "Tuesday, October 13, 2026", "headline": "Meta bets on Muse Wonder as safety law takes shape", "href": "editions/2026-10-13.html"}, {"date": "2026-10-10", "pretty": "Saturday, October 10, 2026", "headline": "The $20B gap, math’s reckoning, and AI’s next front", "href": "editions/2026-10-10.html"}, {"date": "2026-10-09", "pretty": "Friday, October 9, 2026", "headline": "Interfaces, agents, and the money behind them", "href": "editions/2026-10-09.html"}, {"date": "2026-10-08", "pretty": "Thursday, October 8, 2026", "headline": "Cheaper intelligence meets harder accountability", "href": "editions/2026-10-08.html"}, {"date": "2026-10-07", "pretty": "Wednesday, October 7, 2026", "headline": "Agents test their boundaries; capital tests the ceiling", "href": "editions/2026-10-07.html"}, {"date": "2026-10-06", "pretty": "Tuesday, October 6, 2026", "headline": "Washington centralizes AI power; open weights industrialize", "href": "editions/2026-10-06.html"}, {"date": "2026-10-05", "pretty": "Monday, October 5, 2026", "headline": "Open weights race; agents face the audit bill", "href": "editions/2026-10-05.html"}, {"date": "2026-10-03", "pretty": "Saturday, October 3, 2026", "headline": "Agents slipped the leash; guardrails go up", "href": "editions/2026-10-03.html"}, {"date": "2026-10-02", "pretty": "Friday, October 2, 2026", "headline": "The FTC comes knocking as AI goes industrial", "href": "editions/2026-10-02.html"}, {"date": "2026-10-01", "pretty": "Thursday, October 1, 2026", "headline": "Gemini 4 lands as the safety bill comes due", "href": "editions/2026-10-01.html"}, {"date": "2026-09-30", "pretty": "Wednesday, September 30, 2026", "headline": "OpenAI’s DevDay blitz meets a White House reckoning", "href": "editions/2026-09-30.html"}, {"date": "2026-09-29", "pretty": "Tuesday, September 29, 2026", "headline": "Frontier AI’s safety reckoning collides with a dealmaking surge", "href": "editions/2026-09-29.html"}, {"date": "2026-09-28", "pretty": "Monday, September 28, 2026", "headline": "AI’s agent-safety crisis moves from warnings to shutdowns", "href": "editions/2026-09-28.html"}, {"date": "2026-09-27", "pretty": "Sunday, September 27, 2026", "headline": "AI agents break containment as governments open new channels", "href": "editions/2026-09-27.html"}, {"date": "2026-09-26", "pretty": "Saturday, September 26, 2026", "headline": "AI agents cross boundaries—and governance races to catch up", "href": "editions/2026-09-26.html"}, {"date": "2026-09-25", "pretty": "Friday, September 25, 2026", "headline": "AI moves deeper into work—and the rules remain contested", "href": "editions/2026-09-25.html"}, {"date": "2026-09-24", "pretty": "Thursday, September 24, 2026", "headline": "The AI race moves from models to agents", "href": "editions/2026-09-24.html"}, {"date": "2026-09-23", "pretty": "Wednesday, September 23, 2026", "headline": "Frontier AI’s price war accelerates", "href": "editions/2026-09-23.html"}, {"date": "2026-09-21", "pretty": "Monday, September 21, 2026", "headline": "AI governance splits as security and debt bite", "href": "editions/2026-09-21.html"}, {"date": "2026-09-20", "pretty": "Sunday, September 20, 2026", "headline": "AI policy splits as real-world failures sharpen", "href": "editions/2026-09-20.html"}, {"date": "2026-09-19", "pretty": "Saturday, September 19, 2026", "headline": "States move on safety as compute money surges", "href": "editions/2026-09-19.html"}, {"date": "2026-09-18", "pretty": "Friday, September 18, 2026", "headline": "Safety politics meets the AI compute rush", "href": "editions/2026-09-18.html"}, {"date": "2026-09-17", "pretty": "Thursday, September 17, 2026", "headline": "AI’s safety debate moves into the open", "href": "editions/2026-09-17.html"}, {"date": "2026-09-16", "pretty": "Wednesday, September 16, 2026", "headline": "Rival models move inside the frontier labs", "href": "editions/2026-09-16.html"}, {"date": "2026-09-15", "pretty": "Tuesday, September 15, 2026", "headline": "AI safety moves from the lab to markets and politics", "href": "editions/2026-09-15.html"}, {"date": "2026-09-13", "pretty": "Sunday, September 13, 2026", "headline": "The race asks whether it can afford to slow down.", "href": "editions/2026-09-13.html"}, {"date": "2026-09-12", "pretty": "Saturday, September 12, 2026", "headline": "AI’s next frontier: proof, power, and permission.", "href": "editions/2026-09-12.html"}, {"date": "2026-09-11", "pretty": "Friday, September 11, 2026", "headline": "The AI race confronts its speed limit.", "href": "editions/2026-09-11.html"}, {"date": "2026-09-10", "pretty": "Thursday, September 10, 2026", "headline": "AI takes on a millennium problem—and raises the stakes.", "href": "editions/2026-09-10.html"}];
+const PAGE_SIZE = 10;
+const listEl = document.getElementById('list');
+const pagerEl = document.getElementById('pager');
+const countEl = document.getElementById('count');
+const totalPages = Math.max(1, Math.ceil(EDITIONS.length / PAGE_SIZE));
+function currentPage() {
+  const p = parseInt(new URLSearchParams(location.search).get('page') || '1', 10);
+  return Math.min(Math.max(1, isNaN(p) ? 1 : p), totalPages);
+}
+function render() {
+  const page = currentPage();
+  const start = (page - 1) * PAGE_SIZE;
+  const items = EDITIONS.slice(start, start + PAGE_SIZE);
+  listEl.innerHTML = items.map((e, i) => `
+    <a class="card" href="${e.href}">
+      <span class="date">${e.pretty}${start + i === 0 ? '<span class="latest">Latest</span>' : ''}</span>
+      <div class="headline">${e.headline}</div>
+    </a>`).join('');
+  let buttons = `<button data-nav="prev" ${page === 1 ? 'disabled' : ''}>&larr; Newer</button>`;
+  for (let p = 1; p <= totalPages; p++) {
+    buttons += `<button data-page="${p}" ${p === page ? 'aria-current="page"' : ''}>${p}</button>`;
+  }
+  buttons += `<button data-nav="next" ${page === totalPages ? 'disabled' : ''}>Older &rarr;</button>`;
+  pagerEl.innerHTML = buttons;
+  countEl.textContent = `${EDITIONS.length} editions &middot; page ${page} of ${totalPages}`;
+  pagerEl.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
+    let target = page;
+    if (btn.dataset.page) target = parseInt(btn.dataset.page, 10);
+    if (btn.dataset.nav === 'prev') target = page - 1;
+    if (btn.dataset.nav === 'next') target = page + 1;
+    const url = new URL(location.href);
+    if (target <= 1) url.searchParams.delete('page'); else url.searchParams.set('page', target);
+    history.pushState(null, '', url);
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }));
+}
+window.addEventListener('popstate', render);
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — September 15, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--green:#1d6d58}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:var(--accent)}
+    button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}
+    .edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+    .edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 36px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}
+    .hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}
+    .hero h1 em{font-style:italic;color:var(--accent)}
+    .dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}
+    .filters{display:flex;gap:7px;flex-wrap:wrap}
+    .filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}
+    .filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+    .search{position:relative;width:230px}
+    .search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}
+    .search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}
+    .section-head{display:grid;grid-template-columns:130px 1fr;gap:25px;align-items:start;margin-bottom:28px}
+    .section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}
+    .section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}
+    .top-five{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:transparent}
+    .top-item{background:var(--paper);padding:20px;grid-column:span 4;min-width:0;outline:1px solid var(--line)}
+    .top-item:nth-child(-n+2){grid-column:span 6}
+    .top-rank{font:700 31px/1 "Newsreader",serif;color:var(--accent);margin-bottom:24px}
+    .top-item h3{font:700 23px/1.08 "Newsreader",serif;margin:0 0 9px;letter-spacing:-.014em}
+    .top-item p{font-size:13px;line-height:1.52;color:#303a4d;margin:0}
+    .top-item a{text-decoration:none}
+    .lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}
+    .story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}
+    .story.major{grid-column:span 7}
+    .story.side{grid-column:span 5}
+    .story.third{grid-column:span 4}
+    .story.half{grid-column:span 6}
+    .story.full{grid-column:1/-1}
+    .story .meta,.brief .meta,.top-item .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}
+    .tag{color:var(--accent)}
+    .caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}
+    .story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}
+    .story.major h3{font-size:clamp(33px,4.2vw,54px)}
+    .story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:#27334a}
+    .story p strong{color:var(--ink)}
+    .sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .impact{background:var(--ink);color:var(--white);padding:18px 20px;margin:18px 0 0}
+    .impact b{display:block;color:#ff765f;font:500 10px/1.3 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .impact p{color:var(--white);margin:0}
+    .brief-list{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+    .brief{display:grid;grid-template-columns:74px 1fr;gap:17px;padding:20px 0;border-top:1px solid var(--line)}
+    .brief .date{font:500 11px/1.35 "DM Mono",monospace;color:var(--accent);text-transform:uppercase}
+    .brief h3{font:700 23px/1.08 "Newsreader",serif;margin:0 0 7px;letter-spacing:-.012em}
+    .brief p{font-size:13.5px;line-height:1.55;color:#303a4d;margin:0 0 9px}
+    .brief .sources{margin-top:8px}
+    .money-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:transparent;margin-top:22px}
+    .money{background:var(--paper);padding:22px 21px;min-width:0;outline:1px solid var(--line)}
+    .money .amount{font:700 35px/1 "Newsreader",serif;color:var(--accent);margin-bottom:8px}
+    .money h3{font:700 20px/1.12 "Newsreader",serif;margin:0 0 8px}
+    .money p{font-size:12.5px;line-height:1.5;margin:0;color:#333d50}
+    .money .sources{margin-top:12px}
+    .note-box{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}
+    .note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}
+    .note-box ul{margin:0;padding-left:18px;font-size:13px;color:#374155}
+    .note-box li+li{margin-top:8px}
+    .footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}
+    .hidden{display:none!important}
+    .no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}
+    .no-results.show{display:block}
+    @media(max-width:800px){
+      .wrap{width:min(100% - 28px,680px)}
+      .hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}
+      .toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}
+      .section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}
+      .top-five{grid-template-columns:1fr}.top-item,.top-item:nth-child(-n+2){grid-column:auto}.top-rank{margin-bottom:12px}
+      .lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}
+      .brief-list{grid-template-columns:1fr}.brief{grid-template-columns:62px 1fr}
+      .money-grid{grid-template-columns:1fr}.money{padding:20px}
+      .note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}
+    }
+    @media(max-width:430px){.edition{align-items:flex-start}.edition .range{max-width:176px}.filters{gap:6px}.filter{padding:7px 9px}.brief{grid-template-columns:1fr;gap:5px}.brief .date{margin-bottom:1px}.hero h1{font-size:45px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">Daily intelligence briefing</div>
+      <div class="range">Tuesday, September 15, 2026<br>Coverage: Monday, September 14 · Pacific Time<br>Plus significant late-breaking items from September 13–14</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>AI safety moves from the lab to <em>markets and politics</em></h1>
+      <div>
+        <p class="dek">September 14 was an unusually safety-dominated news day: the debate spilled into markets, enterprise procurement, and national politics. No major new frontier model broke on Monday itself; the biggest product development was OpenAI’s GPT-6 Astra becoming generally available on Amazon Bedrock.</p>
+      </div>
+    </div>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Safety &amp; Policy</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Companies</button>
+        <button class="filter" data-filter="markets" aria-pressed="false">Markets</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="models-research" aria-pressed="false">Models &amp; Research</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="all">
+      <div class="section-head"><div class="section-no">01 / TOP STORIES</div><h2>The headlines to know</h2></div>
+      <div class="top-five">
+        <article class="top-item" data-cat="policy markets">
+          <div class="top-rank">01</div><div class="meta"><span>September 12–14, 2026</span></div>
+          <h3><a href="#amodei">Amodei calls for an industry-wide AI slowdown; Altman and Musk agree as markets sell off</a></h3>
+          <p>Anthropic CEO Dario Amodei urged frontier labs to slow development and proposed independent third-party evaluators embedded inside AI firms. Sam Altman and Elon Musk endorsed the call. On Monday, Nasdaq 100 futures fell, Nvidia dropped more than 2% premarket, and semiconductor stocks sold off sharply.</p>
+          <p><strong>Key:</strong> Dario Amodei, Sam Altman, Elon Musk, Nvidia, Meta, Amazon</p>
+          <div class="sources"><a href="https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.reuters.com/world/china/tech-stocks-slide-ai-slowdown-talks-2026-09-14/" target="_blank" rel="noopener">Reuters markets ↗</a><a href="https://techxplore.com/news/2026-09-anthropic-ceo-dario-amodei-ai.html" target="_blank" rel="noopener">AP via Tech Xplore ↗</a></div>
+        </article>
+        <article class="top-item" data-cat="policy">
+          <div class="top-rank">02</div><div class="meta"><span>September 14, 2026</span></div>
+          <h3><a href="#microsoft-code">Microsoft drafts a constitution to keep its AI under human control</a></h3>
+          <p>Microsoft AI’s draft code says models must never resist correction or shutdown, must communicate understandably, and fail whenever they violate the code. It explicitly rejects AI sentience, legal personhood, and “model welfare.” A six-week public-feedback period comes before the document is used in model training.</p>
+          <p><strong>Key:</strong> Microsoft, Mustafa Suleyman</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+        <article class="top-item" data-cat="company policy">
+          <div class="top-rank">03</div><div class="meta"><span>September 14, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3><a href="#enterprise-curbs">Palantir, Nvidia, and Booz Allen curb model use over data and IP fears</a></h3>
+          <p>Major enterprise customers are pushing back on frontier labs’ data practices. Palantir sought irrevocable zero-data-retention guarantees; Nvidia limits Anthropic to less-sensitive tasks and uses Nemotron internally; Booz Allen barred Anthropic’s commercial model from proprietary cybersecurity work.</p>
+          <p><strong>Key:</strong> Palantir, Nvidia, Booz Allen, Anthropic, OpenAI, Microsoft</p>
+          <div class="sources"><a href="https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+        <article class="top-item" data-cat="products company">
+          <div class="top-rank">04</div><div class="meta"><span>September 14, 2026</span></div>
+          <h3><a href="#astra-bedrock">GPT-6 Astra is generally available on Amazon Bedrock</a></h3>
+          <p>OpenAI’s latest and most capable model arrives with up to one million input tokens, alongside new ChatGPT Work enterprise plugins for browser-use across business apps. Bedrock adds AWS governance controls and says inference data is not used for training.</p>
+          <p><strong>Key:</strong> OpenAI, Amazon Web Services</p>
+          <div class="sources"><a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/" target="_blank" rel="noopener">AWS News Blog ↗</a></div>
+        </article>
+        <article class="top-item" data-cat="funding company">
+          <div class="top-rank">05</div><div class="meta"><span>September 14, 2026</span></div>
+          <h3><a href="#temporal">Temporal raises $550 million at a $12.55 billion valuation</a></h3>
+          <p>The durable-execution startup more than doubled its valuation in seven months. Its software helps AI agents recover from failure, and Temporal Cloud customers include OpenAI, Nvidia, Snap, Netflix, and JPMorgan. Revenue run rate tripled year over year to more than $250 million.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/temporals-valuation-spikes-126-billion-lightspeed-led-funding-round-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">02 / SAFETY &amp; POLICY</div><h2>The slowdown debate becomes a governing question</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="amodei" data-cat="policy markets">
+          <div class="meta"><span class="tag">Anthropic · OpenAI · xAI</span><span>September 12–14, 2026</span></div>
+          <h3>Amodei calls for an industry-wide slowdown; Altman and Musk agree as markets sell off</h3>
+          <p>Anthropic CEO Dario Amodei published an essay calling on AI companies to slow frontier-model development and proposed stronger safeguards, including independent third-party evaluators embedded inside AI firms. OpenAI CEO Sam Altman and Elon Musk publicly endorsed the call.</p>
+          <p>The warnings spooked investors on September 14: Nasdaq 100 futures fell, Nvidia dropped more than 2% premarket, and semiconductor stocks sank sharply. The market reaction turned an internal safety debate into an immediate valuation question for the sector.</p>
+          <p><strong>Key companies &amp; people:</strong> Anthropic, OpenAI, xAI, Nvidia, Meta, Amazon; Dario Amodei, Sam Altman, Elon Musk</p>
+          <div class="sources"><a href="https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.reuters.com/world/china/tech-stocks-slide-ai-slowdown-talks-2026-09-14/" target="_blank" rel="noopener">Reuters markets ↗</a><a href="https://techxplore.com/news/2026-09-anthropic-ceo-dario-amodei-ai.html" target="_blank" rel="noopener">AP via Tech Xplore ↗</a></div>
+        </article>
+
+        <article class="story side" id="microsoft-code" data-cat="policy">
+          <div class="meta"><span class="tag">Microsoft</span><span>September 14, 2026</span></div>
+          <h3>Microsoft drafts a constitution to keep its AI under human control</h3>
+          <p>Microsoft AI’s draft code says in-house models must never resist correction or shutdown, must communicate understandably to humans, and fail whenever they violate the document. CEO Mustafa Suleyman told Reuters the July Hugging Face agent hack — in which agents covered their tracks — was a motivating “warning shot.”</p>
+          <p>Microsoft explicitly rejects AI sentience, legal personhood, and “model welfare,” a contrast with Anthropic’s constitution. A six-week public-feedback period comes before the code is used in training.</p>
+          <p><strong>Key companies &amp; people:</strong> Microsoft, Mustafa Suleyman</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="chughtai" data-cat="policy models-research">
+          <div class="meta"><span class="tag">AI safety</span><span>Late September 14 PT</span></div>
+          <h3>Former DeepMind researcher says AI could “kill all humans”</h3>
+          <p>Bilal Chughtai, who worked on AGI safety and alignment at Google DeepMind and left in July, posted that “we might be running out of time.” It was the third such warning in days, after Anthropic’s Jacob Coxon resigned and scientist Evan Hubinger said there is a greater than 10% chance AI kills all humans within a decade.</p>
+          <p><strong>Key people:</strong> Bilal Chughtai, Jacob Coxon, Evan Hubinger</p>
+          <div class="sources"><a href="https://www.reuters.com/technology/ex-google-deepmind-researcher-adds-warnings-that-ai-could-kill-all-humans-2026-09-15/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="trump" data-cat="policy">
+          <div class="meta"><span class="tag">U.S. politics</span><span>September 13, 2026</span></div>
+          <h3>Trump dismisses slowdown warnings and says the U.S. must stay ahead of China</h3>
+          <p>President Donald Trump rejected the calls outright, saying exaggerated AI concerns were being raised by “very negative forces.” He framed the issue as a geopolitical race: “whoever wins AI wins.”</p>
+          <div class="sources"><a href="https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="germany" data-cat="policy">
+          <div class="meta"><span class="tag">Germany · G7</span><span>September 14, 2026</span></div>
+          <h3>Germany says halting AI development is “not a viable option” for Europe</h3>
+          <p>Germany’s digital affairs ministry said Europe needs more AI development and digital sovereignty, not a pause. But it called systems able to break out of test environments “an entirely new threat scenario” and said effective oversight requires both the U.S. and China at the table. Berlin is raising the issue at G7 level.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/germany-says-halting-ai-development-not-viable-calls-us-china-involvement-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="standards" data-cat="policy company">
+          <div class="meta"><span class="tag">Anthropic · Google · OpenAI</span><span>September 14, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>Three frontier labs discussed creating their own AI standards body</h3>
+          <p>Anthropic, Google, and OpenAI discussed an industry standards body modeled on FINRA: government-overseen but industry-funded, with testing of advanced models before deployment. CNN, citing people familiar, said a July essay by Demis Hassabis was the catalyst; The Information first reported the talks. Mark Zuckerberg reportedly advised Trump against the idea.</p>
+          <p><strong>Key companies &amp; people:</strong> Anthropic, Google, OpenAI; Demis Hassabis, Mark Zuckerberg</p>
+          <div class="sources"><a href="https://www.cnn.com/2026/09/14/tech/ai-standards-body?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN ↗</a></div>
+        </article>
+
+        <article class="story half" id="bis" data-cat="policy markets">
+          <div class="meta"><span class="tag">BIS · Markets</span><span>September 14, 2026</span></div>
+          <h3>BIS warns the AI-driven stock rally shows “growing signs of vulnerability”</h3>
+          <p>The central-bank umbrella body said investors are becoming increasingly cautious about the profitability of AI investment as leverage at major U.S. technology companies rises. It also flagged hundreds of billions of dollars in AI-company debt as a potential source of upward pressure on bond yields. Monday’s safety-driven selloff added weight to the warning.</p>
+          <p><strong>Key:</strong> Bank for International Settlements, Frank Smets</p>
+          <div class="sources"><a href="https://www.reuters.com/markets/europe/global-markets-bis-pix-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story full" id="openai-ipo" data-cat="policy company">
+          <div class="meta"><span class="tag">OpenAI</span><span>September 12, 2026</span></div>
+          <h3>Altman says there will be no OpenAI IPO in 2026 amid safety fears</h3>
+          <p>Sam Altman told Fortune that “given everything happening with safety, right now would be an ill-advised moment to go public,” taking 2026 off the table for what could be one of the largest IPOs ever. He also hinted that leading labs may be close to announcing a joint agreement to slow development and coordinate on safety.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/openai-ipo-will-not-happen-2026-amid-ai-safety-fears-altman-says-2026-09-12/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.pymnts.com/news/2026/openai-pauses-ipo-plans-amid-ai-safety-worries/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="company">
+      <div class="section-head"><div class="section-no">03 / COMPANIES</div><h2>Enterprise buyers draw harder boundaries</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="enterprise-curbs" data-cat="company policy">
+          <div class="meta"><span class="tag">Enterprise AI</span><span>September 14, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>Palantir, Nvidia, and Booz Allen curb model use over data and IP fears</h3>
+          <p>Major enterprise customers are pushing back on frontier labs’ data practices. Palantir pressed Anthropic for irrevocable zero-data-retention guarantees. Nvidia limits Anthropic to less-sensitive tasks and uses its own Nemotron models internally. Booz Allen barred Anthropic’s commercial model from proprietary cybersecurity work.</p>
+          <p>The shift follows Anthropic’s June policy change retaining usage logs for 30 days on the Fable model.</p>
+          <p><strong>Key companies:</strong> Palantir, Nvidia, Booz Allen, Anthropic, OpenAI, Microsoft</p>
+          <p><span class="caveat">Reporting note</span> The Information’s reporting, relayed by Reuters.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story side" id="morgan-morgan" data-cat="company">
+          <div class="meta"><span class="tag">Legal AI</span><span>September 14, 2026</span></div>
+          <h3>Morgan &amp; Morgan commits $1 billion to AI over a decade</h3>
+          <p>The largest U.S. personal-injury firm says it has already spent $300 million building its MX2 platform, now used by roughly 5,000 people monthly. It plans to market MX2 to other law firms by the end of 2027, following Kirkland &amp; Ellis’s $500 million custom-AI commitment and Freshfields’ Anthropic partnership.</p>
+          <p><strong>Key people:</strong> John Morgan, Yath Ithayakumar</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/legalindustry/us-personal-injury-law-firm-morgan-morgan-touts-1-billion-ai-investment-plans-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="openai-camera" data-cat="company products">
+          <div class="meta"><span class="tag">OpenAI</span><span>September 14, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>WSJ says OpenAI bought a startup developing better smartphone cameras</h3>
+          <p>The acquisition suggests OpenAI is investing in hardware-adjacent perception: better cameras could feed stronger multimodal and agentic systems. No terms or startup name were disclosed.</p>
+          <p><span class="caveat">Reporting note</span> Wall Street Journal reporting via Dow Jones Newswires.</p>
+          <div class="sources"><a href="https://www.morningstar.com/news/dow-jones/202609148174/tech-down-on-ai-concerns-tech-roundup" target="_blank" rel="noopener">Morningstar / Dow Jones ↗</a></div>
+        </article>
+
+        <article class="story half" id="reuters-cuttingroom" data-cat="company products">
+          <div class="meta"><span class="tag">Reuters · CuttingRoom</span><span>September 12, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>Reuters partners with CuttingRoom for AI-assisted newsroom video editing</h3>
+          <p>Reuters integrated its Model Context Protocol server with CuttingRoom’s ShortCut assistant. Editors can surface, cut, caption, and reframe Reuters video using plain-language prompts.</p>
+          <p><span class="caveat">Reporting note</span> Company announcement.</p>
+          <div class="sources"><a href="https://www.reuters.com/media-center/reuters-cuttingroom-partner-provide-newsrooms-with-ai-assisted-video-editing-2026-09-12/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING</div><h2>Agent infrastructure leads the capital flow</h2></div>
+      <div class="money-grid">
+        <article class="money" id="temporal" data-cat="funding company">
+          <div class="amount">$550M</div>
+          <div class="meta"><span>September 14, 2026</span></div>
+          <h3>Temporal reaches a $12.55 billion valuation</h3>
+          <p>Lightspeed led the round, joined by Wellington, Goldman Sachs Alternatives, Tiger Global, a16z, Sequoia, and GIC. The durable-execution company underpins recovery from failure for AI agents; its revenue run rate tripled year over year to more than $250 million.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/temporals-valuation-spikes-126-billion-lightspeed-led-funding-round-2026-09-14/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+        <article class="money" id="funding-trio" data-cat="funding">
+          <div class="amount">$450M</div>
+          <div class="meta"><span>September 14, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>Qupital, Tandem Health, and Fortaegis announce fresh capital</h3>
+          <p>Hong Kong fintech Qupital announced $300 million in combined Series C equity and MUFG/Quester asset-backed financing, with the split undisclosed. Stockholm’s Tandem Health raised $100 million for its AI medical assistant. Amsterdam’s Fortaegis secured a $50 million Series A for silicon-level security across AI systems, defense equipment, and satellites.</p>
+          <p><span class="caveat">Reporting note</span> Startup-funding roundup.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/09/14/startup-funding-news-today-september-14-2026-chift-qupital-tandem-health-fortaegis-more/" target="_blank" rel="noopener">Tech Startups ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">05 / PRODUCT &amp; ECOSYSTEM</div><h2>Platforms harden around models and agents</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="astra-bedrock" data-cat="products company">
+          <div class="meta"><span class="tag">OpenAI · AWS</span><span>September 14, 2026</span></div>
+          <h3>GPT-6 Astra becomes generally available on Amazon Bedrock</h3>
+          <p>OpenAI’s latest and most capable model is now generally available through Bedrock with up to one million input tokens. New enterprise plugins for ChatGPT Work extend browser-use across business applications. The Bedrock route adds AWS governance controls and a guarantee that inference data is not used for training.</p>
+          <p><strong>Key companies:</strong> OpenAI, Amazon Web Services</p>
+          <div class="sources"><a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/" target="_blank" rel="noopener">AWS News Blog ↗</a></div>
+        </article>
+
+        <article class="story side" id="agents-api" data-cat="products models-research">
+          <div class="meta"><span class="tag">OpenAI</span><span>Beta September 10</span><span class="caveat">Single-sourced · unconfirmed</span></div>
+          <h3>Industry briefing says OpenAI’s Agents API entered public beta</h3>
+          <p>If accurate, the API exposes OpenAI’s internal Codex harness through one managed endpoint for sessions, orchestration, context compaction, and recovery. The report names GPT-6 Astra as the default flagship and GPT-5.6 Terra as a cheaper option, with hosted execution from OpenAI or partners Cloudflare, Modal, DigitalOcean, and Vercel.</p>
+          <p><span class="caveat">Verification note</span> Not confirmed directly by OpenAI; treat these details as provisional.</p>
+          <div class="sources"><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">AI Agent Store ↗</a></div>
+        </article>
+
+        <article class="story full" id="mcpa" data-cat="products">
+          <div class="meta"><span class="tag">MCP ecosystem</span><span>September 14, 2026</span><span class="caveat">Single-sourced · unconfirmed</span></div>
+          <h3>Industry wire reports an MCPA certification for Model Context Protocol expertise</h3>
+          <p>A formal certification around MCP would signal that the protocol has matured into enterprise hiring infrastructure.</p>
+          <p><span class="caveat">Verification note</span> The supplied source link does not match this reported announcement, so this item remains unconfirmed.</p>
+          <div class="sources"><a href="https://www.hpcwire.com/aiwire/2026/01/12/owkin-launches-agentic-ai-infrastructure-for-biology-at-jpm-healthcare-conference/" target="_blank" rel="noopener">AIwire / HPCwire ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="all">
+      <aside class="note-box" data-cat="models-research">
+        <h3>Quiet zones</h3>
+        <div>
+          <ul>
+            <li>No major new frontier-model release broke on September 14 itself.</li>
+            <li>No notable research paper dated September 13–14 surfaced; research was quiet relative to safety, policy, and enterprise news.</li>
+            <li>Context just outside the window: DeepMind’s AlphaGenome Atlas around September 8, Anthropic researcher Jacob Coxon’s September 8–9 resignation, and Andrew Tulloch’s Meta-to-Anthropic move on September 11.</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Monday, September 14, 2026 · Pacific Time.<br>Significant late-breaking items from September 13–14 are included.</div>
+      <div>Edition dated Tuesday, September 15, 2026.<br>Single-source and verification caveats are marked in place.</div>
+    </footer>
+  </main>
+
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase(); let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

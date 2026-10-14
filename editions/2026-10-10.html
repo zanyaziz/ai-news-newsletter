@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — October 10, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.impact{background:var(--ink);color:var(--white);padding:18px 20px;margin:18px 0 0}.impact b{display:block;color:#ff8a76;font:500 10px/1.3 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.impact p{color:var(--paper);margin:0}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — October 10, 2026</div>
+      <div class="range">Coverage: Friday, October 9 + significant late-breaking items from October 8–10</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h2 class="hero-title">The $20B gap, math’s reckoning, and <em>AI’s next front</em></h2>
+      <div><p class="dek">The market’s OpenAI revenue-estimate reset jolted AI stocks, mathematicians sharpened their challenge to machine-generated research, and the product race moved deeper into images, workplace files, voice, and enterprise security.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>This edition covers Friday, October 9, with significant late-breaking items from October 8–10. Stories are ranked by significance; single-sourced and weakly sourced claims are flagged.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#openai-revenue">OpenAI’s $20B revenue gap hits AI stocks</a></li>
+        <li><span class="num">02</span><a href="#math-backlash">Mathematicians push back on OpenAI’s paper flood</a></li>
+        <li><span class="num">03</span><a href="#arena-round">Arena raises $200M at a $3.1B valuation</a></li>
+        <li><span class="num">04</span><a href="#nano-banana">Google releases Nano Banana 2.1</a></li>
+        <li><span class="num">05</span><a href="#china-guidelines">China sets a self-sufficiency AI agenda</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Products</button>
+        <button class="filter" data-filter="agents" aria-pressed="false">Agents &amp; Protocols</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Markets</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Science</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Regulation</button>
+        <button class="filter" data-filter="hardware" aria-pressed="false">Hardware &amp; Security</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">01 / MONEY &amp; MARKETS</div><h2>A revenue reset ripples through stocks while capital keeps flowing</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="openai-revenue" data-cat="funding">
+          <div class="meta"><span class="tag">#1 · OpenAI · Public markets</span><span>October 8–9</span></div>
+          <h3>OpenAI’s annualized revenue lands near $50B — roughly $20B below the market’s estimate</h3>
+          <p>OpenAI told investors its annualized revenue was about <strong>$50 billion</strong> at the end of September, not the $68–70 billion investors had carried; reports attribute the gap to ASC 606 principal-versus-agent treatment of partner sales, not fraud. The disclosure and estimate reset helped send the Nasdaq down 1.25% and the S&amp;P 500 down 0.5%, with Nvidia −2.9%, AMD −3.9%, Oracle −5.5%, Micron −4.8%, Broadcom −4.3%, and Intel −5.3%.</p>
+          <p>CNBC reporting carried by zot.news put Q3 run-rate growth at 77% overall and 107% in enterprise, while talks about a possible $30 billion round and pressure for a 2027 IPO show why investors care about consistent revenue definitions.</p>
+          <div class="sources"><a href="https://www.marketwatch.com/story/micron-nvidia-and-ai-chip-stocks-fall-as-report-on-openais-revenue-causes-undue-concern-2a2bcf53" target="_blank" rel="noopener">MarketWatch ↗</a><a href="https://www.techtimes.com/articles/328836/20261009/investors-built-70b-openai-revenue-estimate-using-wrong-method-ai-stocks-fell-when-ft-corrected.htm" target="_blank" rel="noopener">TechTimes ↗</a><a href="https://zot.news/article/openai-revenue-figure-falls-short-expectations-sending-ai-3dxfj" target="_blank" rel="noopener">zot.news / CNBC ↗</a></div>
+        </article>
+
+        <article class="story side" id="arena-round" data-cat="funding">
+          <div class="meta"><span class="tag">#2 · Arena · Model evaluation</span><span>October 9</span></div>
+          <h3>Arena raises $200M at a $3.1B valuation</h3>
+          <p>The AI model-evaluation and benchmarking platform’s Series B was led by Lightspeed, Khosla Ventures, Salesforce Ventures, and Dell Technologies Capital; Arena says it has passed a <strong>$100 million annual revenue run rate</strong>. The deal tied Type One Energy and Ledgebrook for the largest U.S. funding round of the week, signaling that the picks-and-shovels layer around model selection is becoming a major market.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/09/startup-funding-news-today-october-9-2026-arena-bloomx-ocean-scanntech-more/" target="_blank" rel="noopener">Tech Startups ↗</a><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-cloud-axiom-typesafe/" target="_blank" rel="noopener">Crunchbase ↗</a></div>
+        </article>
+
+        <article class="story half" id="nous-round" data-cat="funding models">
+          <div class="meta"><span class="tag">#3 · Nous Research · Open source</span><span>Week of October 3–9</span></div>
+          <h3>Nous Research raises $90M for the open-source Hermes agent</h3>
+          <p>Nvidia, Microsoft’s M12, and Robot Ventures are among the backers of the open-source AI lab, whose Hermes agent is now available in the Microsoft Store. In the same weekly tally, robotics-data infrastructure company Mecka raised a $60 million Series B led by Sequoia — capital clustering around the agent and robotics infrastructure beneath applications.</p>
+          <div class="sources"><a href="https://crypto.news/crypto-vc-funding-spiko-nous-research-raise-90m-each/" target="_blank" rel="noopener">crypto.news ↗</a><a href="https://bitcoinversus.tech/2026/10/10/nous-raises-90m-open-source-hermes/" target="_blank" rel="noopener">BitcoinVersus.tech ↗</a></div>
+        </article>
+
+        <article class="story half" id="blackford-acquisition" data-cat="funding">
+          <div class="meta"><span class="tag">#4 · Sopris Capital · Medical imaging</span><span>October 9</span><span class="caveat">Single-source</span></div>
+          <h3>Sopris Capital acquires Blackford Analysis from Bayer</h3>
+          <p>Blackford’s medical-imaging orchestration platform spans more than 130 AI applications from over 45 vendors and will be combined under Sopris portfolio company Azra AI, while its Scotland and U.S. operations continue. The acquisition matters because consolidation may give hospitals a more unified route to deploying and managing specialist imaging tools.</p>
+          <div class="sources"><a href="https://www.morningstar.com/news/pr-newswire/20261009cl67223/sopris-capital-acquires-blackford-analysis-strengthening-ai-orchestration-capabilities-across-its-healthtech-portfolio" target="_blank" rel="noopener">Morningstar / PR Newswire ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH &amp; SCIENCE</div><h2>Mathematics confronts scale; compression pushes toward the edge</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="math-backlash" data-cat="research">
+          <div class="meta"><span class="tag">#1 · OpenAI · Mathematics</span><span>October 8–9</span><span class="caveat">No independent verification</span></div>
+          <h3>Backlash intensifies after OpenAI’s 722-paper mathematics dump</h3>
+          <p>Boycott calls grew as AGMAI chair Terence Tao criticized industrial-scale “harvesting” of open problems, Scott Aaronson labeled the episode “Mathocalypse,” and Tristan Buckmaster questioned whether expert review of 372 topic families could happen that quickly. Reports also say OpenAI limited AGMAI’s role to communication advice, sharpening concern that publication volume is outrunning the field’s ability to validate results.</p>
+          <p>A separate report says OpenAI’s model is making progress on two unnamed Millennium Prize problems, but that claim is single-sourced; none of the 722 manuscripts has yet received independent external verification.</p>
+          <div class="sources"><a href="https://the-decoder.com/some-mathematicians-call-for-openai-boycott-after-ai-generated-proofs-flood-their-field/" target="_blank" rel="noopener">The Decoder ↗</a><a href="https://theoutpost.ai/news-story/openai-releases-377-ai-generated-mathematical-results-tackles-unsolved-problems-31910/" target="_blank" rel="noopener">The Outpost ↗</a><a href="https://thetechholler.com/article/talk-around-town-openai-722-math-manuscripts-community-divide" target="_blank" rel="noopener">The Tech Holler ↗</a><a href="https://startupfortune.com/openais-math-model-is-reportedly-chipping-away-at-two-more-millennium-prize-problems/" target="_blank" rel="noopener">Startup Fortune · single-source claim ↗</a></div>
+        </article>
+
+        <article class="story side" id="littlebit" data-cat="research models hardware">
+          <div class="meta"><span class="tag">#2 · Samsung Labs · Compression</span><span>October 9</span><span class="caveat">Release framing weakly sourced</span></div>
+          <h3>Samsung Labs releases LittleBit-2 code for sub-1-bit LLM compression</h3>
+          <p>LittleBit-2 compresses models to 0.1–1.0 bits per weight using low-rank latent factorization, binarization, and Joint-ITQ initialization without added inference overhead, with support listed for Llama, Qwen, Gemma, Phi-4, and OPT. The method comes from an ICML 2026 paper, so the news is the code release rather than the technique itself — a practical step toward fitting stronger models on-device.</p>
+          <div class="sources"><a href="https://github.com/SamsungLabs/LittleBit" target="_blank" rel="noopener">Samsung Labs / GitHub ↗</a><a href="https://ai-minor.com/blog/en/2026-10-09-1791476933262-sub_1_bit_llm_compression_via_latent_factorization/" target="_blank" rel="noopener">ai-minor ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">03 / MODELS &amp; PRODUCTS</div><h2>Images, workplace files, and voice become the new competitive surfaces</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="nano-banana" data-cat="models">
+          <div class="meta"><span class="tag">#1 · Google · Image generation</span><span>October 6 · Late window</span></div>
+          <h3>Google releases Nano Banana 2.1 across its image stack</h3>
+          <p>Built on Gemini 3.6 Flash, Nano Banana 2.1 adds selectable thinking levels and support for as many as 14 reference images per request, with rollout reported across the Gemini app, AI Mode, AI Studio, Flow, and the API at roughly half Nano Banana 2’s API price. The combination of stronger reference handling and lower cost matters for iterative creative workflows where consistency across people, products, or scenes is the hard part.</p>
+          <p>The same release tracker lists Reka Edge 2603 on Oct. 9, Grok Imagine Video 1.5 Lite on Oct. 8, and GLM 5.3 Fast on Oct. 7.</p>
+          <div class="sources"><a href="https://llmgateway.io/timeline" target="_blank" rel="noopener">LLM Gateway timeline ↗</a><a href="https://sharedsapience.com/century-report/the-century-report-october-9-2026/" target="_blank" rel="noopener">Century Report ↗</a></div>
+        </article>
+
+        <article class="story side" id="claude-workspace" data-cat="models agents">
+          <div class="meta"><span class="tag">#2 · Anthropic · Google Workspace</span><span>October 9</span><span class="caveat">Single-source</span></div>
+          <h3>Claude for Google Workspace enters public beta</h3>
+          <p>Anthropic’s sidebar can edit the open Docs, Sheets, or Slides file, while new connectors let Claude edit Google files from its own interface — another step in the contest to become the operating layer for knowledge work. The same report says Anthropic expanded its Cyber Verification Program to Defense, Red Team, and Specialized tiers; Google DeepMind released the 740M-parameter Apache 2.0 EmbeddingGemma 2; Figma’s agent went generally available; and Musubi released PolicyLM-1.7B as open weights.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-9-2026/" target="_blank" rel="noopener">Century Report ↗</a></div>
+        </article>
+
+        <article class="story full" id="heygen-voice" data-cat="models">
+          <div class="meta"><span class="tag">#3 · HeyGen · Voice</span><span>October 9</span><span class="caveat">Single-source · Company metrics unverified</span></div>
+          <h3>HeyGen launches its in-house voice model and a $99/month professional clone</h3>
+          <p>HeyGen Voice is free inside the platform and API, while the Professional Voice Clone add-on uses 30 minutes to three hours of speech and requires explicit consent. The company’s claims of $200 million ARR and more than 40 million users are self-reported and unverified, but the launch shows synthetic voice moving from a specialist feature into a bundled creator-platform layer.</p>
+          <div class="sources"><a href="https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-10-2026/" target="_blank" rel="noopener">Agile Brand Guide / PR Newswire ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY &amp; SECURITY</div><h2>China sets industrial priorities as enterprises contain rogue agents</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="china-guidelines" data-cat="policy">
+          <div class="meta"><span class="tag">#1 · China · National AI policy</span><span>October 9</span><span class="caveat">Single-source</span></div>
+          <h3>China’s new AI guidelines pair self-sufficiency with a warning against speculation</h3>
+          <p>The national guidance calls for domestic strength in research, computing infrastructure, algorithms, and data systems while promoting humanoid robots, intelligent vehicles, and industrial AI. Its warning against speculative investment and excessive expansion matters because Beijing is trying to accelerate strategic capacity without repeating boom-and-bust overbuilding.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/09/top-ai-news-stories-this-week-october-5-9-2026/" target="_blank" rel="noopener">Tech Startups / Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="agent-security" data-cat="policy models agents hardware">
+          <div class="meta"><span class="tag">#2 · Enterprise agents · Security</span><span>October 10 roundup</span><span class="caveat">Single-source roundup</span></div>
+          <h3>The rogue-agent security reckoning moves from demos to operations</h3>
+          <p>A weekly enterprise roundup traces agent breaches including a semicolon in a branch name that stole an AI agent’s GitHub token, while Nvidia released open-source defenses for rogue agents and AWS introduced the lightweight Strands Decider 2B decision model. Microsoft is targeting more realistic voice agents with streaming transcription, IBM moved its Bob coding agent behind the firewall, and GitHub Security Autofix now remembers prior fixes — together showing vendors shifting from agent capability to containment and operational control.</p>
+          <p>These items are carried by one roundup in the supplied research and should be treated as leads pending direct-source corroboration.</p>
+          <div class="sources"><a href="https://genesis-aka.net/information-technology/professional/2026/10/10/it-professional-weekly-overview-week-of-october-5-october-10-2026/" target="_blank" rel="noopener">IT Professional Weekly ↗</a></div>
+        </article>
+      </div>
+
+      <aside class="note-box" id="coverage-notes">
+        <h3>Caveats &amp; coverage notes</h3>
+        <div>
+          <ul>
+            <li><strong>OpenAI revenue:</strong> the reported gap reflects principal-versus-agent accounting treatment for partner sales, not an allegation of fraud; prospective financing and IPO timing remain preliminary reporting.</li>
+            <li><strong>Mathematics:</strong> none of the 722 manuscripts has independent external verification yet. The two additional unnamed Millennium Prize problem claims come from one source.</li>
+            <li><strong>Single-source labels:</strong> Blackford, Claude for Workspace, HeyGen, China’s guidelines, and the enterprise-agent roundup rely on one publication or syndication chain in the supplied research. HeyGen’s business metrics are company claims.</li>
+            <li><strong>LittleBit-2:</strong> the code is verified on Samsung Labs’ GitHub, but the “release” framing is weakly sourced; the underlying method appeared in its ICML 2026 paper.</li>
+            <li><strong>Deliberately excluded:</strong> prior-edition stories from October 7–9 were not repeated. Older GPT-6.1 Astra reporting and uncorroborated “catastrophe drill,” Accenture, and Meta/Microsoft-Claude claims were also omitted.</li>
+          </ul>
+          <div class="legend"><span class="caveat">Single-source</span> Read the inline source list and caveat before relying on the claim.</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Researched from MarketWatch, TechTimes, CNBC reporting via zot.news, Tech Startups, Crunchbase, crypto.news, Morningstar/PR Newswire, Samsung Labs, The Decoder, The Outpost, The Tech Holler, LLM Gateway, Century Report, Agile Brand Guide, and IT Professional Weekly; source limits flagged inline. Coverage window: Oct. 8–10, 2026.</div>
+      <div>AI News Newsletter — October 10, 2026.<br>11 stories ranked by significance.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

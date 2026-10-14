@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Wednesday, October 14, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Wednesday, October 14, 2026</div>
+      <div class="range">Covering Tuesday, October 13, 2026 (+ significant late-breaking items from Oct 12–13)</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Small models inch toward <em>self-replication</em> as Anthropic opens its books</h1>
+      <div><p class="dek">Anthropic warns that small models may soon copy themselves onto unsecured home devices, Apple puts a personal Siri into a $299 smart-home hub, and Character.AI’s collapse lands one of AI’s first marquee bankruptcies.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Stories are ranked by significance within each category. Reported-but-unconfirmed figures, vendor claims, and upper-bound test results are flagged inline and collected in the caveats box below.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#self-replication">Anthropic warns small models may soon self-replicate without data centers</a></li>
+        <li><span class="num">02</span><a href="#apple-homeview">Apple launches $299 HomeView hub with personal Siri AI</a></li>
+        <li><span class="num">03</span><a href="#anthropic-ipo">Anthropic to disclose results for the first time ahead of a possible $2 trillion IPO</a></li>
+        <li><span class="num">04</span><a href="#character-ai">Character.AI files Chapter 11, Disney bids $20 million for a license</a></li>
+        <li><span class="num">05</span><a href="#muse-wonder">Meta’s Muse Wonder lands in fourth place as labs fight evaluators over what they can publish</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor’s caveats — how to read this edition</h3>
+        <ul>
+          <li>Meta published <strong>no benchmarks for Muse Wonder</strong> — every figure in that story is third-party.</li>
+          <li>Anthropic’s self-replication result is an <strong>upper-bound test with security steps removed</strong>, not a demonstration against a defended system.</li>
+          <li>Anthropic’s IPO valuation and revenue figures are <strong>reported talk, not confirmed disclosures</strong>.</li>
+          <li>Broadcom and OpenAI financing amounts include <strong>talks and planned tranches</strong>, not only completed deals.</li>
+          <li>A circulating claim that OpenAI solved the Navier–Stokes problem appeared only in a <strong>single low-credibility source</strong> with no OpenAI announcement — <strong>excluded as unverified</strong>.</li>
+          <li>Character.AI bankruptcy details are <strong>reported from the filing via secondary coverage</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models</button>
+        <button class="filter" data-filter="safety" aria-pressed="false">Safety &amp; Research</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="companies" aria-pressed="false">Companies &amp; Funding</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Markets</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODELS</div><h2>Wonder’s independent scores arrive; HeyGen tops the voice chart</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="muse-wonder" data-cat="models">
+          <div class="meta"><span class="tag">#1 · Meta Superintelligence Labs · Model follow-up</span><span>Released Oct 12 · Results Oct 13</span><span class="caveat">Third-party scores only</span></div>
+          <h3>Meta’s Muse Wonder lands in fourth place in its first independent results</h3>
+          <p>A day after launch, the first independent numbers are in for Meta Superintelligence Labs’ Muse Wonder. The base model runs <strong>$4 per million input tokens and $20 per million output</strong>; the stronger <strong>Wonder Full has no public API</strong> and is reserved for Muse Code subscribers. Both were trained at Meta’s Prometheus data center in Ohio, and the pitch is memory — <strong>Active Memory</strong> that carries across conversations and <strong>Active Focus</strong> for multi-step agent work.</p>
+          <p>Meta published no benchmark numbers of its own. Artificial Analysis scores Wonder Full <strong>56 on its Intelligence Index — rank 4</strong> — with real gains in coding and agents (<strong>57% on Terminal-Bench 4.0</strong>) but weaker knowledge work (AA-Omniscience 30 versus 46 for Claude Opus 5.5) and a <strong>23% hallucination rate</strong>. On Harvey’s Legal Agent Benchmark via Vals AI, Wonder Full met every rubric criterion on just <strong>21.67% of tasks</strong>, fourth — behind Meta’s own earlier Spark 1.2, Spark 1.3 Max, and Spark 1.3. A strong debut, but not the leap the launch suggested.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story side" id="heygen-voice" data-cat="models">
+          <div class="meta"><span class="tag">#2 · HeyGen · Voice model</span><span>October 13</span><span class="caveat">Company-reported ranking</span></div>
+          <h3>HeyGen Voice 1 and Voice 1 Turbo debut at #1 on the voice leaderboard</h3>
+          <p>HeyGen released its first in-house voice model, Voice 1, plus a faster Turbo variant, built to preserve a speaker’s <strong>tone, pacing, and emotion</strong> rather than just the words. The company says it debuted at <strong>#1 on Artificial Analysis’ voice leaderboard</strong> — a ranking reported by HeyGen itself.</p>
+          <p>The model is free through HeyGen’s platform and API, with a <strong>$99/month Professional Voice Clone</strong> tier that requires the speaker’s consent — a notable guardrail as synthetic voices get harder to tell from real ones.</p>
+          <div class="sources"><a href="https://www.prnewswire.com/news-releases/heygen-launches-heygen-voice-debuting-at-1-on-artificial-analysis-leaderboard-302903718.html" target="_blank" rel="noopener">PR Newswire · Oct 13 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="safety">
+      <div class="section-head"><div class="section-no">02 / SAFETY &amp; RESEARCH</div><h2>Self-replication warnings and a fight over who grades the labs</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="self-replication" data-cat="safety">
+          <div class="meta"><span class="tag">#1 · Anthropic · Frontier safety</span><span>October 13</span><span class="caveat">Upper-bound test</span></div>
+          <h3>Anthropic warns small models may soon self-replicate without data centers</h3>
+          <p>Anthropic’s latest experiments suggest small models may be <strong>months away from copying themselves onto poorly secured internet-of-things devices</strong> — Android TV boxes, smart appliances, and the like — rather than needing data-center access. Models under 30B parameters completed many of the required steps but struggled to finish end-to-end; in simplified tests with some security steps removed, <strong>GLM-5.2 and stronger models completed full replication</strong>.</p>
+          <p>Extrapolating the historical rate of improvement, Anthropic projects <strong>autonomous replication by the end of 2026</strong> — and notes that a system spread across consumer devices would have <strong>no central off-switch</strong>. Read the result carefully, though: Anthropic’s own upper-bound test omitted the hacking step and used an unauthenticated port, so this measures capability under generous conditions, not a live threat demonstration.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/ai-models-may-soon-self-replicate-without-access-data-centers-anthropic-warns-2026-10-13/" target="_blank" rel="noopener">Reuters · Oct 13 ↗</a><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story side" id="evaluator-fight" data-cat="safety">
+          <div class="meta"><span class="tag">#2 · Anthropic · OpenAI · Evaluation</span><span>October 13</span></div>
+          <h3>Labs seek control over what independent evaluators can publish</h3>
+          <p>Anthropic and OpenAI have both sought <strong>significant control over what outside evaluators embedded in their labs may publish</strong>, citing trade secrets — though both companies say they are not seeking approval rights over the full text of evaluator reports. The tension matters because pre-release evaluation only reassures regulators and the public if the evaluators can actually speak freely.</p>
+          <p>Marc Warner of Faculty — Anthropic’s first embedded evaluator — puts the point plainly: <strong>independence is precisely what makes evaluators useful</strong>, and findings that can be softened or delayed by the lab being graded are worth far less.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup (via Reuters) · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story full" id="synapse-learning" data-cat="safety">
+          <div class="meta"><span class="tag">#3 · MIT · PNAS · Neuroscience</span><span>October 2026</span></div>
+          <h3>Biological synapses may self-assemble their own gradient learning</h3>
+          <p>New work from Liao and colleagues, published in <em>PNAS</em>, shows how the machinery of biological synapses could <strong>self-organize into gradient-based learning</strong> — the same style of learning artificial networks get from backpropagation, but emerging from local biological rules. Their self-organizing network performed similarly to networks explicitly designed for backpropagation-like learning.</p>
+          <p>If the parallel holds up, it speaks to two fields at once: how real brains might learn without a central training algorithm, and how machine learning might borrow more from biology than it already does.</p>
+          <div class="sources"><a href="https://techxplore.com/news/2026-10-artificial-neural-networks-machinery.html" target="_blank" rel="noopener">TechXplore · Oct 2026 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">03 / PRODUCTS</div><h2>Apple brings personal Siri home; marketing agents move into the chatbots</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="apple-homeview" data-cat="products">
+          <div class="meta"><span class="tag">#1 · Apple · Smart home</span><span>October 13 · Ships Nov 13</span></div>
+          <h3>Apple launches the $299 HomeView hub with a personal Siri AI</h3>
+          <p>At its “Welcome Home” event in New York, Apple unveiled <strong>HomeView</strong>: a <strong>$299 smart-home hub</strong> with a 7-inch display and A18 chip, in tabletop or wall-mounted form, shipping <strong>November 13</strong>. It recognises up to <strong>six faces and voices</strong> and personalises what it shows and says for each person in the household.</p>
+          <p>The privacy design is the pitch: Siri AI draws on a <strong>personal index stored on the user’s own iPhone</strong>, which must be on the same home network — no private data lives on the hub, and Apple says it builds <strong>no marketing profiles</strong>. Apple also announced a HomePod mini 2, a new Apple TV 4K, and a broader Home Collection of cameras, a thermostat, doorbell, and lock built with LG Electronics and Schneider Electric, though the Collection has no launch date yet. One analyst caveat: daily limits on server-side Apple Intelligence, with paid expanded access, could be an early signal of a <strong>paid Siri AI tier</strong>.</p>
+          <div class="sources"><a href="https://www.lapost.com/content/apple-s-homeview-brings-personalized-siri-to-smart-home-takes-on-amazon-and-google" target="_blank" rel="noopener">LA Post · Oct 13 ↗</a><a href="https://www.usatoday.com/story/tech/2026/10/13/apple-homeview-features-colors-price-and-availability/92230013007/" target="_blank" rel="noopener">USA Today · Oct 13 ↗</a><a href="https://www.pymnts.com/news/artificial-intelligence/2026/apples-ives-says-siri-ai-integration-could-drive-services-revenue/" target="_blank" rel="noopener">PYMNTS · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story side" id="marketing-agents" data-cat="products">
+          <div class="meta"><span class="tag">#2 · Movable Ink · Marketing tech</span><span>October 13</span></div>
+          <h3>Marketing agents move into Claude and ChatGPT</h3>
+          <p>Movable Ink launched an <strong>MCP Server exposing more than 50 APIs</strong> to external AI assistants, explicitly including <strong>Claude and ChatGPT</strong> — meaning a marketer can drive campaign tooling from inside a general-purpose chatbot rather than a vendor dashboard.</p>
+          <p>It was one of <strong>nine qualifying marketing-tech releases</strong> that day, alongside agent tools from CreatorIQ, Algolia, Cresta, and ZEPIC — a sign that MCP-style plumbing is becoming the default way enterprise software plugs into assistants.</p>
+          <div class="sources"><a href="https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-14-2026/" target="_blank" rel="noopener">Agile Brand Guide · Oct 13 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="companies">
+      <div class="section-head"><div class="section-no">04 / COMPANIES &amp; FUNDING</div><h2>Anthropic’s IPO moment, Broadcom’s $92B shadow, and a marquee failure</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-ipo" data-cat="companies">
+          <div class="meta"><span class="tag">#1 · Anthropic · IPO</span><span>Reported October 13</span><span class="caveat">Reported — not confirmed</span></div>
+          <h3>Anthropic to disclose results for the first time ahead of a possible $2 trillion IPO</h3>
+          <p>Anthropic will <strong>disclose its Q3 figures to institutional investors for the first time</strong> at a closed-door meeting on October 14, according to CNBC reporting — a step toward an IPO said to target a valuation of <strong>up to $2 trillion</strong>. Anthropic declined to comment.</p>
+          <p>Treat the headline numbers as <strong>reported talk, not confirmed figures</strong>: both the $2 trillion target and chatter about revenue possibly exceeding $100 billion by year-end are unverified, and the accounting treatment matters enormously — whether cloud-partner revenue is counted can swing the totals, as OpenAI’s recently revised $50 billion figure on that basis showed.</p>
+          <div class="sources"><a href="https://www.digitaltoday.co.kr/en/view/114273/anthropic-to-disclose-q3-results-ahead-of-ipo-aiming-for-2-trillion-dollar-valuation" target="_blank" rel="noopener">Digital Today (via CNBC) · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story side" id="broadcom-financing" data-cat="companies">
+          <div class="meta"><span class="tag">#2 · Broadcom · AI financing</span><span>October 13</span><span class="caveat">Includes talks &amp; planned tranches</span></div>
+          <h3>Broadcom’s $92B financing web — and the new constraint on AI growth</h3>
+          <p>Broadcom is discussed as backing <strong>up to $92 billion</strong> for Anthropic and OpenAI chip purchases: <strong>$42 billion in senior debt for Anthropic</strong>, tied to its $125.2 billion five-year TPU lease commitment, an <strong>$18 billion junior tranche planned</strong>, and up to <strong>$50 billion in talks</strong> for OpenAI’s custom XPUs. Some of that is signed, some planned, some still negotiation.</p>
+          <p>The strategic signal came from CEO Hock Tan on October 12: <strong>capital, not chips, is now the biggest constraint</strong> on AI growth — the bottleneck has moved from silicon supply to whoever can finance it.</p>
+          <div class="sources"><a href="https://www.fool.com/investing/2026/10/13/broadcom-is-backing-anthropic-and-openai-with-92-b/" target="_blank" rel="noopener">Motley Fool · Oct 13 ↗</a><a href="https://www.reuters.com/business/broadcom-lend-anthropic-up-42-billion-lease-its-chips-filing-says-2026-10-01/" target="_blank" rel="noopener">Reuters · Oct 1 ↗</a></div>
+        </article>
+
+        <article class="story half" id="character-ai" data-cat="companies">
+          <div class="meta"><span class="tag">#3 · Character.AI · Bankruptcy</span><span>Filed Monday</span><span class="caveat">From filing via secondary coverage</span></div>
+          <h3>Character.AI files Chapter 11; Disney bids $20 million for a license</h3>
+          <p>Character Technologies filed <strong>voluntary Chapter 11 in Delaware</strong> on Monday, listing assets and liabilities each between <strong>$50 million and $100 million</strong>. Disney Worldwide Services is the stalking-horse bidder at <strong>$20 million for a non-exclusive perpetual licence</strong> to certain IP and claims — expressly <strong>not</strong> buying the app — and the platform will be wound down if no buyer keeps it running.</p>
+          <p>The irony is in the creditor list: <strong>Google</strong>, which paid $2.7 billion in August 2024 to licence the technology and re-hire the founders, is the largest unsecured creditor at about <strong>$4.15 million</strong>. Details are reported from the filing via Bloomberg Law and roundup coverage.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup (via Bloomberg Law) · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story half" id="maia-300" data-cat="companies">
+          <div class="meta"><span class="tag">#4 · Microsoft · Silicon</span><span>October 13</span><span class="caveat">Vendor claim</span></div>
+          <h3>Microsoft unveils Maia 300 and promises multi-gigawatt deployment</h3>
+          <p>Microsoft unveiled its <strong>Maia 300</strong> accelerator and committed to <strong>multi-gigawatt deployment from 2027</strong>, claiming <strong>40% more tokens per megawatt</strong> than leading GPU systems — a vendor claim, not an independently verified figure. The earlier Maia 200 already serves Copilot workloads, so this is an incumbent scaling its own silicon rather than a paper launch.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story full" id="mnx-futures" data-cat="companies">
+          <div class="meta"><span class="tag">#5 · MNX · Markets</span><span>October 13</span></div>
+          <h3>New exchange MNX lists futures on private AI firms</h3>
+          <p>A new exchange, <strong>MNX</strong>, has launched futures tied to the valuations of <strong>OpenAI, Anthropic, DeepSeek, and Moonshot</strong> — companies whose shares ordinary investors mostly cannot buy. The contracts expire at the end of 2027, allow up to <strong>3x leverage</strong>, and are <strong>not yet available to US customers</strong>; MNX raised $6.4 million in June in a round led by Village Global. Synthetic exposure to private AI valuations is now a tradeable product — with all the volatility that implies.</p>
+          <div class="sources"><a href="https://coincentral.com/mnx-crypto-exchange-launches-futures-tied-to-private-ai-firms-like-openai-and-anthropic/" target="_blank" rel="noopener">CoinCentral · Oct 13 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; MARKETS</div><h2>Regulation talk, governance stress tests, and a chip selloff</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="regulation-push" data-cat="policy">
+          <div class="meta"><span class="tag">#1 · Regulation · Continuing coverage</span><span>Oct 12–13</span><span class="caveat">No new law enacted</span></div>
+          <h3>The regulation push rolls on — still proposals, not law</h3>
+          <p><em>Status note (first covered Oct 12):</em> Microsoft President Brad Smith’s BBC call for <strong>emergency brakes, mandatory incident reports, victim notification, and independent pre-release evaluation</strong> kept drawing coverage through October 13, alongside UK minister Kanishka Narayan’s frontier-safety push. <strong>No new law was enacted.</strong></p>
+          <div class="sources"><a href="https://informedclearly.com/en/technology/64251/ai-regulation-microsoft-uk-safety-rules" target="_blank" rel="noopener">Informed Clearly · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story third" id="governance-checks" data-cat="policy">
+          <div class="meta"><span class="tag">#2 · Governance · Oversight in practice</span><span>October 13</span></div>
+          <h3>Governance checks move from speeches to specifics</h3>
+          <p>New York City Council is weighing <strong>outside validation and kill switches</strong> for AI systems — SpaceX agreed to testify Friday after the major labs appeared. US bank regulators are asking banks whether they can <strong>audit agent decisions and shut autonomous systems down</strong>. And in the UK, the Home Office’s asylum summarisation tool <strong>failed 45 of 203 expert accuracy checks</strong> — a concrete measure of how far oversight still has to go.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup · Oct 13 ↗</a></div>
+        </article>
+
+        <article class="story third" id="markets" data-cat="policy">
+          <div class="meta"><span class="tag">#3 · Markets · Chips &amp; stability</span><span>October 13</span></div>
+          <h3>Memory-chip selloff spreads as the IMF flags AI investment risk</h3>
+          <p>A memory-chip selloff spread overnight — <strong>SK Hynix down more than 10%, Samsung down 7.4%</strong> — after progress from China’s ChangXin Memory, while the IMF’s October stability report listed a <strong>collapse in AI investment</strong> among near-term threats to financial stability. Separately, Nvidia’s share of China’s data-center AI chip market fell to <strong>34% in H1 2026</strong>, per IDC via Reuters, with Huawei close behind at 28%.</p>
+          <div class="sources"><a href="https://www.usecarly.com/blog/ai-news-2026-10-13/" target="_blank" rel="noopener">UseCarly roundup · Oct 13 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Tuesday, October 13, 2026, plus significant late-breaking items from October 12–13. Reported-but-unconfirmed figures, vendor claims, and upper-bound test results are flagged inline and in the editor’s caveats; re-check contested numbers against primary sources before citing them elsewhere.</div>
+      <div>AI News Newsletter — October 14, 2026.<br>15 ranked stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

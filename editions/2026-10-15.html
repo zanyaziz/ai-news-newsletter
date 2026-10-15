@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Thursday, October 15, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Thursday, October 15, 2026</div>
+      <div class="range">Covering Wednesday, October 14, 2026, plus late-breaking items from Oct 13 and Oct 15</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Eight states sue OpenAI as Anthropic’s <em>IPO race</em> heats up</h1>
+      <div><p class="dek">Eight attorneys general take ChatGPT’s child-safety marketing to court, Anthropic reportedly posts $16.8 billion in quarterly revenue ahead of a possible listing, and Google finally ships Gemini 4 Argon after months of delays.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Stories are ranked by significance within each category. Reported-but-unconfirmed figures, company-reported claims, and single-source items are flagged inline and collected in the caveats box below.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#states-sue-openai">Eight states sue OpenAI over ChatGPT child-safety claims</a></li>
+        <li><span class="num">02</span><a href="#anthropic-ipo-briefing">Anthropic briefs investors ahead of a possible IPO — reported Q3 revenue of $16.8B</a></li>
+        <li><span class="num">03</span><a href="#gemini-4-argon">Google makes Gemini 4 Argon broadly available</a></li>
+        <li><span class="num">04</span><a href="#openai-engineer-charged">OpenAI engineer charged over a hidden recording device</a></li>
+        <li><span class="num">05</span><a href="#asml-record-quarter">ASML posts record quarter on AI chip demand and raises guidance</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor’s caveats — how to read this edition</h3>
+        <ul>
+          <li>Anthropic’s revenue, profitability and IPO-timing figures are <strong>reported, not filed</strong> — no public S-1 was on EDGAR as of Oct 14.</li>
+          <li>The state lawsuits against OpenAI and the recording-device case are <strong>allegations, not court findings</strong>.</li>
+          <li>Grok Voice usage figures and Intuit’s time-savings figure are <strong>company-reported</strong>.</li>
+          <li>Rumors of a Claude Opus 6 or an OpenAI model called “Bell” have <strong>no official source</strong> and are <strong>not covered as news</strong>.</li>
+          <li>The EvoMap research item is a <strong>beta, syndicated report</strong>.</li>
+          <li>Items marked <strong>secondary</strong> are <strong>single-roundup sourced</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Deals</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="top">
+      <div class="section-head"><div class="section-no">01 / TOP STORIES</div><h2>Lawsuits, an IPO race, and a record chip quarter</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="states-sue-openai" data-cat="top">
+          <div class="meta"><span class="tag">#1 · OpenAI · Child safety</span><span>October 14</span><span class="caveat">Allegations — not findings</span></div>
+          <h3>Eight states sue OpenAI over ChatGPT child-safety claims</h3>
+          <p>Attorneys general in <strong>Arizona, Arkansas, Idaho, Iowa, Kansas, Montana, Nebraska and West Virginia</strong> each filed state-court consumer-protection suits alleging ChatGPT was <strong>marketed as safe for children under 13</strong> while allegedly coaching minors toward harmful behaviour. They seek <strong>penalties, disgorgement and product changes</strong>.</p>
+          <p>OpenAI says it has built <strong>age-specific protections, parental controls and break reminders</strong>, and wants to work with states on industry-wide policy. These are allegations in filed complaints, not findings by any court.</p>
+          <div class="sources"><a href="https://aiweekly.co/alerts/eight-state-ags-sue-openai-over-chatgpt-child-safety-claims" target="_blank" rel="noopener">Bloomberg Law via AI Weekly ↗</a><a href="https://intelligibberish.com/news/2026-10-15-daily-roundup/" target="_blank" rel="noopener">The Verge via Intelligibberish ↗</a></div>
+        </article>
+
+        <article class="story side" id="anthropic-ipo-briefing" data-cat="top">
+          <div class="meta"><span class="tag">#2 · Anthropic · IPO</span><span>October 14</span><span class="caveat">Reported — not filed</span></div>
+          <h3>Anthropic briefs investors ahead of a possible IPO — reported Q3 revenue of $16.8B</h3>
+          <p>Anthropic reportedly held an investor meeting on Oct 14, disclosing <strong>Q3 revenue of $16.8 billion, up 45% sequentially</strong>, and reported profitability, as talk grows of a <strong>pre-Thanksgiving listing</strong> while OpenAI points to 2027. Prediction-market odds that Anthropic lists first swung about <strong>12 points to roughly 17%</strong>.</p>
+          <p>Neither company had a public S-1 on SEC EDGAR as of Oct 14, and the revenue and valuation figures are <strong>reported talk, not filed terms</strong>.</p>
+          <div class="sources"><a href="https://tech-insider.org/anthropic-ipo-revenue-16-8-billion-2026/" target="_blank" rel="noopener">Tech Insider · Revenue ↗</a><a href="https://tech-insider.org/openai-anthropic-ipo-first-kalshi-odds-swing/" target="_blank" rel="noopener">Tech Insider · IPO odds ↗</a></div>
+        </article>
+
+        <article class="story major" id="gemini-4-argon" data-cat="top">
+          <div class="meta"><span class="tag">#3 · Google · Flagship model</span><span>Announced Oct 13 · Covered Oct 14</span></div>
+          <h3>Google makes Gemini 4 Argon broadly available</h3>
+          <p>Google released its flagship model to <strong>developers and businesses worldwide</strong> for complex multi-step work in <strong>coding, finance, law, cybersecurity and science</strong> — after months of delays, a cancelled Gemini 3.5 Pro, and a DeepMind leadership shakeup.</p>
+          <p>API pricing starts at <strong>$2 per million input tokens and $10 per million output tokens</strong>, doubling after November 30. Early users include <strong>Deloitte, LexisNexis, Ambience Healthcare and Isomorphic Labs</strong>; the Fairwind program gives vetted cybersecurity defenders a version <strong>without cyber guardrails</strong>, which raises its own governance questions.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/" target="_blank" rel="noopener">Reuters · Oct 13 ↗</a><a href="https://en.walaw.press/articles/google_launches_gemini_4_argon_to_compete_with_openai_and_anthropic/GPWMMMWMQGLX" target="_blank" rel="noopener">Reuters via Walaw ↗</a></div>
+        </article>
+
+        <article class="story side" id="openai-engineer-charged" data-cat="top">
+          <div class="meta"><span class="tag">#4 · OpenAI · Criminal complaint</span><span>Complaint unsealed Oct 13</span><span class="caveat">Allegations — not a conviction</span></div>
+          <h3>OpenAI engineer charged over a hidden recording device in an executive conference room</h3>
+          <p>Federal prosecutors say an OpenAI engineer, <strong>Abdulrahman Alfozan, 35</strong>, was arrested on Oct 9 and charged with <strong>attempting to intercept oral communications</strong> after a concealed, encrypted audio recorder was found on Sep 30 in a <strong>TV USB port</strong> in a San Francisco executive conference room.</p>
+          <p>OpenAI says it fired him and has <strong>no indication model weights, source code or customer data were accessed</strong>. A detention hearing is set for Oct 19. These are allegations in a complaint, not a conviction.</p>
+          <div class="sources"><a href="https://www.justice.gov/usao-ndca/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai-san" target="_blank" rel="noopener">U.S. Department of Justice ↗</a><a href="https://www.theregister.com/security/2026/10/14/openai-engineer-charged-after-boardroom-bug-found-wrapped-in-toilet-paper/5303000" target="_blank" rel="noopener">The Register · Oct 14 ↗</a></div>
+        </article>
+
+        <article class="story full" id="asml-record-quarter" data-cat="top">
+          <div class="meta"><span class="tag">#5 · ASML · Earnings</span><span>October 14</span></div>
+          <h3>ASML posts record quarter on AI chip demand and raises guidance</h3>
+          <p>ASML reported <strong>Q3 revenue of €11.66 billion, up about 55% year on year</strong>, net income of <strong>€4.96 billion</strong> and a <strong>57.5% gross margin</strong>, and raised full-year 2026 guidance to <strong>€44–45 billion</strong> with Q4 guided at <strong>€14.2–15.2 billion</strong>. Its CEO said customers are already discussing equipment orders for delivery in <strong>2029 and 2030</strong>.</p>
+          <p>One caveat: profit was also lifted by valuation effects from ASML’s stake in Mistral AI, so the margin and order book are the cleaner signals.</p>
+          <div class="sources"><a href="https://www.cmcmarkets.com/en-gb/news-and-analysis/asml-earnings-ai-demand-drives-record-revenue-and-higher-profits" target="_blank" rel="noopener">CMC Markets analysis ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODELS &amp; PRODUCTS</div><h2>Voice agents, a China debut, and agents that keep working</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="grok-voice-3" data-cat="models">
+          <div class="meta"><span class="tag">#6 · xAI · Voice model</span><span>October 14</span><span class="caveat">Usage figures company-reported</span></div>
+          <h3>xAI ships Grok Voice 3.0 for voice agents</h3>
+          <p>xAI’s real-time speech-to-speech model is now in the Voice Agent API at <strong>$0.08 per minute</strong>, unchanged from the prior version; apps using the <strong>grok-voice-latest</strong> alias were migrated automatically and Grok Voice 2.0 is deprecated.</p>
+          <p>It tops the Artificial Analysis Speech-to-Speech Index at <strong>86.9</strong> — but on the <strong>tau-Voice</strong> simulated support-call benchmark it scores <strong>71.6%</strong>, behind GPT-Live-1 at <strong>74.5%</strong>, the test closest to the market it is sold into. xAI’s Tesla and Starlink usage figures are company-reported and unverified.</p>
+          <div class="sources"><a href="https://www.unite.ai/xai-introduces-grok-voice-3-0-speech-to-speech-model-for-voice-agents/" target="_blank" rel="noopener">Unite.AI ↗</a><a href="https://aiindustrytoday.com/news/ait-20261015-afternoon-grok-voice/" target="_blank" rel="noopener">AI Industry Today ↗</a></div>
+        </article>
+
+        <article class="story side" id="apple-intelligence-china" data-cat="models">
+          <div class="meta"><span class="tag">#7 · Apple · China</span><span>Reported October 14</span><span class="caveat">Reported</span></div>
+          <h3>Apple Intelligence reportedly reaches China in December</h3>
+          <p>Apple plans to bring Apple Intelligence to China in <strong>iOS 27.3</strong> after two years of regulatory delays — in a limited form: <strong>photo editing and basic features</strong>, without Siri AI, Image Playground or full text generation, using <strong>Alibaba’s Qwen and Tongyi Wanxiang models</strong> after Chinese network-access permits.</p>
+          <div class="sources"><a href="https://www.macrumors.com/" target="_blank" rel="noopener">Bloomberg via MacRumors ↗</a></div>
+        </article>
+
+        <article class="story half" id="intuit-intelligence-global" data-cat="models">
+          <div class="meta"><span class="tag">#8 · Intuit · AI platform</span><span>October 14</span><span class="caveat">Company-reported figure</span></div>
+          <h3>Intuit takes Intuit Intelligence global</h3>
+          <p>Intuit began rolling out its AI platform <strong>internationally</strong> across QuickBooks Online and Intuit Accountant Suite, in beta. The company says early users report saving an average of <strong>13 hours per month</strong> — a company-reported figure.</p>
+          <div class="sources"><a href="https://www.ad-hoc-news.de/boerse/corporate-news/intuit-launches-global-ai-rollout-usd-84-9-billion-values-intuit-stock/70328008" target="_blank" rel="noopener">ad-hoc-news ↗</a></div>
+        </article>
+
+        <article class="story half" id="gemini-task-mode" data-cat="models">
+          <div class="meta"><span class="tag">#9 · Google · Gemini app</span><span>October 14</span><span class="caveat">Secondary source</span></div>
+          <h3>Gemini app gains a task mode for long-running agent work</h3>
+          <p>A weekly agent-news roundup reports Google added a <strong>task mode</strong> letting Gemini keep working while the user is away, connected to <strong>more than 40 apps</strong> including Instacart, OpenTable, Adobe and Shopify.</p>
+          <div class="sources"><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">AI Agent Store ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">03 / POLICY &amp; SAFETY</div><h2>Safety funding, binding rules, and oversight of agents</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="nvidia-uk-safety" data-cat="policy">
+          <div class="meta"><span class="tag">#10 · Nvidia · UK safety research</span><span>October 14</span></div>
+          <h3>Nvidia commits $250 million in compute to UK agentic AI safety research</h3>
+          <p>Nvidia will donate computing resources valued at <strong>$250 million over five years</strong> ($50 million a year) through UK-based cloud partners, supporting the wider UK safety research community plus <strong>BOLD, SOFAIR and Imperial College London</strong>, focused on <strong>agentic foundation models and robotics safety</strong>.</p>
+          <div class="sources"><a href="https://www.freedom969.com/business/nvidia-pledges-250-million-to-boost-uk-ai-safety-research" target="_blank" rel="noopener">Reuters via Freedom 96.9 ↗</a><a href="https://www.hpcwire.com/aiwire/2026/10/14/nvidia-commits-250m-to-advance-uk-agentic-safety-and-security-research/" target="_blank" rel="noopener">Nvidia announcement via HPC Wire ↗</a></div>
+        </article>
+
+        <article class="story side" id="uk-hearing-binding-rules" data-cat="policy">
+          <div class="meta"><span class="tag">#11 · OpenAI · Anthropic · UK Parliament</span><span>October 13</span><span class="caveat">Secondary reporting</span></div>
+          <h3>OpenAI and Anthropic back binding safety rules at a UK parliamentary hearing</h3>
+          <p>Representatives of Anthropic and OpenAI told a parliamentary committee that <strong>voluntary pledges are not enough</strong> for frontier-model safety, backing mandatory elements starting with <strong>incident reporting</strong> — while Google DeepMind and Meta did not support a new statutory framework. Officials confirmed the AI Security Institute relies on voluntary access and <strong>cannot stop a model release</strong>.</p>
+          <div class="sources"><a href="https://medium.com/ai-briefing-room/ai-news-briefing-14-october-2026-70c6072ca732" target="_blank" rel="noopener">WIRED via AI Briefing Room ↗</a></div>
+        </article>
+
+        <article class="story half" id="fsb-agentic-guidance" data-cat="policy">
+          <div class="meta"><span class="tag">#12 · Financial Stability Board · Agentic AI</span><span>October 15 · Late-breaking</span></div>
+          <h3>Global financial watchdog tightens guidance on agentic AI</h3>
+          <p>The Financial Stability Board’s final guidance calls for <strong>more intensive human oversight</strong> of AI agents in higher-risk financial use cases, with clear risk-based triggers for when an agent must <strong>seek human approval</strong> — and drops earlier language treating AI as synthetic employees, noting <strong>agents do not reason like humans</strong>.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/government/global-financial-watchdog-calls-more-human-oversight-agentic-ai-2026-10-15/" target="_blank" rel="noopener">Reuters · Oct 15 ↗</a></div>
+        </article>
+
+        <article class="story half" id="faa-smart-pause" data-cat="policy">
+          <div class="meta"><span class="tag">#13 · FAA · Air traffic</span><span>October 14</span><span class="caveat">Secondary source</span></div>
+          <h3>Lawmakers urge the FAA to pause an AI air-traffic tool</h3>
+          <p>More than <strong>two dozen Democratic lawmakers</strong> asked the FAA to pause <strong>SMART</strong>, an AI tool launched last month around three Washington-area airports, calling for <strong>safety testing</strong> before it continues.</p>
+          <div class="sources"><a href="https://thejoai.com/ai-news/lawmakers-demand-faa-pause-ai-air-traffic-tool-smart/" target="_blank" rel="noopener">The JO AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING, DEALS &amp; PARTNERSHIPS</div><h2>City grants, a security acquisition, and a $1.5B drug deal</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="cities-deliver" data-cat="funding">
+          <div class="meta"><span class="tag">#14 · Rockefeller Foundation · OpenAI Foundation</span><span>October 14</span></div>
+          <h3>Rockefeller Foundation and OpenAI Foundation launch a $50 million Cities Deliver initiative</h3>
+          <p>A global open call will award grants of <strong>$500,000 to $2 million</strong> to nonprofits working with city governments on <strong>public health, economic mobility, environmental resilience and civic engagement</strong>, aiming to reach up to <strong>100 million residents</strong>. Applications run <strong>Oct 14 to Nov 29, 2026</strong>; OpenAI Foundation contributes $40 million and Rockefeller $10 million.</p>
+          <div class="sources"><a href="https://www.prnewswire.com/news-releases/rockefeller-foundation-openai-foundation-announce-50-million-partnership-to-help-cities-improve-public-services-through-ai-302908640.html" target="_blank" rel="noopener">PR Newswire ↗</a><a href="https://www.reuters.com/sustainability/sustainable-finance-reporting/rockefeller-foundation-teams-with-openai-fix-your-potholes-2026-10-14/" target="_blank" rel="noopener">Reuters · Oct 14 ↗</a></div>
+        </article>
+
+        <article class="story side" id="cohere-aisle" data-cat="funding">
+          <div class="meta"><span class="tag">#15 · Cohere · Acquisition</span><span>October 15 · Late-breaking</span></div>
+          <h3>Cohere moves to buy AI cybersecurity startup AISLE</h3>
+          <p>Cohere signed a <strong>letter of intent</strong> to acquire AISLE, a San Francisco startup using AI to find software vulnerabilities, founded in 2025 by former Avast CEO <strong>Ondrej Vlcek</strong> with co-founders from Google DeepMind and Anthropic; AISLE says its AI found <strong>more than 500 bugs</strong> in widely used software in its first year. Terms were not disclosed. The deal sits alongside Cohere’s reported roughly <strong>$20 billion combination</strong> with Germany’s Aleph Alpha.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/transactional/cohere-moves-buy-ai-cybersecurity-startup-aisle-2026-10-15/" target="_blank" rel="noopener">Reuters · Oct 15 ↗</a></div>
+        </article>
+
+        <article class="story half" id="astrazeneca-insitro" data-cat="funding">
+          <div class="meta"><span class="tag">#16 · AstraZeneca · insitro · Drug discovery</span><span>October 15 · Late-breaking</span></div>
+          <h3>AstraZeneca strikes an AI drug-discovery deal with insitro worth up to about $1.5 billion</h3>
+          <p>AstraZeneca will pay <strong>$40 million upfront</strong>, with insitro eligible for up to about <strong>$1.46 billion in milestones</strong> plus royalties, to use its <strong>Virtual Human AI platform</strong> to find targets for MASH liver disease and cardiomyopathies; AstraZeneca will run and fund later clinical trials.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/astrazeneca-strikes-40-million-ai-drug-discovery-deal-with-insitro-2026-10-15/" target="_blank" rel="noopener">Reuters · Oct 15 ↗</a></div>
+        </article>
+
+        <article class="story half" id="google-org-india" data-cat="funding">
+          <div class="meta"><span class="tag">#17 · Google.org · India</span><span>October 14</span></div>
+          <h3>Google.org puts $15 million behind AI for Indian small businesses</h3>
+          <p>Google.org committed <strong>$15 million</strong> to The/Nudge Foundation to support AI tools helping Indian micro, small and medium enterprises <strong>access credit, find markets and manage compliance</strong>. Separately, Google DeepMind’s satellite-based agricultural models continue expanding to more countries.</p>
+          <div class="sources"><a href="https://www.domain-b.com/technology/artificial-intelligence/google-agricultural-ai-msme-funding-india-2026" target="_blank" rel="noopener">Domain-b ↗</a></div>
+        </article>
+
+        <article class="story full" id="tamr-round" data-cat="funding">
+          <div class="meta"><span class="tag">#18 · Tamr · Growth equity</span><span>October 14</span></div>
+          <h3>Smaller rounds: Tamr raises $21 million</h3>
+          <p>Boston-based Tamr raised <strong>$21 million in growth equity</strong> led by Volition Capital to expand its AI-based enterprise data-cleaning technology, increasingly aimed at <strong>making data safe for autonomous agents</strong>.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/10/15/startup-funding-news-today-october-15-2026-modal-labelbox-omass-therapeutics-skeleton-technologies-more/" target="_blank" rel="noopener">TechStartups funding roundup ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">05 / RESEARCH</div><h2>How learning agents might carry skills between runs</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="strategy-genes" data-cat="research">
+          <div class="meta"><span class="tag">#19 · EvoMap · Learning agents</span><span>Promoted October 14</span><span class="caveat">Beta report — unverified</span></div>
+          <h3>Compact ‘strategy genes’ beat full skill documents for learning agents</h3>
+          <p>A beta technical report (arXiv:2604.15097) reports that across <strong>4,590 controlled trials</strong> in 45 scientific code-solving scenarios, a compact <strong>strategy-gene</strong> representation averaged <strong>54.0%</strong> versus <strong>49.9%</strong> for documentation-style skill packages, with distilled failure warnings helping most.</p>
+          <p>Flag prominently: this is a <strong>beta report promoted through syndicated press releases</strong>, not peer-reviewed or independently replicated.</p>
+          <div class="sources"><a href="https://topinvestidea.com/2026/10/14/evomap-publishes-skill-to-gene-research-showing-how-ai-agents-can-keep-learning-across-runs/" target="_blank" rel="noopener">Top Invest Idea · Oct 14 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Wednesday, October 14, 2026, plus significant late-breaking items from October 13 and 15. Reported-but-unconfirmed figures, company-reported claims, and single-source items are flagged inline and in the editor’s caveats; re-check contested numbers against primary sources before citing them elsewhere.</div>
+      <div>AI News Newsletter — October 15, 2026.<br>19 ranked stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

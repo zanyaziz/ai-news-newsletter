@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — October 4, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.impact{background:var(--ink);color:var(--white);padding:18px 20px;margin:18px 0 0}.impact b{display:block;color:#ff8a76;font:500 10px/1.3 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.impact p{color:var(--paper);margin:0}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+
+    <div class="wrap edition">
+      <div class="stamp">Daily intelligence briefing · Sunday, October 4, 2026</div>
+      <div class="range">Coverage: Saturday, October 3, 2026 + late-breaking items from October 2–4, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Europe ships an open giant; <em>agents go to work</em></h1>
+      <div><p class="dek"><strong>TL;DR:</strong> Aleph Alpha's Kolibri gives Europe a compliance-shaped open-weight model, Google makes federated learning externally verifiable, and agents move from demos to deployment shapes — while lawsuits, a reported FTC probe, and state rules harden around the labs.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>This edition covers Saturday, October 3, with late-breaking items from October 2–4. Stories are ranked by significance; single-sourced and weakly sourced claims are flagged in place.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#kolibri">Aleph Alpha releases Kolibri, a 78.1B open-weight MoE</a></li>
+        <li><span class="num">02</span><a href="#gboard">Google details verifiable federated learning for Gboard</a></li>
+        <li><span class="num">03</span><a href="#agents-ops">Agents go operational: IBM Bob, DigitalOcean, Photon</a></li>
+        <li><span class="num">04</span><a href="#decagon">Decagon becomes an OpenAI Marketplace launch partner</a></li>
+        <li><span class="num">05</span><a href="#ftc">FTC probe into Anthropic and OpenAI reported</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models</button>
+        <button class="filter" data-filter="agents" aria-pressed="false">Agents</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy</button>
+        <button class="filter" data-filter="unverified" aria-pressed="false">Unverified</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODELS &amp; RELEASES</div><h2>Open weights get a compliance shape</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="kolibri" data-cat="models">
+          <div class="meta"><span class="tag">#1 · Aleph Alpha · Open weights</span><span>October 3</span></div>
+          <h3>Kolibri: a 78.1B open-weight English–German MoE with only 3.46B active parameters</h3>
+          <p>Europe's sovereign-AI push gets a concrete artifact. Kolibri is a Mixture-of-Experts transformer built end-to-end in Germany, shipping under Apache 2.0 on Hugging Face with 78.1B total parameters but only ~3.46B active per token, up to ~1M-token context (262k recommended for production), and per-request reasoning-effort control. The FP8 checkpoint is ~78GB and runs on a single B200/B300/H200 or 2× H100, served via vLLM.</p>
+          <p>It is explicitly positioned for regulated sectors — public administration, industry, aerospace — with a data pipeline that redacts PII pre-training and targets EU AI Act / GDPR / GPAI Code of Practice compliance (Aleph Alpha is a signatory). That makes it less a leaderboard play than a compliance-shaped alternative to U.S. frontier models for EU deployments. Performance comparisons are the company's internal evaluations, not independently verified.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Aleph Alpha; Hugging Face; the vLLM ecosystem.</p>
+          <div class="sources"><a href="https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/" target="_blank" rel="noopener">MarkTechPost ↗</a></div>
+        </article>
+
+        <article class="story side" id="whistle" data-cat="models research unverified">
+          <div class="meta"><span class="tag">#2 · Speech &amp; retrieval · Applied research</span><span>October 2–3</span><span class="caveat">Company-reported via trade roundup</span></div>
+          <h3>Lightweight speech and retrieval: a 16.9MB speech model, Arabic ASR gains, a retrieval bench</h3>
+          <p>Three applied-research signals from one daily roundup. Cactus Compute launched Whistle, a 16.9MB speech-to-text model that runs locally on CPUs across seven languages and claims to beat Whisper base while being ~9× smaller and ~6× faster. NVIDIA reported fine-tuning Nemotron 3.5 ASR on Najdi and Hijazi Arabic dialects, cutting word error rate from 55% to 30%. And micro1 introduced CortexRetrievalBench, a benchmark for retrieval and reranking on financial records. None are frontier releases; all three point at the efficiency and regionalization layer where deployment actually happens.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Cactus Compute; NVIDIA; micro1.</p>
+          <div class="sources"><a href="https://saudishopper.com.sa/en/daily-ai-roundup-october-2026-updates/" target="_blank" rel="noopener">Saudi Shopper roundup ↗</a></div>
+        </article>
+
+        <article class="story full" id="product-surfaces" data-cat="models unverified">
+          <div class="meta"><span class="tag">#3 · Product surfaces · DeepSeek · Maket · Google</span><span>October 2</span><span class="caveat">Gemini item is an unshipped-feature sighting</span></div>
+          <h3>DeepSeek Harness v0.2 desktop app; Maket 2.0; a Gemini Desktop “Full Access” sighting</h3>
+          <p>DeepSeek Harness v0.2 went live on macOS, Windows, and Linux as a desktop app powered by DeepSeek models for work and coding, with plugins and workspaces built in. Maket launched Maket 2.0, generating floor plans and 3D views for new homes and remodels from short prompts. Separately, a TestingCatalog sighting claims Gemini Desktop is getting a hidden “Full Access” computer-use permission to read, modify, and delete files and control apps without per-action prompts — an unreleased-feature sighting, not a shipped product, but a live data point in the agent-permissions debate.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> DeepSeek; Maket; Google (Gemini Desktop).</p>
+          <div class="sources"><a href="https://www.cryptointegrat.com/p/ai-news-october-3-2026" target="_blank" rel="noopener">CryptoIntegrat ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH</div><h2>Privacy you can audit; physics as a check on models</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gboard" data-cat="research">
+          <div class="meta"><span class="tag">#1 · Google Research · Federated learning</span><span>October 2</span></div>
+          <h3>Google details externally verifiable federated learning for Gboard</h3>
+          <p>Google researchers described a federated-learning method where phone training data is encrypted and processed inside a server Trusted Execution Environment (TEE), with permitted processing methods logged in public records for external verification, and differential privacy applied. It was applied to Gboard's next-word prediction models for English and Japanese.</p>
+          <p>The significance is the verifiability claim: instead of “trust us, it's private,” the system aims for externally auditable proofs that only approved computations ran. If the pattern holds up, it is a template for improving on-device models without centralizing raw user data. Privacy and performance figures are Google-reported.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Google Research.</p>
+          <div class="sources"><a href="https://kimkj.com/en/ai-board-en/?mod=document&amp;uid=17814" target="_blank" rel="noopener">AI Board ↗</a></div>
+        </article>
+
+        <article class="story side" id="physmat" data-cat="research">
+          <div class="meta"><span class="tag">#2 · Tohoku University · Materials AI</span><span>Sept. 29 – Oct. 2</span></div>
+          <h3>Physics-grounded materials AI framework proposes testable predictions</h3>
+          <p>PhysMat AI, published in Advanced Functional Materials, argues materials discovery cannot rely on data correlations alone and organizes physical knowledge into five roles — prior knowledge, descriptors, constraints, verifiers, and infrastructure — so AI predictions become more interpretable and testable against physical law. It is a framework and perspective rather than a benchmark breakthrough, but it addresses a real failure mode: models that interpolate well and extrapolate into physically impossible materials. For labs doing AI-driven materials screening, the verifier layer is the practical takeaway.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Tohoku University WPI-AIMR (Hao Li); Advanced Functional Materials.</p>
+          <div class="sources"><a href="https://phys.org/news/2026-09-physics-grounded-ai-framework-aims.html?deviceType=mobile" target="_blank" rel="noopener">Phys.org ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="agents">
+      <div class="section-head"><div class="section-no">03 / AGENTS &amp; PRODUCTS</div><h2>Agents move from demos to deployment shapes</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="agents-ops" data-cat="agents">
+          <div class="meta"><span class="tag">#1 · IBM · DigitalOcean · Photon</span><span>October 2–3</span></div>
+          <h3>Agents go operational: IBM Bob self-hosted, DigitalOcean Managed Agents, Photon raises $4.5M</h3>
+          <p>The agent story is shifting from demos to deployment shapes. IBM launched a self-hosted version of IBM Bob, its AI coding agent, letting enterprises run it inside their own secure environments — a direct response to agentic-AI security concerns. DigitalOcean introduced Managed Agents: managed cloud infrastructure for AI agents with isolated runtimes and governed tool access. Photon AI agents raised $4.5M in seed to replace traditional mobile-app interactions with conversational agents across messaging platforms.</p>
+          <p>Together they mark three deployment bets at once — on-prem for regulated coding, managed cloud for builders, and messaging-native for consumers. The through-line is trust over speed: agents that run for extended periods are hitting governance, not capability, as the bottleneck. The Photon figure and product claims come from a directory brief aggregating company announcements.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> IBM (IBM Bob); DigitalOcean (Managed Agents); Photon AI.</p>
+          <div class="sources"><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-october-3-2026" target="_blank" rel="noopener">AI Agents Directory ↗</a></div>
+        </article>
+
+        <article class="story side" id="decagon" data-cat="agents">
+          <div class="meta"><span class="tag">#2 · Decagon · OpenAI Marketplace</span><span>October 2</span></div>
+          <h3>OpenAI Marketplace goes B2B: Decagon is a launch partner</h3>
+          <p>Decagon announced it is a launch partner for OpenAI Marketplace, OpenAI's new B2B marketplace, under which eligible OpenAI enterprise customers can apply part of their existing OpenAI commitment toward Decagon's customer-facing AI agents. The mechanism reduces procurement friction by letting customers spend an existing commitment rather than signing a new vendor agreement — frontier labs are building app-store economics on top of committed enterprise spend, and agent vendors are competing for shelf space inside that channel. Terms are as described by Decagon; OpenAI's marketplace documentation is not linked in the coverage.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Decagon (Roger Liang, Ariana Xiang); OpenAI.</p>
+          <div class="sources"><a href="https://www.unite.ai/decagon-joins-openais-b2b-marketplace-as-a-launch-partner/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+
+        <article class="story full" id="quick-hits" data-cat="agents">
+          <div class="meta"><span class="tag">#3 · Quick hits · Enterprise services</span><span>October 2</span><span class="caveat">Vendor-reported figures</span></div>
+          <h3>Quick hits: Constructor's agentic award, Revin's voice/SMS expansion, Nextview's Claude partnership</h3>
+          <p>Lower-significance enterprise items kept for completeness. Constructor won a 2026 MACH Impact Award (Agentic Achievement) and reported a 900% year-over-year increase in companies deploying its conversational AI agents — vendor-reported, base rate not given. Allstar Services extended Revin's AI voice/SMS agents to ten more roofing brands across six states (19 brands total). Nextview Consulting entered Anthropic's Claude Partner Network as a Select Partner, reporting 21 Claude Certified Architects and 131 consultants with 5+ Claude certifications each. Individually incremental; collectively they show services and implementation capacity becoming a tracked metric.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Constructor; Revin; Allstar Services; Nextview Consulting; Anthropic.</p>
+          <div class="sources"><a href="https://agilebrandguide.com/yesterdays-martech-ai-cx-news-october-3-2026/" target="_blank" rel="noopener">Agile Brand Guide ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY &amp; LAW</div><h2>The legal perimeter hardens — courts, a reported probe, and the states</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="lawsuits" data-cat="policy unverified">
+          <div class="meta"><span class="tag">#1 · Litigation · Axios reporting</span><span>October 2</span><span class="caveat">Second-hand summary chain</span></div>
+          <h3>AI lawsuits surge across safety, copyright, and liability</h3>
+          <p>Axios reported a surge in lawsuits against OpenAI, Anthropic, Google, and Meta across two buckets: training-data claims and harms allegedly caused by AI products. The coverage cites a U.S. appeals ruling for Thomson Reuters against Ross Intelligence as highlighting the risk of training on copyrighted material, and reports courts and states applying consumer-protection, privacy, and product-liability law to AI firms. These are pending claims, not findings — but the docket growth matters for insurers, enterprise buyers doing vendor-risk reviews, and any lab planning an IPO. This summary is second-hand (Axios via Crypto Briefing and LeoDex); the underlying Axios piece was not directly fetched.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> OpenAI; Anthropic; Google; Meta; Thomson Reuters; Ross Intelligence.</p>
+          <div class="sources"><a href="https://news.leodex.io/news/openai-anthropic-google-and-meta-face-surge-in-ai-lawsuits-axios-reports" target="_blank" rel="noopener">LeoDex ↗</a></div>
+        </article>
+
+        <article class="story half" id="ftc" data-cat="policy unverified">
+          <div class="meta"><span class="tag">#2 · FTC · Anthropic · OpenAI</span><span>Reported October 1</span><span class="caveat">Single-sourced · unconfirmed</span></div>
+          <h3>FTC investigation into Anthropic and OpenAI safety practices reported</h3>
+          <p>If confirmed, it is an escalation: the FTC is reportedly probing whether Anthropic's and OpenAI's AI systems violate consumer-protection law, per a senior agency official speaking on condition of anonymity. The probe has not been publicly announced and its scope is unclear. It arrives alongside both labs disclosing unpredictable agent behavior and OpenAI canceling a planned model release on safety grounds. FTC Chair Andrew Ferguson has argued existing law may be sufficient and warned against regulation that entrenches incumbents. First reported by the New York Post per Inside AI; neither company commented. Treat as a lead to watch, not an established fact.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> FTC (Andrew Ferguson); Anthropic; OpenAI.</p>
+          <div class="sources"><a href="https://insideai.news/news/ai-policy-and-regulation/ftc-investigation-anthropic-openai/13381/" target="_blank" rel="noopener">Inside AI ↗</a></div>
+        </article>
+
+        <article class="story full" id="states" data-cat="policy">
+          <div class="meta"><span class="tag">#3 · States &amp; cities · Connecticut · New Mexico · NYC</span><span>October 1–5</span></div>
+          <h3>State frontier-AI patchwork hardens: Connecticut in force, New Mexico drafts, NYC hearing Oct 5</h3>
+          <p>While the federal White House accord (Sept. 29) remains voluntary — no penalties, disclosure duty, or deadline — binding state regimes are going live. Connecticut's Act Concerning Online Safety sections entered force October 1, imposing design and risk-management duties on frontier developers (training runs above 10^26 FLOPs) and subscription-transparency rules. New Mexico AG Raúl Torrez is preparing a 2027 bill requiring safety disclosure, incident reporting, advance notice of major training runs, and independent audits, with civil penalties. Separately, NYC Council's October 5 hearing will question OpenAI, Google, Anthropic, and Meta — attendance secured only after subpoena threats, with SpaceXAI subpoenaed after not responding. The pattern is a state-and-city compliance layer forming underneath a voluntary federal framework.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Connecticut General Assembly; NM AG Raúl Torrez; Rep. Linda Serrato; NYC Council Speaker Julie Menin; OpenAI; Google; Anthropic; Meta; SpaceXAI.</p>
+          <div class="sources"><a href="https://digitalpolicyalert.org/event/39848-ai-system-design-and-risk-management-regulation-in-act-concerning-online-safety-public-act-26-15-entered-into-force" target="_blank" rel="noopener">Digital Policy Alert ↗</a><a href="https://nypost.com/2026/09/29/us-news/openai-google-anthropic-agree-to-attend-nyc-ai-hearing-after-subpoena-threats/" target="_blank" rel="noopener">New York Post ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">05 / FUNDING &amp; BUSINESS</div><h2>Capital splits between infrastructure and the applied layer</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="funding" data-cat="funding unverified">
+          <div class="meta"><span class="tag">#1 · Volantis · Armadin · UK weekly</span><span>October 1–2</span><span class="caveat">Some figures via roundups — see caveats</span></div>
+          <h3>Volantis raises $88M for optical memory; Armadin follow-through; UK weekly tally £2.65B</h3>
+          <p>Volantis raised $88M in Series A (co-led by Lachy Groom and Abstract, with John Doerr, Susa Ventures, VXI Capital, and Triatomic Capital) to attack the memory bottleneck with optics, aiming for chips with much larger fast, cheap memory for inference. The prior window's Armadin $255.5M Series B at a $2.5B+ valuation (Oct. 1, Reuters) continues to anchor the AI-security funding thesis. In the UK, the Sept. 28 – Oct. 2 weekly tally was £2,647.3M across AI, healthtech, and data, led by Nscale's ~£2.54B convertible loan note (Third Point) for data-center build-out and Metaview's £45M Series C (Insight Partners) for agentic recruiting. The Volantis figure comes via a social-post roundup; the Nscale and Metaview figures are from a weekly trade report.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Volantis (Lachy Groom, Abstract, John Doerr); Armadin; Nscale (Third Point); Metaview (Insight Partners).</p>
+          <div class="sources"><a href="https://www.cryptointegrat.com/p/ai-news-october-3-2026" target="_blank" rel="noopener">CryptoIntegrat ↗</a><a href="https://www.startupmag.co.uk/funding/uk-startup-funding-report-02-10-2026/" target="_blank" rel="noopener">Startup Magazine ↗</a></div>
+        </article>
+      </div>
+
+      <aside class="note-box" id="coverage-notes">
+        <h3>Caveats &amp; coverage notes</h3>
+        <div>
+          <ul>
+            <li><strong>FTC probe:</strong> single-sourced, anonymous, and unconfirmed; neither Anthropic nor OpenAI commented.</li>
+            <li><strong>Lawsuits story:</strong> a second-hand summary chain (Axios → Crypto Briefing → LeoDex); the underlying Axios article was not directly fetched.</li>
+            <li><strong>Volantis $88M:</strong> via a social-post roundup; verify against a primary release before citing valuation terms.</li>
+            <li><strong>Whistle / NVIDIA ASR figures:</strong> company-reported via a trade roundup.</li>
+            <li><strong>Gemini “Full Access”:</strong> a hidden, unshipped feature sighting — not a product launch.</li>
+            <li><strong>Constructor 900%:</strong> vendor-reported without a base rate.</li>
+            <li><strong>No new developments</strong> in this window for the OpenAI DevDay “Dots” / GPT-6.1 Sol launch, Gemini 4 Argon release timing, or White House accord enforcement detail; those threads carried no genuinely new primary announcements.</li>
+          </ul>
+          <div class="legend"><span class="caveat">Unverified</span> Read the inline source list and caveat before relying on the claim.</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Researched from MarkTechPost, Google Research coverage, AI Agents Directory, Unite.AI, Axios reporting via LeoDex, Inside AI, Digital Policy Alert, the New York Post, CryptoIntegrat, Startup Magazine, Phys.org, Saudi Shopper, and Agile Brand Guide; source limits flagged inline. Coverage window: Oct. 2–4, 2026.</div>
+      <div>AI News Newsletter — October 4, 2026.<br>12 stories ranked by significance.<br>Archived edition rebuilt from the original research report, October 18, 2026.</div>
+    </footer>
+
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

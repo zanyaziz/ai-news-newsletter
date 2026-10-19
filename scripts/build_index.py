@@ -18,8 +18,11 @@ EDITIONS = ROOT / "editions"
 PAGE_SIZE = 10
 
 # Editions that were delivered in chat but whose HTML was never archived
-# (the live page was overwritten the next day). Sep 22, 2026 had no edition.
-GAPS = ["September 14, 2026", "October 4, 2026", "October 11, 2026", "October 12, 2026"]
+# (the live page was overwritten the next day). The four former gaps
+# (Sep 14, Oct 4, Oct 11, Oct 12, 2026) were rebuilt from the surviving
+# research files on Oct 18, 2026, so this list is now empty.
+# Sep 22, 2026 had no edition (kept as a standing note below).
+GAPS = []
 
 
 def clean(fragment: str) -> str:
@@ -74,7 +77,9 @@ def main() -> None:
         )
 
     data_json = json.dumps(entries, ensure_ascii=False)
-    gaps_html = ""
+    gaps_html = (
+        "<p class=\"gaps\">No edition was published on September 22, 2026.</p>"
+    )
     if GAPS:
         gaps_html = (
             "<p class=\"gaps\">Archive gaps: the editions for "

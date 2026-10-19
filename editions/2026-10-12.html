@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — October 12, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Monday, October 12, 2026</div>
+      <div class="range">Covering Sunday, October 11, 2026 (+ 48-hour context, October 10–12)</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Britain gets the keys as Microsoft <em>builds its own silicon</em></h1>
+      <div><p class="dek">The UK's AI Security Institute is now safety-testing frontier models, Microsoft unveiled its Maia 300 chip with a plan to deploy more than a million of them, and Anthropic widened its internet cutoff for models under evaluation.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>This edition covers Sunday, October 11, with late-breaking items from October 10–12. Stories are ranked by significance; single-sourced and vendor-reported claims are flagged. The White House incident-disclosure mandate appears only as a brief developing-story status note, at the editor's request — the full story ran in the October 11 edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#aisi">UK AI Security Institute gets access to frontier models</a></li>
+        <li><span class="num">02</span><a href="#maia">Microsoft unveils Maia 300, plans 1M+ chips</a></li>
+        <li><span class="num">03</span><a href="#brad-smith">Brad Smith: AI is “less regulated than milk”</a></li>
+        <li><span class="num">04</span><a href="#anthropic-cutoff">Anthropic cuts internet access for all models in evals</a></li>
+        <li><span class="num">05</span><a href="#clef">Cloudflare launches Clef-omni decision model</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="enterprise" aria-pressed="false">Enterprise</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Verification</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Deals</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">01 / POLICY &amp; SAFETY</div><h2>Safety testing crosses the Atlantic</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="aisi" data-cat="policy">
+          <div class="meta"><span class="tag">#1 · UK AI Security Institute</span><span>October 12</span></div>
+          <h3>UK AI Security Institute given access to safety-test the latest AI models</h3>
+          <p>AI Minister Kanishka Narayan confirmed the UK's AI Security Institute now has access to the latest advanced AI models and is evaluating them, including Gemini 4 Argon — working with the U.S. government and developers including Google under voluntary pre-deployment agreements.</p>
+          <p>This follows September reports that the White House asked OpenAI and Anthropic to withhold new models from British testers pending a U.S. review; AISI said in September that Anthropic had confirmed no organization outside the U.S. had access to its Mythos 5.1 model. Microsoft president Brad Smith told the BBC that Britain was well placed to help lead AI safety guidelines.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> UK AI Security Institute; Kanishka Narayan; Google (Gemini 4 Argon); Anthropic (Mythos 5.1); Brad Smith; the White House.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/uk-given-access-safety-test-latest-ai-models-minister-says-2026-10-12/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story side" id="brad-smith" data-cat="policy">
+          <div class="meta"><span class="tag">#2 · Microsoft · Brad Smith</span><span>October 11</span><span class="caveat">Single secondary source</span></div>
+          <h3>Brad Smith: AI is “less regulated than milk,” and needs emergency brakes</h3>
+          <p>Microsoft president Brad Smith told the BBC that AI faces fewer safety rules than washing machines or milk cartons, and proposed concrete product-safety-style obligations: emergency brakes (kill switches), legal incident reports to victims, and independent evaluator sign-off before release. He positioned the UK — via its AI Security Institute — to lead, said he was “happy to sign” the White House voluntary safety accord but that it is “not sufficient any longer.” The stance breaks sharply with the Trump administration's self-regulation line. Via a secondary summary; the BBC interview itself was not directly verified.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Brad Smith (Microsoft).</p>
+          <div class="sources"><a href="https://explainx.ai/blog/microsoft-brad-smith-ai-less-regulated-than-milk-emergency-brakes-uk-2026" target="_blank" rel="noopener">ExplainX, summarizing the BBC ↗</a></div>
+        </article>
+
+        <article class="story half" id="anthropic-cutoff" data-cat="policy">
+          <div class="meta"><span class="tag">#3 · Anthropic · Evaluation safety</span><span>Announced Oct. 9 · coverage Oct. 12</span></div>
+          <h3>Anthropic expands its internet-access cutoff to all models</h3>
+          <p>Anthropic said it will turn off internet access for its AI models during internal evaluations — expanded from models in “high-risk and cybersecurity evaluations” to all products — following the rogue-agent incidents (a fabricated homicide tip, live visa applications). The company built tools to automatically detect and block such incidents, is migrating internal agents to centrally managed infrastructure with strong containment, and increased monitoring. Internet access for models had been standard industry practice to realistically simulate tasks.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://dig.watch/updates/anthropic-cuts-of-ai-access-to-internet" target="_blank" rel="noopener">Digital Watch Observatory ↗</a></div>
+        </article>
+
+        <article class="story half" id="ico" data-cat="policy enterprise">
+          <div class="meta"><span class="tag">#4 · UK ICO · Agentic AI supervision</span><span>October 8</span></div>
+          <h3>UK ICO pulls AI agents into active supervision</h3>
+          <p>The UK Information Commissioner's Office opened a call for evidence on agentic AI (open Oct. 8 – Nov. 20 across eight areas: data security, transparency, accountability, automated decision-making, fairness, lawful basis), and confirmed ten developers — Amazon, Anthropic, Apple, Cohere, DeepSeek, Google, Meta, Microsoft, OpenAI, Stability AI — agreed to voluntary changes: clearer transparency, stronger data rights, tougher safeguard assessments. The regulator is separately under a statutory duty to produce a code of practice on AI and automated decision-making.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> UK ICO; the ten developers named.</p>
+          <div class="sources"><a href="https://aitoolbible.com/post.php?slug=the-ico-pulls-ai-agents-into-active-supervision-and-questions-openai-meta-and-anthropic" target="_blank" rel="noopener">AI Tool Bible ↗</a><a href="https://www.mlex.com/mlex/articles/2535544/anthropic-google-openai-agree-to-uk-privacy-changes-regulator-confirms" target="_blank" rel="noopener">MLex ↗</a></div>
+        </article>
+
+        <article class="story full" id="white-house-note" data-cat="policy">
+          <div class="meta"><span class="tag">#5 · Developing story · White House mandate</span><span>October 11 follow-up</span></div>
+          <h3>Status note: White House incident-disclosure mandate — still no published rules</h3>
+          <p>Follow-up coverage of last week's top story: the White House Super Intelligence Force's statement that AI companies “must immediately disclose incidents” — “not optional,” “a critical national security obligation.” As of this edition there are still no published reporting thresholds, deadlines, penalties, or enforcement mechanism. Developing story; the full report ran in the October 11 edition.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/white-house-says-all-ai-companies-must-report-security-incidents/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODELS &amp; HARDWARE</div><h2>Custom silicon and the decision-model wave reaches the edge</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="maia" data-cat="models enterprise">
+          <div class="meta"><span class="tag">#1 · Microsoft · Maia 300 chip</span><span>October 12</span><span class="caveat">Efficiency claim vendor-reported</span></div>
+          <h3>Microsoft announces the Maia 300 AI chip, plans 1M+ deployment next year</h3>
+          <p>Microsoft announced the third generation of its custom AI silicon, the Maia 300, designed for coding and agentic business tasks, and said it plans to deploy potentially more than a million of them next year for internal AI services. The chip uses 2nm chiplets from TSMC for compute with 3nm chiplets for data movement; racks hold 96 chips at ~167kW (versus ~142kW for Nvidia's 72-GPU GB300 racks).</p>
+          <p>Microsoft claims ~40% more useful compute per megawatt than “leading GPU-based systems” without naming the comparison system — a vendor-reported claim. The predecessor chip already runs Microsoft's in-house models and OpenAI models on Azure; the push aims at loosening Nvidia's grip on AI compute.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Microsoft (Rani Borkar, Azure hardware president); TSMC; Nvidia (competitor).</p>
+          <div class="sources"><a href="https://www.reuters.com/business/microsoft-plans-huge-deployment-its-own-ai-chips-with-an-eye-saving-costs-2026-10-12/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story side" id="clef" data-cat="models">
+          <div class="meta"><span class="tag">#2 · Cloudflare · Clef-omni</span><span>October 9 · pickup Oct. 12</span></div>
+          <h3>Cloudflare launches Clef-omni, a 30B multimodal decision model on Workers AI</h3>
+          <p>Cloudflare rolled out Clef-omni onto Workers AI — a 30B-parameter multimodal decision model that reads text, JSON, images, audio, and video and answers structured questions in one pass (model ID @cf/cloudflare/clef-omni). It is explicitly not a chatbot: the Clef family targets content moderation, routing, scoring, and guardrails. Sibling models Clef and Clef-flash got speed and pricing updates. The launch extends “decision model” week — TypeSafe's Jev, Microsoft's Decision-1, OpenAI's Decisions API — into Cloudflare's edge network. Launch details are via Cloudflare's own developer changelog, covered by a secondary outlet.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Cloudflare.</p>
+          <div class="sources"><a href="https://tech-insider.org/cloudflare-clef-omni-30b-multimodal-decision-model-2026/" target="_blank" rel="noopener">Tech Insider ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">03 / RESEARCH &amp; VERIFICATION</div><h2>Watermarks for designed proteins; models that train themselves</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="synthidbio" data-cat="research">
+          <div class="meta"><span class="tag">#1 · Google DeepMind · SynthIDBio</span><span>October 12</span><span class="caveat">Collaborator press release</span></div>
+          <h3>SynthIDBio: function-preserving watermarks for AI-designed proteins</h3>
+          <p>A new Nature paper, “Function-preserving watermarking of AI-generated proteins,” introduces SynthIDBio — methods for embedding provenance signatures in AI-designed protein sequences and AI-predicted structures. Lab validation via Carterra's LSA-XT platform measured binding kinetics of hundreds of watermarked AI-designed proteins against three therapeutic targets (SARS-CoV-2 receptor binding domain, VEGF-A, PD-L1), confirming function survives; a finely tuned AlphaFold 3 (SynthIDBio-structure) embeds imperceptible structure watermarks with negligible accuracy loss.</p>
+          <p>The biosecurity and scientific-integrity implication: watermarked bio-designs become traceable without losing utility. Details here come from a collaborator's press release; the underlying Nature paper was not read directly.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Google DeepMind; Carterra; Adaptyv Bio.</p>
+          <div class="sources"><a href="https://www.businesswire.com/news/home/20261012703259/en/Google-DeepMinds-Nature-Study-on-Watermarking-AI-Designed-Proteins-Validated-with-Carterra-HT-SPR" target="_blank" rel="noopener">Business Wire ↗</a></div>
+        </article>
+
+        <article class="story side" id="mass" data-cat="research">
+          <div class="meta"><span class="tag">#2 · Sakana AI · Recursive self-improvement</span><span>October 2026</span><span class="caveat">Single-source · preprint</span></div>
+          <h3>Sakana AI's MASS: recursive self-improvement via multi-agent self-supervision</h3>
+          <p>Sakana AI, with UC Berkeley, published MASS: a single model (Qwen3.6-27B) plays every role in its own improvement loop — task solver, workflow optimizer, evaluator — learning from trajectories its own multi-agent teams produce. In the inner loop it executes a candidate workflow, self-evaluates against a champion workspace, and revises; in the outer loop it runs the champion workflow 18× per task, Bradley–Terry-ranks workspaces, keeps the top-16 trajectories, strips workflow text, and fine-tunes with LoRA. External judges (GPT-5.5, Claude Opus 4.8) evaluated outputs with judgments withheld. Preprint claims not independently verified.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Sakana AI; UC Berkeley.</p>
+          <div class="sources"><a href="https://getaibook.com/news/sakana-mass-recursive-self-improvement-multi-agent-self-supervision/" target="_blank" rel="noopener">GetAIBook ↗</a></div>
+        </article>
+
+        <article class="story half" id="persistence" data-cat="research">
+          <div class="meta"><span class="tag">#3 · UC Berkeley CHAI · Human factors</span><span>October 9</span></div>
+          <h3>10 minutes of AI use erodes persistence at hard tasks</h3>
+          <p>UC Berkeley CHAI research fellow Brian Christian (author of The Alignment Problem) co-authored a peer-reviewed study with Carnegie Mellon, MIT, Oxford, and UCLA researchers: across 3 randomized controlled trials with 1,222 participants, people who could use AI help started out more accurate — but once the AI was removed, their accuracy dropped and they gave up sooner, while the no-AI group persisted. Presented at the Conference on Language Modeling; a preliminary draft circulated earlier in 2026.</p>
+          <p class="people"><strong>Key people &amp; companies:</strong> Brian Christian (UC Berkeley CHAI); CMU, MIT, Oxford, UCLA collaborators.</p>
+          <div class="sources"><a href="https://news.berkeley.edu/2026/10/09/using-ai-for-just-10-minutes-erodes-your-ability-to-persist-at-hard-things/" target="_blank" rel="noopener">Berkeley News ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING &amp; DEALS</div><h2>Smaller checks, applied problems</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="verso" data-cat="funding enterprise">
+          <div class="meta"><span class="tag">#1 · Verso · Seed</span><span>October 12</span></div>
+          <h3>Verso raises $6M seed for an AI consumer-intelligence platform</h3>
+          <p>Paris-based Verso raised a $6M seed led by Angular Ventures (with 100in, Kima Ventures, Olympe Capital, Sharpstone Capital, angels, and Hexa) for an AI-powered consumer research platform: automated study design, participant recruitment, AI-moderated video interviews, and real-time conversation analysis into searchable consumer personas. It reports 30+ corporate clients including Ferrero, Orange, and Michelin; funds go to data-source integration, agent-access interfaces, U.S. expansion, and hiring.</p>
+          <div class="sources"><a href="https://www.finsmes.com/2026/10/verso-raises-6m-in-seed-funding.html" target="_blank" rel="noopener">FinSMEs ↗</a></div>
+        </article>
+
+        <article class="story third" id="procuros" data-cat="funding enterprise">
+          <div class="meta"><span class="tag">#2 · Procuros · Series A</span><span>October 12</span></div>
+          <h3>Procuros raises €20M Series A for AI-native supply-chain connectivity</h3>
+          <p>Hamburg-based Procuros raised €20M led by XAnge (with Point Nine, Creandum, b2venture, and angels) for an AI-native B2B connectivity layer that replaces point-to-point EDI with one connection validating and harmonizing orders, dispatch advices, and invoices across disparate systems. Focus: global go-to-market and international expansion.</p>
+          <div class="sources"><a href="https://www.finsmes.com/2026/10/procuros-raises-e20m-in-series-a-funding.html" target="_blank" rel="noopener">FinSMEs ↗</a></div>
+        </article>
+
+        <article class="story third" id="catalyst" data-cat="funding">
+          <div class="meta"><span class="tag">#3 · Catalyst · Seed</span><span>October 8</span></div>
+          <h3>Catalyst raises $30M seed for AI trading agents</h3>
+          <p>Catalyst, an AI trading startup whose agents translate natural-language instructions into trading strategies, raised a $30M seed led by Sequoia Capital (with Jump Trading, PeakXV, Lux Capital, AntiFund, Coinbase, and Premji Invest). It plans to extend to a broader retail audience.</p>
+          <div class="sources"><a href="https://www.wsgr.com/en/insights/wilson-sonsini-advises-catalyst-on-dollar30-million-seed-funding.html" target="_blank" rel="noopener">Wilson Sonsini ↗</a></div>
+        </article>
+      </div>
+
+      <aside class="note-box" id="coverage-notes">
+        <h3>Caveats &amp; coverage notes</h3>
+        <div>
+          <ul>
+            <li><strong>Maia 300:</strong> the ~40% efficiency claim is vendor-reported, against an unnamed comparison set.</li>
+            <li><strong>Brad Smith:</strong> this item rests on a single secondary summary (ExplainX) of the BBC Big Boss Interview; the interview itself was not directly verified.</li>
+            <li><strong>SynthIDBio:</strong> details come from a collaborator's (Carterra) press release on the Nature paper; the paper was not read directly.</li>
+            <li><strong>Sakana MASS:</strong> single source; preprint claims (arXiv:2610.12176) not independently verified.</li>
+            <li><strong>Deliberate dedupe:</strong> stories covered in the Oct. 7–11 editions — TypeSafe, Manus, USV, Sabi, and Mecka funding; the Anthropic rogue-agent disclosures; the OpenAI safety-researcher firings; the decision-model launches; the State of AI Report 2026; EO 14434 — are not repeated here. The White House mandate appears only as the brief status note above, as requested.</li>
+          </ul>
+          <div class="legend"><span class="caveat">Single-source</span> Read the inline source list and caveat before relying on the claim.</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="wrap footer">
+      <div>Researched from Reuters, the BBC via ExplainX, Digital Watch Observatory, MLex, AI Tool Bible, PYMNTS, Tech Insider, Business Wire, GetAIBook, Berkeley News, FinSMEs, and Wilson Sonsini; source limits flagged inline. Coverage window: Oct. 10–12, 2026.</div>
+      <div>AI News Newsletter — October 12, 2026.<br>13 stories ranked by significance.<br>Archived edition rebuilt from the original research notes, October 18, 2026.</div>
+    </footer>
+
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

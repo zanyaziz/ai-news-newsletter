@@ -16,6 +16,7 @@ Every edition of Zain Aziz's daily AI news newsletter, published as a static sit
 A new edition is added every morning by the daily newsletter job: the day's page is
 saved to `editions/`, the index is rebuilt, and the change is committed and pushed.
 
-Archive gaps: the editions for September 14, October 4, October 11, and October 12, 2026
-were delivered in chat but their HTML was not archived before the next edition replaced
-them. No edition was published on September 22, 2026.
+The editions for September 14, October 4, October 11, and October 12, 2026 were
+originally delivered in chat without their HTML being archived; they were rebuilt from
+the surviving research files on October 18, 2026 and are now part of the archive.
+No edition was published on September 22, 2026.

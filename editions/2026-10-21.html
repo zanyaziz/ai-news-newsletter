@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Wednesday, October 21, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Wednesday, October 21, 2026</div>
+      <div class="range">Covering Tuesday, October 20, 2026, plus significant late-breaking items from Oct 19–20</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Agents on both sides of the breach — attackers unleashed them, Microsoft moved to <em>rein them in</em></h1>
+      <div><p class="dek">A lone hacker’s AI agents breached 100+ company websites for roughly $50 apiece; the same day, Microsoft shipped Guardian Agents that can shut a rogue agent down. Plus: OpenAI’s $30B race ahead of Anthropic’s IPO, Salesforce buys Braze for $5.66B, and DeepSeek open-sources its inference stack as Washington bars it from federal systems.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Stories are ranked by significance within each category. Single-sourced, self-reported and unconfirmed items are flagged inline and collected again in the caveats box at the end of this edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#hacker-ai-agents-breach">AI agents breach more than 100 company websites</a></li>
+        <li><span class="num">02</span><a href="#microsoft-guardian-agents">Microsoft rolls out Guardian Agents to monitor and stop enterprise agents</a></li>
+        <li><span class="num">03</span><a href="#openai-raise-anthropic-ipo">OpenAI racing to raise about $30 billion ahead of Anthropic IPO</a></li>
+        <li><span class="num">04</span><a href="#salesforce-braze">Salesforce to acquire Braze for $5.66 billion</a></li>
+        <li><span class="num">05</span><a href="#deepseek-deepinfer">DeepSeek open-sources DeepInfer as US bars DeepSeek from federal systems</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Research</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="companies" aria-pressed="false">Infrastructure &amp; Companies</button>
+        <button class="filter" data-filter="money" aria-pressed="false">Funding &amp; Deals</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Tools</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">01 / POLICY, SAFETY &amp; LEGAL</div><h2>One campaign, 100+ breaches — and the governance scramble that followed</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="hacker-ai-agents-breach" data-cat="policy top">
+          <div class="meta"><span class="tag">#1 · Safety · AI-agent hacking</span><span>Reuters · Oct 20</span><span class="caveat">What data was taken is not established</span></div>
+          <h3>AI agents breach more than 100 company websites</h3>
+          <p>Reuters, via <strong>NorForge</strong> research, reported Oct 20 that a <strong>Chinese-speaking hacker</strong> used the open-source <strong>Cairn</strong> platform — which coordinates AI agents, reported as a <strong>Claude Code harness driving DeepSeek V4.1 Flash</strong> — to breach <strong>more than 100 company websites</strong> after attempts on <strong>1,200+</strong>. Reporters identified <strong>Deere, SharkNinja and Cummins</strong> among the targets.</p>
+          <p>The attack instructions were <strong>under 100 characters</strong>, and the whole campaign cost an estimated <strong>~$5,000 in tokens — roughly $50 per breach</strong>. <strong>Caveat:</strong> what data was taken is <strong>not established</strong>. Deere said it saw <strong>no indication sensitive data was accessed</strong>, and SharkNinja said only a <strong>standalone support site</strong> was affected.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://www.technology.org/2026/10/20/hacker-ai-agents-cairn-100-websites-deere-sharkninja-cummins/" target="_blank" rel="noopener">Technology.org ↗</a></div>
+        </article>
+
+        <article class="story side" id="microsoft-guardian-agents" data-cat="policy top">
+          <div class="meta"><span class="tag">#2 · Safety · Microsoft agent governance</span><span>Announced Oct 20</span></div>
+          <h3>Microsoft rolls out Guardian Agents to monitor and stop enterprise agents</h3>
+          <p>Microsoft expanded <strong>Project Perception</strong> in <strong>Microsoft 365 E7</strong> with <strong>Guardian Agents</strong>, <strong>Dynamic Permissions</strong> and <strong>Dynamic Agent Risk</strong>. Admins can now <strong>assess an agent’s risk, restrict it to read-only, require human approval, or shut an agent down</strong> — with detection covering <strong>60 agent types</strong>, per GeekWire reporting.</p>
+          <p>Read against story #1, the pairing is the day in miniature: agents as the attack surface, and agents as the control layer watching them.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-funding-security-and-development-tools-dominate" target="_blank" rel="noopener">AI Agents Directory ↗</a></div>
+        </article>
+
+        <article class="story third" id="opencode-breach" data-cat="policy">
+          <div class="meta"><span class="tag">#6 · Safety · OpenCode breach</span><span>IT-Daily · Oct 20</span><span class="caveat">Action needed — rotate keys</span></div>
+          <h3>OpenCode data breach puts OpenAI, Anthropic and Google API keys at risk</h3>
+          <p>An <strong>OpenCode</strong> data breach exposed API keys for <strong>OpenAI, Anthropic and Google</strong> that were <strong>stored locally</strong>. There are reports of <strong>unauthorized charges up to $1,700</strong>; OpenCode linked the incident to a <strong>distillation campaign</strong>. If you stored keys with OpenCode, treat them as compromised and rotate them.</p>
+        </article>
+
+        <article class="story third" id="anthropic-supply-chain-brief" data-cat="policy">
+          <div class="meta"><span class="tag">#7 · Legal · Anthropic supply-chain case</span><span>Brief filed Oct 20</span></div>
+          <h3>OpenAI and Google employees back rehearing in Anthropic supply-chain case</h3>
+          <p>Employees of <strong>OpenAI and Google</strong> filed a brief Oct 20 supporting a US appeals court <strong>revisiting Anthropic’s challenge</strong> to a government <strong>supply-chain risk designation</strong>, arguing the punishment <strong>harms US AI competitiveness</strong> — rivals’ staff formally siding with Anthropic against the designation.</p>
+          <div class="sources"><a href="https://www.mlex.com/mlex/artificial-intelligence/articles/2540686/openai-google-employees-back-us-appellate-rehearing-in-anthropic-case" target="_blank" rel="noopener">MLex ↗</a></div>
+        </article>
+
+        <article class="story third" id="canadian-publishers-anthropic" data-cat="policy">
+          <div class="meta"><span class="tag">#8 · Legal · Canadian publishers / Anthropic</span><span>Filed in Ontario</span><span class="caveat">Allegations, not court findings</span></div>
+          <h3>Canadian publishers sue Anthropic</h3>
+          <p>A coalition including <strong>Postmedia</strong> and <strong>The Globe and Mail</strong> sued Anthropic in Ontario, alleging <strong>Claude was trained on their copyrighted content without permission</strong>. <strong>These are claims in a lawsuit — allegations, not findings.</strong></p>
+        </article>
+
+        <article class="story third" id="un-military-ai" data-cat="policy">
+          <div class="meta"><span class="tag">#9 · Policy · UN military AI</span><span>Reported Oct 20</span><span class="caveat">Single-sourced — not yet corroborated</span></div>
+          <h3>Reported: UN launches a military AI initiative</h3>
+          <p class="big-caveat">Single-sourced to Emergent — not yet corroborated by major wires.</p>
+          <p>A <strong>UN military AI initiative</strong> was reported launched Oct 20 with <strong>mandatory disclosure and human-oversight protocols</strong> for military AI systems. Until a wire service or the UN itself confirms the details, treat this as a <strong>report to watch</strong>, not an established fact.</p>
+          <div class="sources"><a href="https://emergent.sh/news/un-launches-initiative-regulate-military-ai" target="_blank" rel="noopener">Emergent ↗</a></div>
+        </article>
+
+        <article class="story half" id="imf-world-bank-split" data-cat="policy">
+          <div class="meta"><span class="tag">#10 · Policy · IMF vs World Bank</span><span>Oct 20</span></div>
+          <h3>IMF vs World Bank: a split on AI economics</h3>
+          <p>The <strong>IMF</strong> warned of <strong>financial-stability risks</strong> from the speed of AI investment — six cloud providers’ capex estimated at <strong>$470B in 2025, rising to $870B in 2026</strong>. The <strong>World Bank</strong>, in contrast, highlighted <strong>localized models boosting developing-nation growth</strong>. Same buildout, two institutional readings: systemic risk versus development lever.</p>
+        </article>
+
+        <article class="story half" id="anthropic-junior-hiring" data-cat="policy">
+          <div class="meta"><span class="tag">#11 · Labor · Anthropic hiring</span><span>Reported Oct 20</span></div>
+          <h3>Anthropic’s junior technical hiring share fell from 27% to 9%</h3>
+          <p>Anthropic’s <strong>junior share of technical hiring fell from 27% to 9%</strong> — even as its <strong>overall technical hiring grew</strong>. It is one company’s mix, not an industry census, but it is a concrete data point in the entry-level-jobs debate: the ladder’s bottom rung is where AI-era hiring is changing first.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="money">
+      <div class="section-head"><div class="section-no">02 / FUNDING &amp; DEALS</div><h2>A $30B race, a $5.66B acquisition, and chips at $6.2B</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="openai-raise-anthropic-ipo" data-cat="money top">
+          <div class="meta"><span class="tag">#3 · Money · OpenAI / Anthropic</span><span>Reuters · Oct 19–20</span><span class="caveat">Two anonymous sources — companies declined to comment</span></div>
+          <h3>OpenAI racing to raise about $30 billion at over $1.4 trillion valuation ahead of Anthropic IPO</h3>
+          <p>Reuters reported Oct 19–20 that <strong>OpenAI</strong> is accelerating an <strong>unusually fast ~$30 billion raise</strong> at a valuation <strong>over $1.4 trillion</strong>, aiming to lock in investors before <strong>Anthropic’s expected mid-November IPO</strong>. <strong>SoftBank</strong> and Abu Dhabi’s <strong>MGX</strong> are in talks to participate.</p>
+          <p>OpenAI is pitching <strong>$50 billion in annualized revenue</strong> and <strong>$70 billion by year-end</strong>. <strong>Caveat:</strong> the reporting rests on <strong>two anonymous Reuters sources</strong>; <strong>OpenAI and SoftBank declined to comment</strong>, and the revenue figures are the company’s pitch, not audited disclosures.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-racing-to-raise-30-billion-ahead-of-anthropic-listing/" target="_blank" rel="noopener">PYMNTS (Reuters) ↗</a><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story side" id="salesforce-braze" data-cat="money top">
+          <div class="meta"><span class="tag">#4 · Deals · Salesforce / Braze</span><span>Definitive agreement · Oct 20</span></div>
+          <h3>Salesforce to acquire Braze for $5.66 billion</h3>
+          <p><strong>Salesforce</strong> announced a definitive agreement Oct 20 to acquire <strong>Braze</strong> for <strong>$47.50 cash per share</strong> — a <strong>~58% premium</strong> and an enterprise value of about <strong>$5.66 billion</strong>. Braze stock jumped <strong>51.7% to $45.57</strong> on the news.</p>
+          <p>Braze serves roughly <strong>2,770 customers</strong>, including <strong>Canva, Instacart and Venmo</strong>, and will be integrated with <strong>Marketing Cloud, Data 360 and Agentforce</strong>. The deal is expected to close in <strong>Salesforce’s fiscal 2028</strong>, subject to approvals.</p>
+          <div class="sources"><a href="https://1027wbow.com/2026/10/20/salesforce-to-acquire-braze-in-a-5-66-billion-deal/" target="_blank" rel="noopener">Reuters via WBOW ↗</a></div>
+        </article>
+
+        <article class="story half" id="tenstorrent-series-e" data-cat="money">
+          <div class="meta"><span class="tag">#12 · Funding · Tenstorrent</span><span>Closed Oct 19</span><span class="caveat">No revenue or shipment figures disclosed</span></div>
+          <h3>Tenstorrent raises $1.5B Series E at a $6.2B valuation</h3>
+          <p><strong>Tenstorrent</strong>, Jim Keller’s <strong>RISC-V</strong> chip company, closed a <strong>$1.5 billion Series E</strong> at a <strong>$6.2 billion valuation</strong>, led by <strong>Trace Capital and Innovation X</strong>, with <strong>Fidelity, Valor, Hyundai, Samsung Securities, LG and Bezos Expeditions</strong> participating. <strong>Caveat:</strong> no revenue or shipment figures were disclosed with the round.</p>
+        </article>
+
+        <article class="story half" id="asi-series-c" data-cat="money">
+          <div class="meta"><span class="tag">#13 · Funding · ASI</span><span>SiliconANGLE · Oct 20</span></div>
+          <h3>ASI raises $325M Series C at a $3B valuation</h3>
+          <p><strong>ASI</strong> raised a <strong>$325 million Series C</strong> at a <strong>$3 billion valuation</strong> for AI that manages <strong>critical physical infrastructure</strong>. The round follows a <strong>$875 million multiyear FAA air-traffic agreement</strong> — one of the larger examples of AI moving from software workflows into physical systems of record.</p>
+          <div class="sources"><a href="https://siliconangle.com/2026/10/20/ai-infrastructure-management-software-startup-asi-hits-3b-valuation-after-raising-325m-in-funding/" target="_blank" rel="noopener">SiliconANGLE ↗</a></div>
+        </article>
+
+        <article class="story half" id="smaller-rounds" data-cat="money">
+          <div class="meta"><span class="tag">#14 · Funding · Town / Opsin / AuxoAI</span><span>Oct 20</span></div>
+          <h3>Smaller rounds: Town, Opsin, AuxoAI</h3>
+          <p><strong>Town</strong> raised <strong>$108 million at a $1 billion valuation</strong> for AI assistants. <strong>Opsin</strong> secured <strong>$21 million</strong> to <strong>govern enterprise AI agents</strong> — the funding echo of the day’s governance theme. <strong>AuxoAI</strong> raised <strong>over $20 million</strong>.</p>
+        </article>
+
+        <article class="story half" id="anthropic-nscale-talks" data-cat="money">
+          <div class="meta"><span class="tag">#15 · Deals · Anthropic / Nscale</span><span>Reported Oct 20</span><span class="caveat">Reported — not confirmed by Anthropic or Nscale</span></div>
+          <h3>Reported: a second $45B Nscale compute deal for Anthropic</h3>
+          <p><strong>Anthropic</strong> is reportedly in talks for a <strong>second $45 billion compute deal with Nscale</strong>, which would lift its commitments to roughly <strong>$90 billion</strong>. <strong>Flag:</strong> this is reporting about talks — <strong>neither Anthropic nor Nscale has confirmed it</strong>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">03 / MODELS &amp; RESEARCH</div><h2>Intent-reading models, a diffusion speed claim, and DeepSeek’s open stack</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="next-model-race" data-cat="models">
+          <div class="meta"><span class="tag">#16 · Models · Anthropic / Google / OpenAI</span><span>The Information · Oct 19</span><span class="caveat">Single-source report — no name, date or price announced</span></div>
+          <h3>Anthropic is preparing a model that reads users’ unstated intentions</h3>
+          <p class="big-caveat">Single-source report — treat the details as unconfirmed.</p>
+          <p><strong>The Information</strong> reported Oct 19 that <strong>Anthropic</strong> is preparing a new model that is <strong>better at reading users’ unstated intentions</strong>. A tester said the unnamed model <strong>infers underlying goals</strong> — for example, fixing a <strong>whole class of bug</strong> rather than just the one reported. <strong>No name, release date or price has been announced.</strong></p>
+          <p>The same report says <strong>Google</strong> is working on <strong>Gemini 4 Carbon</strong>, an upgrade to <strong>Gemini 4 Argon</strong> that is strong on <strong>visual and video tasks</strong>, and that <strong>OpenAI</strong> is preparing a <strong>cheaper model in the GPT Terra family</strong>.</p>
+          <div class="sources"><a href="https://www.webpronews.com/anthropic-prepares-new-model-to-better-read-users-unstated-intentions/" target="_blank" rel="noopener">WebProNews (The Information) ↗</a></div>
+        </article>
+
+        <article class="story side" id="deepseek-deepinfer" data-cat="models top">
+          <div class="meta"><span class="tag">#5 · Models · DeepSeek DeepInfer</span><span>Released Oct 20</span></div>
+          <h3>DeepSeek open-sources DeepInfer as US bars DeepSeek from federal systems</h3>
+          <p>On Oct 20 <strong>DeepSeek</strong> released <strong>DeepInfer</strong>, its in-house inference framework, as <strong>Apache 2.0 open source</strong>. The first release supports <strong>only DeepSeek-V4.1-Flash</strong>, and it is <strong>offline inference software — not a managed cloud product</strong>.</p>
+          <p>Separately, the <strong>Department of Homeland Security</strong> ordered DeepSeek <strong>removed from federal civilian systems</strong> and <strong>blocked future purchases</strong> (WSJ, via The Neuron) — the open-source push and the federal ban landing on the same day.</p>
+          <div class="sources"><a href="https://shattered.io/deepseek-deepinfer-open-source-inference-pressure-2026/" target="_blank" rel="noopener">Shattered ↗</a><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="inception-mercury-3" data-cat="models">
+          <div class="meta"><span class="tag">#17 · Models · Inception Mercury 3</span><span>Oct 20</span><span class="caveat">Company-reported claims</span></div>
+          <h3>Mercury 3: a diffusion language model claiming 1,000+ tokens/sec</h3>
+          <p><strong>Inception’s Mercury 3</strong>, a <strong>diffusion language model</strong>, claims <strong>more than 1,000 tokens per second</strong> and quality wins against <strong>GPT-6 Luna and Claude Haiku 5.5</strong> on selected comparisons. <strong>Caveat:</strong> both the speed and the quality wins are <strong>company-reported</strong>, on comparisons Inception chose.</p>
+        </article>
+
+        <article class="story third" id="minimax-m31-flash" data-cat="models">
+          <div class="meta"><span class="tag">#18 · Models · MiniMax M3.1 Flash</span><span>Oct 20</span><span class="caveat">Company claims</span></div>
+          <h3>MiniMax M3.1 Flash claims 3x speed at 70% lower cost</h3>
+          <p><strong>MiniMax’s M3.1 Flash</strong> claims <strong>~3x faster online inference</strong> and <strong>70% lower cost</strong>, with gains in <strong>coding and computer use</strong>. As with Mercury 3, these are <strong>the vendor’s own numbers</strong> — directionally interesting, not yet independently verified.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="companies">
+      <div class="section-head"><div class="section-no">04 / INFRASTRUCTURE &amp; COMPANIES</div><h2>Agents need hosts: Vera CPUs, a gigawatt cluster, and 50 GW more</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="nvidia-vera-modal" data-cat="companies">
+          <div class="meta"><span class="tag">#19 · Infrastructure · Nvidia Vera / Modal</span><span>Reuters · Oct 19</span><span class="caveat">Performance figures are Modal’s own tests</span></div>
+          <h3>Nvidia’s Vera CPU wins its first agent-hosting convert: Modal</h3>
+          <p>Reuters reported Oct 19 that <strong>Modal</strong> — previously an <strong>Intel/AMD-only</strong> shop — will run <strong>Nvidia’s Arm-based Vera CPUs</strong>, the first agent-hosting convert for the chip. In <strong>Modal’s own tests</strong>, Vera delivered <strong>up to 2x the work of Intel Granite Rapids</strong> for long-running agents.</p>
+          <p><strong>Caveat:</strong> those numbers are <strong>Modal’s, not independently verified</strong> — though Modal is putting production traffic behind the claim. Context: Modal raised <strong>$750 million last week at a $15.75 billion valuation</strong>.</p>
+        </article>
+
+        <article class="story side" id="meta-prometheus" data-cat="companies">
+          <div class="meta"><span class="tag">#20 · Infrastructure · Meta Prometheus</span><span>Meta Engineering · Oct 20</span></div>
+          <h3>Inside Prometheus, Meta’s gigawatt-scale supercluster</h3>
+          <p><strong>Meta</strong> published an inside look at <strong>Prometheus</strong>, its <strong>gigawatt-scale AI supercluster in Ohio</strong> that supports the <strong>Muse</strong> model family — a rare first-party tour of how a frontier lab’s largest training site is actually built and run.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="ovhcloud-model" data-cat="companies">
+          <div class="meta"><span class="tag">#21 · Companies · OVHcloud</span><span>Reuters · Oct 20</span></div>
+          <h3>OVHcloud to launch its first proprietary AI model in early 2027</h3>
+          <p>CEO <strong>Octave Klaba</strong> told Reuters Oct 20 that <strong>OVHcloud</strong> will launch its <strong>first proprietary AI model in early 2027</strong> — a <strong>mixture-of-experts</strong> model in training since June on its <strong>Jupiter</strong> supercomputer. The company has <strong>250 MW connected</strong>, with <strong>110 MW ready for new clients</strong>.</p>
+        </article>
+
+        <article class="story third" id="semianalysis-capacity" data-cat="companies">
+          <div class="meta"><span class="tag">#22 · Infrastructure · Capacity outlook</span><span>SemiAnalysis · Oct 20</span></div>
+          <h3>SemiAnalysis expects ~50 GW of new data-center capacity in 2027</h3>
+          <p><strong>SemiAnalysis</strong> expects roughly <strong>50 GW of new data-center capacity</strong> to come online in <strong>2027</strong> — the supply side of the IMF’s capex warning in story #10, and the backdrop for every compute deal in this edition.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">05 / PRODUCTS &amp; TOOLS</div><h2>Agents move into the editor, the browser, and the security stack</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="vscode-agent-host" data-cat="products">
+          <div class="meta"><span class="tag">#23 · Tools · VS Code 1.137</span><span>Oct 20</span></div>
+          <h3>VS Code 1.137 adds Agent Host in isolated Dev Containers</h3>
+          <p><strong>VS Code 1.137</strong> adds an <strong>Agent Host</strong> that runs AI coding agents inside <strong>isolated Dev Containers</strong>, plus <strong>automations and voice mode</strong> — isolation as the default posture for agents that touch your codebase.</p>
+        </article>
+
+        <article class="story third" id="chatgpt-browser-actions" data-cat="products">
+          <div class="meta"><span class="tag">#24 · Products · ChatGPT</span><span>Oct 20</span></div>
+          <h3>ChatGPT expands browser actions</h3>
+          <p><strong>ChatGPT</strong> can now use your <strong>open Chrome tabs as context</strong> and take actions such as <strong>filling forms and downloading files</strong> — the browser becoming an agent surface, with the permissions questions that implies.</p>
+        </article>
+
+        <article class="story third" id="amazon-torchneuron" data-cat="products">
+          <div class="meta"><span class="tag">#25 · Tools · AWS TorchNeuron</span><span>Public beta</span></div>
+          <h3>Amazon TorchNeuron in public beta</h3>
+          <p><strong>TorchNeuron</strong> lets teams move <strong>PyTorch workloads onto Trainium</strong> with a <strong>configuration change</strong> rather than a rewrite. It is in <strong>public beta</strong> now, with an <strong>open-source release planned</strong>.</p>
+        </article>
+
+        <article class="story third" id="anthropic-oss-scanner" data-cat="products">
+          <div class="meta"><span class="tag">#26 · Tools · Anthropic OSS Scanner</span><span>Oct 20</span></div>
+          <h3>Anthropic OSS Scanner: free scans for critical open source</h3>
+          <p>Anthropic’s <strong>OSS Scanner</strong> offers <strong>free periodic vulnerability scans</strong> for critical open-source projects, including a <strong>proof of concept</strong> and, where possible, a <strong>proposed patch</strong> — defensive agent tooling aimed at the supply chain everyone depends on.</p>
+        </article>
+
+        <article class="story half" id="agent-partnerships" data-cat="products">
+          <div class="meta"><span class="tag">#27 · Companies · Partnerships</span><span>Announced Oct 20</span></div>
+          <h3>Partnerships: DXC + LangChain, Protegrity + CharliAI</h3>
+          <p><strong>DXC Technology</strong> partnered with <strong>LangChain</strong> on enterprise agent deployments. Separately, <strong>Protegrity and CharliAI</strong> partnered on <strong>sensitive-data protection for agents in production</strong> — two more signs that the agent stack’s missing layer is governance, not capability.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor’s note &amp; caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> this edition covers <strong>Tuesday, October 20, 2026</strong>, with significant <strong>late items from Oct 19</strong> included and labeled where they appear.</li>
+          <li><strong>Anonymous sources and researcher estimates:</strong> the Reuters-sourced figures in this edition rely on them — the <strong>OpenAI raise</strong> rests on <strong>two anonymous sources</strong> (OpenAI and SoftBank declined to comment), and the <strong>breach counts and ~$5,000 campaign cost</strong> in the Cairn story are <strong>researcher and reporter estimates</strong>. What data was taken in those breaches is <strong>not established</strong>.</li>
+          <li><strong>Self-reported performance claims:</strong> the speed and cost figures from <strong>Inception (Mercury 3)</strong>, <strong>MiniMax (M3.1 Flash)</strong> and <strong>Modal (Vera CPU tests)</strong> are <strong>company-reported and not independently verified</strong> — flagged in place wherever they appear.</li>
+          <li><strong>Single-sourced items, marked as such:</strong> the <strong>UN military-AI initiative</strong> is sourced only to <strong>Emergent</strong> and has not been corroborated by major wires; <strong>The Information’s</strong> next-model report (Anthropic’s intent-reading model, Gemini 4 Carbon, OpenAI’s Terra family) is likewise a <strong>single-source report</strong> with no names, dates or prices announced.</li>
+          <li><strong>Also flagged in place:</strong> the reported <strong>$45B second Nscale deal</strong> is talks, not a confirmed agreement; <strong>Tenstorrent</strong> disclosed no revenue or shipment figures with its raise; the Canadian publishers’ claims against Anthropic are <strong>allegations, not court findings</strong>; and the Salesforce–Braze close remains <strong>subject to approvals</strong>.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are single-sourced, self-reported, alleged, or not yet confirmed — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Tuesday, October 20, 2026, plus significant late-breaking items from October 19–20, labeled where they appear. Reuters funding and hacking figures rely on anonymous sources and researcher estimates; model speed and cost claims from Inception, MiniMax and Modal are self-reported and not independently verified; the UN military-AI item and The Information’s next-model report are single-sourced — re-check contested items against primary sources before citing them elsewhere.</div>
+      <div>AI News Newsletter — October 21, 2026.<br>27 ranked stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

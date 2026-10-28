@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Wednesday, October 28, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.people{font-size:12px!important;color:var(--copy-soft)!important}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.sources span{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;color:var(--muted)}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Wednesday, October 28, 2026</div>
+      <div class="range">Covering Tuesday, October 27, 2026, plus significant late-breaking items from October 26, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Two labs claim a <em>theorem fell</em></h1>
+      <div><p class="dek">Anthropic files its S-1 alongside a $63B chip-financing deal, OpenAI and Anthropic both claim their models refuted the Exponential Time Hypothesis — unreviewed — DeepMind’s Genie 4 learns to make sound, and Oracle turns its cloud into an AI chip buffet.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Coverage is Tuesday, October 27, 2026, with late-breaking October 26 items marked as such. The Exponential Time Hypothesis and other OpenAI science claims are unreviewed lab claims — Lean artifacts exist, but there is no independent expert verdict yet. Genie 4 and Liquid AI’s LFM3 figures are company-reported. OpenAI’s reported purchase of Google TPUs is reported, not confirmed. And Anthropic’s headline $80.7B loss is mostly non-cash accounting, not operating cash burn.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#anthropic-ipo">Anthropic files S-1 and lands $63B chip financing</a></li>
+        <li><span class="num">02</span><a href="#eth-claims">OpenAI and Anthropic both claim their models refuted the Exponential Time Hypothesis</a></li>
+        <li><span class="num">03</span><a href="#genie-4">Google DeepMind previews Genie 4 world model with native audio</a></li>
+        <li><span class="num">04</span><a href="#oracle-chip-buffet">Oracle becomes an AI chip buffet and brings ChatGPT/Codex into its apps</a></li>
+        <li><span class="num">05</span><a href="#microsoft-buyouts">Microsoft offers voluntary buyouts to ~60,000 employees as AI spending climbs</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Open Source</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Enterprise</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Business</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Community</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- MODELS & RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODELS &amp; RELEASES</div><h2>A world model that makes sound, a mid-tier Terra, and six small open models</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="genie-4" data-cat="models top">
+          <div class="meta"><span class="tag">#3 · Models · Google DeepMind</span><span>Announced Oct 27 · Research preview</span><span class="caveat">Company demos only — not independently benchmarked</span></div>
+          <h3>Google DeepMind previews Genie 4 world model with native audio</h3>
+          <p><strong>Genie 4</strong> is DeepMind’s first real-time world model to <strong>generate audio natively in the same generative loop</strong> — music, ambient sound and interactive dialogue — rather than bolting sound on afterwards. <strong>Gemini 3.8 Flash</strong> sits in the loop as a guiding agent, and users can <strong>steer by text in real time</strong>: change the weather, move the camera, add people or objects mid-simulation. Coherent scenes now run to about <strong>2 minutes, double Genie 3’s ~1 minute</strong>.</p>
+          <p>Access is a <strong>research preview for trusted testers only</strong>. Next comes rollout to <strong>Google AI Ultra subscribers via Project Genie</strong> and early-access <strong>Gemini API / AI Studio</strong> partners; a waitlist is open, with no firm timeline.</p>
+          <p class="big-caveat">Caveat: company demos only, not independently benchmarked — and DeepMind itself notes that visual detail and object permanence still drift.</p>
+          <div class="sources"><a href="https://www.techtimes.com/articles/329582/20261028/deepmind-genie-4-adds-native-audio-gemini-powered-reasoning-real-time-world-simulation.htm" target="_blank" rel="noopener">TechTimes ↗</a><a href="https://imasters.com/news/google-deepmind-launches-genie-4-a-world-model-with-audio-and-real-time-editing" target="_blank" rel="noopener">iMasters ↗</a></div>
+        </article>
+
+        <article class="story side" id="gpt-terra" data-cat="models products">
+          <div class="meta"><span class="tag">Models · OpenAI</span><span>Oct 26 · Late-breaking</span></div>
+          <h3>OpenAI GPT-6.1 Terra: the mid-tier model, in full spec</h3>
+          <p><strong>GPT-6.1 Terra</strong> sits between <strong>GPT-6 Luna</strong> and <strong>GPT-6.1 Sol/Astra</strong>, pitched for <strong>visual reasoning, computer use and clear writing</strong>. Specs: a <strong>1,050,000-token context window</strong>, <strong>128,000 max output tokens</strong>, knowledge cutoff <strong>June 1, 2026</strong>, <strong>text + image input</strong> and text output.</p>
+          <div class="sources"><a href="https://medium.alexmerced.blog/ai-weekly-gpt-6-1-terra-agent-skills-and-anthropics-s-1-70ceda868c79" target="_blank" rel="noopener">Alex Merced / Medium ↗</a></div>
+        </article>
+
+        <article class="story full" id="lfm3" data-cat="models">
+          <div class="meta"><span class="tag">Models · Open Source · Liquid AI</span><span>Oct 27</span><span class="caveat">Benchmarks self-reported — company-reported</span></div>
+          <h3>Liquid AI’s LFM3 family: six open-weight models around 2B parameters</h3>
+          <p>Liquid AI released <strong>six open-weight LFM3 models</strong> spanning <strong>text, vision, audio, omni and decision</strong> tasks, all around the ~2B-parameter class. The headline <strong>LFM3-1.7B</strong> was trained on <strong>22 trillion tokens</strong>, carries a <strong>256K context</strong>, and runs at roughly <strong>1GB at 4-bit</strong> quantisation.</p>
+          <p><strong>Caveat:</strong> the benchmark scores published with the launch are <strong>company-reported</strong> and have not been independently verified.</p>
+          <div class="sources"><a href="https://thehype.news/daily-ai-digest-october-27/" target="_blank" rel="noopener">The Hype ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANIES, FUNDING & INFRASTRUCTURE -->
+    <section class="wrap section" data-section="infra">
+      <div class="section-head"><div class="section-no">02 / COMPANIES, FUNDING &amp; INFRASTRUCTURE</div><h2>Anthropic’s S-1 and $63B of chip debt, Oracle’s buffet, and Microsoft’s buyout offer</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-ipo" data-cat="infra funding top">
+          <div class="meta"><span class="tag">#1 · Business · Anthropic</span><span>S-1 filed Oct 26</span><span class="caveat">Price range &amp; share count not yet disclosed</span></div>
+          <h3>Anthropic files S-1 and lands $63B chip financing</h3>
+          <p>Anthropic’s S-1 shows <strong>H1 2026 revenue of $16.3 billion, up ~1,300% year on year</strong> — <strong>Q2 alone brought $11.56B</strong> and the company’s <strong>first quarterly operating profit, $974M</strong>. Compute spend in H1 was about <strong>$8.9B</strong>. The company will list as <strong>ANT on Nasdaq</strong>; reports say trading could begin <strong>as soon as November 16</strong>, but the price range and share count are not yet disclosed — an amended S-1 is still pending.</p>
+          <p class="big-caveat">Read the loss correctly: the $80.7B net loss is driven mostly by ~$72B+ in non-cash fair-value charges on convertible notes, derivatives and SAFEs — not cash burn.</p>
+          <p>Separately, on October 26, <strong>Bank of America, Blackstone, Citi and Morgan Stanley</strong> arranged <strong>$63B of financing</strong> via a special-purpose vehicle to buy <strong>Broadcom AI chips and networking gear for lease to Anthropic</strong>, with deliveries from 2027 — roughly <strong>$43.5B senior debt and $19.5B second-lien</strong>. <strong>Caveat:</strong> financing questions about debt-funded data centres remain open.</p>
+          <div class="sources"><a href="https://www.wealthprofessional.ca/investments/equity-markets/anthropic-sells-its-ipo-into-canada-but-lists-only-on-the-nasdaq/393876" target="_blank" rel="noopener">Wealth Professional ↗</a><a href="https://techstartups.com/2026/10/27/tech-news-today-october-27-2026-anthropic-files-for-ipo-63b-ai-chip-deal-microsofts-60000-employee-buyouts-and-openais-new-gpt-6-1-terra/" target="_blank" rel="noopener">TechStartups ↗</a><a href="https://bytevyte.com/daily-brief-ai-data-centers-2026-10-27/" target="_blank" rel="noopener">ByteVyte ↗</a><a href="https://theledger.asia/ai-rally-faces-financing-test-as-debt-funded-data-centres-draw-scrutiny/" target="_blank" rel="noopener">The Ledger Asia ↗</a></div>
+        </article>
+
+        <article class="story side" id="oracle-chip-buffet" data-cat="infra products top">
+          <div class="meta"><span class="tag">#4 · Infrastructure · Oracle</span><span>Oracle AI World, Las Vegas · Oct 27</span><span class="caveat">OpenAI TPU purchase — reported, not confirmed</span></div>
+          <h3>Oracle becomes an AI chip buffet and brings ChatGPT/Codex into its apps</h3>
+          <p>At Oracle AI World, Oracle and Google said <strong>Google TPUs — 8t for training, 8i for inference — will run on Oracle Cloud Infrastructure from calendar 2027</strong>: the first hyperscale cloud outside Google to offer TPUs, in a multi-year, multi-gigawatt partnership. Oracle also lined up <strong>Cerebras and SambaNova</strong> inference hardware and expanded <strong>Nvidia Vera Rubin</strong> to multi-gigawatt scale.</p>
+          <p>The OpenAI partnership expands too: <strong>Oracle AI Workspace</strong> (in development) will use <strong>ChatGPT across Oracle apps</strong>, and US customers can buy the <strong>OpenAI API, Codex and ChatGPT Work through Oracle Marketplace</strong> with Oracle Universal Credits.</p>
+          <p><strong>Reported, not confirmed:</strong> OpenAI plans to buy Google TPUs, per The Information via Reuters; terms are undisclosed and OpenAI declined to comment.</p>
+          <div class="sources"><a href="https://aistockwire.com/blog/oracle-orcl-google-tpus-cerebras-cbrs-oci-2027-october-2026" target="_blank" rel="noopener">AI Stock Wire ↗</a><a href="https://www.skimwire.com/oracle-google-tpus-openai-reportedly-buying/" target="_blank" rel="noopener">Skimwire ↗</a><a href="https://thediaryofai.com/ai-news-20261027/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="microsoft-buyouts" data-cat="infra top">
+          <div class="meta"><span class="tag">#5 · Business · Microsoft</span><span>Notified Oct 26 · Reported Oct 27</span><span class="caveat">An offer to 60,000 — not 60,000 layoffs</span></div>
+          <h3>Microsoft offers voluntary buyouts to ~60,000 employees as AI spending climbs</h3>
+          <p>Microsoft offered voluntary buyouts to about <strong>60,000 employees — ~27% of its ~223,000 workforce</strong> — in the <strong>US, UK, India and Canada</strong>, at level 70 and below, including some VPs. <strong>Windows, Copilot, Xbox, finance and HR</strong> are included; <strong>data-centre, sales and marketing staff are excluded</strong>.</p>
+          <p>There is <strong>no target for acceptances</strong>. Eligible staff decide by early December; approved exits leave <strong>December 31</strong> on standard severance plus career support. Chief People Officer <strong>Amy Coleman</strong> framed it as giving employees a supported transition option.</p>
+          <div class="sources"><a href="https://techbriefly.com/2026/10/27/microsoft-60000-employee-buyouts/" target="_blank" rel="noopener">TechBriefly ↗</a><a href="https://en.sedaily.com/international/2026/10/27/microsoft-offers-voluntary-exit-to-60000-staff-amid-ai" target="_blank" rel="noopener">Seoul Economic Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="general-compute" data-cat="infra funding">
+          <div class="meta"><span class="tag">Funding · General Compute</span><span>Oct 27</span><span class="caveat">Revenue figure is contracted, not recognised</span></div>
+          <h3>General Compute raises $100M Series A at an $800M valuation</h3>
+          <p><strong>General Compute</strong> raised a <strong>$100M Series A at an $800M post-money valuation</strong> for AI inference infrastructure built on specialised chips. A <strong>~$100M annualised contracted-revenue agreement</strong> was reported — <strong>contracted, not recognised revenue</strong> — with first major deployments planned for <strong>Q1 2027</strong>. A separate <strong>$400M debt facility</strong> was announced previously.</p>
+          <div class="sources"><a href="https://techamerica.ai/artificial-intelligence/general-compute-raises-100m-at-800m-valuation-for-ai-inference" target="_blank" rel="noopener">TechAmerica ↗</a></div>
+        </article>
+
+        <article class="story half" id="hyphenate" data-cat="funding products">
+          <div class="meta"><span class="tag">Funding · Hyphenate</span><span>Oct 27 · via Bloomberg</span></div>
+          <h3>Hyphenate raises $45M for finance-focused AI agents</h3>
+          <p><strong>Hyphenate</strong>, founded in 2024 by Microsoft veterans, raised <strong>$45M</strong> for AI agents aimed at <strong>accounting and strategic finance</strong>. Customers include <strong>Groupon and Synthesia</strong>, and revenue is reportedly up <strong>86× since its $9M seed</strong>.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/hyphenate-raises-45-million-dollars-finance-focused-ai-agents/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+
+        <article class="story half" id="neocloud-vc" data-cat="infra funding">
+          <div class="meta"><span class="tag">Funding · AI neoclouds · PitchBook</span><span>Figures cited Oct 27</span></div>
+          <h3>AI neocloud VC hits $6.6B year to date</h3>
+          <p>PitchBook figures cited by Morningstar put AI neocloud venture funding at <strong>$6.6B across 58 global deals in 2026 so far — 51% above 2025’s $4.4B total</strong>. Debt and payment-support deals are counted separately.</p>
+          <div class="sources"><a href="https://www.neoteo.com/en/ai-neocloud-vc-funding-hits-a-reported-66b-record" target="_blank" rel="noopener">Neoteo ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">03 / RESEARCH</div><h2>Two rival claims on the Exponential Time Hypothesis — and a 43-million-line formalisation</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="eth-claims" data-cat="research top">
+          <div class="meta"><span class="tag">#2 · Research · OpenAI / Anthropic</span><span>Announced Oct 26–27</span><span class="caveat">Unreviewed — no independent expert verdict yet</span></div>
+          <h3>OpenAI and Anthropic both claim their models refuted the Exponential Time Hypothesis</h3>
+          <p class="big-caveat">Unreviewed: no peer review and no independent expert verdict yet. A working group led by Russell Impagliazzo, Ramamohan Paturi and Ryan Williams is examining OpenAI’s claim and says its involvement is not certification. Treat both as claims, not results.</p>
+          <p><strong>OpenAI announced on October 26</strong> that its models had refuted the <strong>Exponential Time Hypothesis</strong>; <strong>hours later on October 27, Anthropic posted its own Claude-credited paper and Lean 4 proof</strong> reaching the same claim. Both labs date the core result to <strong>October 16</strong> and formalised it in <strong>Lean</strong>.</p>
+          <p><strong>What it would — and wouldn’t — mean:</strong> the result is <strong>purely asymptotic</strong>. It only beats brute force at astronomically large formula sizes, <strong>changes nothing for real SAT solvers</strong>, and <strong>does not settle P vs NP</strong>.</p>
+          <p>OpenAI also claimed two further October 26 results — a proof of <strong>Sogge’s local smoothing conjecture</strong> (which would settle versions of the Kakeya and Stein problems) and a <strong>Yang–Mills existence proof</strong> whose materials have <strong>not yet been released</strong>. Both are also unconfirmed.</p>
+          <div class="sources"><a href="https://cellcog.ai/blog/claude-refutes-eth-3-sat/" target="_blank" rel="noopener">CellCog ↗</a><a href="https://papex.org/blog/claimed-verified-explained" target="_blank" rel="noopener">Papex ↗</a><a href="https://thediaryofai.com/ai-news-20261027/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story side" id="axiom-math" data-cat="research">
+          <div class="meta"><span class="tag">Research · Axiom Math</span><span>Oct 27</span><span class="caveat">Self-reported by the team</span></div>
+          <h3>Axiom Math formalises the classification of finite simple groups in Lean</h3>
+          <p>Axiom Math says it has formalised the <strong>classification of finite simple groups</strong> in Lean — about <strong>43.1 million lines and 2.05 million declarations</strong>, built on <strong>715 papers and books</strong>. The team also says the work surfaced an <strong>issue in a published Unbalanced Group Theorem argument</strong>.</p>
+          <p><strong>Caveat:</strong> both the scale figures and the claimed issue are <strong>self-reported</strong> by the team.</p>
+          <div class="sources"><a href="https://thehype.news/daily-ai-digest-october-27/" target="_blank" rel="noopener">The Hype ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & TOOLS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">04 / PRODUCTS &amp; TOOLS</div><h2>Apple puts an AI assistant — and MCP — inside its office apps</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="apple-creator-studio" data-cat="products">
+          <div class="meta"><span class="tag">Products · Apple Creator Studio</span><span>Coming in November · Beta</span></div>
+          <h3>Apple adds AI assistant + MCP to Keynote, Pages and Numbers</h3>
+          <p>Apple is adding a <strong>beta AI assistant</strong> — built on Apple models and OpenAI — to <strong>Keynote, Pages and Numbers</strong> in Creator Studio, plus <strong>MCP support</strong> so outside agents can read and edit documents on Mac. The features arrive in <strong>November</strong>; the assistant is <strong>US English only</strong> at launch.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261027/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SAFETY & SECURITY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / SAFETY &amp; SECURITY</div><h2>Joint cyber coordination, a critical MCP flaw, and the Anthropic safety debate</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="labs-coordination" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · OpenAI / Anthropic / Google DeepMind</span><span>Oct 27</span><span class="caveat">AI-assisted outlet — treat details cautiously</span></div>
+          <h3>Frontier labs confirm weeks of joint cyber-safety coordination</h3>
+          <p><strong>OpenAI, Anthropic and Google DeepMind</strong> are reported to have confirmed <strong>weeks of joint coordination on cyber safety</strong>, with shared safeguards and access programs for dual-use cyber capabilities.</p>
+          <p><strong>Caveat:</strong> the source is an <strong>AI-assisted outlet</strong>; treat the details cautiously pending stronger sourcing.</p>
+          <div class="sources"><a href="https://genznewz.com/cyber-safety-coordination-unites-openai-anthropic-deepmind" target="_blank" rel="noopener">GenZ NewZ ↗</a></div>
+        </article>
+
+        <article class="story half" id="mcp-toolbox-flaw" data-cat="policy">
+          <div class="meta"><span class="tag">Security · Google MCP Toolbox</span><span>CVE-2026-93328 · CVSS 9.3</span></div>
+          <h3>Critical flaw in Google’s MCP Toolbox for Databases — update to 1.5.0</h3>
+          <p>A critical vulnerability, <strong>CVE-2026-93328 (CVSS 9.3)</strong>, affects <strong>MCP Toolbox for Databases versions 1.2.0–1.4.0</strong>: it allows <strong>unauthenticated file copy and overwrite</strong>. The fix is to <strong>update to version 1.5.0</strong>.</p>
+          <div class="sources"><a href="https://thehype.news/daily-ai-digest-october-27/" target="_blank" rel="noopener">The Hype ↗</a></div>
+        </article>
+
+        <article class="story full" id="anthropic-safety-debate" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · Anthropic</span><span>Oct 27</span><span class="caveat">Commentary / analysis — not news</span></div>
+          <h3>The Anthropic safety debate persists — commentary, not news</h3>
+          <p><strong>Commentary:</strong> Zvi Mowshowitz’s October 27 analysis, citing Kelsey Piper and METR, argues that <strong>no clear alignment plan was evident to visitors</strong>, even as outside evaluators gain deeper access. <strong>Dario Amodei</strong> defended Anthropic’s record as pro-safety and commercially costly. This is an ongoing argument about the company’s approach, presented here as analysis rather than a reported event.</p>
+          <div class="sources"><a href="https://ai-news-brief.com/" target="_blank" rel="noopener">AI News Brief ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & REGULATION -->
+    <section class="wrap section" data-section="policy-reg">
+      <div class="section-head"><div class="section-no">06 / POLICY &amp; REGULATION</div><h2>115 state measures, New York’s child chatbot rules, and Delaware’s AI companies under scrutiny</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="state-ai-laws" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · US states · Transparency Coalition</span><span>Report released Oct 27</span><span class="caveat">Count includes measures not yet enacted</span></div>
+          <h3>US state AI laws surge: 115 measures across 30 states</h3>
+          <p>The Transparency Coalition’s 2026 report counts <strong>115 AI measures across 30 states, up nearly 58% from 73 in 2025</strong>. <strong>14 states</strong> advanced chatbot safety and <strong>8</strong> restricted AI-only health coverage denials; <strong>Illinois</strong> requires risk frameworks and annual independent audits for advanced developers, and <strong>California</strong> set audit-organisation standards.</p>
+          <p><strong>Caveat:</strong> the count includes some measures still awaiting governors’ decisions — it is not purely enacted laws.</p>
+          <div class="sources"><a href="https://superpowerdaily.com/posts/transparency-coalition-counts-115-ai-measures-across-30-states-up-nearly-58" target="_blank" rel="noopener">Superpower Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="ny-chatbot-kids" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · New York</span><span>Signed Oct 27</span></div>
+          <h3>New York signs chatbot protections for kids</h3>
+          <p>Governor <strong>Kathy Hochul</strong> signed bills imposing <strong>strict limits on chatbots interacting with children on sensitive topics</strong> and <strong>banning bots from claiming human emotions or romantic relationships with under-18s</strong>, alongside security rules for connected baby monitors. The chatbot rules take effect in the coming months; the baby-monitor rules in <strong>90 days</strong>.</p>
+          <div class="sources"><a href="https://news.bloomberglaw.com/ip-law/hochul-signs-bills-on-ai-risks-to-children-in-pre-election-push" target="_blank" rel="noopener">Bloomberg Law ↗</a><a href="https://theoutpost.ai/news-story/new-york-bans-ai-chatbots-from-pretending-to-be-human-when-talking-to-kids-under-18-32769/" target="_blank" rel="noopener">The Outpost ↗</a></div>
+        </article>
+
+        <article class="story full" id="delaware-aic" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · Congress / Delaware</span><span>Documents sought by Nov 9</span></div>
+          <h3>House Oversight probes Delaware’s AI-run companies plan</h3>
+          <p>House Oversight Chair <strong>James Comer</strong> sought documents from Governor <strong>Matt Meyer</strong> by <strong>November 9</strong> on the proposed <strong>Artificial Intelligence Company (AIC)</strong> entity, raising <strong>liability-shield and regulatory-capture concerns</strong>. Delaware says the AIC would be a <strong>supervised sandbox</strong>, with draft legislation expected next year.</p>
+          <div class="sources"><a href="https://decrypt.co/382035/house-oversight-chair-comer-probes-delaware-plan-for-ai-run-companies" target="_blank" rel="noopener">Decrypt ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Tuesday, October 27, 2026, with significant late-breaking October 26 items — Anthropic’s S-1 and chip financing, GPT-6.1 Terra, and Microsoft’s buyout notification — marked as such in place.</li>
+          <li><strong>Unreviewed science claims:</strong> the Exponential Time Hypothesis refutations claimed by OpenAI and Anthropic, and OpenAI’s Sogge local-smoothing and Yang–Mills claims, are <strong>unreviewed lab claims</strong>. Lean artifacts exist, but there is <strong>no independent expert verdict yet</strong>, and the reviewers’ involvement is explicitly not certification.</li>
+          <li><strong>Company-reported figures:</strong> Genie 4’s capabilities rest on <strong>company demos only</strong>, and Liquid AI’s LFM3 benchmark scores are <strong>self-reported</strong>; Axiom Math’s formalisation figures are likewise self-reported.</li>
+          <li><strong>Reported, not confirmed:</strong> OpenAI’s plan to buy Google TPUs comes via The Information via Reuters, with terms undisclosed and OpenAI declining to comment.</li>
+          <li><strong>Not cash burn:</strong> Anthropic’s headline <strong>$80.7B net loss</strong> is mostly <strong>non-cash fair-value accounting</strong> on convertible notes, derivatives and SAFEs — not operating cash burn. Its $63B Broadcom deal is SPV financing creating lease obligations, split ~$43.5B senior / ~$19.5B second-lien.</li>
+          <li><strong>Counting matters:</strong> Microsoft’s 60,000 is the number <strong>offered</strong> buyouts, not departures; the Transparency Coalition’s 115 state measures include some <strong>not yet enacted</strong>; General Compute’s ~$100M revenue figure is <strong>contracted, not recognised</strong>.</li>
+          <li><strong>Weakly sourced &amp; commentary:</strong> the frontier labs’ cyber-coordination item rests on an AI-assisted outlet, and the Anthropic safety item is <strong>commentary/analysis</strong>, not news — both are labelled in place.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are single-sourced, vendor-reported, rumoured, or second-hand — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Tuesday, October 27, 2026, plus significant late-breaking items from October 26, 2026. Several items rest on single or weakly sourced reporting and are flagged as such; vendor-reported benchmarks have not been independently tested.</div>
+      <div>AI News Newsletter — October 28, 2026.<br>18 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

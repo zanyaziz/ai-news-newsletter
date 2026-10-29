@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Thursday, October 29, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Thursday, October 29, 2026</div>
+      <div class="range">Covering Wednesday, October 28, 2026, plus late-breaking items from October 29, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>The frontier goes <em>on defense</em></h1>
+      <div><p class="dek">Google’s Gemini 4 Carbon and a newly public Mistral Large 4 both arrive as cybersecurity models, OpenAI reportedly moves to buy Google chips, Anthropic deepens its government footprint, and Congress asks who is liable when an AI runs the company.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Cybersecurity is the through-line of this edition — Google’s newest frontier model, Mistral’s new open model, and a Cloudflare disclosure all land on the same day governments are arguing over who answers when an AI runs a company. Benchmark figures below that come from the labs themselves are marked as company-reported, not independently verified.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gemini-carbon">Google unveils Gemini 4 Carbon, its new frontier model for coding and cybersecurity</a></li>
+        <li><span class="num">02</span><a href="#openai-tpu">OpenAI reportedly plans to buy Google’s AI chips</a></li>
+        <li><span class="num">03</span><a href="#anthropic-gov">Anthropic expands its government Claude deal</a></li>
+        <li><span class="num">04</span><a href="#nemotron-transcribe">Nvidia releases open transcription model Nemotron 3.5 Transcribe</a></li>
+        <li><span class="num">05</span><a href="#delaware-aic">House Oversight probes Delaware’s plan for AI-run companies</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Open Source</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Enterprise</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Business</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Community</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- MODELS & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODELS &amp; RESEARCH</div><h2>A frontier model built for defense, an open transcriber, and a 43-million-line proof</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gemini-carbon" data-cat="models top">
+          <div class="meta"><span class="tag">#1 · Models · Google DeepMind</span><span>Announced Oct 28</span><span class="caveat">Benchmarks are Google-reported — not independently reproduced</span></div>
+          <h3>Google unveils Gemini 4 Carbon, its new frontier model for coding and cybersecurity</h3>
+          <p>Google DeepMind announced <strong>Gemini 4 Carbon</strong> on October 28, two weeks after Gemini 4 Argon, calling it its <strong>strongest model yet for long-horizon software engineering and defensive cybersecurity</strong>.</p>
+          <p>Google reports <strong>88.2% on SEC-bench Pro</strong> for finding real vulnerabilities, <strong>54.8% on ExploitGym</strong>, and <strong>71.0% on CWE-bench</strong> for root-cause patching, and says it writes secure code at <strong>more than twice Argon’s success rate</strong> on internal tests. It ranks <strong>first on the Artificial Analysis Intelligence Index v5.0 with a score of 59</strong>.</p>
+          <p>Access is staged: <strong>only vetted cyber defenders at first, via Google’s Fairwind Program</strong>, with broader developer and consumer access promised later but no date given. Introductory pricing is <strong>$2 per million input tokens and $10 per million output tokens</strong>, doubling later.</p>
+          <p class="big-caveat">Caveat: the benchmark and secure-code figures are Google’s own, not independently reproduced.</p>
+          <div class="sources"><a href="https://ashutoshai.com/ai-compass/" target="_blank" rel="noopener">AI Compass ↗</a><a href="https://medium.com/ai-briefing-room/ai-news-briefing-29-october-2026-8e288c9ea3e0" target="_blank" rel="noopener">AI Briefing Room / Medium ↗</a></div>
+        </article>
+
+        <article class="story side" id="nemotron-transcribe" data-cat="models top">
+          <div class="meta"><span class="tag">#4 · Models · Nvidia</span><span>Released Oct 28 · Open-weight</span></div>
+          <h3>Nvidia releases open transcription model Nemotron 3.5 Transcribe</h3>
+          <p>Nvidia released <strong>Nemotron 3.5 Transcribe</strong> on October 28, a <strong>free, open-weight</strong> model that transcribes audio in <strong>up to 40 languages</strong>, translates <strong>31 languages to and from English</strong>, handles recordings <strong>up to an hour long</strong>, and distinguishes <strong>up to eight speakers</strong>.</p>
+          <p>At <strong>30 billion parameters</strong> it is designed to run on a <strong>single chip</strong>, from Jetson AGX Thor to Blackwell datacenter chips. Nvidia also released <strong>version 2 of its Granary open speech dataset</strong>. It targets meetings and medical transcription. <strong>Limitation:</strong> it works on recorded audio, not livestreams.</p>
+          <div class="sources"><a href="https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/" target="_blank" rel="noopener">TechCrunch ↗</a></div>
+        </article>
+
+        <article class="story third" id="particle-1" data-cat="models research">
+          <div class="meta"><span class="tag">Models · Particle</span><span>Listed Oct 28</span><span class="caveat">Figures self-reported by Particle</span></div>
+          <h3>Particle-1 claims big token savings</h3>
+          <p><strong>Particle-1</strong>, listed October 28, is a reinforcement-learning post-train of <strong>DeepSeek V4.1 Flash</strong> that Particle says uses <strong>28–52% fewer output tokens</strong> on four coding benchmarks at similar pass rates.</p>
+          <p><strong>Caveat:</strong> figures are self-reported by Particle.</p>
+          <div class="sources"><a href="https://explainx.ai/catch-up-on-ai/2026-10-29" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </article>
+
+        <article class="story third" id="axiom-cfsg" data-cat="research">
+          <div class="meta"><span class="tag">Research · Axiom</span><span>Oct 28</span></div>
+          <h3>Axiom says it computer-verified the Classification of Finite Simple Groups</h3>
+          <p>Axiom’s Lean formalization contains about <strong>43.1 million lines</strong>, produced with AI agent help over <strong>24 days</strong>, for a mathematical result whose original proof spans roughly <strong>15,000 pages</strong>.</p>
+          <p>Lean checks each logical step, though mathematicians can still examine whether the formal statements capture the intended mathematics.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="anthropic-drugs" data-cat="research">
+          <div class="meta"><span class="tag">Research · Anthropic</span><span>Published Oct 28</span></div>
+          <h3>Anthropic reports early drug-discovery results</h3>
+          <p>Anthropic published early results from <strong>six drug-development partnerships</strong> on October 28 and disclosed its own programs for <strong>rare childhood muscular dystrophies</strong>.</p>
+          <p>One BigHat Biosciences project tested about <strong>1,010 Claude-assisted antibody variants</strong>; Anthropic says another program could reach <strong>human trials as early as late 2028</strong> if candidates continue to succeed. Most of the work remains preclinical.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUSINESS & INFRASTRUCTURE -->
+    <section class="wrap section" data-section="infra">
+      <div class="section-head"><div class="section-no">02 / BUSINESS &amp; INFRASTRUCTURE</div><h2>Chips, government deals, and a market still betting on AI spend</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="openai-tpu" data-cat="infra top">
+          <div class="meta"><span class="tag">#2 · Infrastructure · OpenAI / Google</span><span>Reported Oct 28 · Reuters</span><span class="caveat">Single report — unconfirmed by either company</span></div>
+          <h3>OpenAI reportedly plans to buy Google’s AI chips</h3>
+          <p>Reuters reported October 28 that <strong>OpenAI plans to purchase Google Tensor Processing Units</strong>, adding them to its compute supply alongside its extensive Nvidia GPU use.</p>
+          <p><strong>Financial terms and volumes were not disclosed</strong>, and neither company has publicly confirmed a deal. It matters because OpenAI already rents Google TPUs, so a purchase would <strong>deepen its diversification away from Nvidia</strong> at a moment when compute supply is the industry’s binding constraint.</p>
+          <p class="big-caveat">Caveat: single report, unconfirmed by either company.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story side" id="anthropic-gov" data-cat="infra policy top">
+          <div class="meta"><span class="tag">#3 · Business · Anthropic</span><span>Expanded Oct 28 · GSA</span></div>
+          <h3>Anthropic expands its government Claude deal</h3>
+          <p>Anthropic expanded its <strong>GSA agreement</strong> on October 28 to <strong>federal plus state and local governments</strong>, with a <strong>40% discount</strong> across Claude Enterprise, Claude for Government, and the Claude API.</p>
+          <p>Anthropic estimates the agreement could <strong>save government organizations $1 billion</strong> and says roughly <strong>500 U.S. government organizations</strong> now use Claude. It locks a frontier lab into public-sector workflows just as governments debate AI rules — and on the same day the White House floated renaming the technology itself.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="stocks-hynix" data-cat="infra funding">
+          <div class="meta"><span class="tag">Markets · SK Hynix</span><span>Oct 28</span></div>
+          <h3>AI optimism lifts stocks; SK Hynix posts record profit</h3>
+          <p>Global indexes rose October 28 on AI enthusiasm, with the <strong>Nasdaq up about 1.2%</strong>, as <strong>SK Hynix reported a record third-quarter operating profit of about 83.33 trillion won</strong> on memory demand.</p>
+          <p>Investors are treating <strong>Alphabet and Microsoft earnings</strong> as the next test of whether massive AI spending turns into sustainable revenue.</p>
+          <div class="sources"><a href="https://particle.news/story/ai-optimism-pushes-global-stocks-higher" target="_blank" rel="noopener">Particle News ↗</a></div>
+        </article>
+
+        <article class="story half" id="fia-aws" data-cat="infra products">
+          <div class="meta"><span class="tag">Infrastructure · FIA / AWS</span><span>Announced Oct 28</span></div>
+          <h3>FIA names AWS its official AI and cloud partner</h3>
+          <p>Announced October 28, the <strong>FIA named Amazon Web Services its Official AI and Cloud Computing Partner</strong>, adding GPU-accelerated simulation and AI surrogate models to its aerodynamic workloads and expanding its Digital Licensing Platform to more national sporting authorities.</p>
+          <p><strong>Generative AI will not be used to propose car designs</strong>, and humans retain final regulatory control.</p>
+          <div class="sources"><a href="https://particle.news/story/fia-names-aws-official-ai-and-cloud-partner-to-power-rulemaking-and-licensing" target="_blank" rel="noopener">Particle News ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY, SAFETY & SOCIETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">03 / POLICY, SAFETY &amp; SOCIETY</div><h2>Who answers when an AI runs the company — and what governments call it</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="delaware-aic" data-cat="policy top">
+          <div class="meta"><span class="tag">#5 · Policy · House Oversight / Delaware</span><span>Coverage Oct 28 · Letter sent Oct 26</span><span class="caveat">Draft legislation — not enacted law</span></div>
+          <h3>House Oversight probes Delaware’s plan for AI-run companies</h3>
+          <p>Coverage on October 28 of House Oversight Chairman <strong>James Comer’s</strong> letter (sent October 26) to Delaware Governor <strong>Matt Meyer</strong> demanding documents, <strong>by November 9</strong>, on a proposed <strong>Artificial Intelligence Company (AIC)</strong> entity that would let AI agents run businesses.</p>
+          <p>Comer warns the structure could <strong>shield human owners and investors from liability</strong> for harmful AI actions; Delaware officials present the AIC as a <strong>supervised, accountable framework</strong>, with draft legislation expected next year. The clash matters nationally because <strong>Delaware incorporates more than two-thirds of Fortune 500 companies</strong>.</p>
+          <div class="sources"><a href="https://decrypt.co/382035/house-oversight-chair-comer-probes-delaware-plan-for-ai-run-companies" target="_blank" rel="noopener">Decrypt ↗</a><a href="https://aidailypost.com/news/house-oversight-seeks-delaware-documents-ai" target="_blank" rel="noopener">AI Daily Post ↗</a></div>
+        </article>
+
+        <article class="story side" id="cloudflare-workers" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · Cloudflare</span><span>Disclosed Oct 28</span></div>
+          <h3>Cloudflare discloses cross-customer data exposure in Workers AI</h3>
+          <p>Cloudflare disclosed that a <strong>configuration mismatch triggered an SGLang bug</strong> in its GLM-5.3 Workers AI service, causing some long requests to receive <strong>cached information from other customers</strong>.</p>
+          <p>It identified <strong>155 affected responses between August 27 and September 9</strong>, found <strong>no evidence of deliberate exploitation</strong>, and patched both its configuration and the inference engine.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="uk-budget" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · UK Budget</span><span>Oct 28</span></div>
+          <h3>UK Budget ties AI investment to Civil Service savings</h3>
+          <p>In the October 28 UK Budget, the Chancellor announced AI investment for Civil Service transformation intended to support a further <strong>£600 million reduction in back-office budgets</strong>, plus a review of NHS productivity and AI, an <strong>AI Challenge Prize</strong> for public services, <strong>£18 million for advanced chip design</strong> led by the University of Edinburgh, and <strong>£7.5 million for AI and cyber capability in Belfast</strong>.</p>
+          <p>Detailed delivery plans have not yet been published.</p>
+          <div class="sources"><a href="https://medium.com/ai-briefing-room/ai-news-briefing-29-october-2026-8e288c9ea3e0" target="_blank" rel="noopener">AI Briefing Room / Medium ↗</a></div>
+        </article>
+
+        <article class="story half" id="netherlands-cuts" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · Netherlands</span><span>Oct 28</span></div>
+          <h3>Netherlands plans 25,000 government job cuts tied to AI adoption</h3>
+          <p>The Netherlands plans to <strong>eliminate 25,000 government jobs, over 15% of its civil service workforce</strong>, as part of savings associated with AI adoption, ahead of further government AI deployment.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story full" id="trump-si" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · White House</span><span>Statement Oct 28 · Truth Social</span><span class="caveat">Statement only — no implementation document seen</span></div>
+          <h3>Trump says government documents should say “Super Intelligence,” not “AI”</h3>
+          <p>President Trump said on Truth Social on October 28 that the U.S. will officially <strong>“ban” the term AI / Artificial Intelligence</strong> in relevant government documents in favor of <strong>“Super Intelligence” (SI)</strong>, criticizing continued use of the old term.</p>
+          <p><strong>No implementation document or government-wide instruction</strong> was included in the sources reviewed, so the scope remains unclear — treat this as a statement, not an enacted policy.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-28-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LATE-BREAKING -->
+    <section class="wrap section" data-section="late">
+      <div class="section-head"><div class="section-no">04 / LATE-BREAKING — OCT 29</div><h2>An open model for cybersecurity, released to run anywhere</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="mistral-large-4" data-cat="models policy">
+          <div class="meta"><span class="tag">Late-breaking · Models · Mistral</span><span>Reported Thu Oct 29 · Reuters</span><span class="caveat">Late-breaking — Oct 29</span></div>
+          <h3>Mistral publicly releases Large 4 for cybersecurity</h3>
+          <p>Reuters reported Thursday, October 29, that French startup <strong>Mistral released its Large 4 model to the public</strong>, designed to help organizations <strong>identify and fix cybersecurity vulnerabilities</strong>. Unlike most leading systems accessed only online, it can be <strong>downloaded and run independently</strong>.</p>
+          <p>Mistral calls it its <strong>most capable openly available model for cybersecurity use</strong>, upgraded from the version unveiled three weeks ago after testing with governments and corporate users. Separately, <strong>Orange Cyberdefense</strong> signed a deal to equip its products with a cybersecurity variant of the model, running on computing capacity in Europe.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/litigation/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users-2026-10-29/" target="_blank" rel="noopener">Reuters — Large 4 release ↗</a><a href="https://www.reuters.com/legal/litigation/orange-unit-signs-deal-mistrals-latest-ai-cybersecurity-model-2026-10-29/" target="_blank" rel="noopener">Reuters — Orange deal ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Wednesday, October 28, 2026, with the Mistral Large 4 release as a late-breaking October 29 item, marked as such in place.</li>
+          <li><strong>Google’s own figures (a):</strong> Gemini 4 Carbon’s benchmark scores — 88.2% SEC-bench Pro, 54.8% ExploitGym, 71.0% CWE-bench — its Artificial Analysis ranking, and its secure-code rate are <strong>Google’s own claims, not independently reproduced</strong>.</li>
+          <li><strong>Single report, unconfirmed (b):</strong> the OpenAI plan to buy Google TPUs is a <strong>single Reuters report</strong>; terms and volumes were not disclosed and <strong>neither company has confirmed</strong> a deal.</li>
+          <li><strong>Self-reported savings (c):</strong> Particle-1’s claim of <strong>28–52% fewer output tokens</strong> is <strong>self-reported by Particle</strong> and has not been independently verified.</li>
+          <li><strong>Statement, not policy (d):</strong> the “Super Intelligence” renaming is a <strong>social-media statement</strong> — <strong>no implementation document</strong> or government-wide instruction was seen in the sources reviewed, so its scope is unclear.</li>
+          <li><strong>Draft, not law (e):</strong> Delaware’s Artificial Intelligence Company (AIC) entity is still a <strong>proposal with draft legislation expected next year</strong> — it is <strong>not enacted law</strong>.</li>
+          <li><strong>Company estimates:</strong> Anthropic’s $1 billion government-savings figure is the company’s own estimate, and most of its drug-discovery work described today remains preclinical.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are single-sourced, vendor-reported, rumoured, or second-hand — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Wednesday, October 28, 2026, plus late-breaking October 29 items marked as such. Several items rest on single or company-reported sourcing and are flagged as such; vendor-reported benchmarks have not been independently tested.</div>
+      <div>AI News Newsletter — October 29, 2026.<br>15 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

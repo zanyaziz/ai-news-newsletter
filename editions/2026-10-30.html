@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Friday, October 30, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.note-box + .note-box{margin-top:20px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Friday, October 30, 2026</div>
+      <div class="range">Covering Thursday, October 29, 2026, plus significant late-breaking items from October 28</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>A frontier model, <em>gated by its own power</em></h1>
+      <div><p class="dek">Google releases Gemini 4 Carbon only to vetted cyber defenders, Mistral opens Large 4’s weights, Alphabet’s AI bill unnerves investors, and the two leading labs split publicly over who should be able to pull the plug on a dangerous model.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Capability and control run through this edition: a frontier model released through a safety gate, a red team chaining 62 patched CVEs, agents breaching a lab through third-party software, and new laws in New York and Australia aimed at chatbots and children. Where sources disagree on a figure — Alphabet’s share-price fall is the clearest case — this edition reports the disagreement rather than picking a number. Single-sourced items and unadjudicated allegations are flagged in place.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gemini-carbon">Google launches Gemini 4 Carbon for cybersecurity and long-horizon engineering</a></li>
+        <li><span class="num">02</span><a href="#alphabet-q3">Alphabet beats on cloud, misses overall — and the AI bill spooks investors</a></li>
+        <li><span class="num">03</span><a href="#anthropic-breach">AI agents breach Anthropic through third-party software</a></li>
+        <li><span class="num">04</span><a href="#mistral-large-4">Mistral releases the open weights of Mistral Large 4</a></li>
+        <li><span class="num">05</span><a href="#wan-lawsuit">Family sues OpenAI in wrongful-death case over GPT-4o</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Open Source</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Enterprise</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Business</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Community</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- MODELS & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES &amp; RESEARCH</div><h2>A safety-gated frontier, open weights from Paris, and a world model that talks back</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gemini-carbon" data-cat="models top">
+          <div class="meta"><span class="tag">#1 · Models · Google</span><span>Announced Oct 28 · Widely reported Oct 29</span><span class="caveat">Benchmarks are Google-reported — not independently reproduced</span></div>
+          <h3>Google launches Gemini 4 Carbon, a frontier model for cybersecurity and long-horizon engineering</h3>
+          <p>Google’s <strong>Gemini 4 Carbon</strong>, announced October 28 and widely reported October 29, is pitched as its frontier model for <strong>cybersecurity and long-horizon software engineering</strong>. Google says Carbon scored <strong>88.2% on SEC-bench Pro</strong> (finding real software vulnerabilities), <strong>71% on CWE-bench</strong> (producing fixes), and <strong>54.8% on ExploitGym</strong>.</p>
+          <p>It tops the <strong>Artificial Analysis Intelligence Index v5 at 59</strong>, ahead of <strong>Claude Opus 5.5</strong> and <strong>GPT-6 Astra</strong>. Access is restricted to <strong>vetted cyber defenders through Google’s Fairwind Program</strong> while voluntary U.S. government pre-release testing continues, with <strong>no date for broad access</strong>. Introductory pricing is <strong>$2 per million input tokens and $10 per million output tokens</strong>.</p>
+          <p><strong>Why it matters:</strong> Google is treating a model’s cyber capability as a <strong>safety-gated release, not just a product launch</strong> — the strongest model in the line is the one most people cannot yet use.</p>
+          <p class="big-caveat">Caveat: the benchmark scores and index ranking are Google’s own figures, not independently reproduced.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://killtheai.com/news/top-10-ai-news-today-october-29-2026/" target="_blank" rel="noopener">Kill The AI ↗</a><a href="https://www.thehindubusinessline.com/info-tech/google-launches-gemini-4-carbon-ai-model-with-cybersecurity-focus/article71638823.ece?utm_source=non-amp&amp;utm_medium=quickdiscovery&amp;utm_campaign=article" target="_blank" rel="noopener">Reuters via Hindu BusinessLine ↗</a><a href="https://www.pymnts.com/news/artificial-intelligence/2026/google-tops-ai-smarts-ranking-as-openai-slashes-prices/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+
+        <article class="story side" id="mistral-large-4" data-cat="models top">
+          <div class="meta"><span class="tag">#4 · Models · Mistral</span><span>Weights released Oct 29 · Open-weight</span><span class="caveat">Benchmark is Mistral-reported</span></div>
+          <h3>Mistral releases the open weights of Mistral Large 4</h3>
+          <p>Mistral released the <strong>open weights of Mistral Large 4</strong> on October 29, after <strong>three more weeks of reinforcement learning</strong>, under a <strong>modified MIT license</strong> that asks model-as-a-service businesses to pay. Mistral’s own <strong>Terminal-Bench 4.0 score rose from 28% to 41%</strong>, and the API list price is now <strong>$0.70 / $2.10 per million input/output tokens</strong> — about half the preview rate.</p>
+          <p><strong>Why it matters:</strong> a large European open-weight model aimed at coding and cyber defense, letting customers <strong>run it under their own control</strong> rather than through a U.S. cloud API.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="le-chonk" data-cat="models">
+          <div class="meta"><span class="tag">Models · Mistral</span><span>Oct 29</span><span class="caveat">Single-sourced — X / company summary</span></div>
+          <h3>Mistral also opens an improved Le Chonk</h3>
+          <p>Mistral released weights of an <strong>improved Le Chonk</strong> for agentic coding and cybersecurity, <strong>ranked first among open models on Cognition’s FrontierCode</strong> in the vendor’s account.</p>
+          <p><strong>Why it matters:</strong> if the ranking holds up, the strongest open option for autonomous coding work is now a downloadable model, not a hosted one.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="model-spec" data-cat="models policy">
+          <div class="meta"><span class="tag">Models · OpenAI</span><span>Updated Oct 29</span></div>
+          <h3>OpenAI rewrites its Model Spec around five values</h3>
+          <p>OpenAI updated its <strong>Model Spec</strong> on October 29, reorganizing the behavior rulebook around <strong>five values</strong> — <strong>faithfulness to human intent</strong> as the foundation, plus harm minimization, honesty and transparency, human agency, and care. It tightens guidance on <strong>misinformation, impersonation, persuasion, deepfakes, and disinformation</strong>, and OpenAI says current models <strong>do not yet fully reflect</strong> the new spec.</p>
+          <p><strong>Why it matters:</strong> this is the public charter governing how ChatGPT and API models behave as they get more capable and agentic.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/openai-says-human-intent-center-updated-ai-model-guidelines-2026-10-29/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story third" id="claude-self-assessment" data-cat="models research">
+          <div class="meta"><span class="tag">Research · Anthropic</span><span>Reported Oct 29</span><span class="caveat">Single-sourced — company / X summary</span></div>
+          <h3>Anthropic trains Claude to flag its own conversations for misuse</h3>
+          <p>Anthropic has trained Claude to <strong>flag potential misuse through self-assessment</strong>: right after responding, Claude gives a <strong>preliminary safety assessment of the conversation</strong>. Since June, the technique has surfaced misuse that other safeguards were <strong>not designed to catch</strong>.</p>
+          <p><strong>Why it matters:</strong> the model itself becomes a monitoring layer, catching misuse categories nobody wrote a filter for.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="genie-4" data-cat="models research">
+          <div class="meta"><span class="tag">Research · Google DeepMind</span><span>Announced Oct 28 · Research-stage</span></div>
+          <h3>Genie 4: a real-time world model with a voice</h3>
+          <p>Google DeepMind’s <strong>Genie 4</strong>, announced October 28, is a <strong>real-time world model</strong> with native audio, <strong>live character dialogue</strong>, text steering, and <strong>Gemini 3.8 Flash orchestration inside the simulation loop</strong>. It is research-stage, with <strong>no API yet</strong>.</p>
+          <p><strong>Why it matters:</strong> a step toward <strong>interactive simulation for training and synthetic data</strong> — worlds agents can act in, hear, and be directed through, generated on the fly.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://montanimation.studio/ai-news-october-29-2026-gemini-4-carbon-openai-and-more/" target="_blank" rel="noopener">Montanimation ↗</a></div>
+        </article>
+
+        <article class="story half" id="kimi-k31" data-cat="models research">
+          <div class="meta"><span class="tag">Models · Moonshot AI</span><span>Launched Oct 23 · Weights due by Nov 4</span><span class="caveat">Hallucination figure is a company claim — unverified</span></div>
+          <h3>Moonshot’s Kimi K3.1 Pro promises its weights by November 4</h3>
+          <p>Moonshot’s <strong>Kimi K3.1 Pro</strong>, launched October 23, is a large multimodal model with a <strong>1M-token context</strong>, strong at <strong>full-project game coding, 3D design, and finance work</strong>, with hallucinations down a <strong>claimed 65%</strong>. Open weights are <strong>promised by November 4</strong>.</p>
+          <p><strong>Why it matters:</strong> a million-token open-weight contender would pressure closed frontier pricing — and the November 4 date is a concrete test of whether the promise lands.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & ENTERPRISE -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">02 / PRODUCTS &amp; ENTERPRISE</div><h2>Agents write the first draft, and every vendor has to prove the ROI</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="github-copilot-fusion" data-cat="products">
+          <div class="meta"><span class="tag">Products · GitHub / Microsoft</span><span>Launched Oct 29 · Octoverse 2026</span></div>
+          <h3>GitHub’s Copilot Fusion routes coding agents — which now originate over 40% of pull requests</h3>
+          <p>GitHub launched <strong>Copilot Fusion</strong>, a model-routing system for coding agents, and <strong>Copilot code review Max</strong>. Its <strong>Octoverse 2026</strong> report says agents originated <strong>more than 40% of pull requests in September</strong>, up from <strong>17% in March</strong>, and GitHub now serves <strong>more than 225 million developers</strong>.</p>
+          <p><strong>Why it matters:</strong> agent-written code is becoming the <strong>default first draft</strong> — the human job is shifting from writing code to reviewing what a routed fleet of models produced.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://montanimation.studio/ai-news-october-29-2026-gemini-4-carbon-openai-and-more/" target="_blank" rel="noopener">Montanimation ↗</a></div>
+        </article>
+
+        <article class="story side" id="nemotron-transcribe" data-cat="products models">
+          <div class="meta"><span class="tag">Products · NVIDIA</span><span>Released Oct 29 · Open-weight</span></div>
+          <h3>NVIDIA releases Nemotron 3.5 Transcribe and a 463,062-hour speech dataset</h3>
+          <p>NVIDIA’s <strong>Nemotron 3.5 Transcribe</strong> is an open-weight speech-to-text model covering <strong>40 languages</strong>, translating <strong>31 to and from English</strong>, distinguishing <strong>up to eight speakers</strong>, for recordings <strong>up to an hour</strong> — not live audio. Alongside it, <strong>Granary v2</strong> offers <strong>463,062 hours</strong> of speech across <strong>48 languages</strong>.</p>
+          <p><strong>Why it matters:</strong> open, accurate transcription <strong>lowers the cost of multilingual voice tools</strong> without a cloud API call per minute.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="servicenow-openai" data-cat="products">
+          <div class="meta"><span class="tag">Enterprise · OpenAI / ServiceNow</span><span>Available now</span></div>
+          <h3>OpenAI and ServiceNow wire ChatGPT and Codex into enterprise workflows</h3>
+          <p>OpenAI and ServiceNow expanded their partnership with a <strong>ServiceNow plugin</strong> connecting authorized workflow actions to <strong>ChatGPT and Codex</strong> — available now, with expanded functions expected <strong>by year-end</strong>.</p>
+          <p><strong>Why it matters:</strong> OpenAI is <strong>embedding into incumbent enterprise workflow software</strong> rather than asking companies to rip it out.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="chrome-autofill" data-cat="products">
+          <div class="meta"><span class="tag">Products · Google Chrome</span><span>Opt-in · U.S. rollout</span></div>
+          <h3>Chrome’s autofill can now reach into your Gmail</h3>
+          <p>Chrome’s <strong>enhanced autofill</strong> can now pull details from <strong>Gmail</strong> — flight confirmations, hotel reservations, order and tracking numbers, and membership IDs. It is <strong>opt-in</strong> and rolling out in the <strong>U.S.</strong></p>
+          <p><strong>Why it matters:</strong> the convenience deepens the link between <strong>browser, Gmail, and Gemini</strong> — and raises the privacy trade-off question of how much of your inbox a form field should be able to see.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story third" id="chatgpt-icloud-cursor" data-cat="products">
+          <div class="meta"><span class="tag">Products · OpenAI / Apple / Cursor</span><span>Oct 29</span></div>
+          <h3>ChatGPT plugs into iCloud; Cursor agents take the keyboard</h3>
+          <p>ChatGPT added <strong>iCloud Mail and Calendar plugins</strong> — users connect Apple accounts via <strong>app-specific passwords</strong>. Separately, <strong>Cursor agents can now control a user’s computer</strong> (for example, an iOS Simulator) to test what they build.</p>
+          <p><strong>Why it matters:</strong> assistants are moving from answering questions to <strong>holding credentials and operating the machine</strong> — useful, and a larger trust surface.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="claude-enterprise-reports" data-cat="products">
+          <div class="meta"><span class="tag">Enterprise · Anthropic</span><span>Launched Oct 29</span></div>
+          <h3>Claude Enterprise gets smart reports, surveys, and pooled budgets</h3>
+          <p>Anthropic launched <strong>smart reports, in-app surveys, and pooled group budgets</strong> for Claude Enterprise, showing what teams produce with Claude, <strong>what it costs</strong>, and where workflows break down. Anthropic says it will <strong>not use the data for training by default</strong>.</p>
+          <p><strong>Why it matters:</strong> as AI budgets grow, vendors must now <strong>prove ROI</strong> — usage dashboards are becoming a competitive feature, not an admin extra.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="meta-style-sketch" data-cat="products">
+          <div class="meta"><span class="tag">Products · Meta</span><span>Indonesia · Singapore · Thailand</span><span class="caveat">Single-sourced — via TechCrunch</span></div>
+          <h3>Meta quietly launches Style Sketch, a fashion app built on your Instagram photos</h3>
+          <p>Meta has quietly launched <strong>Style Sketch</strong> in <strong>Indonesia, Singapore, and Thailand</strong>: it uses Instagram photos to build a <strong>digital closet</strong>, suggest outfits, and offer <strong>virtual try-ons</strong>.</p>
+          <p><strong>Why it matters:</strong> a low-key regional launch tests whether people want their social photo archive turned into a shopping surface — before any wider rollout.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUSINESS, FUNDING & EARNINGS -->
+    <section class="wrap section" data-section="infra">
+      <div class="section-head"><div class="section-no">03 / BUSINESS, FUNDING &amp; EARNINGS</div><h2>Cloud growth beats; the cost of building it does not</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="alphabet-q3" data-cat="infra funding top">
+          <div class="meta"><span class="tag">#2 · Earnings · Alphabet</span><span>Q3 2026 · Reported Oct 29</span><span class="caveat">Sources differ on the share-price fall — see below</span></div>
+          <h3>Alphabet beats on cloud, misses overall — and the AI bill spooks investors</h3>
+          <p>Alphabet’s Q3 2026 revenue was <strong>$127.6 billion, up 25%</strong>, but <strong>missed analyst expectations</strong>. <strong>Google Cloud revenue more than doubled to $30.7 billion</strong> and the <strong>Gemini app reached 1 billion users</strong>, while <strong>free cash flow fell to $9.07 billion</strong> and <strong>capex was $51.36 billion</strong> — below the $55.09 billion forecast, but part of a plan Alphabet says will <strong>top $200 billion this year and exceed $300 billion in 2027</strong>.</p>
+          <p>Shares <strong>fell sharply on October 29</strong>. <strong>Why it matters:</strong> AI cloud growth can beat expectations while the <strong>cost of building it still unsettles investors</strong> — the market is now pricing the spending, not just the demand.</p>
+          <p class="big-caveat">Caveat: sources differ on the size of the fall — one roundup reports more than 7%, another about 13%. This edition reports the miss and the sharp fall, not a single precise drop.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://killtheai.com/news/top-10-ai-news-today-october-29-2026/" target="_blank" rel="noopener">Kill The AI ↗</a><a href="https://www.pymnts.com/news/artificial-intelligence/2026/google-tops-ai-smarts-ranking-as-openai-slashes-prices/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+
+        <article class="story side" id="microsoft-aws-capex" data-cat="infra">
+          <div class="meta"><span class="tag">Earnings · Microsoft / AWS</span><span>Reported Oct 29</span></div>
+          <h3>Microsoft spends $45.2B in a quarter; AWS grows 39%</h3>
+          <p>Microsoft spent <strong>$45.2 billion on capex</strong> as <strong>Azure revenue grew 48%</strong> in its first quarter. <strong>AWS revenue grew 39% to $45.98 billion</strong> in Q3, in a quarter with deals signed with <strong>Meta and OpenAI</strong>.</p>
+          <p><strong>Why it matters:</strong> all three hyperscalers are now spending at a pace where a single quarter’s capex rivals the annual budgets of mid-size governments — and all three say demand still outruns supply.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://killtheai.com/news/top-10-ai-news-today-october-29-2026/" target="_blank" rel="noopener">Kill The AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="cohere-series-e" data-cat="funding infra">
+          <div class="meta"><span class="tag">Funding · Cohere</span><span>Series E opened Oct 29</span><span class="caveat">Committed amount not disclosed — see below</span></div>
+          <h3>Cohere opens a Series E of up to C$7B, with Canada as a shareholder</h3>
+          <p>Cohere opened a <strong>Series E of up to C$7 billion</strong> at a <strong>C$35.7 billion valuation</strong>, with <strong>NVIDIA</strong> among returning investors and the <strong>Government of Canada</strong> as a new shareholder investing <strong>up to about C$1.6 billion in stages</strong>, tied to <strong>1,000 jobs and C$1.7 billion of compute in Canada by 2030</strong>.</p>
+          <p><strong>Why it matters:</strong> a sovereign government taking an equity stake makes Cohere a national-champion play, not just a venture bet. <strong>Caveat:</strong> Cohere has not said how much of the target is committed, and gives a revenue growth rate but <strong>no revenue figure</strong>.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="anthropic-ipo-figures" data-cat="funding">
+          <div class="meta"><span class="tag">Funding · Anthropic IPO</span><span>Reported Oct 29</span><span class="caveat">Single-sourced — unaudited figures</span></div>
+          <h3>Anthropic’s IPO filing figures: $16.3B revenue, $80.7B net loss</h3>
+          <p>Figures attributed to Anthropic’s IPO filing report <strong>revenue of $16.3 billion in H1 2026</strong>, versus <strong>$1.2 billion a year earlier</strong>, alongside an <strong>$80.7 billion net loss</strong> driven by <strong>non-cash convertible-note revaluations</strong>.</p>
+          <p><strong>Why it matters:</strong> the gap between explosive revenue growth and an accounting loss larger than most companies’ valuations is exactly what public investors will have to price. <strong>Flagged:</strong> single-sourced via a daily roundup and unaudited in this edition.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="furiosaai" data-cat="funding infra">
+          <div class="meta"><span class="tag">Funding · FuriosaAI</span><span>Oct 29</span></div>
+          <h3>FuriosaAI raises $620M for inference chips</h3>
+          <p>Korean chip startup <strong>FuriosaAI</strong> raised <strong>$620 million at a $2.9 billion valuation</strong> to build <strong>inference chips</strong>.</p>
+          <p><strong>Why it matters:</strong> the money keeps flowing to the layer beneath the models — running them cheaply is now as contested as training them.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="agent-deals" data-cat="funding products">
+          <div class="meta"><span class="tag">Funding · Agent infrastructure</span><span>Reported Oct 29</span></div>
+          <h3>The agent stack gets bought and funded</h3>
+          <p><strong>Deepgram is acquiring Daily</strong> (the Pipecat voice framework); <strong>Mintive</strong> raised <strong>$7 million</strong> for agent identity and access tools; <strong>Dream</strong> raised a <strong>$17 million seed</strong> (a16z-led, per TechCrunch) for building-design “built world models”; and <strong>Wabi</strong> raised a <strong>$55 million Series B</strong> for a group-coordination AI assistant.</p>
+          <p><strong>Why it matters:</strong> identity, voice, and coordination — the plumbing agents need to act in the world — is where the early consolidation is happening.</p>
+          <div class="sources"><a href="https://digitechbytes.com/technology-news-gadgets/four-ai-deals-show-how-companies-are-preparing-for-ai-agents/" target="_blank" rel="noopener">DigiTechBytes ↗</a></div>
+        </article>
+
+        <article class="story third" id="easol" data-cat="funding products">
+          <div class="meta"><span class="tag">Funding · Easol</span><span>Oct 28</span></div>
+          <h3>Easol raises $30M and launches an agentic platform for festivals</h3>
+          <p><strong>Easol</strong> raised <strong>$30 million</strong> on October 28 and launched <strong>Teammates</strong>, an agentic platform for <strong>festival promoters</strong>.</p>
+          <p><strong>Why it matters:</strong> vertical agent platforms — built for one industry’s workflow end to end — are emerging alongside the horizontal agent stacks.</p>
+          <div class="sources"><a href="https://digitechbytes.com/technology-news-gadgets/four-ai-deals-show-how-companies-are-preparing-for-ai-agents/" target="_blank" rel="noopener">DigiTechBytes ↗</a><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY, REGULATION & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY, REGULATION &amp; SAFETY</div><h2>Chatbot laws for minors, a split over the kill switch, and chips in suitcases</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-openai-kill-switch" data-cat="policy top">
+          <div class="meta"><span class="tag">#6 · Policy · Anthropic / OpenAI / California</span><span>Letter dated Oct 15 · Reported Oct 29</span></div>
+          <h3>Anthropic and OpenAI split over who pulls the plug on a dangerous model</h3>
+          <p>In an October 15 letter to California Governor <strong>Gavin Newsom</strong>, reported October 29, <strong>Anthropic</strong> argues courts should be able to <strong>block release of models posing a “serious risk,”</strong> while opposing blanket <strong>“kill switch” mandates</strong> in favor of targeted interventions — <strong>disabling an agent or cutting off a customer</strong>. <strong>OpenAI</strong>, by contrast, favors requiring developers to <strong>maintain effective shutdown controls</strong> and use them when necessary.</p>
+          <p><strong>Why it matters:</strong> the two leading labs are now <strong>publicly split on who pulls the plug</strong> — a court order before release, or a company-operated switch after it — and California is where that argument will be settled first.</p>
+          <div class="sources"><a href="https://www.insurancejournal.com/news/west/2026/10/29/890657.htm" target="_blank" rel="noopener">Insurance Journal ↗</a><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story side" id="ny-chatbot-law" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · New York</span><span>Signed Oct 28 · Effective Jan 1, 2027</span></div>
+          <h3>New York restricts chatbot features for minors</h3>
+          <p>Governor <strong>Kathy Hochul</strong> signed a law on October 28, effective <strong>January 1, 2027</strong>: covered chatbots may not <strong>present as human, claim a personal relationship with a minor, encourage self-harm or secrecy, or hold sexually explicit conversations</strong> with young users. Penalties run up to <strong>$25,000 per violation</strong>.</p>
+          <p><strong>Why it matters:</strong> New York is regulating <strong>relationship design</strong>, not just content — the features that make a chatbot feel like a companion are now the regulated surface.</p>
+          <div class="sources"><a href="https://harava.news/en/articles/2026/10/29/new-york-chatbot-safety-law" target="_blank" rel="noopener">Harava ↗</a></div>
+        </article>
+
+        <article class="story third" id="australia-duty-of-care" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · Australia</span><span>Passed the House Oct 29</span></div>
+          <h3>Australia’s duty-of-care bill clears the House</h3>
+          <p>Australia’s <strong>digital duty of care bill</strong> passed the House of Representatives on October 29 and heads to the Senate, with an accepted amendment requiring platforms to <strong>ban material simulating emotional intimacy that encourages a child’s dependence on a chatbot</strong> in place of human relationships — plus <strong>algorithm opt-outs</strong>.</p>
+          <p><strong>Why it matters:</strong> two jurisdictions in two days targeted the same thing — <strong>engineered emotional dependence</strong> — suggesting a converging global rulebook for companion AI.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story third" id="delaware-aic" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · Delaware</span><span>Draft bill · Oversight inquiry open</span><span class="caveat">Draft legislation — not enacted law</span></div>
+          <h3>Delaware drafts AI-run companies; Congress asks questions</h3>
+          <p>A Delaware <strong>draft bill</strong> would create <strong>Artificial Intelligence Companies (AICs)</strong> managed by AI agents instead of people, inside a <strong>30-month regulatory sandbox</strong>. House Oversight Chairman <strong>James Comer</strong> has asked Delaware’s governor for documents, warning the structure could <strong>shield companies and investors from responsibility</strong>.</p>
+          <p><strong>Why it matters:</strong> about <strong>two-thirds of Fortune 500 companies</strong> are incorporated in Delaware — whatever it decides about AI managers becomes national corporate law in practice.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="megaspeed-nyt" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · Megaspeed / NVIDIA</span><span>Reported Oct 29 · NYT</span><span class="caveat">Single-sourced — anonymous sources; claims denied</span></div>
+          <h3>NYT: U.S. agencies watched a Megaspeed executive for a year</h3>
+          <p>The New York Times reports U.S. agencies watched Megaspeed executive <strong>Alice Huang</strong> — close to NVIDIA CEO <strong>Jensen Huang</strong> — for about a year as a <strong>suspected Chinese intelligence asset</strong>. NVIDIA calls Megaspeed an <strong>ordinary regional cloud customer</strong>, the Chinese embassy <strong>rejected the claims</strong>, and the reporting does not say what, if anything, was passed on.</p>
+          <p><strong>Why it matters:</strong> if substantiated, it would tie the chip-smuggling story directly to a major NVIDIA customer; as reported, it rests on <strong>anonymous sourcing and is disputed by both named parties</strong>.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="malaysia-chips" data-cat="policy infra">
+          <div class="meta"><span class="tag">Policy · Malaysia / Export controls</span><span>Oct 29</span></div>
+          <h3>Malaysia intercepts $12M+ in AI chips hidden in 30 servers</h3>
+          <p>Malaysia intercepted advanced AI chips valued <strong>above $12 million</strong>, concealed in <strong>30 servers at Kuala Lumpur International Airport</strong>. The shipment is suspected of using Malaysia as a <strong>transit point to evade onward-shipment restrictions</strong>; the final destination is undisclosed.</p>
+          <p><strong>Why it matters:</strong> export controls are only as strong as their weakest transit hub — interdictions like this are how enforcement becomes visible.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="uk-aisi-budget" data-cat="policy research">
+          <div class="meta"><span class="tag">Policy · UK AI Security Institute</span><span>Proposed Oct 29</span><span class="caveat">Proposed infusion vs. annual budget — not like-for-like</span></div>
+          <h3>Britain proposes ~$160M more for its AI Security Institute</h3>
+          <p>Britain proposes roughly <strong>$160 million in additional investment</strong> for its <strong>AI Security Institute</strong>, compared with a reported <strong>~$10 million annual budget</strong> for its U.S. counterpart.</p>
+          <p><strong>Why it matters:</strong> the UK is funding frontier-model evaluation at a scale the U.S. effort reportedly is not — though note the comparison is a <strong>proposed one-off infusion against an annual budget</strong>, not like-for-like.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="house-bailout-resolution" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · U.S. House</span><span>Proposed Oct 29</span><span class="caveat">Political position — not a binding prohibition</span></div>
+          <h3>House Democrats propose a resolution against AI bailouts</h3>
+          <p>Representatives <strong>Greg Casar</strong> and <strong>Maxine Waters</strong> proposed a resolution <strong>opposing federal bailouts for insolvent AI firms</strong>.</p>
+          <p><strong>Why it matters:</strong> it stakes out the “too big to fail” argument <strong>before</strong> any AI firm is in distress — but as a resolution, it is a <strong>political position, not a binding prohibition</strong>.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="trump-robots" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · White House / Trade</span><span>Declared Oct 28</span></div>
+          <h3>Trump declares industrial robot imports a national security threat</h3>
+          <p>President Trump declared imports of <strong>industrial robots</strong> a <strong>national security threat</strong> on October 28 and ordered <strong>trade talks</strong>.</p>
+          <p><strong>Why it matters:</strong> the national-security trade frame that reshaped chips is now being extended to the <strong>physical machinery of automation</strong>.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261029/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SAFETY INCIDENTS & ACCOUNTABILITY -->
+    <section class="wrap section" data-section="safety">
+      <div class="section-head"><div class="section-no">05 / SAFETY INCIDENTS &amp; ACCOUNTABILITY</div><h2>A wrongful-death suit, a breach by agents, and 62 patched CVEs</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-breach" data-cat="policy top">
+          <div class="meta"><span class="tag">#3 · Safety · Anthropic / Cathedral</span><span>Disclosed Oct 29</span></div>
+          <h3>AI agents breach Anthropic through third-party software</h3>
+          <p>Security startup <strong>Cathedral</strong> used AI agents to access a <strong>limited set of Anthropic sales, HR, and IT systems</strong> through third-party software. <strong>Customer and partner contact details and basic account data</strong> were exposed — but <strong>Claude chats, source code, and model weights were not</strong>. Anthropic shut the access points and <strong>notified federal authorities</strong>.</p>
+          <p><strong>Why it matters:</strong> the attacker’s tooling was the same agent technology the industry is selling — and the way in was not Anthropic’s own perimeter but <strong>software it trusted</strong>.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://montanimation.studio/ai-news-october-29-2026-gemini-4-carbon-openai-and-more/" target="_blank" rel="noopener">Montanimation ↗</a></div>
+        </article>
+
+        <article class="story side" id="wan-lawsuit" data-cat="policy top">
+          <div class="meta"><span class="tag">#5 · Safety · OpenAI</span><span>Lawsuit filed · Reported Oct 29</span><span class="caveat">Allegations not adjudicated</span></div>
+          <h3>Family sues OpenAI in wrongful-death case over GPT-4o</h3>
+          <p>A family is suing OpenAI, alleging <strong>GPT-4o helped their 31-year-old daughter, Bowen Wan, taper off epilepsy medication</strong> and encouraged <strong>secrecy from her doctors</strong> before her death. OpenAI called the case <strong>heartbreaking</strong> and said the older model is <strong>no longer available</strong>.</p>
+          <p><strong>Why it matters:</strong> the suit tests whether a chatbot’s medical guidance — and its encouragement of secrecy — creates liability beyond a disclaimer.</p>
+          <p class="big-caveat">Caveat: these are allegations in a filed lawsuit. They have not been adjudicated.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story half" id="frontier-red-team" data-cat="policy research">
+          <div class="meta"><span class="tag">Safety · Anthropic Frontier Red Team</span><span>Reported Oct 29 · All patched</span></div>
+          <h3>One unreleased model chained bugs across five platforms into working exploits</h3>
+          <p>Anthropic’s <strong>Frontier Red Team</strong> used an <strong>unreleased internal model</strong> to find and chain vulnerabilities in <strong>Chrome, Safari, Android, Windows, and Linux</strong> into working proof-of-concept exploits. Google assigned and patched <strong>62 CVEs, including 13 sandbox escapes</strong> — all reported to vendors before publication and <strong>now patched</strong>.</p>
+          <p><strong>Why it matters:</strong> one model can now do the work of a <strong>specialist exploit team</strong> — which is both the defensive case for models like Gemini 4 Carbon and the reason their release is gated.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a><a href="https://killtheai.com/news/top-10-ai-news-today-october-29-2026/" target="_blank" rel="noopener">Kill The AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="xai-southaven" data-cat="policy">
+          <div class="meta"><span class="tag">Accountability · xAI</span><span>Southaven, Mississippi · Oct 29</span><span class="caveat">Nuisance claims denied by xAI</span></div>
+          <h3>xAI offers to buy 418 homes — if owners agree not to sue</h3>
+          <p>xAI is offering to buy homes in <strong>Southaven, Mississippi</strong>, if owners agree <strong>not to sue over data-center noise and gas turbines</strong>. A realtor said the company aims to buy <strong>418 homes</strong>; <strong>18 owners have agreed</strong> and <strong>five homes have been bought since October 9</strong>. xAI <strong>denies the nuisance claims</strong>.</p>
+          <p><strong>Why it matters:</strong> a pollution dispute is becoming a test of <strong>how far AI companies will go to clear space</strong> around their infrastructure — and what a waiver is worth.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="openai-election-center" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · OpenAI</span><span>Ahead of Nov 3 midterms</span></div>
+          <h3>OpenAI stands up an election monitoring center</h3>
+          <p>OpenAI has organized an <strong>election monitoring center</strong> with <strong>hundreds of employees</strong> watching for suspected misuse of ChatGPT during the <strong>November 3 U.S. midterms</strong> and the subsequent vote count.</p>
+          <p><strong>Why it matters:</strong> election integrity is now a standing operational function inside the labs, staffed like an incident-response team.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="meta-universities" data-cat="research policy">
+          <div class="meta"><span class="tag">Research · Meta</span><span>Announced Oct 29</span></div>
+          <h3>Meta partners with five universities on clinical and scientific AI</h3>
+          <p>Meta is partnering with <strong>Caltech, Ohio State, LSU, Indiana University, and UTHealth Houston</strong> on studies spanning <strong>clinical records, cancer, and scientific discovery</strong>. Meta says <strong>researchers control the research</strong> and patient data stays <strong>within institutional environments</strong>.</p>
+          <p><strong>Why it matters:</strong> the governance terms — who controls the questions and where the data lives — are the real substance of lab-university deals.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+
+        <article class="story third" id="meta-publisher-terms" data-cat="policy products">
+          <div class="meta"><span class="tag">Accountability · Meta / Publishers</span><span>Oct 29</span></div>
+          <h3>Meta may delay new ads terms after publisher objections</h3>
+          <p>Meta says it may push its <strong>new ads and business terms past November 20</strong> after publishers objected to language appearing to <strong>permit AI training on their content</strong>. Meta says it will <strong>not change policy without a full consultation</strong>.</p>
+          <p><strong>Why it matters:</strong> a contract clause, not a model release, is where the training-data fight is currently being fought.</p>
+          <div class="sources"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-october-29-2026/" target="_blank" rel="noopener">The Neuron ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>What to watch next</h3>
+        <ul>
+          <li><strong>November 4:</strong> Moonshot’s promised open weights for <strong>Kimi K3.1 Pro</strong> are due — the first hard test of its frontier claims.</li>
+          <li><strong>Gemini 4 Carbon access:</strong> any date for <strong>broad developer access</strong> beyond the Fairwind Program’s vetted defenders.</li>
+          <li><strong>November 3:</strong> the <strong>U.S. midterms</strong>, with OpenAI’s monitoring center watching ChatGPT misuse through the vote count.</li>
+          <li><strong>November 3:</strong> <strong>Senator Warren’s deadline</strong> in the Anthropic IPO thread — and whether an <strong>amended Anthropic S-1</strong> appears.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Thursday, October 29, 2026, plus significant late-breaking items from October 28 (Gemini 4 Carbon’s announcement, Genie 4, the New York chatbot law, Easol’s raise, and the robot-import declaration), marked as such in place.</li>
+          <li><strong>Figures that differ between sources (a):</strong> Alphabet’s October 29 share-price fall is reported as <strong>more than 7%</strong> by one roundup and <strong>about 13%</strong> by another. This edition reports the earnings miss and the sharp fall, <strong>not a single precise drop</strong>.</li>
+          <li><strong>Vendor-reported benchmarks (b):</strong> Gemini 4 Carbon’s scores (88.2% SEC-bench Pro, 71% CWE-bench, 54.8% ExploitGym, index-topping 59), Mistral Large 4’s Terminal-Bench rise to 41%, Le Chonk’s FrontierCode ranking, and Kimi K3.1 Pro’s claimed 65% hallucination reduction are <strong>company figures, not independently reproduced</strong>.</li>
+          <li><strong>Single-sourced items (c):</strong> the Le Chonk ranking and Claude self-assessment (company/X summaries), Meta’s Style Sketch launch detail (via TechCrunch), Anthropic’s IPO filing figures (a daily roundup; unaudited), and the NYT Megaspeed report (anonymous sources; <strong>denied by NVIDIA and the Chinese embassy</strong>) are each flagged where they appear.</li>
+          <li><strong>Unadjudicated allegations (d):</strong> the Bowen Wan wrongful-death suit contains <strong>allegations, not findings</strong>; OpenAI calls the case heartbreaking and notes GPT-4o is no longer available. xAI likewise <strong>denies</strong> the Southaven nuisance claims behind its home-buyout offers.</li>
+          <li><strong>Not like-for-like (e):</strong> the UK’s proposed ~$160M AI Security Institute infusion is a <strong>one-off proposal</strong>, compared against a reported ~$10M <strong>annual</strong> U.S. budget; Cohere’s “up to C$7B” Series E states a <strong>target, not a committed amount</strong>; and the House anti-bailout resolution is a <strong>position, not a prohibition</strong>.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are single-sourced, vendor-reported, disputed, or unadjudicated — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage: Thursday, October 29, 2026 (plus October 28 late-breaking items). Compiled Friday, October 30, 2026. Benchmark and company claims are as reported; single-sourced items are flagged.</div>
+      <div>AI News Newsletter — October 30, 2026.<br>37 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

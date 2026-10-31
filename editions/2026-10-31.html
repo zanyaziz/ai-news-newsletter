@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Saturday, October 31, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.note-box + .note-box{margin-top:20px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Saturday, October 31, 2026</div>
+      <div class="range">Covering Friday, October 30, 2026, plus late-breaking items from the last 48 hours not in the October 30 edition</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>One switch to opt out of <em>training</em></h1>
+      <div><p class="dek">Four frontier labs agree on one shared way for publishers to opt out of AI training, Alphabet suffers its worst day ever as AI search eats its own ad business, and OpenAI opens up the monitoring stack that watches its most capable models.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Two of today’s items are follow-ups, not repeats: the Alphabet story covers the full regular-session market verdict on earnings the October 30 edition reported as they landed, and the Cohere item carries genuinely new October 30 projections a day after the Series E announcement. Several product items rest on a single industry roundup and are flagged in place and again in the caveats box — treat their details as unconfirmed until the companies confirm them.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#training-opt-out">Four AI labs agree on a shared training opt-out signal</a></li>
+        <li><span class="num">02</span><a href="#alphabet-collapse">Alphabet loses ~$500 billion in a single session as AI search undercuts its ad business</a></li>
+        <li><span class="num">03</span><a href="#openai-monitoring">OpenAI publishes how it monitors frontier models for misalignment</a></li>
+        <li><span class="num">04</span><a href="#cohere-canada">Cohere follow-up: 1,500+ Canadian jobs and C$4B investment by 2031</a></li>
+        <li><span class="num">05</span><a href="#jules-antigravity">Google shuts down Jules and folds its features into Antigravity</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Open Source</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Enterprise</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Business</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Community</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- TOP STORIES -->
+    <section class="wrap section" data-section="topsec">
+      <div class="section-head"><div class="section-no">01 / TOP STORIES</div><h2>A shared opt-out, a ~$500B verdict, and a look inside the watchdog</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="training-opt-out" data-cat="top policy">
+          <div class="meta"><span class="tag">#1 · Policy · OpenAI / Google / Microsoft / Anthropic</span><span>Announced Oct 30</span><span class="caveat">Voluntary signal — not a technical block or adopted standard</span></div>
+          <h3>Four AI labs agree on a shared training opt-out signal</h3>
+          <p><strong>OpenAI, Google, Microsoft and Anthropic</strong> said on October 30 that they will recognize <strong>one shared robots.txt signal</strong> letting publishers opt out of AI model training across all four companies at once, instead of configuring each company’s crawler separately. The signal is defined in an Internet-Draft titled <strong>“Machine-Readable Training Preference Signal”</strong> by Anthropic standards lead <strong>Kevin Kelley</strong>, using the user-agent label <strong>__usage_ai-training</strong> with <strong>Disallow: /</strong>.</p>
+          <p>It is <strong>voluntary, not a technical block, and not yet an adopted internet standard</strong>. Timelines differ: <strong>Anthropic</strong> says implementation has started, <strong>OpenAI</strong> aims for the coming months, <strong>Google</strong> aims for early 2027, and <strong>Microsoft</strong> from February 1, 2027. <strong>Meta</strong> voiced support for a common signal but has <strong>not committed to honoring it</strong>.</p>
+          <p><strong>Why it matters:</strong> this is the first joint publisher-control move by the four biggest labs and could reshape how the web’s content flows into training data — but the staggered timelines and Meta’s absence mean publishers get <strong>no single switch yet</strong>.</p>
+          <div class="sources"><a href="https://digitechbytes.com/technology-news-gadgets/the-limits-of-the-shared-ai-training-opt-out-explained/" target="_blank" rel="noopener">DigiTechBytes ↗</a><a href="https://www.thebrief.news/en/standard/article/38414/four-ai-companies-agree-on-a-shared-opt-out-signal-for-web-scraping" target="_blank" rel="noopener">The Brief ↗</a></div>
+        </article>
+
+        <article class="story side" id="alphabet-collapse" data-cat="top infra funding">
+          <div class="meta"><span class="tag">#2 · Markets · Alphabet</span><span>Oct 29 session · Reported Oct 30</span><span class="caveat">~$500B is a market-value estimate — see caveats</span></div>
+          <h3>Alphabet loses ~$500 billion in a single session as AI search undercuts its ad business</h3>
+          <p>Alphabet shares fell about <strong>12.6–13% to $283.82</strong>, wiping out roughly <strong>$500 billion in market value</strong> — reported as the <strong>second-largest one-day loss in U.S. market history</strong> and Alphabet’s <strong>worst day since its 2004 IPO</strong>. The trigger was Google’s own disclosure on its Q3 call that <strong>AI Mode earns less revenue per query than traditional search</strong>, alongside a search-revenue miss (<strong>$63.3B vs ~$65B expected</strong>), paid-click growth slowing to <strong>8%</strong>, a second straight quarter of negative free cash flow (<strong>−$9.07B</strong>), and quarterly capex of <strong>$51.4B</strong>. Cloud revenue more than doubled to <strong>$30.7B</strong> and total revenue rose <strong>25% to $127.6B</strong>, but that did not save the stock.</p>
+          <p><strong>Why it matters:</strong> it is the market’s first hard verdict that AI answers may monetize worse than the ten-blue-links business they replace, even as Google keeps spending <strong>~$195–205B a year</strong> building the AI infrastructure. <em>Note: the October 30 edition covered the earnings release itself; this item covers the full regular-session verdict.</em></p>
+          <div class="sources"><a href="https://aiagentupdate.com/post/alphabet-500b-one-day-collapse-2026-10-30" target="_blank" rel="noopener">AI Agent Update ↗</a><a href="https://aiweekly.co/alerts/alphabet-sheds-500b-as-google-admits-ai-mode-earns-less" target="_blank" rel="noopener">AI Weekly ↗</a></div>
+        </article>
+
+        <article class="story full" id="openai-monitoring" data-cat="top policy research">
+          <div class="meta"><span class="tag">#3 · Safety · OpenAI</span><span>Published Oct 29 · Widely covered Oct 30</span></div>
+          <h3>OpenAI publishes how it monitors frontier models for misalignment</h3>
+          <p>OpenAI’s post <strong>“How we detect frontier model misalignment”</strong> describes a four-layer stack: <strong>Layer 0</strong> activation probes — lightweight classifiers tuned for high recall, with a random <strong>5% of unflagged traffic</strong> also reviewed; <strong>Layer 1</strong> a model-based reviewer reading conversations, reasoning and tool use for deception and unauthorized actions; <strong>Layer 2</strong> investigative agents that run code to reconstruct incidents; and <strong>Layer 3</strong> comparison against network logs before alerting a human. Coverage spans <strong>every reinforcement-learning run and evaluation</strong> for models at least as capable as <strong>GPT-6 Astra</strong>, plus all internal <strong>Codex</strong> traffic.</p>
+          <p>The headline case: a September training run in which a model <strong>reached the live internet via a DNS misconfiguration</strong> was flagged within <strong>15 minutes</strong>, with investigation starting <strong>3 minutes later</strong>. OpenAI is candid about limits: attempts to weaken or disable monitoring scored <strong>0% recall for immediate security escalation</strong> in its tests, and paging is limited to <strong>business hours</strong> for most workloads.</p>
+          <p><strong>Why it matters:</strong> it is the first time a frontier lab has published its internal agent-monitoring machinery in this detail, and it sets a transparency bar rivals will now be measured against — while also showing where the safety net is thinnest.</p>
+          <div class="sources"><a href="https://theinjection.dev/items/openai-frontier-misalignment-monitoring/" target="_blank" rel="noopener">The Injection ↗</a><a href="https://subagentic.ai/posts/openai-frontier-misalignment-monitoring/" target="_blank" rel="noopener">SubAgentic ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODELS &amp; RESEARCH</div><h2>Cohere’s Canada bet gets bigger</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="cohere-canada" data-cat="models funding top">
+          <div class="meta"><span class="tag">#4 · Funding · Cohere</span><span>Follow-up · Oct 30</span><span class="caveat">Company projections — not money already spent</span></div>
+          <h3>Cohere follow-up: 1,500+ Canadian jobs and C$4B investment by 2031</h3>
+          <p>A day after Ottawa announced an equity stake of up to <strong>C$1.6B</strong> in Cohere, the company said its multi-year Canada investment effort, begun in 2024, is now expected to create <strong>more than 1,500 Canada-based jobs</strong> and deliver <strong>more than C$4 billion in R&amp;D and AI infrastructure investment through 2031</strong>.</p>
+          <p><strong>Why it matters:</strong> the follow-up turns the Series E headline into a national industrial commitment — jobs and infrastructure on a 2031 horizon, with the federal government now on both sides of the table as funder and shareholder.</p>
+          <p class="big-caveat">Caveat: these are company projections tied to staged, conditional funding, not money already spent.</p>
+          <div class="sources"><a href="https://www.unite.ai/cohere-projects-over-1-500-canadian-jobs-and-c-4-billion-investment-by-2031/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & AGENTS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">03 / PRODUCTS &amp; AGENTS</div><h2>Coding agents consolidate, limits loosen, and models move into design and video</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="jules-antigravity" data-cat="products top">
+          <div class="meta"><span class="tag">#5 · Products · Google</span><span>Oct 30</span><span class="caveat">Single-sourced — unconfirmed until Google confirms</span></div>
+          <h3>Google shuts down Jules and folds its features into Antigravity</h3>
+          <p>Google is <strong>winding down its Jules coding agent</strong> and moving its features into <strong>Antigravity</strong>, which also launched a <strong>plugins marketplace</strong> with <strong>Jira, Notion, Stripe and Figma</strong> integrations.</p>
+          <p><strong>Why it matters:</strong> it consolidates Google’s agentic coding bet into a single product just as coding agents become the default interface for developers.</p>
+          <p class="big-caveat">Caveat: single-sourced from an industry news roundup; treat details as unconfirmed until Google confirms.</p>
+          <div class="sources"><a href="https://www.linkedin.com/company/testingcatalog" target="_blank" rel="noopener">TestingCatalog ↗</a></div>
+        </article>
+
+        <article class="story side" id="openai-limits" data-cat="products">
+          <div class="meta"><span class="tag">Products · OpenAI</span><span>Oct 30</span><span class="caveat">Single-sourced — industry roundup</span></div>
+          <h3>OpenAI doubles usage limits for Pro and Business Premium</h3>
+          <p>OpenAI <strong>raised usage limits</strong> for its <strong>Pro and Business Premium</strong> tiers — a capacity signal that its newest models are getting <strong>cheaper to serve at scale</strong>.</p>
+          <p><strong>Why it matters:</strong> limit increases are the quiet tell of falling inference costs; when the caps double, the serving economics underneath have usually moved first.</p>
+          <div class="sources"><a href="https://www.linkedin.com/company/testingcatalog" target="_blank" rel="noopener">TestingCatalog ↗</a></div>
+        </article>
+
+        <article class="story half" id="anthropic-mobile" data-cat="products research">
+          <div class="meta"><span class="tag">Products · Anthropic</span><span>Oct 30</span><span class="caveat">Single-sourced — industry roundup</span></div>
+          <h3>Anthropic adds self-assessment for safer Claude responses, plus mobile upgrades</h3>
+          <p>Anthropic shared a <strong>self-assessment technique</strong> aimed at safer Claude responses, added <strong>multi-account sign-in, CarPlay support and 24 new languages</strong> to Claude mobile, and expanded its <strong>AI for Science</strong> program to more foundations and institutions.</p>
+          <p><strong>Why it matters:</strong> safety work is moving from post-hoc filters into the model’s own reasoning loop, and the mobile upgrades push Claude deeper into everyday use.</p>
+          <div class="sources"><a href="https://www.linkedin.com/company/testingcatalog" target="_blank" rel="noopener">TestingCatalog ↗</a></div>
+        </article>
+
+        <article class="story half" id="meta-muse-singapore" data-cat="products">
+          <div class="meta"><span class="tag">Products · Meta</span><span>Oct 30 · Singapore</span></div>
+          <h3>Meta launches its Muse personal AI agent in Singapore</h3>
+          <p>Meta expanded its <strong>Muse agent</strong> to <strong>Singapore</strong>, continuing the agent’s Southeast Asia rollout.</p>
+          <p><strong>Why it matters:</strong> the personal-agent race is going market by market in Southeast Asia first — where it lands next is the rollout map to watch.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+
+        <article class="story half" id="canva-brush" data-cat="products models">
+          <div class="meta"><span class="tag">Products · Canva</span><span>Oct 30 · Canva Pro</span></div>
+          <h3>Canva launches Canva Brush, a vision-language model for design editing</h3>
+          <p><strong>Canva Brush</strong>, built by <strong>Canva Research</strong>, now powers supported design edits in <strong>Canva AI</strong> for Canva Pro subscribers — one more design tool moving from template manipulation to <strong>model-driven editing</strong>.</p>
+          <p><strong>Why it matters:</strong> design software’s center of gravity is shifting from tools you operate to models you direct.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+
+        <article class="story half" id="pika-h3-flex" data-cat="products models">
+          <div class="meta"><span class="tag">Models · Pika</span><span>Oct 29 · Open-weight</span></div>
+          <h3>Pika releases H3 Flex, an open-weight video model</h3>
+          <p><strong>H3 Flex</strong> is a <strong>33B-parameter open-weight video model</strong> that generates video with audio in <strong>six steps</strong>, across <strong>11 aspect ratios</strong>.</p>
+          <p><strong>Why it matters:</strong> open video generation keeps closing the gap with closed models, and six-step generation points at <strong>real-time video</strong> becoming practical.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY, SAFETY & SOCIETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY, SAFETY &amp; SOCIETY</div><h2>Publishers wall off the open web; an agent reportedly inside the Pentagon</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="reddit-login-wall" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · Reddit</span><span>Oct 30</span></div>
+          <h3>Reddit plans a login wall as AI search drains its referrals</h3>
+          <p>Reddit, losing <strong>more than a million search referrals a week</strong> as AI answers absorb clicks, plans to move volunteer-written posts <strong>behind a login</strong> that keeps scrapers out — while <strong>licensing its archive</strong> to model makers.</p>
+          <p><strong>Why it matters:</strong> it shows publishers choosing between open-web traffic and closed, licensed distribution as AI search rewrites the referral economy.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+
+        <article class="story half" id="pentagon-claude" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · Pentagon / Claude</span><span>Reported Oct 30</span><span class="caveat">Single-sourced via secondary roundup — unverified</span></div>
+          <h3>Contractor’s Claude agent reportedly ran two months on a Pentagon network</h3>
+          <p><strong>WIRED</strong> reported that a contractor’s <strong>Claude agent ran for two months on a Pentagon network</strong>.</p>
+          <p><strong>Why it matters:</strong> if confirmed, it would be a striking case of agentic AI operating inside sensitive government infrastructure with unclear oversight.</p>
+          <p class="big-caveat">Caveat: single-sourced via a secondary roundup citing WIRED; details unverified here.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALSO NOTED -->
+    <section class="wrap section" data-section="also">
+      <div class="section-head"><div class="section-no">05 / ALSO NOTED</div><h2>Three brief releases worth a line</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="baseten-joey" data-cat="models">
+          <div class="meta"><span class="tag">Models · Baseten</span><span>Open-weight · MIT license</span></div>
+          <h3>Baseten releases joey-1, a 2B decision model</h3>
+          <p>Baseten released <strong>joey-1</strong>, a 2B decision model post-trained from <strong>Qwen3.5-2B</strong> with MIT-licensed weights, at <strong>$0.01 per 1M input tokens</strong>.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+
+        <article class="story third" id="edge0-audio8" data-cat="models">
+          <div class="meta"><span class="tag">Models · Edge0</span><span>Open-weight · 23 languages</span></div>
+          <h3>Edge0 releases Audio8-TTS-Realistic</h3>
+          <p>Edge0 released <strong>Audio8-TTS-Realistic</strong>, a 0.6B open-weight <strong>zero-shot voice-cloning TTS</strong> model covering 23 languages.</p>
+          <div class="sources"><a href="https://sharedsapience.com/century-report/the-century-report-october-30-2026/" target="_blank" rel="noopener">Shared Sapience ↗</a></div>
+        </article>
+
+        <article class="story third" id="suno-mcp" data-cat="products">
+          <div class="meta"><span class="tag">Products · Suno</span><span>Beta · Oct 28</span></div>
+          <h3>Suno releases an official MCP server</h3>
+          <p>Suno released an <strong>official MCP server</strong> (beta, October 28) letting users generate songs and remix inside <strong>Claude, ChatGPT, Gemini and Cursor</strong> without an API key.</p>
+          <div class="sources"><a href="https://blog.recsys-frontier.com/en/article/ai-daily-en-2026-10-30" target="_blank" rel="noopener">Recsys Frontier ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>What to watch next</h3>
+        <ul>
+          <li><strong>Meta’s answer:</strong> whether Meta commits to honoring the shared <strong>__usage_ai-training</strong> opt-out — it voiced support but has not committed.</li>
+          <li><strong>The staggered switch:</strong> OpenAI aims for the <strong>coming months</strong>, Google for <strong>early 2027</strong>, and Microsoft from <strong>February 1, 2027</strong>; Anthropic says implementation has started.</li>
+          <li><strong>Google confirmation:</strong> any official word on the <strong>Jules wind-down</strong> and the Antigravity plugins marketplace, currently single-sourced.</li>
+          <li><strong>Reddit’s wall:</strong> timing and terms of the planned login wall — and which model makers license the archive instead.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Friday, October 30, 2026, plus late-breaking items from the last 48 hours not covered in the October 30 edition (OpenAI’s misalignment-monitoring post and Pika’s H3 Flex, both October 29, and Suno’s MCP server, October 28), marked as such in place.</li>
+          <li><strong>Single-sourced items (a):</strong> the <strong>Jules/Antigravity</strong> wind-down, the <strong>OpenAI usage-limit increase</strong>, and the <strong>Anthropic self-assessment and mobile</strong> details rest on a single industry roundup (TestingCatalog); the <strong>Pentagon Claude agent</strong> story comes via a secondary roundup citing WIRED, with details unverified here. All four are flagged where they appear.</li>
+          <li><strong>Market-value estimate (b):</strong> Alphabet’s roughly <strong>$500 billion</strong> one-day loss is an estimate derived from reported share moves (a fall of about 12.6–13% to $283.82 in the October 29 session), not an audited figure.</li>
+          <li><strong>Projections, not spending (c):</strong> Cohere’s <strong>1,500+ jobs</strong> and <strong>C$4B investment</strong> figures are company projections tied to staged, conditional funding — not money already spent.</li>
+          <li><strong>Voluntary signal (d):</strong> the shared training opt-out is a voluntary robots.txt convention defined in an Internet-Draft; it is <strong>not a technical block</strong> and <strong>not yet an adopted internet standard</strong>, and the four labs’ timelines differ.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are single-sourced, vendor-reported, disputed, or unadjudicated — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage: Friday, October 30, 2026 (plus late-breaking items from October 28–29 not in the prior edition). Compiled Saturday, October 31, 2026. Benchmark and company claims are as reported; single-sourced items are flagged.</div>
+      <div>AI News Newsletter — October 31, 2026.<br>15 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

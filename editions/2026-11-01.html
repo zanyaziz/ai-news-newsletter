@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Sunday, November 1, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.note-box + .note-box{margin-top:20px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Sunday, November 1, 2026</div>
+      <div class="range">Covering Saturday, October 31, 2026, plus late-breaking items from the last 48 hours not in the October 31 edition</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>A quiet Saturday, a <em>loud verdict</em> on AI spending</h1>
+      <div><p class="dek">A quiet Saturday, a loud verdict on AI spending — OpenAI trims its funding target, Apple finally takes Apple Intelligence to China, and Google gets an AI answer back from orbit.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>This is a Saturday edition, so the news flow was lighter than a weekday, and several items below rest on secondary roundups reporting primary outlets (Financial Times, CNBC, Reuters) rather than on primary filings or company posts — those figures are flagged as reported, not confirmed. Yesterday’s lead items are not repeated as new stories; the Meta terms appear here only where there is genuinely new follow-up.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#openai-funding">OpenAI cuts its funding target to $20 billion as AI-spending worries deepen</a></li>
+        <li><span class="num">02</span><a href="#apple-china">Apple Intelligence reaches mainland China with Alibaba’s Qwen inside</a></li>
+        <li><span class="num">03</span><a href="#suncatcher">Google’s Project Suncatcher returns its first AI response from space</a></li>
+        <li><span class="num">04</span><a href="#uk-cma-meta">UK regulator opens a formal probe into Meta’s publisher terms</a></li>
+        <li><span class="num">05</span><a href="#nasdaq-tumble">Nasdaq posts its worst day since June as tech shares tumble</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="markets" aria-pressed="false">Markets &amp; Funding</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Agents</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Research</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- MARKETS & FUNDING -->
+    <section class="wrap section" data-section="markets">
+      <div class="section-head"><div class="section-no">01 / MARKETS &amp; FUNDING</div><h2>The fundraising climate tightens</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="openai-funding" data-cat="top markets">
+          <div class="meta"><span class="tag">#1 · Markets / Funding · OpenAI</span><span>Reported Oct 30–31</span><span class="caveat">Figures reported — not confirmed</span></div>
+          <h3>OpenAI cuts its funding target to $20 billion as AI-spending worries deepen</h3>
+          <p><strong>OpenAI</strong> now seeks <strong>up to $20 billion</strong> in its latest round, down from <strong>up to $30 billion</strong>, with about <strong>$11 billion reported secured</strong>, after the <strong>Financial Times</strong> first reported the cut on October 30 and <strong>CNBC</strong> confirmed it. The reported target valuation has also fallen, with the cut linked to mounting anxiety about AI spending and investor demand.</p>
+          <p><strong>Why it matters:</strong> a smaller round at a lower target is the clearest financing signal yet that the AI boom’s fundraising climate tightened in late October, even for OpenAI.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261031/" target="_blank" rel="noopener">The Diary of AI ↗</a><a href="https://michaelbrunger.com/briefs/2026-10-31/" target="_blank" rel="noopener">Michael Brunger brief ↗</a></div>
+        </article>
+
+        <article class="story side" id="nasdaq-tumble" data-cat="top markets">
+          <div class="meta"><span class="tag">#5 · Markets</span><span>Oct 30 session · Reported Oct 31</span></div>
+          <h3>Nasdaq posts its worst day since June as tech shares tumble</h3>
+          <p>The <strong>Nasdaq Composite fell 2.86% to 25,437</strong> — its largest one-day percentage drop since June 5 — with the <strong>S&amp;P 500 down 1.82% to 7,580.07</strong> and the <strong>Dow down 1.09% to 51,770.31</strong>, after disappointing results from <strong>Intel and Amazon</strong> deepened worries about returns on AI investment; reporting also put the week’s tech loss at <strong>more than $1 trillion</strong>.</p>
+          <p><strong>Why it matters:</strong> Friday’s selloff, a day after Alphabet’s record loss, shows investors are now pricing AI spending against near-term returns, not just capability.</p>
+          <div class="sources"><a href="https://medium.com/daily-post-of-ai/the-daily-post-of-ai-issue-26-da255149eb93" target="_blank" rel="noopener">The Daily Post of AI ↗</a><a href="https://michaelbrunger.com/briefs/2026-10-31/" target="_blank" rel="noopener">Michael Brunger brief ↗</a></div>
+        </article>
+
+        <article class="story half" id="credit-warnings" data-cat="markets">
+          <div class="meta"><span class="tag">Markets / Funding · Meta / Anthropic</span><span>Oct 30</span><span class="caveat">Anthropic rating is a reported expectation — not assigned</span></div>
+          <h3>Credit warnings pile up around AI spending</h3>
+          <p><strong>S&amp;P</strong> moved its outlook on <strong>Meta</strong> to <strong>negative from stable</strong>, keeping its <strong>AA- rating</strong>, over AI spending and negative free cash flow; Meta disagrees. Separately, the <strong>Financial Times</strong> reported <strong>Blackstone</strong> now expects <strong>Anthropic</strong> to receive a <strong>high junk (high-yield) credit rating</strong> after its IPO.</p>
+          <p><strong>Why it matters:</strong> credit markets are starting to price frontier AI buildouts like leveraged bets, which raises the cost of the compute race for everyone.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261031/" target="_blank" rel="noopener">The Diary of AI ↗</a><a href="https://medium.com/daily-post-of-ai/the-daily-post-of-ai-issue-26-da255149eb93" target="_blank" rel="noopener">The Daily Post of AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="dataline" data-cat="markets">
+          <div class="meta"><span class="tag">Funding · Dataline</span><span>Oct 31</span><span class="caveat">Company claim</span></div>
+          <h3>Dataline raises $10.6 million to give AI agents data they can trust</h3>
+          <p>The round was <strong>co-led by Lattice and Samsung-backed Dispersion Capital</strong>, with participation from <strong>Symbolic Capital, Coinbase Ventures</strong> and others. <strong>Dataline</strong>, a decentralized network for agent-payable data, also launched an <strong>AI Data Launch</strong> cohort with partners including <strong>Kite, Polymarket, Kalshi and Base</strong>.</p>
+          <p><strong>Why it matters:</strong> as agents transact on their own, trusted, payable data feeds become infrastructure — this round bets that agents, not just humans, will be the customers.</p>
+          <div class="sources"><a href="https://fundseconomy.com/dataline-raises-10-6m-to-give-ai-agents-data-they-can-trust/" target="_blank" rel="noopener">Funds Economy ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">02 / POLICY &amp; SAFETY</div><h2>A probe in London, a tax rejected in Paris, and new safety ledgers</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="uk-cma-meta" data-cat="top policy">
+          <div class="meta"><span class="tag">#4 · Policy · Meta / UK CMA</span><span>Opened Oct 30 · Reported Oct 31</span><span class="caveat">Investigation — not a finding</span></div>
+          <h3>UK regulator opens a formal probe into Meta’s publisher terms</h3>
+          <p>The UK <strong>Competition and Markets Authority</strong> opened a formal investigation on October 30 under <strong>Chapter II of the Competition Act 1998</strong> into whether <strong>Meta</strong> is abusing a dominant position through commercial terms for businesses using <strong>Facebook, Instagram</strong> and its other services. The CMA’s concern is that the terms could allow Meta to <strong>collect content from publishers’ and advertisers’ own websites</strong> and use it to develop its products, including AI features, <strong>without those businesses getting a choice</strong> on if or how their content is used.</p>
+          <p>Meta had already <strong>delayed the revised terms from October 30 to November 20</strong>, then <strong>paused the rollout on October 28</strong> pending consultation; the CMA opened the case regardless, and a <strong>Norwegian court separately blocked the terms</strong> from taking effect on November 20 pending a legality assessment. Meta says there are <strong>no grounds for an investigation</strong>.</p>
+          <p><strong>Why it matters:</strong> if the CMA finds abuse, the remedy debate — opt-in licensing for web content used in AI — would not stop at Meta.</p>
+          <div class="sources"><a href="https://ppc.land/meta-faces-uk-probe-over-planned-terms-to-use-publishers-content-for-ai/" target="_blank" rel="noopener">PPC Land ↗</a><a href="https://dig.watch/updates/uk-cma-launches-probe-into-metas-terms" target="_blank" rel="noopener">Digwatch ↗</a></div>
+        </article>
+
+        <article class="story side" id="france-tax" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · France</span><span>Oct 30 · Reported Nov 1</span></div>
+          <h3>France rejects an AI tax proposal</h3>
+          <p>France’s <strong>National Assembly</strong> on Friday, October 30 rejected a plan to <strong>tax company spending on AI</strong>, while two other AI tax measures failed in committee during debate over the 2027 budget. One failed committee measure proposed a <strong>1% charge on annual AI and robotics spending above 100,000 euros</strong>; another would have <strong>expanded the digital services tax to AI services</strong>.</p>
+          <p><strong>Why it matters:</strong> Europe’s first serious attempts to tax AI spending directly are stalling, leaving regulation — not taxation — as the near-term policy lever.</p>
+          <div class="sources"><a href="https://www.tokenpost.com/news/regulation/45781" target="_blank" rel="noopener">TokenPost ↗</a></div>
+        </article>
+
+        <article class="story half" id="india-depa" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · India</span><span>Oct 31</span></div>
+          <h3>India launches a DEPA handbook for secure AI training data</h3>
+          <p>India’s <strong>Ministry of Electronics and Information Technology (MeitY)</strong> launched the <strong>Handbook on Data Empowerment and Protection Architecture (DEPA) for AI Training</strong> at a roundtable in Bengaluru, unveiled by Secretary <strong>S. Krishnan</strong> with support from the <strong>iSPIRT Foundation</strong>. The framework aims to enable secure data collaboration while protecting <strong>privacy, intellectual property and institutional control</strong> — the barriers that often restrict data sharing.</p>
+          <p><strong>Why it matters:</strong> India’s AI ambitions depend on wider access to high-quality datasets, and DEPA is its attempt to unlock them without surrendering control.</p>
+          <div class="sources"><a href="https://www.thehindubusinessline.com/info-tech/meity-launches-depa-handbook-to-enable-secure-data-sharing-for-ai-training/article71648821.ece/amp/" target="_blank" rel="noopener">The Hindu BusinessLine ↗</a></div>
+        </article>
+
+        <article class="story half" id="openai-safety" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · OpenAI</span><span>Announced · Oct 31 reporting</span></div>
+          <h3>OpenAI promises safety reporting and stronger teen protections</h3>
+          <p><strong>OpenAI</strong> announced <strong>tighter limits on weapons-related information for under-18s</strong> and additional restrictions around <strong>detailed reconstructions of mass attacks for all users</strong>, due to begin rolling out over the next few weeks. It also committed to a first <strong>Community Safety Report in early 2027</strong>, covering the second half of 2026, with <strong>six-monthly updates</strong> afterwards.</p>
+          <p><strong>Why it matters:</strong> after a week of safety scrutiny, OpenAI is moving from one-off fixes to a regular public safety ledger — but these are planned protections, not independently verified controls.</p>
+          <div class="sources"><a href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-10-31" target="_blank" rel="noopener">Precise Impact AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="etsi-deepfakes" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · ETSI</span><span>Reported Oct 31</span></div>
+          <h3>ETSI sets out testable safeguards against harmful deepfakes</h3>
+          <p><strong>ETSI’s</strong> new <strong>TS 104 275</strong> specification addresses deepfake risks throughout the AI lifecycle — <strong>secure design, development, deployment, maintenance and end of life</strong> — including risk assessments, content labelling, monitoring and human oversight, with <strong>test scenarios and pass/fail criteria</strong>.</p>
+          <p><strong>Why it matters:</strong> buyers of generative-media tools now have a concrete checklist to put to suppliers instead of a generic safety promise, though a specification is not a legal compliance certificate.</p>
+          <div class="sources"><a href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-10-31" target="_blank" rel="noopener">Precise Impact AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="cursor-extension" data-cat="policy">
+          <div class="meta"><span class="tag">Safety / Security · Cursor / Anthropic</span><span>Oct 29–30 · Updated Oct 31</span></div>
+          <h3>Tampered Claude Code extension prompts urgent Cursor checks</h3>
+          <p>A tampered <strong>Claude Code extension, version 2.1.313</strong>, reached <strong>up to 5,000 Cursor users</strong> through Cursor’s marketplace on October 29; <strong>StepSecurity’s</strong> October 30 analysis says the payload installed <strong>persistent remote-access mechanisms</strong>. <strong>Anthropic</strong> clarified its own systems and official distribution channels were not compromised and it did not build the tampered extension.</p>
+          <p><strong>Why it matters:</strong> developer tools are now a supply-chain attack surface — teams should check the affected version and follow Cursor’s incident guidance rather than assuming uninstalling is enough.</p>
+          <div class="sources"><a href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-10-31" target="_blank" rel="noopener">Precise Impact AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & AGENTS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">03 / PRODUCTS &amp; AGENTS</div><h2>Apple enters China, agents get auditable, voice acts mid-sentence</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="apple-china" data-cat="top products">
+          <div class="meta"><span class="tag">#2 · Products · Apple / Alibaba</span><span>Announced Oct 31 · December launch</span><span class="caveat">Feature list as reported — pending Apple documentation</span></div>
+          <h3>Apple Intelligence reaches mainland China with Alibaba’s Qwen inside</h3>
+          <p><strong>Apple</strong> said <strong>Apple Intelligence</strong> reaches iPhones in <strong>mainland China with iOS 27.3 in December</strong>, with <strong>Alibaba’s Qwen</strong> inside <strong>Siri, Writing Tools and Visual Intelligence</strong>, and without Siri AI in the form reported.</p>
+          <p><strong>Why it matters:</strong> after years of absence, Apple’s AI finally enters the world’s largest smartphone market — but only through a local model partnership, a template other Western labs may have to follow in China.</p>
+          <p class="big-caveat">Caveat: details rest on a secondary roundup; treat the feature list as reported until Apple publishes full China documentation.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261031/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story side" id="sema4" data-cat="products">
+          <div class="meta"><span class="tag">Products / Enterprise · Sema4.ai</span><span>Oct 31</span><span class="caveat">Company claims</span></div>
+          <h3>Sema4.ai launches Enterprise AI Agent Platform 3.0</h3>
+          <p>The release adds <strong>team-based shared workspaces</strong> for collaborative agent management, with the company claiming a cached data-access approach <strong>cuts LLM token usage by up to 80%</strong> and delivers queries <strong>4x faster</strong> than conventional AI query generation, plus <strong>forensic audit reporting</strong> that logs every agent step with before-and-after diffs, meeting <strong>ISO 27001, SOC 2, HIPAA and GDPR</strong> standards.</p>
+          <p><strong>Why it matters:</strong> token cost and auditability, not raw capability, are now the enterprise agent battleground.</p>
+          <div class="sources"><a href="https://emergent.sh/news/sema4-ai-3-0-cuts-llm-token-usage-80-shared" target="_blank" rel="noopener">Emergent ↗</a></div>
+        </article>
+
+        <article class="story half" id="phonic" data-cat="products">
+          <div class="meta"><span class="tag">Products / Voice · Phonic</span><span>Oct 31</span></div>
+          <h3>Phonic launches voice AI that can act while callers speak</h3>
+          <p><strong>Phonic</strong> launched <strong>Phonic-1</strong>, a speech-to-speech model designed to <strong>call tools while a caller is still talking</strong>, and announced a <strong>$27.5 million Series A led by First Round</strong>. The company says the model supports <strong>more than 50 languages</strong> and can switch languages mid-conversation, while its own evaluation acknowledges <strong>human voices still win roughly 60%</strong> of preference comparisons.</p>
+          <p><strong>Why it matters:</strong> voice agents that act mid-sentence, rather than waiting for a pause, are the next step toward phone automation that actually completes tasks.</p>
+          <div class="sources"><a href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-10-31" target="_blank" rel="noopener">Precise Impact AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="toyota-waymo" data-cat="products">
+          <div class="meta"><span class="tag">Products / Autonomy · Toyota / Waymo</span><span>Announced · Oct 31 reporting</span><span class="caveat">Roadmap — not a live service</span></div>
+          <h3>Toyota will build Waymo robotaxis for Japan and the UK</h3>
+          <p><strong>Toyota</strong> will manufacture <strong>2027 bZ4X vehicles</strong> with <strong>Waymo’s</strong> autonomous-driving system integrated at its <strong>Takaoka factory</strong>, with testing starting in Japan next year and vehicles intended for other right-hand-drive markets including the <strong>UK</strong>.</p>
+          <p><strong>Why it matters:</strong> autonomy is moving from retrofitted test fleets into established factory production — but this is a vehicle-supply and testing roadmap, not a bookable UK service yet.</p>
+          <div class="sources"><a href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-10-31" target="_blank" rel="noopener">Precise Impact AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">04 / MODELS &amp; RESEARCH</div><h2>An answer from orbit, and agents that act unprompted</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="suncatcher" data-cat="top models">
+          <div class="meta"><span class="tag">#3 · Research / Infrastructure · Google</span><span>Milestone reported Oct 30–31</span></div>
+          <h3>Google’s Project Suncatcher returns its first AI response from space</h3>
+          <p><strong>Google</strong> ran an AI model on a <strong>prototype satellite in orbit</strong> and received its <strong>first complete response back on Earth</strong>, a milestone CEO <strong>Sundar Pichai</strong> called a <strong>‘hello world’ for Project Suncatcher</strong>. The prototype satellite launched <strong>October 1</strong> as part of Google’s long-term research into whether space could support scalable machine-learning infrastructure; reporting identifies the model run as the <strong>open Gemma 4 on a data-center-class TPU</strong>.</p>
+          <p><strong>Why it matters:</strong> orbital inference is a real, if early, step toward space-based compute — and a vivid reminder that the AI infrastructure race is no longer confined to Earth.</p>
+          <div class="sources"><a href="https://www.thehindubusinessline.com/info-tech/googles-project-suncatcher-achieves-first-successful-ai-response-from-space/article71648240.ece/amp/" target="_blank" rel="noopener">The Hindu BusinessLine ↗</a><a href="https://teccurrent.com/articles/daily-brief-2026-10-31/" target="_blank" rel="noopener">Tech Current ↗</a></div>
+        </article>
+
+        <article class="story half" id="deepseek-agent" data-cat="models">
+          <div class="meta"><span class="tag">Open source · DeepSeek</span><span>Oct 31</span><span class="caveat">Research prototype — not production-ready</span></div>
+          <h3>DeepSeek open-sources a proactive GitHub agent</h3>
+          <p><strong>DeepSeek</strong> open-sourced <strong>dsh-superagent-prototype</strong> under <strong>MIT licence</strong>: a research agent bundle for <strong>DeepSeek Harness</strong> that turns allowed <strong>GitHub or Feishu</strong> requests into tickets and pull requests, labelled <strong>not production-ready</strong>.</p>
+          <p><strong>Why it matters:</strong> proactive agents that watch a repo and act, rather than waiting to be prompted, are moving from demo to open, inspectable code.</p>
+          <p class="big-caveat">Caveat: single-roundup item; check the repository before deploying.</p>
+          <div class="sources"><a href="https://explainx.ai/catch-up-on-ai/2026-10-31" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </article>
+
+        <article class="story half" id="unslop" data-cat="models">
+          <div class="meta"><span class="tag">Community / Tools</span><span>Oct 31</span></div>
+          <h3>unslop, a free Claude skill that fixes AI-looking UI</h3>
+          <p>Designer <strong>Damir Sokolovsky’s unslop</strong> audits a vibecoded screen, proposes a design direction, then fixes <strong>spacing, colour, icons, copy, type, layout, details, visuals and motion</strong> in ordered passes.</p>
+          <p><strong>Why it matters:</strong> as AI-generated interfaces flood products, the tell-tale ‘AI look’ is becoming a design problem with its own tooling.</p>
+          <div class="sources"><a href="https://explainx.ai/catch-up-on-ai/2026-10-31" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>What to watch next</h3>
+        <ul>
+          <li><strong>OpenAI’s close:</strong> whether the trimmed <strong>$20 billion</strong> round fills at the reported lower valuation — and any primary confirmation of the <strong>$11 billion</strong> said to be secured.</li>
+          <li><strong>Meta’s November 20 date:</strong> the CMA probe runs alongside the paused terms rollout and the Norwegian court’s block on the same effective date.</li>
+          <li><strong>Apple’s December launch:</strong> full China documentation for <strong>iOS 27.3</strong> and the Qwen-powered feature list, currently as reported.</li>
+          <li><strong>Cursor follow-through:</strong> incident guidance for users of the tampered <strong>version 2.1.313</strong> extension.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Saturday edition (1):</strong> lighter news flow; several figures (OpenAI’s <strong>$20B / $11B</strong>, market levels, the Anthropic rating expectation, the Apple China feature list) are reported by secondary roundups citing the <strong>Financial Times, CNBC, Reuters</strong> or company statements, not verified against primary filings or posts in this edition.</li>
+          <li><strong>Investigation, not a finding (2):</strong> the <strong>CMA probe</strong> into Meta’s terms is an investigation with <strong>no finding of wrongdoing</strong>.</li>
+          <li><strong>Company claims (3):</strong> <strong>Sema4.ai, Dataline and Phonic</strong> performance and funding details are company claims.</li>
+          <li><strong>Roadmap, not a service (4):</strong> the <strong>Toyota–Waymo</strong> item is a manufacturing and testing roadmap, not a live service.</li>
+          <li><strong>No repeats (5):</strong> items from the October 31 edition are not repeated here except where genuinely updated.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, company-claimed, or still unconfirmed — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage: Saturday, October 31, 2026 (plus late-breaking items from the last 48 hours not in the October 31 edition). Compiled Sunday, November 1, 2026. Market and company claims are as reported; single-sourced and company-claimed items are flagged.</div>
+      <div>AI News Newsletter — November 1, 2026.<br>17 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

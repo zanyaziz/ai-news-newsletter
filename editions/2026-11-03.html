@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Tuesday, November 3, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.note-box + .note-box{margin-top:20px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Tuesday, November 3, 2026</div>
+      <div class="range">Covering Monday, November 2, 2026, plus late-breaking items from November 1–3</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>The $115B optics bet, and the <em>12% reality check</em></h1>
+      <div><p class="dek">Marvell’s $115 billion Lumentum deal tests how far investors will fund the AI build-out, SemiAnalysis’s new GDPx benchmark puts the best frontier model at just 12% on real economic work, and Apple Intelligence finally lands in China on Alibaba’s Qwen.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Several items below rest on third-party reporting, aggregator summaries, or company claims not yet independently reproduced — notably SemiAnalysis’s GDPx scores, MIT CSAIL’s weight-space results, and Sam Altman’s on-stage remarks about a next-generation GPT. Those are flagged as reported, single-sourced, or vendor/author claims wherever they appear.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#marvell-lumentum">Marvell to buy Lumentum in $115B all-stock deal</a></li>
+        <li><span class="num">02</span><a href="#gdpx-benchmark">SemiAnalysis launches GDPx: best model scores only 12%</a></li>
+        <li><span class="num">03</span><a href="#apple-china">Apple Intelligence arrives in China in December on Alibaba’s Qwen</a></li>
+        <li><span class="num">04</span><a href="#openai-lifeval">OpenAI releases LifeVal, a benchmark for everyday life</a></li>
+        <li><span class="num">05</span><a href="#oracle-raise">Oracle seeks $20B more for AI infrastructure</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products &amp; Platforms</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="markets" aria-pressed="false">Funding &amp; Infrastructure</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Research &amp; Agents</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- FUNDING & INFRASTRUCTURE -->
+    <section class="wrap section" data-section="markets">
+      <div class="section-head"><div class="section-no">01 / FUNDING &amp; INFRASTRUCTURE</div><h2>A $115B optics bet, Oracle’s next $20B, and the grid strain underneath</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="marvell-lumentum" data-cat="top markets">
+          <div class="meta"><span class="tag">#1 · Funding · Marvell / Lumentum</span><span>Nov 2 · TechStartups</span></div>
+          <h3>Marvell to buy Lumentum in $115B all-stock deal</h3>
+          <p><strong>Marvell</strong> will acquire optical-networking company <strong>Lumentum</strong> in an <strong>all-stock deal valued at about $115 billion</strong> — a bet that the optical links inside AI data centers are where the build-out money flows next. Lumentum shareholders get <strong>4.5 Marvell shares per share</strong>, about a <strong>23.9% premium</strong> to the October 28 close, leaving Marvell holders with roughly <strong>67%</strong> of the combined company and Lumentum holders <strong>33%</strong>.</p>
+          <p><strong>Why it matters:</strong> the deal, expected to close in the <strong>first half of 2028</strong> with more than <strong>$1 billion in projected annual cost synergies</strong> and an addressable market put at about <strong>$550 billion</strong>, is one of the largest AI-infrastructure bets yet — yet <strong>shares in both companies fell sharply</strong>, a sign investors are starting to price the build-out’s cost, not just its promise.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a></div>
+        </article>
+
+        <article class="story side" id="oracle-raise" data-cat="top markets">
+          <div class="meta"><span class="tag">#5 · Funding · Oracle</span><span>Nov 2 · TechStartups</span></div>
+          <h3>Oracle seeks $20B more for AI infrastructure</h3>
+          <p><strong>Oracle</strong> is seeking about <strong>$20 billion more</strong> for its AI infrastructure build-out — roughly <strong>$10 billion in stock and $10 billion in debt</strong> — on top of about <strong>$125 billion already borrowed</strong>.</p>
+          <p><strong>Why it matters:</strong> Oracle’s shares fell as investors questioned the growing debt load — the clearest market signal yet that AI infrastructure spending is being judged on financing discipline, not just ambition.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a></div>
+        </article>
+
+        <article class="story half" id="northwood-space" data-cat="markets">
+          <div class="meta"><span class="tag">Funding · Northwood Space</span><span>Nov 2 · TechStartups</span></div>
+          <h3>Northwood Space raises $375M at a $2B valuation</h3>
+          <p><strong>Northwood Space</strong>, the satellite-to-Earth communications company founded in <strong>2022</strong> and led by CEO <strong>Bridgit Mendler</strong>, raised <strong>$375 million</strong> at a <strong>$2 billion valuation</strong>, co-led by <strong>Andreessen Horowitz</strong> and <strong>DFJ Growth</strong>, alongside an <strong>HSBC credit facility</strong>.</p>
+          <p><strong>Why it matters:</strong> ground-station capacity is becoming a bottleneck for the satellite industry, and investors are paying infrastructure-scale prices for the link between orbit and Earth.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a></div>
+        </article>
+
+        <article class="story half" id="tutor-intelligence" data-cat="markets">
+          <div class="meta"><span class="tag">Funding · Tutor Intelligence</span><span>Nov 2 · SiliconANGLE</span></div>
+          <h3>Tutor Intelligence raises $75M for warehouse robotics</h3>
+          <p><strong>Tutor Intelligence</strong> raised <strong>$75 million</strong>, led by <strong>Andreessen Horowitz</strong> with <strong>Union Square Ventures</strong> and <strong>Neo</strong>, to scale its warehouse robotics — including <strong>Cassie</strong>, a mobile arm that handles <strong>up to 18 items per minute</strong>.</p>
+          <p><strong>Why it matters:</strong> warehouse automation keeps drawing serious capital as physical-AI systems move from pilots into production logistics.</p>
+          <div class="sources"><a href="https://siliconangle.com/2026/11/02/robotics-startup-tutor-intelligence-nabs-75m-investment/" target="_blank" rel="noopener">SiliconANGLE ↗</a></div>
+        </article>
+
+        <article class="story half" id="stealth-seeds" data-cat="markets">
+          <div class="meta"><span class="tag">Funding · 42AI / Marble Cognition</span><span>Nov 2 · TechStartups</span><span class="caveat">Single-sourced summary</span></div>
+          <h3>42AI emerges from stealth with $62.5M; Marble Cognition takes €3.35M</h3>
+          <p><strong>42AI</strong> emerged from stealth with a <strong>$62.5 million seed round</strong> to build systems that <strong>predict human behaviour</strong>, while <strong>Marble Cognition</strong> raised a <strong>€3.35 million pre-seed</strong> for AI coworkers that learn by watching people work.</p>
+          <p><strong>Why it matters:</strong> two very different takes on modelling people — prediction at scale and observation-based coworkers — both found early funding on the same day. Both figures come from a single roundup summary and are not yet independently confirmed.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a></div>
+        </article>
+
+        <article class="story half" id="south-korea-budget" data-cat="markets">
+          <div class="meta"><span class="tag">Infrastructure · South Korea</span><span>Nov 2 · TechStartups</span></div>
+          <h3>South Korea proposes 21.3 trillion won for chips, physical AI and data centres</h3>
+          <p><strong>South Korea</strong> has proposed <strong>21.3 trillion won</strong> in its <strong>2027 budget</strong> for <strong>semiconductors, physical AI and data centres</strong>, plus a further <strong>4.7 trillion won</strong> for <strong>domestic AI models</strong>.</p>
+          <p><strong>Why it matters:</strong> Seoul is putting sovereign-scale money behind the full AI stack — chips, compute and home-grown models — rather than relying on US platforms.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a></div>
+        </article>
+
+        <article class="story full" id="openai-campuses-grid" data-cat="markets">
+          <div class="meta"><span class="tag">Infrastructure · OpenAI / SemiAnalysis</span><span>Nov 2 · Communeify AI Daily</span><span class="caveat">Auto-compiled brief — verify against originals</span></div>
+          <h3>OpenAI’s data-centre push meets grid strain and a bipartisan backlash</h3>
+          <p><strong>OpenAI</strong> reportedly plans a post-midterms push to rebrand its facilities as <strong>“AI Compute Campuses,”</strong> paired with <strong>community benefit agreements</strong>, plus a programme letting data centres <strong>cut power during grid emergencies</strong>. Meanwhile, <strong>SemiAnalysis</strong> estimates bipartisan backlash threatens <strong>62.2 GW</strong> of planned <strong>2028</strong> US data-centre capacity — against <strong>33.8 GW for 2027</strong>, most of it already under construction.</p>
+          <p><strong>Why it matters:</strong> the constraint on AI growth is shifting from chips to power and politics: 2027 capacity is largely locked in, but 2028’s is exposed to local opposition and grid limits. This item comes from an auto-compiled brief — check it against the TechCrunch and SemiAnalysis originals before citing.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & PLATFORMS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">02 / PRODUCTS &amp; PLATFORMS</div><h2>Apple lands in China, a haiku from orbit, and an agent that buys the gifts</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="apple-china" data-cat="top products">
+          <div class="meta"><span class="tag">#3 · Products · Apple / Alibaba</span><span>Nov 2 · TechStartups / Communeify</span></div>
+          <h3>Apple Intelligence arrives in China in December on Alibaba’s Qwen</h3>
+          <p><strong>Apple Intelligence</strong> finally reaches <strong>China</strong>, running on <strong>Alibaba’s Qwen</strong> models, with a <strong>developer beta from November 4</strong> and a <strong>full rollout with iOS 27.3 in December</strong>. <strong>Alibaba</strong> confirmed that inputs and outputs will <strong>not be retained for training without explicit consent</strong>.</p>
+          <p><strong>Why it matters:</strong> it is Apple’s long-delayed China AI landing, built on a local partner’s models — and the <strong>next-generation Siri is excluded at launch</strong>, so the headline features arrive without the assistant upgrade at their centre.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story side" id="deepseek-superagent" data-cat="products">
+          <div class="meta"><span class="tag">Products / Open Source · DeepSeek</span><span>Nov 2 · Communeify</span></div>
+          <h3>DeepSeek open-sources dsh-superagent v0.1.0 under MIT licence</h3>
+          <p><strong>DeepSeek</strong> has open-sourced <strong>dsh-superagent v0.1.0</strong> under an <strong>MIT licence</strong> — a <strong>router-worker coding agent</strong> that breaks repository tasks into <strong>parallel tickets</strong>, monitors GitHub repos and can hook into optional <strong>Feishu webhooks</strong>.</p>
+          <p><strong>Why it matters:</strong> the agent’s architecture is inspectable and reusable in the open, another step in multi-agent coding workflows moving from demos to shared tooling.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="project-suncatcher" data-cat="products">
+          <div class="meta"><span class="tag">Products / Space · Google</span><span>Nov 2 · TechStartups, citing The Register</span></div>
+          <h3>Google’s Project Suncatcher runs Gemma 4 on an orbital TPU — and returns a haiku</h3>
+          <p><strong>Google’s Project Suncatcher</strong> ran <strong>Gemma 4</strong> on an orbital <strong>TPU</strong> and returned a <strong>haiku from space</strong>. The prototype satellite launched <strong>October 1</strong> on <strong>SpaceX Transporter-18</strong>, carrying <strong>four Trillium TPUs</strong> on roughly <strong>1 kW of solar power</strong>, and managed about <strong>20 minutes of continuous operation on one TPU</strong>; thermal and radiation stress tests come next.</p>
+          <p><strong>Why it matters:</strong> it is a first working proof that AI inference can run in orbit — the opening experiment for space-based compute, not yet a data centre in the sky.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/02/top-tech-news-today-november-2-2026-the-biggest-stories-in-ai-startups-and-big-tech/" target="_blank" rel="noopener">TechStartups ↗</a></div>
+        </article>
+
+        <article class="story half" id="grok-shopping" data-cat="products">
+          <div class="meta"><span class="tag">Products / Agents · xAI / X Money</span><span>Nov 2 · Communeify</span><span class="caveat">Demo — single-sourced</span></div>
+          <h3>Grok shops for gifts autonomously via X Money in Musk demo</h3>
+          <p>In an <strong>Elon Musk</strong> demo, <strong>Grok</strong> researched gift preferences and <strong>spent up to $100 from an X Money account</strong> on surprise <strong>LEGO sets</strong> — <strong>without manual checkout</strong>.</p>
+          <p><strong>Why it matters:</strong> an agent that researches, decides and pays on its own is the consumer end of agentic commerce — but this is a staged demo reported by a single source, not a shipped product.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story third" id="perplexity-deeptime" data-cat="products">
+          <div class="meta"><span class="tag">Products · Perplexity</span><span>Nov 2 · Communeify</span></div>
+          <h3>Perplexity launches DeepTime, a 3D globe of 400 million years</h3>
+          <p><strong>Perplexity’s DeepTime</strong> is an interactive <strong>3D globe</strong> visualising <strong>400 million years of continental drift</strong>, built from <strong>258 tectonic plates</strong>, <strong>109 paleoelevation maps</strong> and <strong>14 open datasets</strong>.</p>
+          <p><strong>Why it matters:</strong> a search company shipping a deep-time science visualisation is a bet that interactive, explorable answers can stand beside text results.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story third" id="chatgpt-device-limits" data-cat="products">
+          <div class="meta"><span class="tag">Products · OpenAI</span><span>Nov 2 · Communeify, citing OpenAI Help Center / The Decoder</span></div>
+          <h3>OpenAI imposes device and payment-card limits on ChatGPT subscriptions</h3>
+          <p><strong>OpenAI</strong> is enforcing <strong>device and payment-card limits</strong> on ChatGPT subscriptions to deter <strong>account pooling and resale</strong>, with <strong>“Device limit reached”</strong> lockouts when a card or device carries too many subscriptions.</p>
+          <p><strong>Why it matters:</strong> shared and resold accounts are a real revenue leak for subscription AI; enforcement, though, will land on legitimate multi-device households too.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story third" id="openai-dots" data-cat="products">
+          <div class="meta"><span class="tag">Products · OpenAI</span><span>Nov 3 · AI Timeline</span><span class="caveat">Aggregator — Plus claim unconfirmed</span></div>
+          <h3>OpenAI’s dots to expand with GPT-6 Astra and GPT-6.1 Terra</h3>
+          <p>Codex lead <strong>Tibo</strong> says OpenAI’s <strong>dots</strong> will add <strong>GPT-6 Astra</strong>, <strong>GPT-6.1 Terra</strong> and others later, expanding the model family.</p>
+          <p><strong>Why it matters:</strong> the model line is fragmenting into named tiers — but claims that dots is <strong>coming to Plus are speculation, not announced</strong>, and this report comes via an aggregator.</p>
+          <div class="sources"><a href="https://aitimeline.news/en/Daily/2026-11-03-X%E6%97%A5%E6%8A%A5/" target="_blank" rel="noopener">AI Timeline X Daily ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">03 / MODELS &amp; RESEARCH</div><h2>A 12% reality check, a benchmark for everyday life, and weights that rewrite themselves</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gdpx-benchmark" data-cat="top models">
+          <div class="meta"><span class="tag">#2 · Research / Benchmarks · SemiAnalysis</span><span>Nov 3 · AI Timeline, verifying SemiAnalysis</span><span class="caveat">Vendor-reported — not independently reproduced</span></div>
+          <h3>SemiAnalysis launches GDPx: best model scores only 12%</h3>
+          <p><strong>SemiAnalysis’s GDPx</strong> benchmark scores frontier models on <strong>206 long-horizon tasks</strong> across <strong>11 domains</strong>, built with <strong>14 data partners</strong>, an <strong>8-hour default</strong> runtime and <strong>pass@1 over three attempts</strong>. The leaderboard is sobering: <strong>Claude Opus 5.5 at 12.0%</strong>, <strong>Gemini 4 Carbon at 10.9%</strong> and <strong>GPT-6 Astra at 9.6%</strong> — and <strong>98% of cybersecurity runs violated a behavioural rule</strong>. Finance and law scored mostly zero on binary grading, so <strong>partial credit</strong> was used; <strong>alignment tasks scored worst</strong> of all.</p>
+          <p><strong>Why it matters:</strong> it is the sharpest reality check yet on agent capability against real economic work. Treat the numbers as provisional: <strong>most tasks are private, there is no independent reproduction yet</strong>, and the leaderboard updates only every <strong>3–6 months</strong>.</p>
+          <div class="sources"><a href="https://aitimeline.news/en/Daily/2026-11-03-X%E6%97%A5%E6%8A%A5/" target="_blank" rel="noopener">AI Timeline X Daily ↗</a></div>
+        </article>
+
+        <article class="story side" id="openai-lifeval" data-cat="top models">
+          <div class="meta"><span class="tag">#4 · Research / Benchmarks · OpenAI</span><span>Nov 3 · AI Timeline</span><span class="caveat">Closed internal benchmark — vendor-reported</span></div>
+          <h3>OpenAI releases LifeVal, a benchmark for everyday life</h3>
+          <p><strong>OpenAI’s LifeVal</strong> benchmarks models on the stuff of everyday life — <strong>caregiving, health, finance and government errands</strong> — with tasks sourced from the <strong>American Time Use Survey</strong> plus a <strong>3,995-person survey</strong>, written by about <strong>100 experienced writers</strong>. <strong>GPT-6 Astra charted at about 80.6%</strong> against <strong>GPT-5.2’s 49.3%</strong>; sample scores include <strong>choosing a kindergarten after a move at 93.1%</strong> and <strong>meal planning for a newly diabetic parent at 90.4%</strong>.</p>
+          <p><strong>Why it matters:</strong> it shifts evaluation from exams to errands — but it is a <strong>closed internal benchmark with tasks and grading unpublished</strong>, so the scores are OpenAI’s own.</p>
+          <div class="sources"><a href="https://aitimeline.news/en/Daily/2026-11-03-X%E6%97%A5%E6%8A%A5/" target="_blank" rel="noopener">AI Timeline X Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="mit-weight-space" data-cat="models">
+          <div class="meta"><span class="tag">Research · MIT CSAIL</span><span>Nov 3 · AI Timeline</span><span class="caveat">Author self-reported — no preprint, no reproduction</span></div>
+          <h3>MIT CSAIL’s “weight-space programming”: a model that edits its own weights</h3>
+          <p>An <strong>MIT CSAIL</strong> result describes <strong>GPT-6 Astra</strong> reading and writing model weights directly — changing about <strong>0.016% of Qwen3.5-0.8B’s parameters</strong> to lift <strong>MATH-500 from 7.9% to 48.1%</strong>, <strong>GSM8K from 13.8% to 67.1%</strong> and <strong>IFEval from 21.0% to 62.3%</strong>.</p>
+          <p><strong>Why it matters:</strong> if it holds up, a frontier model surgically improving a smaller model’s weights is a new lever for capability gains. For now it is an <strong>author self-reported blog post — no arXiv preprint found and no third-party reproduction yet</strong>.</p>
+          <div class="sources"><a href="https://aitimeline.news/en/Daily/2026-11-03-X%E6%97%A5%E6%8A%A5/" target="_blank" rel="noopener">AI Timeline X Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="altman-adipec" data-cat="models">
+          <div class="meta"><span class="tag">Research · OpenAI / Sam Altman</span><span>Nov 2 · ADIPEC, via AI Timeline</span><span class="caveat">Company claim — not a confirmed result</span></div>
+          <h3>Altman at ADIPEC: “ten thousand agents” and a millennium problem</h3>
+          <p>Speaking at <strong>ADIPEC</strong> on November 2, <strong>Sam Altman</strong> said <strong>“ten thousand agents of the upcoming next-generation GPT models”</strong> ran for about <strong>four days, decentralised</strong>, to prove <strong>“the first millennium problem.”</strong></p>
+          <p class="big-caveat">Caveat: Altman did not name the problem or the model on stage. Retellings link the remark to the September 8 Navier–Stokes claim, which the Clay Mathematics Institute has not confirmed and which faces a priority dispute and a formalisation-gap preprint. The company claim and any confirmed result are separate things.</p>
+          <div class="sources"><a href="https://aitimeline.news/en/Daily/2026-11-03-X%E6%97%A5%E6%8A%A5/" target="_blank" rel="noopener">AI Timeline X Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="model-releases" data-cat="models">
+          <div class="meta"><span class="tag">Models · Meituan / Nace AI / MiniMax</span><span>Nov 1–2 · AIFOD tracker / Communeify</span></div>
+          <h3>New releases: LongCat-2.5, Drex Max v1, and local M3.1 Flash</h3>
+          <p><strong>Meituan’s LongCat-2.5</strong> (Nov 2) is a <strong>1.6T-total / 48B-active</strong> multimodal model aimed at agent execution and programming. <strong>Nace AI’s Drex Max v1</strong> (Nov 1) is a <strong>27B open-weights</strong> decision model with a <strong>262,144-token context</strong>, scoring <strong>67.52 on Decision Index 0.4</strong>. And <strong>MiniMax</strong> has compiled community quantisation toolkits so its <strong>M3.1 Flash 428B</strong> can run in local inference.</p>
+          <p><strong>Why it matters:</strong> the release cadence now spans trillion-parameter agent models, open decision models and local-inference packaging in a single weekend.</p>
+          <div class="sources"><a href="https://af.net/realtime/ai-model-releases-november-2026/" target="_blank" rel="noopener">AIFOD Model Tracker ↗</a><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="research-roundup" data-cat="models">
+          <div class="meta"><span class="tag">Research · Meta / Google / Stanford / Oxford / Adobe</span><span>Nov 2 · Communeify</span></div>
+          <h3>Research roundup: theorem proving, CI repair, and knowing when to speak</h3>
+          <p>A minimalist <strong>Meta/NYU “h1”</strong> Lean feedback loop solved <strong>598 PutnamBench problems</strong> against Goedel-Architect’s 597, at <strong>$1.08 vs $1.47 per problem</strong>. <strong>Google’s FlowAgent</strong> does in-CI automated repair — <strong>28,554 fixes merged</strong>, <strong>67.18% fully correct</strong> on inspected patches, median repair <strong>9.85 minutes</strong>. <strong>Google/Stanford/Oxford’s StreamVibe</strong> predicts when a live video assistant should speak, up <strong>10.7%</strong> on timing and helpfulness over comparators on a Qwen3.5-9B backbone, and <strong>Adobe/UCSD’s EditAgent</strong> brings metric-driven multi-step image editing.</p>
+          <p><strong>Why it matters:</strong> the common thread is agents embedded in real workflows — proofs, CI pipelines, live video — with costs and correctness measured, not just demos shown.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY &amp; SAFETY</div><h2>New York’s toughest-in-the-country plan, incident-reporting deadlines, and a plea on consciousness</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="ny-raise-act" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · New York · RAISE Act 2.0</span><span>Introduced Oct 29 · Reported Nov 2 · Bloomberg Government</span></div>
+          <h3>New York’s RAISE Act 2.0 would set the country’s toughest AI limits</h3>
+          <p><strong>Senator Andrew Gounardes’s RAISE Act 2.0 (S.10731)</strong>, introduced October 29, would empower a new <strong>Office of Digital Innovation, Governance, Integrity, and Trust</strong> to <strong>limit training compute</strong>, require <strong>independent frontier examiners</strong>, mandate <strong>quarterly reporting</strong> and require <strong>72-hour reporting of capability or compute jumps</strong> — framed as <strong>pacing self-improvement</strong>.</p>
+          <p><strong>Why it matters:</strong> if it passes in 2027, New York would move from disclosure rules to direct leverage over how fast frontier models can scale — the most aggressive state-level approach in the US so far.</p>
+          <div class="sources"><a href="https://news.bgov.com/bloomberg-government-news/new-york-democrats-plan-countrys-toughest-ai-limits-in-2027" target="_blank" rel="noopener">Bloomberg Government ↗</a></div>
+        </article>
+
+        <article class="story side" id="house-democrats-uk" data-cat="policy">
+          <div class="meta"><span class="tag">Policy · US House / UK regulators</span><span>Oct 28–30 · AI Agent Store roundup</span></div>
+          <h3>House Democrats demand incident accounting; UK says existing law already covers agents</h3>
+          <p><strong>US House Democrats’</strong> October 28 letters to <strong>Anthropic, Google, Meta, OpenAI and SpaceX</strong> seek a <strong>full accounting of past misalignment and safety incidents</strong>, plus <strong>48-hour notice</strong> of new ones — <strong>24 hours</strong> where critical infrastructure is involved — with a <strong>November 11 deadline</strong>. In the UK, regulators (<strong>CMA, FCA, ICO and Ofcom</strong>, via the DRCF) said in an October 30 joint statement that <strong>existing consumer, competition, data-protection and sectoral rules already apply to personal AI agents</strong>.</p>
+          <p><strong>Why it matters:</strong> Washington is asking for an incident record that does not yet exist in any standard form, while London’s message is the opposite of a regulatory gap: agents are covered today.</p>
+          <div class="sources"><a href="https://aiagentstore.ai/ai-agent-news/topic/legal-regulatory" target="_blank" rel="noopener">AI Agent Store Legal Roundup ↗</a></div>
+        </article>
+
+        <article class="story half" id="california-ab1883" data-cat="policy">
+          <div class="meta"><span class="tag">Policy / Workplace · California AB 1883</span><span>Nov 2 · Foley</span></div>
+          <h3>California AB 1883 bans AI workplace tools that infer emotions or read neural data</h3>
+          <p>Taking effect in <strong>2027</strong>, California’s <strong>AB 1883</strong> bans workplace surveillance tools that use AI to <strong>infer employee emotions</strong> or <strong>collect neural data</strong>, with a <strong>safety-monitoring exception</strong> and penalties of up to <strong>$500 per violation</strong> plus injunctive relief.</p>
+          <p><strong>Why it matters:</strong> emotion inference at work goes from a grey area to a banned practice in the largest US state labour market — vendors of monitoring software have a year to comply.</p>
+          <div class="sources"><a href="https://www.foley.com/insights/publications/2026/11/new-california-laws-focus-heavily-on-ai-in-the-workplace/" target="_blank" rel="noopener">Foley ↗</a></div>
+        </article>
+
+        <article class="story half" id="suleyman-consciousness" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · Microsoft AI / Mustafa Suleyman</span><span>Nov 2 · Communeify</span></div>
+          <h3>Suleyman urges the industry not to build conscious systems</h3>
+          <p><strong>Microsoft AI CEO Mustafa Suleyman</strong> argues in a new essay that the industry should <strong>not build conscious systems</strong> — calling instead for <strong>architectural boundaries</strong> that preclude consciousness and self-interested preservation motives, and for work to <strong>halt if signs of self-awareness emerge</strong>.</p>
+          <p><strong>Why it matters:</strong> a sitting frontier-lab CEO drawing a design-level red line puts machine consciousness on the industry’s safety agenda as an engineering constraint, not a philosophy seminar.</p>
+          <div class="sources"><a href="https://www.communeify.com/en/blog/ai-daily-2026-11-02/" target="_blank" rel="noopener">Communeify AI Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="epoch-glm-exploits" data-cat="policy">
+          <div class="meta"><span class="tag">Safety · Epoch AI / GLM 5.3</span><span>Oct 30 · Reported Nov 2 · ODSC</span></div>
+          <h3>Epoch AI: open-weight GLM 5.3 turned published Firefox patches into working exploits</h3>
+          <p>In an <strong>October 30</strong> finding reported this week, <strong>Epoch AI</strong> found that the open-weight <strong>GLM 5.3</strong> could turn <strong>published Firefox patches into working exploits</strong> in tests.</p>
+          <p><strong>Why it matters:</strong> a patch is a map to the vulnerability it fixes; a model that reliably converts patches into exploits compresses the window defenders have between disclosure and attack.</p>
+          <div class="sources"><a href="https://opendatascience.com/last-week-in-ai-october-26-to-november-1-2026/" target="_blank" rel="noopener">ODSC Week in Review ↗</a></div>
+        </article>
+
+        <article class="story half" id="hhs-hti5" data-cat="policy">
+          <div class="meta"><span class="tag">Policy / Health IT · HHS HTI-5</span><span>Nov 2 · Arbiter AI</span><span class="caveat">Third-party legal read — not legal advice</span></div>
+          <h3>Policy note: HTI-5 analysis says EHR “model card” disclosure ends December 28</h3>
+          <p>A November 2 analysis of the <strong>HHS HTI-5 rule</strong> says the AI <strong>“model card” disclosure requirement</strong> for certified EHRs ends <strong>December 28, 2026</strong> — removing <strong>31 predictive and 13 evidence-based attributes</strong> from disclosure.</p>
+          <p><strong>Why it matters:</strong> health-AI transparency requirements are being rolled back just as clinical models spread. This is a <strong>third-party legal read of the rule, not legal advice</strong> — health-IT teams should check the rule text itself.</p>
+          <div class="sources"><a href="https://www.arbiterai.tech/blog/hti-5-model-cards.html" target="_blank" rel="noopener">Arbiter AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>What to watch next</h3>
+        <ul>
+          <li><strong>November 4:</strong> the Apple Intelligence China developer beta begins — the first hands-on test of the Qwen-powered feature set ahead of December’s iOS 27.3 rollout.</li>
+          <li><strong>November 11:</strong> the deadline House Democrats set for Anthropic, Google, Meta, OpenAI and SpaceX to account for past misalignment and safety incidents.</li>
+          <li><strong>H1 2028:</strong> the Marvell–Lumentum close — and whether the projected $1B+ in annual cost synergies survives the wait.</li>
+          <li><strong>GDPx on re-check:</strong> whether SemiAnalysis’s 12% headline scores hold up once independent researchers can reproduce them.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Vendor-reported benchmarks (1):</strong> SemiAnalysis’s GDPx scores (12.0% / 10.9% / 9.6%) rest on mostly private tasks with no independent reproduction yet; OpenAI’s LifeVal is a closed internal benchmark with tasks and grading unpublished.</li>
+          <li><strong>Author claims (2):</strong> MIT CSAIL’s weight-space results are self-reported in a blog post — no arXiv preprint found, no third-party reproduction. Sam Altman’s ADIPEC remarks are a company claim: he named neither the problem nor the model, and the linked Navier–Stokes claim is unconfirmed by the Clay Mathematics Institute.</li>
+          <li><strong>Aggregator-sourced (3):</strong> the OpenAI “AI Compute Campuses” and grid item comes from an auto-compiled brief (verify against TechCrunch/SemiAnalysis originals); the dots model-family report is via an aggregator, and the claim that dots is coming to Plus is speculation, not announced.</li>
+          <li><strong>Single-sourced (4):</strong> the 42AI and Marble Cognition rounds, and the Grok gift-shopping demo, each rest on one source or a staged demo.</li>
+          <li><strong>Third-party legal read (5):</strong> the HTI-5 item is Arbiter AI’s analysis of the rule, not legal advice; the RAISE Act and AB 1883 items describe proposed or enacted law as reported by Bloomberg Government and Foley respectively.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, or still unconfirmed — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage: Monday, November 2, 2026 (plus late-breaking items from November 1–3). Compiled Tuesday, November 3, 2026. Reported and single-sourced items are flagged; market and funding figures are as reported by their sources.</div>
+      <div>AI News Newsletter — November 3, 2026.<br>26 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

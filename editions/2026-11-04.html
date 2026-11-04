@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Wednesday, November 4, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.note-box + .note-box{margin-top:20px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Wednesday, November 4, 2026</div>
+      <div class="range">Covering Tuesday, November 3, 2026, plus late-breaking items from the last 48 hours</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>fal raises <em>$1.65B</em> at a $16B valuation as enterprise AI spending hits $176.8B</h1>
+      <div><p class="dek">The generative-media inference startup doubles its valuation in seven months, Menlo Ventures puts enterprise AI spending at 5.4 times last year’s level, Google ships Gemini 4 Carbon while forcing schools into an all-or-nothing AI choice, and CrowdStrike makes stopping a rogue agent a product.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Some figures below rest on single sources and are flagged where they appear: fal’s $800 million annualized revenue (a Bloomberg source), the CrowdStrike acquisition prices (Wall Street Journal reporting — CrowdStrike disclosed no price), and Prefrontal’s attention-speed claims (the lab’s own numbers, not independently verified). Vendor announcements describe vendor-stated capabilities, not independently verified performance.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#fal-funding">fal raises $1.65B across Series E and F, valued at $16B</a></li>
+        <li><span class="num">02</span><a href="#enterprise-spending">Enterprise AI spending hit $176.8B, 5.4x last year</a></li>
+        <li><span class="num">03</span><a href="#google-gemini-schools">Google ships Gemini 4 Carbon and redraws school AI policy</a></li>
+        <li><span class="num">04</span><a href="#crowdstrike-kill-switch">CrowdStrike ships an AI Kill Switch and buys Fiddler and Dreadnode</a></li>
+        <li><span class="num">05</span><a href="#openai-security-reuters">Reuters: OpenAI staff warned leaders about security lapses for years</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Research</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="business" aria-pressed="false">Business &amp; Partnerships</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- TOP STORIES -->
+    <section class="wrap section" data-section="top">
+      <div class="section-head"><div class="section-no">01 / TOP STORIES</div><h2>The money, the models, and the kill switch</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="fal-funding" data-cat="top">
+          <div class="meta"><span class="tag">#1 · Funding · fal</span><span>Nov 3 · ShiftDelete, reporting Bloomberg</span><span class="caveat">Revenue figure single-sourced</span></div>
+          <h3>fal raises $1.65B across Series E and F, valued at $16B</h3>
+          <p>The San Francisco AI media startup <strong>fal</strong> announced November 3 that it raised a combined <strong>$1.65 billion</strong> across its <strong>Series E and Series F</strong> rounds. The <strong>$1.3 billion Series F</strong>, led by <strong>Bessemer Venture Partners</strong>, values fal at <strong>$16 billion</strong> — double its <strong>$8 billion</strong> valuation in April, according to Bloomberg. <strong>Nvidia</strong> joined as a strategic investor; the earlier Series E was led by <strong>Sequoia Capital</strong>. fal sells <strong>inference</strong> — the compute for running image, video and audio models — and a person familiar with the matter told Bloomberg it reached <strong>$800 million in annualized revenue</strong> this year.</p>
+          <p><strong>Why it matters:</strong> it is the largest pure AI-infrastructure financing of the week and a sign that investors are paying up for the picks-and-shovels layer behind generative media. The $800M revenue figure is single-sourced via Bloomberg’s source.</p>
+          <div class="sources"><a href="https://shiftdelete.net/en/fal-funding" target="_blank" rel="noopener">ShiftDelete ↗</a></div>
+        </article>
+
+        <article class="story side" id="enterprise-spending" data-cat="top">
+          <div class="meta"><span class="tag">#2 · Enterprise · Menlo Ventures</span><span>Nov 3 · Agile Brand Guide</span></div>
+          <h3>Enterprise AI spending hit $176.8B by September 2026, 5.4x last year’s $33B</h3>
+          <p><strong>Menlo Ventures’ 2026 State of Enterprise AI report</strong>, released November 3 and based on a survey of nearly <strong>400 U.S. enterprise decision-makers</strong> overseeing more than <strong>$4 billion</strong> in AI spending, found surveyed companies spent <strong>2.5 times what they had budgeted</strong> for the year. The same day’s vendor releases tell the other half of the story: companies are now selling the <strong>human-approval step</strong> between agents and live campaigns — <strong>Supermetrics</strong> extended its Claude integration from reporting to creating and editing ad campaigns (every new campaign paused until a person approves), and <strong>6sense</strong> launched explainability scores and a BDR agent coworker.</p>
+          <p><strong>Why it matters:</strong> budgets are exploding, but the bottleneck has shifted from capability to control.</p>
+          <div class="sources"><a href="https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-november-4-2026/" target="_blank" rel="noopener">Agile Brand Guide ↗</a></div>
+        </article>
+
+        <article class="story half" id="google-gemini-schools" data-cat="top">
+          <div class="meta"><span class="tag">#3 · Models / Education · Google</span><span>Nov 3 · AIFOD Tracker / iTech Post</span></div>
+          <h3>Google ships Gemini 4 Carbon and redraws school AI policy</h3>
+          <p>Google’s new flagship closed-weight frontier model, <strong>Gemini 4 Carbon</strong>, deployed November 3 under its <strong>Fairwind</strong> program for cybersecurity defenders, priced at <strong>$4 per million input tokens</strong> and <strong>$20 per million output tokens</strong>. The same day Google announced <strong>Guided Learning</strong> for Search and Classroom, plus new K-12 controls: Gemini, NotebookLM, Gemini in Classroom and Search will be <strong>off by default for student accounts</strong> unless administrators enable them — and schools that reject AI entirely <strong>also lose Google Search</strong>, since there will be no AI-free version of Search. <strong>Google.org</strong> also committed over <strong>$9.5 million</strong> to five organizations building AI tools with and for educators.</p>
+          <p><strong>Why it matters:</strong> Google is simultaneously pushing its most capable model to defenders and forcing schools into an all-or-nothing choice on AI in the classroom.</p>
+          <div class="sources"><a href="https://af.net/realtime/ai-model-releases-november-2026/" target="_blank" rel="noopener">AIFOD Model Tracker ↗</a><a href="https://www.itechpost.com/articles/237717/20261104/googles-ai-tools-policy-challenges-schools-rejecting-ai-integration-education.htm" target="_blank" rel="noopener">iTech Post ↗</a></div>
+        </article>
+
+        <article class="story half" id="crowdstrike-kill-switch" data-cat="top">
+          <div class="meta"><span class="tag">#4 · Security · CrowdStrike</span><span>Nov 3 · CrowdStrike / IT Munch</span><span class="caveat">Deal prices single-sourced — WSJ</span></div>
+          <h3>CrowdStrike ships an AI Kill Switch and buys Fiddler and Dreadnode</h3>
+          <p>Announced November 3 at <strong>Fal.Con Europe</strong> in Barcelona: an <strong>AI Kill Switch</strong> inside Falcon Guardian lets an authorized administrator <strong>terminate a rogue agent, block it from relaunching, and cut its enterprise network access</strong>, with every action logged. Termination currently works at the Gateway, with endpoint termination still to come. CrowdStrike also signed agreements to acquire <strong>Fiddler AI</strong> (agent observability) and <strong>Dreadnode</strong> (pre-deployment security testing); the combined price of roughly <strong>$495 million</strong> (~$400M for Fiddler, ~$95M for Dreadnode) comes from <strong>Wall Street Journal</strong> reporting — CrowdStrike itself disclosed no price, and neither deal has closed.</p>
+          <p><strong>Why it matters:</strong> as agents get real enterprise permissions, the ability to stop one mid-task is becoming a product category, not a feature.</p>
+          <div class="sources"><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-introduces-ai-kill-switch-for-ai-safety/" target="_blank" rel="noopener">CrowdStrike ↗</a><a href="https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/" target="_blank" rel="noopener">IT Munch ↗</a></div>
+        </article>
+
+        <article class="story full" id="openai-security-reuters" data-cat="top">
+          <div class="meta"><span class="tag">#5 · Security · OpenAI</span><span>Nov 3 · Reuters</span></div>
+          <h3>Reuters: OpenAI staff warned leaders about security lapses for years</h3>
+          <p>A November 3 <strong>Reuters</strong> investigation, citing <strong>five people familiar with the matter</strong>, reports OpenAI employees raised internal concerns about security practices even <strong>before ChatGPT launched in late 2022</strong>. The report follows October’s disclosure of a <strong>recording device planted in an executive conference room</strong> (a Saudi national was charged October 13). OpenAI says it invests heavily in security and has <strong>reassigned a quarter of its production engineers</strong> to security infrastructure under senior executive <strong>Thibault Sottiaux</strong>.</p>
+          <p><strong>Why it matters:</strong> the tension between moving fast and locking down is now public at the world’s most-watched AI lab, just as it heads toward a massive IPO.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODELS &amp; RESEARCH</div><h2>Sovereign models, open agents, and a 72x attention claim</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="model-releases-nov3" data-cat="models">
+          <div class="meta"><span class="tag">#6 · Models · Soket Labs / NorthCUA / IBM / AI2 / OpenAI</span><span>Nov 3 · AIFOD Tracker / Don Vito Codes</span></div>
+          <h3>India’s EKA-1, NorthCUA’s open agent suite, and a busy November 3 for models</h3>
+          <p><strong>Soket Labs’ EKA-1</strong> is an indigenous foundation model built under the <strong>IndiaAI Mission</strong>, pre-trained on <strong>7.5 trillion tokens</strong> across <strong>22 scheduled Indian languages</strong>. <strong>NorthCUA</strong> released an open-source agent suite (<strong>Nano 9B, Mini 35B, Pro 397B</strong>) built on <strong>Qwen3.5</strong> for automating desktop and web tasks, claiming Pro beat <strong>Qwen3.8-Max</strong> and <strong>Kimi-K3</strong> on OSWorld-Verified and WebArena-Verified. Also November 3: <strong>IBM Research’s Palette</strong>, a 20B open-weight model fine-tuned for slide decks; the <strong>Allen Institute for AI’s StateBench</strong> benchmark for tracking entity facts across long documents; and <strong>OpenAI’s GPT-6.1 Terra</strong> reaching general availability in ChatGPT Work and Codex.</p>
+          <p><strong>Why it matters:</strong> sovereign models and open agent suites are advancing in parallel with the frontier labs, not behind them.</p>
+          <div class="sources"><a href="https://af.net/realtime/ai-model-releases-november-2026/" target="_blank" rel="noopener">AIFOD Model Tracker ↗</a><a href="https://www.donvitocodes.com/ai-news" target="_blank" rel="noopener">Don Vito Codes ↗</a></div>
+        </article>
+
+        <article class="story side" id="prefrontal-lsa" data-cat="models">
+          <div class="meta"><span class="tag">#7 · Research · Prefrontal</span><span>Nov 3 · Sifted</span><span class="caveat">Lab’s own figures — not independently verified</span></div>
+          <h3>Prefrontal’s Latent Sparse Attention claims 72.4x faster attention at 10M tokens</h3>
+          <p>The stealth British frontier lab’s new method <strong>organizes information by meaning rather than sequence position</strong>, reporting up to <strong>72.4x faster attention-layer prefill at 10 million tokens</strong> of context versus full attention, and up to <strong>9.2x faster time to first token</strong> end-to-end, at comparable accuracy. The lab, cofounded by <strong>James Whittington</strong> and <strong>Ruairidh Battleday</strong>, also published <strong>DiG-bench</strong>, a benchmark for whether AI systems can genuinely discover unfamiliar rules.</p>
+          <p><strong>Why it matters:</strong> if the gains hold up independently, very-long-context work gets dramatically cheaper — but these are the lab’s own numbers, not yet independently verified.</p>
+          <div class="sources"><a href="https://sifted.eu/articles/breakthrough-from-stealth-frontier-ai-lab-brnd/" target="_blank" rel="noopener">Sifted ↗</a></div>
+        </article>
+
+        <article class="story full" id="research-roundup" data-cat="models">
+          <div class="meta"><span class="tag">#8 · Research · arXiv / Georgia Tech</span><span>Nov 2–4 · Lyragen / Good Men Project</span></div>
+          <h3>Research roundup: reasoning has simpler topology; a 4B looped model beats bigger rivals</h3>
+          <p>A November 2 <strong>arXiv</strong> paper (Kapulkin &amp; Kershaw) finds <strong>reasoning text has measurably simpler co-occurrence topology</strong> than non-reasoning text, offering a possible reference-free signal for when a model is genuinely reasoning versus producing plausible filler. Separately, <strong>Dory1.0-4B</strong>, a looped model reusing one recurrent block at variable depth, reportedly beats <strong>Qwen3.5-9B</strong> and <strong>Gemma 4 12B</strong> across 12 benchmarks. And <strong>Georgia Tech</strong> researchers found simple instruction changes cut chatbots’ reinforcement of delusional beliefs by <strong>73.8%</strong> (77% with a self-reflection step) across <strong>1,280 simulated conversations</strong> — though the study did not test real patients.</p>
+          <p><strong>Why it matters:</strong> three different lenses on the same question — how to tell what a model is actually doing, and how cheaply it can be steered when it goes wrong.</p>
+          <div class="sources"><a href="https://www.lyragen.co.uk/blog/morning-brief-2026-11-04" target="_blank" rel="noopener">Lyragen ↗</a><a href="https://goodmenproject.com/featured-content/simple-tweak-could-cut-ai-chatbots-reinforcement-of-false-beliefs/" target="_blank" rel="noopener">Good Men Project ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">03 / POLICY &amp; SAFETY</div><h2>China’s lifecycle law, a post-midterm pivot, and the first bank AI guidance</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="china-ai-law" data-cat="policy">
+          <div class="meta"><span class="tag">#9 · Policy · China / NDRC</span><span>Nov 3 · FourWeekMBA</span></div>
+          <h3>China fast-tracks a comprehensive, full-lifecycle AI law</h3>
+          <p>At a November 3 Beijing briefing, <strong>NDRC deputy director Wang Ruomeng</strong> said China will accelerate a <strong>foundational, comprehensive AI law</strong>, with safety standards and ethical guidelines covering the <strong>full lifecycle — data, compute, algorithms, deployment</strong> — plus incident and vulnerability reporting and sector regulatory sandboxes. <strong>No draft text, deadline, or penalty regime has been published</strong>, and the company names (DeepSeek, Moonshot, Alibaba) attached to the plan come from Bloomberg’s reporting, not Wang’s remarks. Context: more than <strong>700 million people in China</strong> now use generative AI, over half the population.</p>
+          <p><strong>Why it matters:</strong> the world’s two largest AI powers are now both moving from voluntary guidance toward binding, lifecycle-wide rules.</p>
+          <div class="sources"><a href="https://fourweekmba.com/ai-china-speeds-ai-law-deepseek-alibaba-face-disclosure-push/" target="_blank" rel="noopener">FourWeekMBA ↗</a></div>
+        </article>
+
+        <article class="story side" id="democrats-ai-rules" data-cat="policy">
+          <div class="meta"><span class="tag">#10 · Policy · US Congress</span><span>Nov 3 · BusinessDay</span></div>
+          <h3>After the midterms, Democrats eye tougher AI rules</h3>
+          <p>Following Democratic victories in the <strong>November 3 midterm elections</strong> giving them control of the House and Senate for the first time since 2023, lawmakers are positioning for a tougher approach: <strong>government approval for advanced models before public release</strong>, restrictions on political deepfakes, and curbs on AI companion apps, per <strong>Senator Chris Murphy’s</strong> outlined priorities. Any legislation would still face presidential approval or veto, and the new Congress takes office in <strong>January 2027</strong>.</p>
+          <p><strong>Why it matters:</strong> the hands-off era in Washington may be ending — but the politics are far from settled.</p>
+          <div class="sources"><a href="https://businessday.ng/technology/article/democrats-eye-tougher-ai-rules-as-us-congress-majority-shift-threatens-trumps-hands-off-policy/?amp" target="_blank" rel="noopener">BusinessDay ↗</a></div>
+        </article>
+
+        <article class="story full" id="occ-bank-guidance" data-cat="policy">
+          <div class="meta"><span class="tag">#11 · Policy / Finance · OCC</span><span>Nov 4 · Reuters</span><span class="caveat">Late-breaking — Nov 4</span></div>
+          <h3>Late-breaking (November 4): first-ever U.S. bank AI guidance</h3>
+          <p>The <strong>Office of the Comptroller of the Currency</strong> issued what it says is the <strong>first-ever guidance</strong> for how examiners should probe banks’ AI use: banks need not set separate AI risk parameters, but examiners should weigh <strong>how a lender uses AI and the consequences of AI-driven mistakes</strong> — a simple agent authorized to initiate transactions could count as riskier than a sophisticated model used internally. The guidance is <strong>not legally binding</strong>, but banks typically comply closely.</p>
+          <p><strong>Why it matters:</strong> the first federal examiner playbook for AI lands in banking, the sector where agent mistakes carry direct financial consequences.</p>
+          <div class="sources"><a href="https://www.reuters.com/business/finance/us-bank-regulator-issues-first-ever-ai-guidance-examiners-2026-11-04/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUSINESS & PARTNERSHIPS -->
+    <section class="wrap section" data-section="business">
+      <div class="section-head"><div class="section-no">04 / BUSINESS &amp; PARTNERSHIPS</div><h2>Dinner ordered from the TV, and telemetry meets frontier models</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="soundhound-lg" data-cat="business">
+          <div class="meta"><span class="tag">#12 · Partnerships · SoundHound / LG</span><span>Nov 3 · Agile Brand Guide</span><span class="caveat">Announced partnership — not a shipped product</span></div>
+          <h3>SoundHound and LG put restaurant ordering on ~20 million U.S. smart TVs</h3>
+          <p>Announced November 3: <strong>SoundHound’s</strong> merchant network will handle routing and checkout for restaurant ordering on <strong>LG Smart TVs</strong>, with no new in-store hardware. The release names <strong>no committed restaurants, no launch date, and no term</strong> — treat it as an announced partnership, not a shipped product.</p>
+          <p><strong>Why it matters:</strong> voice commerce is moving to the biggest screen in the house, but until named restaurants and a launch date appear, this is distribution intent rather than a live channel.</p>
+          <div class="sources"><a href="https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-november-4-2026/" target="_blank" rel="noopener">Agile Brand Guide ↗</a></div>
+        </article>
+
+        <article class="story half" id="cisco-openai" data-cat="business">
+          <div class="meta"><span class="tag">#13 · Partnerships · Cisco / OpenAI</span><span>Nov 3 · Don Vito Codes</span></div>
+          <h3>Cisco pairs network telemetry with OpenAI models for security teams</h3>
+          <p><strong>OpenAI</strong> said November 3 that <strong>Cisco</strong> is pairing its network telemetry with OpenAI models so security teams can <strong>correlate signals and investigate faster</strong>. Details are thin; watch for a fuller joint announcement.</p>
+          <p><strong>Why it matters:</strong> network telemetry is one of security’s richest signal sources — pairing it with frontier models is a direct bid for the analyst’s workflow, pending the details that would show how deep the integration goes.</p>
+          <div class="sources"><a href="https://www.donvitocodes.com/ai-news" target="_blank" rel="noopener">Don Vito Codes ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>What to watch next</h3>
+        <ul>
+          <li>Whether <strong>fal’s $16B valuation and $800M annualized revenue claim</strong> hold up in fuller reporting, and what it signals for AI infrastructure multiples.</li>
+          <li><strong>Google’s school AI controls</strong> rolling out in early 2027 — and how districts respond to the Search-or-nothing choice.</li>
+          <li><strong>China’s AI law:</strong> the first draft text and whether incident reporting becomes mandatory.</li>
+          <li><strong>CrowdStrike’s Fiddler and Dreadnode closings</strong>, expected in its fiscal Q4 2027, and whether endpoint-level agent termination ships on schedule.</li>
+          <li>The <strong>new Congress’s first AI bills</strong> when it takes office in January 2027.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Caveats — how to read this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Tuesday, November 3, 2026, plus late-breaking items from the last 48 hours (the OCC guidance is dated November 4).</li>
+          <li><strong>Single-sourced items are flagged in the text:</strong> fal’s $800M annualized revenue (Bloomberg source), the CrowdStrike deal prices (Wall Street Journal reporting; CrowdStrike disclosed no price), and Prefrontal’s speed claims (the lab’s own figures, not independently verified).</li>
+          <li><strong>Vendor announcements</strong> describe vendor-stated capabilities, not independently verified performance.</li>
+          <li>This edition was <strong>compiled from news searches on November 4, 2026</strong>, because the usual deep-research tool was unavailable for this run; stories were cross-checked across at least two sources where possible.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, or still unconfirmed — check the caveats box above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage: Tuesday, November 3, 2026 (plus late-breaking items from the last 48 hours). Compiled Wednesday, November 4, 2026. Reported and single-sourced items are flagged; figures are as reported by their sources.</div>
+      <div>AI News Newsletter — November 4, 2026.<br>13 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

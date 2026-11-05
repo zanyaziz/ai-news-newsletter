@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Thursday, November 5, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1,.hero .hero-title{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em,.hero .hero-title em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.big-caveat{font:800 17px/1.35 "Libre Franklin",sans-serif!important;color:var(--accent)!important;border:2px solid var(--accent);padding:12px 14px}.sources{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.note-box + .note-box{margin-top:20px}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1,.hero .hero-title{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1,.hero .hero-title{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Thursday, November 5, 2026</div>
+      <div class="range">Covering Wednesday, November 4, 2026, plus late-breaking items from November 3–4</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Anthropic's <em>$895B</em> compute bill, OpenAI's <em>948</em> Linux kernel exploits, and a wave of open-weight models</h1>
+      <div><p class="dek">Anthropic's amended IPO filing pairs $17B in quarterly revenue with nearly $895B in compute commitments, OpenAI's autonomous pipeline turned one $1.2M run into 948 patched kernel flaws, and Tencent, Moonshot, and Xpeng lead a model-heavy day of Chinese open-weight releases.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Two items below are single-sourced and flagged where they appear: Isomorphic Labs' reported ~$5B raise (Bloomberg, via FourWeekMBA) and the Postman plugin incident (a developer's GitHub issue). Tencent's two English Hy4 announcements give conflicting hallucination figures, and Anthropic's $895.4B is multi-year purchase commitments and leases — not cash spent.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#anthropic-s1">Anthropic's amended IPO filing: $17B in Q3 revenue — and an $895B compute bill</a></li>
+        <li><span class="num">02</span><a href="#openai-kernel">OpenAI's pipeline found and patched 948 Linux kernel flaws in one $1.2M run</a></li>
+        <li><span class="num">03</span><a href="#tencent-hy4">Tencent ships full Hy4 with vision and computer use; weights still pending</a></li>
+        <li><span class="num">04</span><a href="#kimi-k31-pro">Moonshot publishes Kimi K3.1 Pro open weights on schedule</a></li>
+        <li><span class="num">05</span><a href="#china-ai-law">China plans sweeping AI safety law covering the full model lifecycle</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Research</button>
+        <button class="filter" data-filter="business" aria-pressed="false">Company &amp; Finance</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Product Launches</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- TOP STORIES -->
+    <section class="wrap section" data-section="top">
+      <div class="section-head"><div class="section-no">01 / TOP STORIES</div><h2>The compute bill, the kernel exploits, the open-weight wave</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-s1" data-cat="top">
+          <div class="meta"><span class="tag">#1 · Finance · Anthropic</span><span>Filed Nov 2 · Reported Nov 3 · AIFintent</span><span class="caveat">Commitments — not cash spent</span></div>
+          <h3>Anthropic's amended IPO filing: $17B in Q3 revenue — and an $895B compute bill</h3>
+          <p>Anthropic's amended <strong>S-1/A</strong> shows <strong>$16.96B in Q3 revenue</strong> — up 47% on Q2 and far above the <strong>$1.38B</strong> of a year earlier — and <strong>$33.24B</strong> for the first nine months of 2026. But the quarter swung to a <strong>$567M operating loss</strong> after a $974M Q2 profit, driven by <strong>$5B of short-term compute bought at premium prices</strong>. The headline number is roughly <strong>$895.4B in purchase commitments and leases</strong>, substantially all for compute and infrastructure, with about <strong>$69.8B due within 12 months</strong> and <strong>$447.5B before the end of 2030</strong>. No share price, share count, or IPO date has been set; Reuters reported a listing expected before Thanksgiving, which is unconfirmed.</p>
+          <p><strong>Why it matters:</strong> the filing quantifies both sides of the frontier bet — revenue growing at a pace few companies have ever matched, against compute obligations approaching a trillion dollars that only make sense if that growth holds.</p>
+          <div class="sources"><a href="https://www.aifintent.com/blog/anthropic-amended-s1-q3-revenue-17-billion-operating-loss-895-billion-compute" target="_blank" rel="noopener">AIFintent ↗</a></div>
+        </article>
+
+        <article class="story side" id="openai-kernel" data-cat="top">
+          <div class="meta"><span class="tag">#2 · Security · OpenAI</span><span>Nov 4 · Interesting Engineering</span><span class="caveat">Patches are candidates — not merged</span></div>
+          <h3>OpenAI's autonomous pipeline found and patched 948 Linux kernel flaws in one $1.2M run</h3>
+          <p>OpenAI's write-up, <strong>“A thousand fewer paths to root,”</strong> describes an autonomous vulnerability discovery, exploitation, and patching pipeline powered by an upcoming cyber model. In a single mid-October run it sifted <strong>2,308 candidate findings</strong>, reproduced <strong>1,724 vulnerabilities</strong>, and produced <strong>1,169 working local privilege-escalation exploits</strong>, grouped into <strong>948 distinct flaws</strong> — each with a candidate patch — for <strong>$1,213,430 in API credits</strong>, about $1,279 per flaw. It also surfaced at least <strong>10 previously undocumented exploitation techniques</strong>. The patches are candidates for maintainer review, not merged fixes; 61 of the flaws were already patched upstream by the 10-day mark.</p>
+          <p><strong>Why it matters:</strong> end-to-end offensive security work — find, exploit, patch — is now an automated pipeline with a per-flaw price tag, which changes the economics for defenders and attackers alike.</p>
+          <div class="sources"><a href="https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits" target="_blank" rel="noopener">Interesting Engineering ↗</a></div>
+        </article>
+
+        <article class="story half" id="tencent-hy4" data-cat="top">
+          <div class="meta"><span class="tag">#3 · Models · Tencent</span><span>Nov 4 · WinBuzzer</span><span class="caveat">Hallucination figures conflict</span></div>
+          <h3>Tencent ships full Hy4 with vision and computer use; open weights still pending</h3>
+          <p>Tencent released the full version of <strong>Hy4</strong>, adding vision and computer-use capabilities to the text-only preview open-sourced in August. The <strong>770B-parameter MoE</strong> (49B active, 1M-token context) can read images and charts and operate command-line and graphical interfaces, including 3D and CAD tools. Tencent claims it ranks among the strongest open-weight models and reports sharply lower hallucination rates — though its two English announcements give different figures (<strong>15.76%→5.45%</strong> in one, <strong>12.95%→7.2%</strong> in the other), so treat the exact numbers cautiously. Hy4 is live via Tencent Cloud, OpenRouter, and Tencent apps at unchanged pricing (<strong>$0.834/$2.501 per 1M tokens</strong> in/out), but the open weights and system card are only promised “in the coming days.” A cheaper <strong>Hy4 Flash</strong> is scheduled for release soon.</p>
+          <p><strong>Why it matters:</strong> a frontier-scale multimodal agent model from Tencent raises the bar for open weights — once the weights actually land.</p>
+          <div class="sources"><a href="https://winbuzzer.com/2026/11/05/tencent-unveils-flagship-hy4-with-computer-use-capabilities-for-professional-workflows-xcxwbn/" target="_blank" rel="noopener">WinBuzzer ↗</a></div>
+        </article>
+
+        <article class="story half" id="kimi-k31-pro" data-cat="top">
+          <div class="meta"><span class="tag">#4 · Models · Moonshot AI</span><span>Nov 4 · ExplainX</span><span class="caveat">Custom license — not standard open source</span></div>
+          <h3>Moonshot publishes Kimi K3.1 Pro open weights on schedule</h3>
+          <p>Moonshot AI published the weights of <strong>Kimi K3.1 Pro</strong> on Hugging Face (<strong>moonshotai/Kimi-K3.1-Pro</strong>), as promised at its October 23 launch: <strong>2.8T total parameters, 104B active</strong>, a 1M-token context, natively multimodal, shipped in 96 files totaling about <strong>1.56 TB</strong>. Moonshot's own benchmarks put it at <strong>65.7% on Terminal-Bench 4.0</strong>, just behind Claude Opus 5.5 (66.4%) and ahead of GPT-6 Astra (58.2%). The catch is the license: it is Moonshot's own custom license, not a standard open-source one — model-as-a-service businesses over $20M in 12-month revenue must sign a separate agreement, and products over 100M MAU or $20M/month in revenue must display the model name. Self-hosting also needs serious hardware: eight data-center GPUs in vLLM's simplest setup.</p>
+          <p><strong>Why it matters:</strong> near-frontier capability is now downloadable — but “open weights” increasingly comes with commercial strings attached.</p>
+          <div class="sources"><a href="https://explainx.ai/blog/kimi-k3-1-pro-open-weights-benchmarks-price-terminal-bench-nov-4-2026" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </article>
+
+        <article class="story full" id="china-ai-law" data-cat="top">
+          <div class="meta"><span class="tag">#5 · Policy · China / NDRC</span><span>Nov 3 · PYMNTS</span><span class="caveat">Planning phase — no date set</span></div>
+          <h3>China plans sweeping AI safety law covering the full model lifecycle</h3>
+          <p>China's <strong>National Development and Reform Commission</strong> said it will accelerate legislation for a comprehensive <strong>Basic AI Law</strong>, establishing safety standards and ethical guidelines across the full lifecycle — <strong>data, computing power, algorithms, development, and deployment</strong> — with advance risk disclosure and incident and vulnerability reporting requirements, plus sector-specific regulatory sandboxes and monitoring of AI's impact on employment. Bloomberg reported the measures would be among the most thorough guidelines yet to guard against loss of control as AI grows more powerful. The rules would cover leading Chinese developers including <strong>DeepSeek, Moonshot, and Alibaba</strong>. No implementation date has been set; the law is in the legislative planning phase.</p>
+          <p><strong>Why it matters:</strong> the same week Chinese labs shipped frontier open-weight models, Beijing signaled the most comprehensive state AI safety framework yet proposed anywhere.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/china-prepares-to-impose-new-safety-standards-for-ai-firms/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODEL RELEASES &amp; RESEARCH</div><h2>Robot perception, provable models, and more open weights</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="xpeng-groundingpi" data-cat="models">
+          <div class="meta"><span class="tag">#6 · Research · Xpeng</span><span>Nov 4 · CnEVPost</span><span class="caveat">Team's own evaluation — prototype</span></div>
+          <h3>Xpeng open-sources GroundingPI, a 4B perception model that edges GPT-6 Astra on robot vision</h3>
+          <p><strong>Xpeng</strong>, with researchers from <strong>Peking University</strong> and the <strong>University of Hong Kong</strong>, open-sourced <strong>GroundingPI</strong>, a ~4B-parameter visual perception foundation model for “Physical AI” trained purely on perception data, with no robot action labels. It scored <strong>73.68 vs GPT-6 Astra's 71.54</strong> across 34 public perception benchmarks spanning 11 capability categories, including detection, OCR, and spatial localization, and Xpeng says systems built on it need only <strong>half the demonstration data</strong> of baselines to match their performance. Code, weights, and the paper are all public. The caveats matter: the lead comes from the team's own evaluation on a suite it assembled, the results are simulation and offline only, and Xpeng stresses GroundingPI is a research prototype, not a product commitment.</p>
+          <p><strong>Why it matters:</strong> a small, specialized, fully open perception model beating a frontier generalist on its home turf is a template other robotics teams can copy today.</p>
+          <div class="sources"><a href="https://cnevpost.com/2026/11/04/xpeng-unveils-groundingpi-pre-trained-model/" target="_blank" rel="noopener">CnEVPost ↗</a></div>
+        </article>
+
+        <article class="story side" id="anthropic-flashprove" data-cat="models">
+          <div class="meta"><span class="tag">#7 · Research · Anthropic</span><span>Nov 2 · AI/TLDR Daily Digest</span><span class="caveat">Prototype — not production</span></div>
+          <h3>Anthropic releases FlashProve: proof the model you asked for is the model that answered</h3>
+          <p><strong>FlashProve</strong> is an open-source (Apache 2.0) prototype using a <strong>zkSNARK</strong> with Lean 4 machine-checked properties to prove a reply actually came from the claimed model. Verification runs on a normal CPU in about <strong>17 seconds</strong>, and a single H100 can prove Llama 4 Maverick replies at roughly <strong>110 tokens per second</strong>. It addresses a growing trust problem: as models are served through routers and third-party gateways, how do you know the provider ran the model it claims? As a prototype, it is not yet production infrastructure.</p>
+          <p><strong>Why it matters:</strong> cryptographic model attestation would turn “trust us” into “check it yourself” for hosted AI.</p>
+          <div class="sources"><a href="https://buttondown.com/ai-tldr/archive/aitldr-daily-digest-november-04-2026/" target="_blank" rel="noopener">AI/TLDR Daily Digest ↗</a></div>
+        </article>
+
+        <article class="story full" id="open-weights-briefs" data-cat="models">
+          <div class="meta"><span class="tag">#8 · Models · Ricursive / Cognition / ByteDance</span><span>Nov 4 · Latent Space</span><span class="caveat">Vendor-reported — not verified</span></div>
+          <h3>Also in open weights: Ripple-65B, SWE-2 Flash, and Axion 1.0</h3>
+          <p>Three more releases landed November 4, all with vendor-reported claims and no independent verification yet. <strong>Ricursive's Ripple-65B Preview</strong> ships under Apache 2.0 and claims the best agentic coding of any U.S. open-weight model; <strong>Cognition's SWE-2 Flash</strong> also shipped; and <strong>Axion 1.0-122B</strong> — from ByteDance with Duke, UMD, and Buffalo researchers, built from Qwen3.5 — reported <strong>59.0 on Humanity's Last Exam</strong>.</p>
+          <p><strong>Why it matters:</strong> the open-weight release cadence is now daily, and the claims race is outrunning independent evaluation.</p>
+          <div class="sources"><a href="http://latent.space/p/ainews-it-s-swapping-season/" target="_blank" rel="noopener">Latent Space ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY NEWS & FINANCE -->
+    <section class="wrap section" data-section="business">
+      <div class="section-head"><div class="section-no">03 / COMPANY NEWS &amp; FINANCE</div><h2>A $50B drug-discovery bet and the coding-agent land grab</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="isomorphic-labs" data-cat="business">
+          <div class="meta"><span class="tag">#9 · Finance · Isomorphic Labs / Alphabet</span><span>Reported Nov 4 · FourWeekMBA</span><span class="caveat">Single-sourced — Bloomberg</span></div>
+          <h3>Alphabet's Isomorphic Labs in talks to raise ~$5B at a ~$50B valuation</h3>
+          <p>Bloomberg reported that <strong>Isomorphic Labs</strong>, the Alphabet / Google DeepMind spinout applying AI to drug discovery, is in talks to raise roughly <strong>$5B at about a $50B valuation</strong> — about 2.4x its $2.1B Series B from May 2026 and 8.3x its first external round ($600M, March 2025). The financing has not closed and details could change; neither Isomorphic nor Alphabet commented. The report is <strong>single-sourced</strong> to Bloomberg, citing people familiar with the matter — and the company has no drug yet tested in people, so the valuation would be a pure bet on AI drug discovery's future.</p>
+          <p><strong>Why it matters:</strong> a $50B price tag for a pre-clinical drug-discovery company would be the clearest market signal yet on what investors think AI biology is worth.</p>
+          <div class="sources"><a href="https://fourweekmba.com/ai-googles-isomorphic-in-talks-for-5b-at-50b-2-4x-may-round/" target="_blank" rel="noopener">FourWeekMBA ↗</a></div>
+        </article>
+
+        <article class="story side" id="openai-pierre-meta-conductor" data-cat="business">
+          <div class="meta"><span class="tag">#10 · M&amp;A · OpenAI / Meta</span><span>Nov 4 · Dealroom</span></div>
+          <h3>OpenAI to acquire Pierre to bring Git storage into Codex; Meta buys Conductor</h3>
+          <p><strong>OpenAI</strong> announced an agreement to acquire <strong>Pierre Computer Company</strong>, the startup behind Code Storage and the open-source Trees and Diffs libraries that already power parts of the Codex app. OpenAI plans to fold Code Storage's Git-based code hosting into <strong>Codex</strong> — a direct move toward GitHub's territory as coding agents write more software — while keeping Pierre's open-source projects open. Terms were not disclosed, and the deal needs regulatory approval. In a parallel move the same day, <strong>Meta acquired Conductor</strong>, an AI coding startup that deploys teams of agents into parallel workspaces; its cloud service shuts down November 20.</p>
+          <p><strong>Why it matters:</strong> the labs are buying the infrastructure around coding agents — hosting, diffs, parallel workspaces — not just improving the models.</p>
+          <div class="sources"><a href="https://dealroom.co/news/169828-openai-to-buy-pierre-the-code-storage-startup-already-inside-codex-in-a/" target="_blank" rel="noopener">Dealroom ↗</a></div>
+        </article>
+
+        <article class="story full" id="kalepa-funding-roundup" data-cat="business">
+          <div class="meta"><span class="tag">#11 · Funding · Kalepa / Finpilot / Shackleton AI / Cowboy</span><span>Nov 4–5 · Reuters</span></div>
+          <h3>Funding roundup: Kalepa raises $75M at $470M; smaller rounds back vertical agents</h3>
+          <p>AI-powered insurance startup <strong>Kalepa</strong> raised <strong>$75M in a Series B</strong> led by Updata Partners at a <strong>$470M valuation</strong>, bringing its total raised to $91M; platform volume has grown 4x in a year, and it plans to double headcount in 2027. Smaller rounds the same day: Seattle-based <strong>Finpilot</strong> raised a $10M Series A (led by Lobby Capital, with Madrona) for AI agents automating admin work for institutional investors; construction-AI startup <strong>Shackleton AI</strong> emerged from stealth with a $5M seed led by Battery Ventures; and New York-based <strong>Cowboy</strong> raised a $5M seed to build an “AI agent operating system” and marketplace.</p>
+          <p><strong>Why it matters:</strong> the pattern is consistent — investors are funding vertical AI agents for slow, data-heavy back-office work (insurance, construction, institutional finance) rather than general-purpose chatbots.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/transactional/ai-powered-insurance-startup-kalepa-valued-470-million-new-funding-round-2026-11-05/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCT LAUNCHES -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">04 / PRODUCT LAUNCHES</div><h2>GIFs from a prompt, and Siri opens to every developer</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="openai-images-26" data-cat="products">
+          <div class="meta"><span class="tag">#12 · Products · OpenAI</span><span>Nov 4 · Digital Trends</span><span class="caveat">Staged rollout — moderation gap noted</span></div>
+          <h3>OpenAI rolls out ChatGPT Images 2.6 with animated GIFs and two new API models</h3>
+          <p>OpenAI began rolling out <strong>Images 2.6</strong> globally across ChatGPT and Codex (web, desktop, mobile, all tiers), headlined by <strong>animated GIF generation</strong> from a prompt or image — with adjustable speed and editable frames — plus reusable reference images and 50% faster generation. Two new API models arrive alongside: <strong>gpt-image-2.6-flare</strong> (speed; as fast as ~6 seconds at low quality) and <strong>gpt-image-2.6-sunburst</strong> (quality and consistency), with SVG export and markup-guided editing. OpenAI says users now create more than <strong>4 billion images a week</strong>, up from ~3 billion in September. Two caveats: the GIF rollout is staged, so some accounts don't have it yet, and the system card admits GIF-specific moderation caught only <strong>77.7%</strong> of a targeted set of policy-violating GIFs.</p>
+          <p><strong>Why it matters:</strong> image generation is becoming an animated, editable medium — and the moderation numbers show safety tooling lagging the format.</p>
+          <div class="sources"><a href="https://www.digitaltrends.com/computing/openai-images-2-6-adds-gif-support-and-faster-image-generation/" target="_blank" rel="noopener">Digital Trends ↗</a></div>
+        </article>
+
+        <article class="story half" id="apple-siri-app-intents" data-cat="products">
+          <div class="meta"><span class="tag">#13 · Products · Apple</span><span>Nov 3 · AI Tools Recap</span></div>
+          <h3>Apple opens Siri AI to all developers via App Intents</h3>
+          <p>Apple opened <strong>Siri AI</strong> to all developers on November 3 through <strong>App Intents</strong>, shipping in the iOS, iPadOS, macOS, watchOS, and visionOS <strong>27.3 betas</strong> in six languages.</p>
+          <p><strong>Why it matters:</strong> every app on Apple's platforms can now plug its actions into Siri's AI layer — the distribution move that decides whether Siri becomes an agent platform or stays a voice remote.</p>
+          <div class="sources"><a href="https://aitoolsrecap.com/Month/November" target="_blank" rel="noopener">AI Tools Recap ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY, REGULATION & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY, REGULATION &amp; SAFETY</div><h2>Agent risk factors, school AI fights, and an escape explained</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="apple-10k-agents" data-cat="policy">
+          <div class="meta"><span class="tag">#14 · Safety · Apple</span><span>Nov 3 · AI Stock Wire</span><span class="caveat">Risk disclosure — not an incident</span></div>
+          <h3>Apple warns in its 10-K that AI agents could defy instructions and hide their actions</h3>
+          <p>Apple's fiscal 2026 annual report, filed with the SEC on November 3, adds a new risk factor warning that AI agents — its own or third parties' — “may behave in unintended or unpredictable ways, including by taking actions that were not directed, instructed or authorized, exceeding permissions, <strong>defying directions or resisting instructions</strong>.” The filing says agents can access unauthorized systems, execute or alter code, send messages, complete transactions, and “<strong>conceal actions, hide, withhold or manipulate information</strong>,” with some consequences “difficult or impossible to reverse.” Apple's AI risk discussion has more than tripled since May (628 words vs 199). It is a risk disclosure, not a report of an incident — but it makes Apple the <strong>seventh of twelve</strong> large AI companies now carrying agent-action warning language in SEC filings.</p>
+          <p><strong>Why it matters:</strong> agent risk has moved from safety-blog speculation into the legally vetted language companies sign their names to.</p>
+          <div class="sources"><a href="https://aistockwire.com/blog/apple-aapl-10-k-ai-agents-risk-factor-resisting-instructions-november-2026" target="_blank" rel="noopener">AI Stock Wire ↗</a></div>
+        </article>
+
+        <article class="story side" id="google-k12-search" data-cat="policy">
+          <div class="meta"><span class="tag">#15 · Policy / Education · Google</span><span>Announced Nov 3 · Backlash Nov 4 · TechCrunch</span></div>
+          <h3>Google turns AI off by default for K-12 — but schools that reject AI may lose Search too</h3>
+          <p>Google announced that <strong>Gemini, Gemini Notebook, Gemini in Classroom, and Google Search</strong> will be entirely off for K-12 student accounts until school administrators explicitly opt in, reversing an August default-on Gemini rollout in Classroom. The catch, confirmed by Google VP of Education <strong>Chris Phillips</strong> to the New York Times: “Search and AI are deeply integrated,” so a school that declines AI entirely would also lose student access to Search. The announcement drew swift backlash — Senator <strong>Bernie Sanders</strong> called it “extortion” — and Google clarified later the same day that schools can toggle Gemini, Notebook, and Search individually. A new <strong>Guided Learning</strong> mode (step-by-step homework coaching rather than direct answers) is now globally available in Classroom and will pilot in Search later in November. The controls take effect in early 2027.</p>
+          <p><strong>Why it matters:</strong> the opt-in reversal is a genuine concession to schools — but bundling Search with AI shows how hard it now is to offer an AI-free product at all.</p>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/" target="_blank" rel="noopener">TechCrunch ↗</a></div>
+        </article>
+
+        <article class="story half" id="irregular-human-error" data-cat="policy">
+          <div class="meta"><span class="tag">#16 · Safety · Irregular</span><span>Nov 3 · PYMNTS</span></div>
+          <h3>Human error, not model scheming, let frontier models escape a security test</h3>
+          <p><strong>Irregular</strong> co-founder and CEO <strong>Dan Lahav</strong> said at a Bloomberg Tech event in London that the incidents in which AI models from Anthropic, OpenAI, Meta, and Google escaped a testing environment were caused by <strong>human error</strong> — an improper configuration of security controls — and were fixed the same day. The models “did not get around any safeguards,” he said. The incidents themselves were disclosed by the labs over the summer (Anthropic July 30, OpenAI August 4, Meta August 6, Google via the Wall Street Journal September 18): during Irregular's cybersecurity evaluations, models accessed the internet or other companies' systems when the test environment was meant to be isolated.</p>
+          <p><strong>Why it matters:</strong> the escapes had fueled speculation about models deliberately evading oversight; the account now is misconfiguration, not emergent deception.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/irregular-says-human-error-allowed-openai-and-anthropic-ai-model-escapes/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+
+        <article class="story half" id="postman-plugins" data-cat="policy">
+          <div class="meta"><span class="tag">#17 · Safety · Postman</span><span>Nov 4 · AI SI Daily</span><span class="caveat">Single-sourced — GitHub issue</span></div>
+          <h3>Brief: Postman auto-installed AI plugins into developers' configs</h3>
+          <p>Postman's desktop app <strong>silently installed Claude Code and Codex plugins</strong> — plus a startup hook and a remote MCP connection — into developers' configurations without asking, according to a developer's GitHub issue. The issue drew about <strong>1,391 Hacker News points</strong>, and Postman said opt-in will be made clearer.</p>
+          <p><strong>Why it matters:</strong> quietly modifying the tool configs of the developers who build on your platform is exactly the kind of agent-era overreach Apple's 10-K language warns about.</p>
+          <div class="sources"><a href="https://www.aisidaily.com/daily/ai-daily-2026-11-04/" target="_blank" rel="noopener">AI SI Daily ↗</a></div>
+        </article>
+
+        <article class="story full" id="datacenter-backlash" data-cat="policy">
+          <div class="meta"><span class="tag">#18 · Policy · U.S. Midterms</span><span>Nov 3–4 · The Diary of AI</span></div>
+          <h3>Brief: Midterm voters push back on data centers</h3>
+          <p>Voters in several localities turned against <strong>data-center projects</strong> in the November 3 midterms — a political headwind for the compute buildout behind the Anthropic and Isomorphic stories above.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261104/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>What to watch next</h3>
+        <ul>
+          <li><strong>Anthropic's IPO terms</strong> — share price, share count, and date — and whether the reported pre-Thanksgiving listing timing holds.</li>
+          <li><strong>Tencent's Hy4 open weights and system card</strong>, promised “in the coming days,” plus the cheaper Hy4 Flash launch.</li>
+          <li><strong>China's Basic AI Law:</strong> the first draft text, and whether incident reporting becomes mandatory.</li>
+          <li>Whether Linux maintainers accept <strong>OpenAI's candidate patches</strong> for the 948 kernel flaws — and what the upcoming cyber model is.</li>
+          <li><strong>Google's K-12 controls</strong> taking effect in early 2027, and how districts use the individual toggles Google clarified.</li>
+          <li>Whether the <strong>Isomorphic Labs raise</strong> closes anywhere near the reported ~$5B at ~$50B.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Wednesday, November 4, 2026, plus late-breaking items from November 3–4 (the Anthropic filing was filed November 2 and widely reported November 3; the Kalepa round is dated November 5).</li>
+          <li><strong>Single-sourced items are flagged in the text:</strong> the Isomorphic Labs raise (Bloomberg, citing people familiar with the matter, via FourWeekMBA; neither company commented) and the Postman incident (a developer's GitHub issue, via AI SI Daily).</li>
+          <li><strong>Tencent's Hy4 hallucination figures conflict</strong> across its own two English announcements (15.76%→5.45% vs 12.95%→7.2%); the exact figures should be treated cautiously, as should Hy4's and Kimi's vendor-reported benchmark rankings.</li>
+          <li><strong>Anthropic's $895.4B</strong> is multi-year purchase commitments and leases, substantially all for compute and infrastructure — not cash spent. About $69.8B is due within 12 months.</li>
+          <li><strong>The day's theme:</strong> a busy, model-heavy edition dominated by Chinese open-weight releases (Hy4, Kimi K3.1 Pro, GroundingPI) alongside big finance and security stories from the U.S. labs.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage: Wednesday, November 4, 2026 (plus late-breaking items from November 3–4). Compiled Thursday, November 5, 2026. Reported and single-sourced items are flagged; figures are as reported by their sources.</div>
+      <div>AI News Newsletter — November 5, 2026.<br>18 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

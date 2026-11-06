@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Friday, November 6, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Friday, November 6, 2026</div>
+      <div class="range">Covering Thursday, November 5, 2026, plus late-breaking items from November 4–6</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>OpenAI launches GPT-6 Cyber, its first <em>'Critical'</em>-rated cybersecurity model</h1>
+      <div><p class="dek">A dual-use cyber model restricted to approved customers leads a day that also brought the first hard number on AI accelerating AI R&amp;D inside Anthropic, Claude credited with critical Xen flaws, and a 2.8-trillion-parameter open-weight release from Moonshot.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Caveats are marked inline. The “Critical” rating on GPT-6 Cyber is OpenAI’s own classification; METR warns key evidence behind its 1.9× estimate was redacted; Ricursive’s Ripple-65B scores are vendor-reported and single-sourced; and the U.S. AI pause bills are proposals only — neither has passed its chamber.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gpt6-cyber">OpenAI launches GPT-6 Cyber, its first 'Critical'-rated cybersecurity model</a></li>
+        <li><span class="num">02</span><a href="#metr-anthropic">METR finds AI R&amp;D is accelerating inside Anthropic</a></li>
+        <li><span class="num">03</span><a href="#claude-xen">Claude gets formal credit for finding two critical Xen hypervisor flaws</a></li>
+        <li><span class="num">04</span><a href="#claude-finance">Anthropic launches Claude Personal Finance in US beta</a></li>
+        <li><span class="num">05</span><a href="#tencent-hy4">Tencent releases Hy4, a 770B-parameter open model that can operate computers</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="top" aria-pressed="false">Top Stories</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Models &amp; Open Weights</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Benchmarks</button>
+        <button class="filter" data-filter="business" aria-pressed="false">Business &amp; Infrastructure</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="people" aria-pressed="false">People</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- TOP STORIES -->
+    <section class="wrap section" data-section="top">
+      <div class="section-head"><div class="section-no">01 / TOP STORIES</div><h2>The 'Critical' cyber model and the AI-improving-AI number</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gpt6-cyber" data-cat="top">
+          <div class="meta"><span class="tag">#1 · Cybersecurity · OpenAI</span><span>Nov 5</span><span class="caveat">“Critical” is OpenAI's own rating</span></div>
+          <h3>OpenAI launches GPT-6 Cyber, its first 'Critical'-rated cybersecurity model</h3>
+          <p>OpenAI released <strong>GPT-6 Cyber</strong>, a specialized variant of GPT-6 Astra built for authorized vulnerability discovery, exploit development, and web penetration testing. It scores <strong>48.5% on ExploitGym</strong> (vs 32.1% for GPT-5.6 Cyber) and <strong>40.3% vulnerability recall</strong> in web-pentesting (vs 32.0% for GPT-6 Astra). OpenAI rates it <strong>“Critical” for cybersecurity</strong> and “High” for biological and chemical capabilities. Access is initially limited to approved <strong>Daybreak Red</strong> customers via the API and Codex — a deliberate restriction given the dual-use stakes.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://www.reuters.com/technology/openai-launches-gpt-6-cyber-with-critical-cybersecurity-rating-2026-11-05/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://deploymentsafety.openai.com/gpt-6-cyber" target="_blank" rel="noopener">OpenAI system card ↗</a></div>
+        </article>
+
+        <article class="story side" id="metr-anthropic" data-cat="top">
+          <div class="meta"><span class="tag">#2 · Research · METR / Anthropic</span><span>Nov 5</span><span class="caveat">Key evidence redacted</span></div>
+          <h3>METR finds AI R&amp;D is accelerating inside Anthropic</h3>
+          <p>Independent evaluator <strong>METR</strong> published a high-access assessment of AI R&amp;D acceleration at Anthropic (Aug 12–Oct 29, 2026), estimating benchmark capability progress has run about <strong>1.9× faster since October 2025</strong> (95% CI 1.5–2.8×). It’s the first hard number on the “AI improving AI” loop from inside a frontier lab. METR itself warns that crucial evidence was redacted, so treat the estimate as directional, not precise.</p>
+          <p class="players"><strong>Key players:</strong> METR, Anthropic.</p>
+          <div class="sources"><a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/" target="_blank" rel="noopener">METR ↗</a></div>
+        </article>
+
+        <article class="story half" id="claude-xen" data-cat="top">
+          <div class="meta"><span class="tag">#3 · Security · Anthropic / Xen Project</span><span>Disclosed Nov 3 · Covered Nov 4–5</span></div>
+          <h3>Claude gets formal credit for finding two critical Xen hypervisor flaws</h3>
+          <p>The Xen Project patched two grant-copy vulnerabilities (<strong>CVE-2026-102703, CVE-2026-102704</strong>, advisory XSA-523) that let a malicious guest VM read and write the memory of other VMs, including the privileged dom0. <strong>Every Xen release from 4.6 onward</strong> is affected; patches are out and there is no known mitigation. The advisory credits Anthropic, using Claude, with the discovery — validated by Stephan Lipp of Ada Logics, with CodeAnt’s team independently reporting the same flaws. No known exploitation in the wild.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic, Xen Project, Ada Logics, CodeAnt.</p>
+          <div class="sources"><a href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html" target="_blank" rel="noopener">The Hacker News ↗</a></div>
+        </article>
+
+        <article class="story half" id="claude-finance" data-cat="top">
+          <div class="meta"><span class="tag">#4 · Products · Anthropic</span><span>Nov 5</span></div>
+          <h3>Anthropic launches Claude Personal Finance in US beta</h3>
+          <p>Claude can now connect to bank and card accounts (<strong>read-only</strong>) so users can ask questions about their money. Rolling out this week on <strong>Pro, Max, and Ultra</strong> plans in the US. No money moves — it’s analysis only — but it’s Anthropic’s clearest step yet into personal finance, a category where trust and accuracy matter more than anywhere.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a></div>
+        </article>
+
+        <article class="story full" id="tencent-hy4" data-cat="top">
+          <div class="meta"><span class="tag">#5 · Models · Tencent</span><span>Nov 4</span></div>
+          <h3>Tencent releases Hy4, a 770B-parameter open model that can operate computers</h3>
+          <p>Tencent’s <strong>Hy4</strong> activates only <strong>49B parameters per query</strong>, handles <strong>1M-token context</strong>, and — a first for the Hunyuan series — understands images and directly operates computers via graphical UI and command-line interfaces. Open-weights computer-use models at this scale raise the bar for open agent capabilities.</p>
+          <p class="players"><strong>Key players:</strong> Tencent.</p>
+          <div class="sources"><a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=20887" target="_blank" rel="noopener">Kim's Daily Briefing ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS & OPEN WEIGHTS -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODELS &amp; OPEN WEIGHTS</div><h2>The largest open weights yet, GIFs, and cheaper video</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="kimi-k31" data-cat="models">
+          <div class="meta"><span class="tag">#6 · Open Weights · Moonshot AI</span><span>Nov 4</span></div>
+          <h3>Moonshot ships Kimi K3.1 Pro open weights</h3>
+          <p>Moonshot published weights for <strong>Kimi K3.1 Pro</strong> on Hugging Face: a natively multimodal <strong>2.8T-parameter MoE (104B active, 896 experts)</strong> with ~1M context, hybrid attention, and MXFP4 quantization. It’s now the <strong>largest publicly downloadable open-weight model</strong>, rivaling top proprietary US models — and it launched alongside Kimi Hosted Agents, a managed agent-harness cloud service.</p>
+          <p class="players"><strong>Key players:</strong> Moonshot AI.</p>
+          <div class="sources"><a href="https://www.llm-digest.com/daily" target="_blank" rel="noopener">LLM Digest ↗</a></div>
+        </article>
+
+        <article class="story side" id="images-26" data-cat="models">
+          <div class="meta"><span class="tag">#7 · Image Models · OpenAI</span><span>Nov 4</span></div>
+          <h3>OpenAI ships Images 2.6 with GIF creation</h3>
+          <p><strong>GPT-Image-2.6 (Flare and Sunburst)</strong> arrives in ChatGPT, Codex, and the Image API with <strong>~50% faster generation</strong>, animated GIF workflows, image markup, and SVG export controls. The GIF support turns image gen into a lightweight animation tool.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://openai.com/index/introducing-images-2-6/" target="_blank" rel="noopener">OpenAI ↗</a></div>
+        </article>
+
+        <article class="story half" id="gemini-omni" data-cat="models">
+          <div class="meta"><span class="tag">#8 · Video Models · Google DeepMind</span><span>Nov 5</span></div>
+          <h3>Google DeepMind: Gemini Omni 1.2 Flash goes GA</h3>
+          <p>The video generation model is generally available on the Gemini API and Gemini for business, with <strong>15-second clips</strong> (up from 10) and 720p video at <strong>$0.07/second</strong> — 30% cheaper than the prior version.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a></div>
+        </article>
+
+        <article class="story half" id="ripple-65b" data-cat="models">
+          <div class="meta"><span class="tag">#9 · Open Weights · Ricursive Intelligence</span><span>Nov 5</span><span class="caveat">Vendor-reported — single-sourced</span></div>
+          <h3>Ricursive releases Ripple-65B Preview</h3>
+          <p>A dense <strong>65B transformer</strong> (12T tokens, 1M context) under Apache 2.0, claiming <strong>80.5 on TerminalBench 2.1, 76.5 on SWE-bench Verified, and 85.2 on GPQA Diamond</strong>, with total R&amp;D cost cited at about $32M.</p>
+          <p class="players"><strong>Key players:</strong> Ricursive Intelligence.</p>
+          <div class="sources"><a href="https://nhip.verai.vn/en/papers/2026-11-05" target="_blank" rel="noopener">AI Research Paper Roundup ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH & BENCHMARKS -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">03 / RESEARCH &amp; BENCHMARKS</div><h2>Long tasks stay hard; coding gets faster and cheaper</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="gdpx" data-cat="research">
+          <div class="meta"><span class="tag">#10 · Benchmarks · SemiAnalysis</span><span>Nov 5</span></div>
+          <h3>SemiAnalysis GDPx: best AI agent solves only 12% of long tasks</h3>
+          <p>A new benchmark of <strong>206 long agent tasks across 11 fields</strong> tops out at <strong>12%</strong> for the best model, with cost-per-point compared across 12 models. A useful reality check on agentic hype: long-horizon autonomy is still early.</p>
+          <p class="players"><strong>Key players:</strong> SemiAnalysis.</p>
+          <div class="sources"><a href="https://www.llm-digest.com/daily" target="_blank" rel="noopener">LLM Digest ↗</a></div>
+        </article>
+
+        <article class="story third" id="swe2-flash" data-cat="research">
+          <div class="meta"><span class="tag">#11 · Coding Models · Cognition</span><span>Nov 5</span></div>
+          <h3>Cognition ships SWE-2 Flash</h3>
+          <p>A faster, cheaper coding model: <strong>3× the speed and 1/5 the price</strong> of Cognition’s flagship, aimed at high-volume agentic coding workloads.</p>
+          <p class="players"><strong>Key players:</strong> Cognition.</p>
+          <div class="sources"><a href="https://www.synthpost.ai/links/667-ai-news-today-november-5-top-stories-ai-weekly" target="_blank" rel="noopener">AI Weekly / SynthPost ↗</a></div>
+        </article>
+
+        <article class="story third" id="message-threads" data-cat="research">
+          <div class="meta"><span class="tag">#12 · Platform · Anthropic</span><span>Public beta</span></div>
+          <h3>Anthropic adds Message Threads to the Claude Platform (public beta)</h3>
+          <p>Long-running agent sessions get <strong>lower latency</strong> by eliminating the need to resend the entire conversation history with every API request.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://turbo.gadgets360.com/en/ai/google-deepmind-chief-scientist-jeff-dean-moonshot-podcast-agi-conversations-ai-9197627" target="_blank" rel="noopener">Gadgets 360 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUSINESS & INFRASTRUCTURE -->
+    <section class="wrap section" data-section="business">
+      <div class="section-head"><div class="section-no">04 / BUSINESS &amp; INFRASTRUCTURE</div><h2>A $2.9B chip bet, a voice-AI acquisition, and TPUs for everyone</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="amd-taalas" data-cat="business">
+          <div class="meta"><span class="tag">#13 · Chips / M&amp;A · AMD / Taalas</span><span>Nov 4</span></div>
+          <h3>AMD prices its Taalas acquisition at ~$2.9B</h3>
+          <p>AMD’s 10-Q values the pending acquisition of Toronto inference-chip startup <strong>Taalas</strong> at about <strong>$2.9B in cash and stock</strong>, including up to ~$1.4B in contingent consideration. Taalas hardwires AI models directly into silicon as an alternative to general-purpose GPUs for inference. Closing expected by end of 2026, pending regulatory approval.</p>
+          <p class="players"><strong>Key players:</strong> AMD, Taalas.</p>
+          <div class="sources"><a href="https://tech-insider.org/ca/amd-taalas-acquisition-toronto-ai-inference-chip-2026/" target="_blank" rel="noopener">Tech Insider ↗</a></div>
+        </article>
+
+        <article class="story third" id="salesforce-cresta" data-cat="business">
+          <div class="meta"><span class="tag">#14 · M&amp;A · Salesforce / Cresta</span><span>Nov 2</span></div>
+          <h3>Salesforce to acquire voice-AI platform Cresta</h3>
+          <p>Salesforce signed a definitive agreement to acquire <strong>Cresta</strong>, a voice-first customer-experience platform whose AI agents resolve complex calls end to end and coach human reps in real time. Salesforce didn’t disclose the price; The Information reported <strong>~$2.7B</strong> (about 27× Cresta’s ~$100M ARR). Close expected Q1 FY2028 (Feb–Apr 2027).</p>
+          <p class="players"><strong>Key players:</strong> Salesforce, Cresta.</p>
+          <div class="sources"><a href="https://futurumgroup.com/insights/salesforce-moves-to-acquire-cresta/" target="_blank" rel="noopener">Futurum Group ↗</a></div>
+        </article>
+
+        <article class="story third" id="google-tpus" data-cat="business">
+          <div class="meta"><span class="tag">#15 · Infrastructure · Google</span><span>Nov 5</span></div>
+          <h3>Google TPUs now serve Oracle, OpenAI, Anthropic, and Meta</h3>
+          <p>SemiAnalysis reports Google’s <strong>TPUs</strong> have gone from internal-only to serving external customers including <strong>Oracle, OpenAI, Anthropic, and Meta</strong>, with a growing software ecosystem — a notable shift in the AI compute landscape.</p>
+          <p class="players"><strong>Key players:</strong> Google, Oracle, OpenAI, Anthropic, Meta.</p>
+          <div class="sources"><a href="https://www.llm-digest.com/daily" target="_blank" rel="noopener">LLM Digest ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; SAFETY</div><h2>Data-center pledges, a pause push, and China’s Basic AI Law</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="openai-compact" data-cat="policy">
+          <div class="meta"><span class="tag">#16 · Policy · OpenAI</span><span>Nov 5</span></div>
+          <h3>OpenAI publishes National Community Compact for data-center towns</h3>
+          <p>OpenAI set out pledges to communities hosting its data centers, including <strong>paying the full cost of its electricity</strong>, alongside a Compute Campus Policy Blueprint. It comes as data-center projects face growing local opposition — several US ballot measures on data centers failed this week.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a></div>
+        </article>
+
+        <article class="story third" id="democrats-pause" data-cat="policy">
+          <div class="meta"><span class="tag">#17 · Policy · U.S. Congress</span><span>Nov 4</span><span class="caveat">Proposals only — not law</span></div>
+          <h3>US Democrats renew push to pause advanced AI development</h3>
+          <p>After midterm gains, Rep. <strong>Yassamin Ansari</strong> and allies are pushing a pause on advanced AI development and a ban on artificial superintelligence. The bills (<strong>H.R. 10538, S. 5493</strong>) would create a federal Department of AI and halt advanced systems until safety rules are in place. They remain early-stage proposals, not law.</p>
+          <p class="players"><strong>Key players:</strong> Rep. Yassamin Ansari, Rep. Greg Casar, Sen. Bernie Sanders.</p>
+          <div class="sources"><a href="https://the420.in/us-ai-superintelligence-ban-bill/" target="_blank" rel="noopener">The 420 ↗</a></div>
+        </article>
+
+        <article class="story third" id="china-basic-law" data-cat="policy">
+          <div class="meta"><span class="tag">#18 · Policy · China / NDRC</span><span>Nov 3</span></div>
+          <h3>China to expedite a comprehensive Basic AI Law</h3>
+          <p>China’s National Development and Reform Commission announced plans to fast-track a <strong>Basic AI Law</strong> covering data, computing power, and algorithms, naming <strong>DeepSeek, Moonshot, and Alibaba</strong> as leading developers subject to regulation.</p>
+          <p class="players"><strong>Key players:</strong> NDRC, DeepSeek, Moonshot, Alibaba.</p>
+          <div class="sources"><a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=20887" target="_blank" rel="noopener">Kim's Daily Briefing ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PEOPLE -->
+    <section class="wrap section" data-section="people">
+      <div class="section-head"><div class="section-no">06 / PEOPLE</div><h2>The talent war, in two moves</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="talent-war" data-cat="people">
+          <div class="meta"><span class="tag">#19 · People · OpenAI / Anthropic / Google DeepMind</span><span>Nov 5</span></div>
+          <h3>Talent war continues: Catherine Wu joins OpenAI from Anthropic</h3>
+          <p><strong>Catherine Wu</strong>, who headed product for Claude Code at Anthropic since August 2024, announced she is joining OpenAI as <strong>Product Lead for Core Products</strong> (ChatGPT, Codex, API, Enterprise). Meanwhile <strong>Barret Zoph</strong> moved from OpenAI to Google DeepMind as VP of Research.</p>
+          <p class="players"><strong>Key players:</strong> Catherine Wu, Barret Zoph, OpenAI, Anthropic, Google DeepMind.</p>
+          <div class="sources"><a href="https://aimagazine.com/news/ai-executive-appointments-in-november-2026" target="_blank" rel="noopener">AI Magazine ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Thursday, November 5, 2026, plus late-breaking items from November 4–6. Caveats are marked inline.</li>
+          <li><strong>GPT-6 Cyber:</strong> the “Critical” rating is OpenAI’s own classification.</li>
+          <li><strong>METR / Anthropic:</strong> key evidence behind the 1.9× acceleration estimate was redacted — treat it as directional.</li>
+          <li><strong>Ricursive Ripple-65B:</strong> vendor-reported scores, single-sourced.</li>
+          <li><strong>U.S. pause bills (H.R. 10538, S. 5493):</strong> proposals only; neither bill has passed its chamber.</li>
+          <li>Single-sourced and vendor-reported items are flagged as such where they appear.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Thursday, November 5, 2026, plus late-breaking items from November 4–6. Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.</div>
+      <div>AI News Newsletter — November 6, 2026.<br>19 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Saturday, November 7, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Saturday, November 7, 2026</div>
+      <div class="range">Covering Friday, November 6, 2026, plus significant late-breaking items from November 5, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>GPT-6 Cyber leads a split-screen day: private AI spending soars as the Nasdaq <em>plunges</em></h1>
+      <div><p class="dek">OpenAI's 'Critical'-rated security model, investor pushback on Anthropic's IPO valuation, and a 5.5% Nasdaq rout sat alongside Google's $17B Wyoming data-center bet, a $5.3B defense deal at Shield AI, and Zipline's $1.5B raise — public-market skepticism, private-market conviction.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Caveats are marked inline. GPT-6 Cyber's benchmark figures and Kakao's speed claims are vendor-reported and unverified; items resting on a single publication's reporting are flagged as single-sourced; Anthropic's chip-team story is based on reports, and Xiaomi's robot demonstration is a vendor-produced video.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gpt6-cyber">OpenAI releases GPT-6 Cyber, a security model built to find and fix exploits</a></li>
+        <li><span class="num">02</span><a href="#anthropic-ipo">Investors push back on Anthropic's IPO valuation as AI stocks sell off</a></li>
+        <li><span class="num">03</span><a href="#google-wyoming">Google announces $17B Wyoming data center, its first in the state</a></li>
+        <li><span class="num">04</span><a href="#claude-finance">Anthropic launches Personal Finance in Claude — read-only bank linking via Plaid</a></li>
+        <li><span class="num">05</span><a href="#dropbox-tigris">Dropbox to acquire Tigris Data for $350M and launches DBX Agent Cloud</a></li>
+        <li><span class="num">06</span><a href="#shield-echodyne">Shield AI to acquire radar maker Echodyne for $5.3B at a $28.8B valuation</a></li>
+        <li><span class="num">07</span><a href="#zipline">Zipline raises $1.5B at $21.5B valuation; Walmart signs for 300 more drone sites</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES</div><h2>A 'Critical' cyber model, cheaper video, and frontier-scale open weights</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gpt6-cyber" data-cat="models">
+          <div class="meta"><span class="tag">#1 · Security Model · OpenAI</span><span>Nov 5</span><span class="caveat">Benchmarks vendor-reported — unverified</span></div>
+          <h3>OpenAI releases GPT-6 Cyber, a security model built to find and fix exploits</h3>
+          <p>OpenAI launched <strong>GPT-6 Cyber</strong>, a specialized model for authorized vulnerability investigation, reproduction, and fix verification. It scored <strong>48.5% on ExploitGym</strong> — turning known vulnerabilities into working exploits — versus 32.1% for GPT-5.6 Cyber and 42.4% for flagship GPT-6 Astra, a roughly 51% relative gain. OpenAI says researchers used it to develop <strong>948 privilege-escalation exploits in Linux</strong> and to find <strong>81 previously unknown high-severity Firefox vulnerabilities</strong>, which Mozilla has fixed. The model is classified <strong>“Critical” in cybersecurity</strong> under OpenAI's Preparedness Framework, and OpenAI says it stays within authorized scope 99% of the time (up from 95%). Access is initially limited to select customers approved for OpenAI's <strong>Daybreak Red</strong> program, via the API and Codex, expanding to all customers in the coming weeks.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI, Mozilla, Fouad Matin (OpenAI).</p>
+          <div class="sources"><a href="https://myindustrynews.net/TenantSites/1bf91c5e-dbc9-4e91-a10c-d949ca1d094d/2026/11/9bf9fbed-34a1-4927-8447-1c29c5cc0f99.html" target="_blank" rel="noopener">The Week in Tech ↗</a><a href="https://essamamdani.com/blog/ai-model-releases-november-2026" target="_blank" rel="noopener">AI Model Releases ↗</a><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-06" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+
+        <article class="story side" id="gemini-omni" data-cat="models">
+          <div class="meta"><span class="tag">#2 · Video Models · Google DeepMind</span><span>Nov 5</span></div>
+          <h3>Google ships Gemini Omni 1.2 Flash into general availability — 15-second video, 30% cheaper</h3>
+          <p>Google DeepMind made <strong>Gemini Omni 1.2 Flash</strong> generally available on the Gemini API and Gemini for Business. The video-generation model now produces native clips up to <strong>15 seconds</strong> (duration selectable in one-second increments) with multi-turn conversational editing and stronger reference following, at pricing about <strong>30% below the prior version</strong> — around $0.07 per second. Cheaper, longer-form video generation lowers the cost of AI video production for developers and businesses, and sharpens competition with OpenAI's video tools.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind, Google.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a><a href="https://www.dhaneesh.in/briefings/2026-11-06/" target="_blank" rel="noopener">Dhaneesh Briefing ↗</a></div>
+        </article>
+
+        <article class="story half" id="inkling-2" data-cat="models">
+          <div class="meta"><span class="tag">#3 · Frontier Models · Thinking Machines Lab</span><span>Nov 5</span></div>
+          <h3>Thinking Machines Lab releases Inkling 2 Small (594B parameters) on Tinker</h3>
+          <p>Thinking Machines Lab introduced <strong>Inkling 2 Small</strong>, a sparse mixture-of-experts model with <strong>594 billion total parameters and 17 billion active</strong>, with image input and a 1-million-token context window. It is available through the company's Tinker platform with closed weights; <strong>Apache 2.0 open weights were promised for the following week</strong>. The release matters because Thinking Machines — founded by former OpenAI CTO Mira Murati — is now shipping frontier-scale models, and an open-weights release of this size would be one of the largest of the year.</p>
+          <p class="players"><strong>Key players:</strong> Thinking Machines Lab, Mira Murati.</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-06" target="_blank" rel="noopener">Dosa AI Tools ↗</a><a href="https://thediaryofai.com/ai-news-20261106/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="tencent-hy4" data-cat="models">
+          <div class="meta"><span class="tag">#4 · Open Models · Tencent</span><span>Nov 4</span></div>
+          <h3>Tencent announces Hy4, its latest large language model, with computer use</h3>
+          <p>Tencent announced <strong>Hy4</strong>, its latest large language model, adding visual understanding and computer-use capabilities for the first time. Tencent positions it among the world's leading open-source AI systems, with model weights and a system card scheduled for release in the coming days. It signals China's big tech labs continuing to close the gap on frontier open-weight models while pushing into agentic computer operation.</p>
+          <p class="players"><strong>Key players:</strong> Tencent.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a><a href="https://www.linkedin.com/pulse/ai-doesnt-write-robot-works-8-hour-shift-week-clocked-rahman-qawac" target="_blank" rel="noopener">Weekly Roundup ↗</a></div>
+        </article>
+
+        <article class="story third" id="kakao-kanana" data-cat="models">
+          <div class="meta"><span class="tag">#5 · Open Source · Kakao</span><span>Nov 6</span><span class="caveat">Single-sourced · Speed claims vendor-reported</span></div>
+          <h3>Kakao open-sources Kanana-2-v-decide, a model that outputs decisions instead of text</h3>
+          <p>Kakao open-sourced <strong>Kanana-2-v-decide</strong>, an unusual multimodal model that does not generate text at all — it outputs decisions (probabilities, selections, scores). Built on Kakao's Kanana-2-v-3b with an embedding-based architecture that reuses vector representations of choices, it averages <strong>under 0.04 seconds per response</strong> on a single NVIDIA H200 GPU — claimed to be roughly <strong>43× faster than OpenAI's GPT-6 Luna</strong>. The design points to a new class of ultra-low-latency decision models for real-time systems, trading generative flexibility for speed.</p>
+          <p class="players"><strong>Key players:</strong> Kakao.</p>
+          <div class="sources"><a href="https://www.linkedin.com/pulse/ai-doesnt-write-robot-works-8-hour-shift-week-clocked-rahman-qawac" target="_blank" rel="noopener">Weekly Roundup ↗</a></div>
+        </article>
+
+        <article class="story third" id="nvidia-cosmos" data-cat="models">
+          <div class="meta"><span class="tag">#6 · World Models · Nvidia</span><span>Nov 5</span></div>
+          <h3>Nvidia releases four open Cosmos 3 Nano world models for driving and robotics</h3>
+          <p>Nvidia released four <strong>16-billion-parameter Cosmos 3 Nano</strong> checkpoints for physical-AI simulation: Transfer-Auto (multi-view driving data across weather, lighting, and time of day, up to 11 cameras plus LiDAR), Sim-Auto (streaming synchronized camera and LiDAR observations), Sim-Transfer (simulator controls plus text into photorealistic video), and Sim-Bimanual (video predicted from dual-arm robot actions). All use the <strong>OpenMDW 1.1 license</strong>, permitting commercial use, and Nvidia published a post-training recipe so teams can adapt them with their own data.</p>
+          <p class="players"><strong>Key players:</strong> Nvidia.</p>
+          <div class="sources"><a href="https://www.dhaneesh.in/briefings/2026-11-06/" target="_blank" rel="noopener">Dhaneesh Briefing ↗</a><a href="https://blog.recsys-frontier.com/en/article/ai-daily-en-2026-11-06" target="_blank" rel="noopener">Recsys Frontier ↗</a></div>
+        </article>
+
+        <article class="story third" id="plamo-3" data-cat="models">
+          <div class="meta"><span class="tag">#7 · Open Weights · Preferred Networks</span><span>Nov 5</span><span class="caveat">Single-sourced</span></div>
+          <h3>Preferred Networks releases PLaMo 3 Translate as open weights</h3>
+          <p>Japanese AI company Preferred Networks released <strong>PLaMo 3 Translate</strong>, a translation-focused language model, as open weights. A smaller, specialized open release, it adds to the growing set of openly available non-English-focused models.</p>
+          <p class="players"><strong>Key players:</strong> Preferred Networks.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH</div><h2>AI designing its own chips, and robots working a full shift</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="anthropic-chips" data-cat="research">
+          <div class="meta"><span class="tag">#8 · Silicon · Anthropic</span><span>Reported Nov 3</span><span class="caveat">Single-sourced — based on reports</span></div>
+          <h3>Anthropic assembles a 15-person chip design team, using Claude to help design custom silicon</h3>
+          <p>Reports emerged that Anthropic has assembled a <strong>15-person chip design team</strong> and is using its own Claude models to assist with custom chip engineering and design work. If confirmed, it would mark Anthropic following Google and Amazon into custom AI silicon to reduce dependence on Nvidia and control its enormous compute costs — particularly relevant given its reported <strong>~$895 billion in compute commitments</strong>. The move also showcases AI models being used to design the hardware that runs them.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://www.linkedin.com/pulse/ai-doesnt-write-robot-works-8-hour-shift-week-clocked-rahman-qawac" target="_blank" rel="noopener">Weekly Roundup ↗</a></div>
+        </article>
+
+        <article class="story half" id="xiaomi-robots" data-cat="research">
+          <div class="meta"><span class="tag">#9 · Robotics · Xiaomi</span><span>Nov 3</span><span class="caveat">Single-sourced — vendor video</span></div>
+          <h3>Xiaomi humanoid robots complete an 8-hour shift sorting auto parts</h3>
+          <p>Xiaomi published an <strong>eight-hour continuous video</strong> showing two humanoid robots sorting automotive components at its Xiaomi Auto factory. The demonstration is a concrete data point for humanoid robots moving from lab demos toward sustained factory work — though the video is vendor-produced and the task scope was narrow.</p>
+          <p class="players"><strong>Key players:</strong> Xiaomi.</p>
+          <div class="sources"><a href="https://www.linkedin.com/pulse/ai-doesnt-write-robot-works-8-hour-shift-week-clocked-rahman-qawac" target="_blank" rel="noopener">Weekly Roundup ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY NEWS -->
+    <section class="wrap section" data-section="company">
+      <div class="section-head"><div class="section-no">03 / COMPANY NEWS</div><h2>Valuation discipline, a market rout, and billions in new buildout</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-ipo" data-cat="company">
+          <div class="meta"><span class="tag">#10 · IPO · Anthropic</span><span>Nov 5–6</span></div>
+          <h3>Investors push back on Anthropic's IPO valuation as AI stocks sell off</h3>
+          <p>Potential investors told Reuters that <strong>$1.5 trillion is the high end</strong> for Anthropic's IPO valuation and want a bigger discount; Bloomberg reported figures <strong>as low as $1.1 trillion</strong>. The raise could shrink from up to $100 billion to about <strong>$80 billion</strong>, per the Wall Street Journal — though Anthropic still aims to list before Thanksgiving, with a roadshow starting next week and a listing targeted for the week of November 16. Anthropic's updated S-1 shows <strong>Q3 revenue of $17 billion</strong>, an $80B+ revenue run rate at end of October, and $895 billion in compute commitments. The haggling is the clearest sign yet that even the most anticipated AI listing faces valuation discipline after the post-midterm tech selloff.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic; Reuters; Bloomberg; Financial Times; Wall Street Journal; JPMorgan (investor briefing Nov 13).</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261106/" target="_blank" rel="noopener">The Diary of AI ↗</a><a href="https://michaelparekh.substack.com/p/ai-midterms-ai-shift-anthropics-ipo" target="_blank" rel="noopener">AI-RTZ ↗</a><a href="https://en.coinotag.com/anthropic-ipo-100-billion-raise-reduced-1-75t-valuation" target="_blank" rel="noopener">Coinotag ↗</a></div>
+        </article>
+
+        <article class="story side" id="nasdaq-selloff" data-cat="company">
+          <div class="meta"><span class="tag">#11 · Markets · Nasdaq</span><span>Nov 5</span></div>
+          <h3>Nasdaq plunges 5.5% in worst AI-stock selloff since April 2025</h3>
+          <p>The <strong>Nasdaq Composite plunged about 5.5% to 24,315</strong> in one of its worst sessions in more than a year, leaving it roughly 11.9% below its record high and in correction territory; the Nasdaq 100 lost a record <strong>$2.3 trillion in a day</strong>. The selloff came two days after US midterm elections in which voters backed data-center limits in 40 of 41 ballot measures, and Democratic lawmakers called for curbing data-center expansion. The same day, Google, Shield AI, and Zipline announced billions in AI investment — a sharp split between public-market skepticism and private-market spending.</p>
+          <p class="players"><strong>Key players:</strong> Nasdaq, Nvidia, AMD.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/05/top-tech-news-roundup-for-today-november-5-2026-googles-17b-ai-data-center-nvidia-ziplines-1-5b-funding-and-nasdaqs-5-5-plunge/" target="_blank" rel="noopener">TechStartups ↗</a><a href="https://www.my2cents.ai/news/2026-11-06/" target="_blank" rel="noopener">My2Cents AI News ↗</a></div>
+        </article>
+
+        <article class="story half" id="google-wyoming" data-cat="company">
+          <div class="meta"><span class="tag">#12 · Infrastructure · Google</span><span>Nov 5</span></div>
+          <h3>Google announces $17B Wyoming data center, its first in the state</h3>
+          <p>Google announced it will build its first Wyoming data center — a long-term, <strong>$17 billion investment</strong> in Laramie County (Cheyenne area, “Project Tembo”) with partners Tallgrass Energy, Black Hills Energy, American Electric Power, and Related Digital. Power comes in part from a contracted <strong>702 MW fuel-cell development with carbon capture and storage</strong> — described as the largest of its kind — with AEP investing ~$4 billion under a 20-year power purchase agreement; full fuel-cell operation is expected by end of 2028. Google says it will pay 100% of the power it uses, air-cool the facility to limit water use, and generate hundreds of millions in local property taxes. Separately, on November 6 Google acquired Crusoe's data-center site in southeast Wyoming (price undisclosed). The announcement landed two days after voters backed data-center limits in 40 of 41 ballot measures.</p>
+          <p class="players"><strong>Key players:</strong> Google; Tallgrass Energy; Black Hills Energy; American Electric Power; Related Digital; Bloom Energy; Crusoe.</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/" target="_blank" rel="noopener">Google Blog ↗</a><a href="https://www.unite.ai/google-plans-its-first-wyoming-data-center-with-carbon-capture-power/" target="_blank" rel="noopener">Unite.AI ↗</a><a href="https://www.securities.io/google-buys-crusoes-southeast-wyoming-data-center-site/" target="_blank" rel="noopener">Securities.io ↗</a></div>
+        </article>
+
+        <article class="story half" id="dropbox-tigris" data-cat="company">
+          <div class="meta"><span class="tag">#13 · M&amp;A · Dropbox / Tigris Data</span><span>Nov 5 · Agreement signed Nov 3</span></div>
+          <h3>Dropbox to acquire Tigris Data for $350M and launches DBX Agent Cloud</h3>
+          <p>Dropbox announced an agreement to acquire <strong>Tigris Data</strong>, a globally distributed S3-compatible object-storage platform built for AI workloads, for approximately <strong>$350 million in cash</strong> — its largest acquisition since founding in 2007 (topping HelloSign's $230M in 2019). The deal is expected to close in Q4 2026. Alongside it, Dropbox introduced <strong>DBX Agent Cloud</strong>, a new infrastructure business for companies building AI applications, starting with standalone S3-compatible object storage and expanding to filesystem and content-processing capabilities. Dropbox also reported Q3 revenue of $637.3 million, up 0.5% year over year. The move pivots Dropbox from file sharing into AI infrastructure, monetizing its storage expertise.</p>
+          <p class="players"><strong>Key players:</strong> Dropbox; Tigris Data (CEO Ovais Tariq); Drew Houston.</p>
+          <div class="sources"><a href="https://www.businesswire.com/news/home/20261105521246/en/Dropbox-Announces-Third-Quarter-2026-Results" target="_blank" rel="noopener">Business Wire ↗</a><a href="https://www.techtimes.com/articles/330167/20261106/dropbox-moved-most-user-data-off-amazon-s3-now-agrees-buy-storage-startup-tigris-350m.htm" target="_blank" rel="noopener">TechTimes ↗</a><a href="https://www.unite.ai/dropbox-signs-tigris-deal-to-enter-ai-infrastructure/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="shield-echodyne" data-cat="company">
+          <div class="meta"><span class="tag">#14 · Defense / M&amp;A · Shield AI / Echodyne</span><span>Nov 5</span></div>
+          <h3>Shield AI to acquire radar maker Echodyne for $5.3B, raises $2.5B at $28.8B valuation</h3>
+          <p>Defense autonomy company Shield AI entered a definitive agreement to acquire <strong>Echodyne</strong>, maker of metamaterial electronically scanned array (MESA) radars used in counter-drone and security systems in 40+ countries, in a transaction valued at <strong>$5.3 billion</strong> ($4.8B at closing plus up to $500M in performance earn-outs), expected to close in early 2027. Shield is raising <strong>$2.5 billion</strong> to fund it: $1B Series H at a <strong>$28.8B post-money valuation</strong> (more than double its $12.7B March valuation), $1B structured equity from Blackstone-managed funds, and $500M in debt led by JPMorgan Chase. The deal fuses Shield's Hivemind autonomy software with radar sensing, deepening its bet on autonomous defense systems.</p>
+          <p class="players"><strong>Key players:</strong> Shield AI (CEO Gary Steele); Echodyne (CEO Eben Frankenberg); Blackstone; JPMorgan Chase.</p>
+          <div class="sources"><a href="https://shield.ai/shield-to-acquire-echodyne-in-a-transaction-valued-at-5-3-billion-and-raise-2-5-billion-at-a-28-8-billion-valuation/" target="_blank" rel="noopener">Shield AI ↗</a><a href="https://www.janes.com/defence-intelligence-insights/defence-news/c4isr/shield-ai-finalises-agreement-to-acquire-echodyne" target="_blank" rel="noopener">Janes ↗</a><a href="https://dealroom.co/news/170103-shield-ai-to-buy-echodyne-for-5-3b-and-raise-2-5b-at-a-28-8b-valuation/" target="_blank" rel="noopener">Dealroom ↗</a></div>
+        </article>
+
+        <article class="story half" id="microsoft-oracle" data-cat="company">
+          <div class="meta"><span class="tag">#15 · Cloud · Microsoft / Oracle</span><span>Reported Nov 5–6</span></div>
+          <h3>Microsoft winds down its Oracle AI compute rental deal</h3>
+          <p>Microsoft is switching off AI computing it rented from Oracle under a 2023 deal (originally for Bing), declining to renew it, Bloomberg reported. The servers ran older-generation Nvidia chips that no longer meet Microsoft's requirements; Oracle said demand for its AI infrastructure, including older GPUs, remains strong. The deal size was not disclosed, but the move signals hyperscalers pruning legacy capacity even as they commit tens of billions to newer infrastructure — Nscale's filing puts its Microsoft contracts at up to <strong>~$43.8 billion</strong>, roughly half of the $80B+ Microsoft has committed to outside capacity.</p>
+          <p class="players"><strong>Key players:</strong> Microsoft, Oracle, Bloomberg, Nscale.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261106/" target="_blank" rel="noopener">The Diary of AI ↗</a><a href="https://en.coinotag.com/anthropic-ipo-100-billion-raise-reduced-1-75t-valuation" target="_blank" rel="noopener">Coinotag ↗</a></div>
+        </article>
+
+        <article class="story half" id="agility-listing" data-cat="company">
+          <div class="meta"><span class="tag">#16 · Robotics / Markets · Agility Robotics</span><span>Nov 5 · Merger completed Nov 4</span></div>
+          <h3>Agility Robotics becomes first pure-play humanoid robot maker to list in the US</h3>
+          <p>Agility Robotics began trading on Nasdaq under ticker <strong>AGLT</strong> after completing its merger with Churchill Capital Corp XI — the first dedicated humanoid robot maker to list in the US. The deal values Agility's existing equity at ~$2.5 billion and provides ~$465 million in gross capital. Scrutiny is immediate: Agility reported just <strong>$174,000 in revenue</strong> (mostly from related parties) and a <strong>$362 million loss</strong> in the first half of 2026, though it cites $300 million in planned contracts from 30 customers for Digit 5, contingent on throughput, uptime, and placement targets.</p>
+          <p class="players"><strong>Key players:</strong> Agility Robotics; Churchill Capital Corp XI; Nvidia (backer).</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/05/top-tech-news-roundup-for-today-november-5-2026-googles-17b-ai-data-center-nvidia-ziplines-1-5b-funding-and-nasdaqs-5-5-plunge/" target="_blank" rel="noopener">TechStartups ↗</a><a href="https://infotechlead.com/analytics/tech-ma-deals-shield-echodyne-agility-robotics-meta-conductor-99451" target="_blank" rel="noopener">InfotechLead ↗</a><a href="https://www.my2cents.ai/news/2026-11-06/" target="_blank" rel="noopener">My2Cents AI News ↗</a></div>
+        </article>
+
+        <article class="story half" id="google-cncf" data-cat="company">
+          <div class="meta"><span class="tag">#17 · Open Source · Google / CNCF</span><span>Nov 6</span><span class="caveat">Single-sourced</span></div>
+          <h3>Google donates three agent projects to the CNCF</h3>
+          <p>Google donated three open-source projects — <strong>Agent Substrate, gVisor, and OpenRL</strong> — to the Cloud Native Computing Foundation after their acceptance into the CNCF Sandbox. The move places key agent-infrastructure building blocks under neutral governance, a notable step as agentic AI systems move toward standardized, cloud-native deployment.</p>
+          <p class="players"><strong>Key players:</strong> Google, CNCF.</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-06" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING</div><h2>Drones, defense, and a valuation reality check for OpenAI</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="zipline" data-cat="funding">
+          <div class="meta"><span class="tag">#18 · Venture · Zipline</span><span>Nov 5</span></div>
+          <h3>Zipline raises $1.5B at $21.5B valuation; Walmart signs for 300 more drone sites</h3>
+          <p>Autonomous delivery company Zipline raised <strong>$1.5 billion at a $21.5 billion post-money valuation</strong> — nearly triple its $7.6 billion valuation in January 2026 — led by Paradigm, WCM Investment Management, and Layer Global, with Uber, Tiger Global, J.P. Morgan, ARK Invest, Fidelity, and Salesforce Ventures participating. The same day, <strong>Walmart</strong> signed a national multi-year agreement to launch <strong>300 additional Zipline drone-delivery sites</strong>. Zipline says it has flown 150 million commercial autonomous miles and made over a million deliveries in Dallas–Fort Worth in 2026; Uber is targeting one million Zipline deliveries a day by 2029, per Zipline. The capital funds US manufacturing, hiring, and a nationwide drone-delivery network.</p>
+          <p class="players"><strong>Key players:</strong> Zipline; Walmart; Uber; Paradigm; WCM Investment Management; Layer Global.</p>
+          <div class="sources"><a href="https://www.zipline.com/newsroom/zipline-raises-1-5-billion-to-build-nationwide-drone-delivery-network" target="_blank" rel="noopener">Zipline ↗</a><a href="https://srnnews.com/drone-delivery-startup-zipline-valued-at-21-5-billion-in-latest-funding-round/" target="_blank" rel="noopener">Reuters via SRN News ↗</a><a href="https://news.crunchbase.com/venture/biggest-startup-rounds-ai-defense-space-tech-shield-zipline/" target="_blank" rel="noopener">Crunchbase News ↗</a></div>
+        </article>
+
+        <article class="story side" id="openai-round" data-cat="funding">
+          <div class="meta"><span class="tag">#19 · Private Round · OpenAI</span><span>Reported week of Nov 6</span><span class="caveat">Single-sourced via FT reporting</span></div>
+          <h3>OpenAI's private round reportedly reaches ~$11B at $1.25T valuation, target cut</h3>
+          <p>OpenAI has reportedly secured about <strong>$11 billion of commitments</strong> so far in its private round at a <strong>$1.25 trillion valuation</strong> — less than half its $30 billion target — and has cut the target to about <strong>$20 billion</strong>, per the Financial Times. The shortfall, alongside Anthropic's IPO haggling, suggests even the AI leaders face a more valuation-sensitive funding environment ahead of OpenAI's planned mega-IPO next year.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://michaelparekh.substack.com/p/ai-midterms-ai-shift-anthropics-ipo" target="_blank" rel="noopener">AI-RTZ, citing FT ↗</a></div>
+        </article>
+
+        <article class="story full" id="humble-robotics" data-cat="funding">
+          <div class="meta"><span class="tag">#20 · Venture · Humble Robotics</span><span>Nov 6</span><span class="caveat">Single-sourced</span></div>
+          <h3>Humble Robotics raises $51M Series A for cabless autonomous electric trucks</h3>
+          <p>Humble Robotics raised a <strong>$51 million Series A</strong> for cabless autonomous electric trucks — a smaller but notable funding in autonomous freight. Details on investors and terms were thin in available coverage.</p>
+          <p class="players"><strong>Key players:</strong> Humble Robotics.</p>
+          <div class="sources"><a href="https://www.my2cents.ai/news/2026-11-06/" target="_blank" rel="noopener">My2Cents AI News ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">05 / PRODUCTS</div><h2>Claude meets your bank account; agents become coworkers</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="claude-finance" data-cat="products">
+          <div class="meta"><span class="tag">#21 · Personal Finance · Anthropic / Plaid</span><span>Nov 5</span></div>
+          <h3>Anthropic launches Personal Finance in Claude — read-only bank linking via Plaid (US beta)</h3>
+          <p>Anthropic launched <strong>Personal Finance in Claude</strong>, a beta that lets US subscribers on Pro ($20/mo), Max, and Ultra plans link bank, card, loan, and investment accounts through <strong>Plaid</strong> and ask Claude questions about their own money in plain language — spending, bills, savings, cash flow. Access is strictly <strong>read-only</strong>: Claude cannot move, manage, or invest money, and the feature is not designed to give investment advice. It reads balances, credit limits, and up to <strong>24 months of transactions for up to 16 linked banks</strong>, and chats in the Personal Finance hub are not used for model training. The launch follows OpenAI's account-connected finance tools via Plaid in May and marks AI assistants' push into personal finance — with the privacy stakes that come with it.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic, Plaid.</p>
+          <div class="sources"><a href="https://financefeeds.com/anthropic-partners-with-plaid-to-bring-personal-financial-data-into-claude/" target="_blank" rel="noopener">FinanceFeeds ↗</a><a href="https://www.unite.ai/anthropic-introduces-read-only-personal-finance-beta-in-claude/" target="_blank" rel="noopener">Unite.AI ↗</a><a href="https://madrobot.blog/2026/11/05/claude-personal-finance-bank-accounts-plaid/" target="_blank" rel="noopener">MadRobot ↗</a></div>
+        </article>
+
+        <article class="story side" id="perplexity-teammates" data-cat="products">
+          <div class="meta"><span class="tag">#22 · Agents · Perplexity</span><span>Nov 5</span></div>
+          <h3>Perplexity launches Teammates, always-on AI work agents ($200/mo Max plan)</h3>
+          <p>Perplexity launched <strong>Teammates</strong>, collaborative AI agents that run continuously in a workspace, each with its own computing environment, files, and memory — taking on goals rather than single instructions, working across projects, and able to take over desktop control via Perplexity Computer. The feature requires the <strong>$200/month Max plan</strong> and is web-only at launch. CEO Aravind Srinivas says ~10,000 such agents already work on Perplexity's internal workspace. Perplexity also cut Agent API search costs by up to 90%. Teammates push the “agent as coworker” model further than rivals' chatbots, but the steep price limits it to power users for now.</p>
+          <p class="players"><strong>Key players:</strong> Perplexity, Aravind Srinivas.</p>
+          <div class="sources"><a href="https://www.dhaneesh.in/briefings/2026-11-06/" target="_blank" rel="noopener">Dhaneesh Briefing ↗</a><a href="https://blog.recsys-frontier.com/en/article/ai-daily-en-2026-11-06" target="_blank" rel="noopener">Recsys Frontier ↗</a><a href="https://www.eyssen.ai/blog/latest-ai-news-35/latest-ai-news-november-5-2026-484" target="_blank" rel="noopener">eYssen AI ↗</a></div>
+        </article>
+
+        <article class="story third" id="airbnb-agent" data-cat="products">
+          <div class="meta"><span class="tag">#23 · Travel · Airbnb</span><span>Nov 5</span><span class="caveat">Single-sourced</span></div>
+          <h3>Airbnb says its AI travel agent will launch in the first half of 2027</h3>
+          <p>Airbnb announced its <strong>AI travel agent will launch in the first half of 2027</strong>, CEO Brian Chesky told analysts Thursday. The agent is Airbnb's bid to move from search-and-book listings toward conversational, agentic trip planning — a space where OpenAI, Google, and Perplexity are also racing.</p>
+          <p class="players"><strong>Key players:</strong> Airbnb, Brian Chesky.</p>
+          <div class="sources"><a href="https://www.dhaneesh.in/briefings/2026-11-06/" target="_blank" rel="noopener">Dhaneesh Briefing ↗</a></div>
+        </article>
+
+        <article class="story third" id="world-labs-frameboy" data-cat="products">
+          <div class="meta"><span class="tag">#24 · World Models · World Labs</span><span>Nov 6</span><span class="caveat">Single-sourced</span></div>
+          <h3>World Labs releases Frameboy — real-time roaming of its Atlas world model in the browser</h3>
+          <p>World Labs released <strong>Frameboy</strong>, which enables real-time roaming of its Atlas world model in the browser. The tool makes explorable AI-generated 3D worlds accessible without special hardware, advancing the practical use of world models beyond research demos.</p>
+          <p class="players"><strong>Key players:</strong> World Labs.</p>
+          <div class="sources"><a href="https://blog.recsys-frontier.com/en/article/ai-daily-en-2026-11-06" target="_blank" rel="noopener">Recsys Frontier ↗</a></div>
+        </article>
+
+        <article class="story third" id="mistral-studio" data-cat="products">
+          <div class="meta"><span class="tag">#25 · Enterprise Agents · Mistral AI</span><span>Nov 5</span><span class="caveat">Single-sourced</span></div>
+          <h3>Mistral adds managed agents and workflow builder to Mistral Studio (public preview)</h3>
+          <p>Mistral AI added a <strong>managed agent and workflow builder</strong> to Mistral Studio in public preview, combining sandboxed code execution with human-approval workflows, MCP support, and OpenTelemetry tracing. Pricing, limits, and adoption figures remain undisclosed. It positions Mistral's European platform for governed enterprise agent deployments.</p>
+          <p class="players"><strong>Key players:</strong> Mistral AI.</p>
+          <div class="sources"><a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=21015" target="_blank" rel="noopener">Kim's Daily Briefing ↗</a></div>
+        </article>
+
+        <article class="story full" id="meta-muse-voice" data-cat="products">
+          <div class="meta"><span class="tag">#26 · Consumer AI · Meta</span><span>Nov 6</span><span class="caveat">Single-sourced</span></div>
+          <h3>Meta rolls out Muse Voice and expressive avatars in the US, adds Custom Spaces</h3>
+          <p>Meta rolled out <strong>Muse Voice and expressive avatars</strong> in the US, then added <strong>Custom Spaces</strong> — expanding its AI assistant's voice and personalization features. Details were thin in available coverage.</p>
+          <p class="players"><strong>Key players:</strong> Meta.</p>
+          <div class="sources"><a href="https://thediaryofai.com/ai-news-20261106/" target="_blank" rel="noopener">The Diary of AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">06 / POLICY &amp; SAFETY</div><h2>Data-center backlash becomes the story</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="openai-compact" data-cat="policy">
+          <div class="meta"><span class="tag">#27 · Policy · OpenAI</span><span>Nov 5</span></div>
+          <h3>OpenAI publishes National Community Compact and Compute Campus Policy Blueprint</h3>
+          <p>OpenAI published a <strong>National Community Compact</strong> and a <strong>Compute Campus Policy Blueprint</strong>, pledging that at future campuses it owns and operates it will <strong>pay the full cost of electricity and grid infrastructure</strong> (with financial assurances before major spending), publish construction plans and independent noise studies, avoid NDAs with public officials, and give each campus its own local compact shaped by residents, with an annual public report. The blueprint asks lawmakers to make similar rules apply industry-wide. It builds on the Grid Protectors Program (Nov 2), under which Georgia Power can cut up to 1,000 MW at OpenAI's planned Effingham County, Georgia campus during peak demand. Notably, the compact <strong>does not cover partner-built sites such as Oracle's</strong>, which supply much of OpenAI's compute.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI, Georgia Power.</p>
+          <div class="sources"><a href="https://pivotnews.ai/five/openai-pledges-full-power-costs-at-the-data-centers-it-owns" target="_blank" rel="noopener">Pivot News ↗</a><a href="https://www.inc.com/amy-zwagerman/openai-data-center-rebrand-voter-backlash/91432154" target="_blank" rel="noopener">Inc. ↗</a><a href="https://cellcog.ai/blog/openai-grid-protectors/" target="_blank" rel="noopener">Cellcog ↗</a></div>
+        </article>
+
+        <article class="story half" id="voter-backlash" data-cat="policy">
+          <div class="meta"><span class="tag">#28 · Politics · U.S. Elections</span><span>Nov 3 election · Reported Nov 5–6</span></div>
+          <h3>Voters back data-center limits in 40 of 41 ballot measures; 57% say AI will do more harm than good</h3>
+          <p>In the November 3 US elections, voters backed limits on data-center development in <strong>40 of 41 local ballot measures</strong> (33 restrictions passed by the morning after, with more projected), and 7 pro-development plans failed. Exit polls found <strong>57% of voters believe AI will do more harm than good</strong> for society. The backlash is already reshaping AI infrastructure politics: it prompted OpenAI's community compact, Google's community commitments in Wyoming, and calls from Democratic lawmakers (including Texas governor-elect Gina Hinojosa) to curb data-center expansion. It is the clearest political headwind yet for the AI buildout.</p>
+          <p class="players"><strong>Key players:</strong> U.S. voters; OpenAI; Google; Gina Hinojosa.</p>
+          <div class="sources"><a href="https://www.inc.com/amy-zwagerman/openai-data-center-rebrand-voter-backlash/91432154" target="_blank" rel="noopener">Inc. ↗</a><a href="https://aiagentupdate.com/post/google-wyoming-17bn-datacenter-2026-11-06" target="_blank" rel="noopener">AI Agent Update ↗</a><a href="https://www.binance.com/en-KZ/square/post/11-07-2026-binance-market-update-anthropic-targets-up-to-1-75t-ipo-valuation-as-december-fed-hike-odds-rise-to-78-385691161684987" target="_blank" rel="noopener">Binance Market Update ↗</a></div>
+        </article>
+
+        <article class="story half" id="gpt6-gating" data-cat="policy">
+          <div class="meta"><span class="tag">#29 · Safety · OpenAI</span><span>Nov 5</span></div>
+          <h3>OpenAI's GPT-6 Cyber gated behind Daybreak Red approval — a safety-gating precedent</h3>
+          <p>OpenAI is limiting GPT-6 Cyber — its most capable offensive-security model, rated “Critical” under its Preparedness Framework — to customers approved for its <strong>Daybreak Red</strong> program for authorized security work, rather than releasing it broadly. The gated rollout is a notable test of whether frontier labs can ship dual-use capabilities responsibly: the same model that finds real vulnerabilities could be misused outside authorized testing, and OpenAI is betting access controls plus scope-adherence training (<strong>99% in-bounds</strong>) are the answer.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://news-insight-ai.web.app/en/news/20261106_ai-news-daily" target="_blank" rel="noopener">AI News Briefing ↗</a><a href="https://myindustrynews.net/TenantSites/1bf91c5e-dbc9-4e91-a10c-d949ca1d094d/2026/11/9bf9fbed-34a1-4927-8447-1c29c5cc0f99.html" target="_blank" rel="noopener">The Week in Tech ↗</a></div>
+        </article>
+
+        <article class="story half" id="browsesafe" data-cat="policy">
+          <div class="meta"><span class="tag">#30 · Safety Research · Perplexity</span><span>Nov 2 · Noted in Nov 6 coverage</span><span class="caveat">Single-sourced</span></div>
+          <h3>Perplexity releases BrowseSafe++ benchmark against prompt injection</h3>
+          <p>The Perplexity Secure Intelligence Institute released <strong>BrowseSafe++</strong>, a successor to its BrowseSafe benchmark (December 2025) — an open benchmark dedicated to <strong>indirect prompt injection</strong> targeting agents that browse the web — along with BrowseSafe-Guard detectors. As agents gain the ability to act on the web, indirect prompt injection — malicious instructions hidden in webpages — is a leading attack vector, and open benchmarks help the field measure defenses.</p>
+          <p class="players"><strong>Key players:</strong> Perplexity.</p>
+          <div class="sources"><a href="https://blog.jls42.org/en/news/ia-actualites-02-nov-2026" target="_blank" rel="noopener">JLS42 AI News ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Friday, November 6, 2026, plus significant late-breaking items from November 5. November 5 carried most of the week's major news; November 6 itself was comparatively quiet. No major research papers broke out as headline news in this window — the period was dominated by product, funding, and market stories.</li>
+          <li><strong>GPT-6 Cyber:</strong> the ExploitGym score (48.5%) and 99% scope-adherence figure are vendor-reported by OpenAI; no independent verification was available in this window. The “Critical” rating is OpenAI's own classification under its Preparedness Framework.</li>
+          <li><strong>Kakao Kanana-2-v-decide:</strong> single-sourced, and the ~43× speed claim versus GPT-6 Luna is vendor-reported — treat as unverified.</li>
+          <li><strong>Single-sourced items</strong> are flagged inline: PLaMo 3 Translate, Anthropic's chip team (based on reports), Xiaomi's robot shift (vendor-produced video), Google's CNCF donation, OpenAI's private round (via FT reporting), Humble Robotics, Airbnb's agent date, World Labs Frameboy, Mistral Studio, Meta's Muse Voice, and BrowseSafe++.</li>
+          <li><strong>OpenAI's community compact</strong> applies only to campuses OpenAI owns and operates — not partner-built sites such as Oracle's, which supply much of its compute.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Friday, November 6, 2026, plus significant late-breaking items from November 5, 2026. Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.</div>
+      <div>AI News Newsletter — November 7, 2026.<br>30 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News Newsletter — Monday, November 9, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News Newsletter — Monday, November 9, 2026</div>
+      <div class="range">Covering Sunday, November 8, 2026, plus significant late-breaking items from November 7–9, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Siri wants to be an <em>agent</em> — and music's biggest names take Suno to court</h1>
+      <div><p class="dek">Apple CEO John Ternus is pressing to turn Siri into a goal-chasing AI agent; Elvis Presley's estate and Eminem's publisher sue Suno over AI training and voice imitation; fal raises $1.3 billion as AI infrastructure money keeps flowing.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Caveats are marked inline. The Apple Siri story is single-sourced from Bloomberg's Mark Gurman, based on unnamed sources, and Apple has not confirmed any timeline; the Suno lawsuits are allegations in filed complaints, not court findings; Anthropic's IPO valuation cut reflects investor expectations reported by Reuters; Groq's $8 billion valuation is a reported financing round, not confirmed; and the TCSExam and PSI proof claims are unreviewed research. See the full caveats at the end of this edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#apple-siri-agentic">Apple races to make Siri agentic</a></li>
+        <li><span class="num">02</span><a href="#suno-lawsuits">Elvis and Eminem rights holders sue Suno</a></li>
+        <li><span class="num">03</span><a href="#fal-funding">fal raises $1.3B at a $16B valuation</a></li>
+        <li><span class="num">04</span><a href="#anthropic-ipo">Anthropic IPO expectations cut below $1.5T</a></li>
+        <li><span class="num">05</span><a href="#claude-code-leak">Claude Code prompts leaked 2,539 secrets to public GitHub</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORY -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORY</div><h2>The lead story</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="apple-siri-agentic" data-cat="company">
+          <div class="meta"><span class="tag">Top Story · Apple</span><span>Nov 8</span><span class="caveat">Single-sourced — Gurman / Bloomberg, unnamed sources; Apple has not confirmed</span></div>
+          <h3>Apple races to make Siri agentic</h3>
+          <p>Apple CEO <strong>John Ternus</strong> has pressed software chief <strong>Craig Federighi</strong> to speed up Siri's roadmap and turn it into an assistant that works like an agent — software that follows a goal and keeps working on it without the user starting each step — according to Bloomberg's <strong>Mark Gurman</strong> in his Power On newsletter on Sunday, November 8. The goal is to rival OpenAI's Dots, Meta's Muse and Grok. Two upgrades are expected in the coming months: finer control over Apple's own apps in <strong>iOS 27.3</strong>, due in December (editing photos, organising Safari tabs), and third-party app integration in spring 2027, which The Verge says would let Siri place a Grubhub order or book an OpenTable reservation. Gurman believes a fully agentic Siri could arrive as early as 2027.</p>
+          <p>Apple has not confirmed the report or any timeline, and some coverage has urged caution — AppleInsider said the account should be taken with a grain of salt. Siri AI shipped in beta with iOS 27 on September 14, and Apple removed the waitlist on November 5. It matters because Siri is the assistant on more than a billion devices: if Apple turns it into a real agent, agentic AI goes mainstream overnight — but Apple is visibly playing catch-up to rivals that already ship agents.</p>
+          <p class="players"><strong>Key players:</strong> Apple, John Ternus, Craig Federighi, Mark Gurman (Bloomberg).</p>
+          <div class="sources"><a href="https://blogs.techbytes.app/posts/apple-is-racing-to-make-siri-more-agentic/" target="_blank" rel="noopener">The Verge via TechBytes ↗</a><a href="https://techworthit.com/news/apple-reportedly-wants-siri-to-act-more-like-an-ai-agent" target="_blank" rel="noopener">TechWorthIt ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES</div><h2>A million-token multimodal model and a small open reasoning model</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="ling-flash" data-cat="models">
+          <div class="meta"><span class="tag">#1 · Multimodal · Ant Group</span><span>Nov 8</span></div>
+          <h3>Ant Group ships Ling-3.2-flash with a 1M-token window</h3>
+          <p>Ant Group released <strong>Ling-3.2-flash</strong>, a native multimodal mixture-of-experts model with <strong>560 billion total parameters and 25 billion active</strong>, a <strong>1-million-token context window</strong>, and text, image and video input. Chat and OpenAI/Anthropic-compatible APIs are live and free for two weeks; the weights stay closed. It matters as another frontier-scale Chinese model aimed squarely at developers building multimodal agents, and as a sign that 1M-token context is becoming table stakes.</p>
+          <p class="players"><strong>Key players:</strong> Ant Group.</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-08" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+
+        <article class="story side" id="twil-8b" data-cat="models">
+          <div class="meta"><span class="tag">#2 · Open Weights · webAI</span><span>Nov 8</span><span class="caveat">Headline benchmark lab-reported — not independently verified</span></div>
+          <h3>webAI releases TwIL-8B, an open reasoning model</h3>
+          <p>webAI released <strong>TwIL-8B</strong>, an 8.79-billion-parameter dense reasoning model post-trained from IBM Granite 4.2 8B for math, code and instruction following, with balanced and verbose variants and a 131K-token context. Weights are published under the webAI Non-Commercial License; lab-reported MATH-500 is 98.2 on the balanced variant. It matters as a capable small open model for on-device and cost-sensitive reasoning — though the headline benchmark is lab-reported, not independently verified.</p>
+          <p class="players"><strong>Key players:</strong> webAI, IBM.</p>
+          <div class="sources"><a href="https://www.llm-releases.com/changelog" target="_blank" rel="noopener">LLM Releases ↗</a></div>
+        </article>
+
+        <article class="story full" id="kimi-bedrock" data-cat="models">
+          <div class="meta"><span class="tag">#3 · Distribution · Moonshot AI / AWS</span><span>Nov 6</span></div>
+          <h3>Moonshot's Kimi K3.1 Pro Highspeed lands on AWS Bedrock</h3>
+          <p>AWS added Moonshot AI's open-weight <strong>Kimi K3.1 Pro Highspeed</strong> to <strong>Amazon Bedrock</strong>, bringing a leading Chinese open-weight model into a global hyperscaler's managed catalog. It matters because Bedrock distribution puts a Chinese open model one click away for enterprise AWS customers — a notable step in open-weight models going mainstream through the big clouds.</p>
+          <p class="players"><strong>Key players:</strong> Moonshot AI, AWS.</p>
+          <div class="sources"><a href="https://www.aoyii.com/ai-daily-20261108/" target="_blank" rel="noopener">AOYii AI Daily ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH</div><h2>Machine-checked proofs, and alignment for a new kind of model</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="tcsexam" data-cat="research">
+          <div class="meta"><span class="tag">#4 · AI for Science · OpenAI / Moonshot AI</span><span>Nov 5 (arXiv), reported Nov 8</span><span class="caveat">Unreviewed research</span></div>
+          <h3>GPT-6 Astra proves 70% of research theorems in Lean</h3>
+          <p>A benchmark paper posted to arXiv on November 5, <strong>TCSExam</strong>, reports OpenAI's <strong>GPT-6 Astra</strong> producing complete, machine-checked Lean proofs for <strong>70.0% of 20 research theorems</strong> in theoretical computer science — though it resolved none of the 30 open conjectures in the benchmark. Moonshot's Kimi K3.1 Pro came second at 38.3%, and the other six agents tested reached at most 11.7%. On the paper's combined TCSExam Index, GPT-6 Astra scores 71.9 and Kimi K3.1 Pro 57.4. It matters as a concrete, machine-checked measure of AI capability on real research mathematics — and as a gap: proving known theorems is not the same as cracking open ones.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI, Moonshot AI.</p>
+          <div class="sources"><a href="https://fourweekmba.com/ai-science-week-3-labs-models-had-lean-proofs-2-teased/" target="_blank" rel="noopener">FourWeekMBA ↗</a></div>
+        </article>
+
+        <article class="story side" id="psi-proof" data-cat="research">
+          <div class="meta"><span class="tag">#5 · AI for Science · Physical Superintelligence / Anthropic</span><span>Nov 6–7, reported Nov 8</span><span class="caveat">Unreviewed · Model unidentified</span></div>
+          <h3>A claimed proof of the Aaronson–Ambainis conjecture — with an unidentified Anthropic model</h3>
+          <p><strong>Physical Superintelligence (PSI)</strong> says instances of a non-public Anthropic model produced a complete proof of the <strong>Aaronson–Ambainis conjecture</strong>, accepted by the Lean proof assistant, during the third day of a run. The paper has not been published in a peer-reviewed journal, and Business Insider reported on November 7 that it is not clear which unreleased Anthropic model was used, with no public assessment yet from Scott Aaronson or Andris Ambainis. It matters if it holds up — a machine-checked proof of a named open conjecture would be a landmark for AI in mathematics — but the claim currently rests on the claimant's own account.</p>
+          <p class="players"><strong>Key players:</strong> Physical Superintelligence, Anthropic.</p>
+          <div class="sources"><a href="https://fourweekmba.com/ai-science-week-3-labs-models-had-lean-proofs-2-teased/" target="_blank" rel="noopener">FourWeekMBA ↗</a></div>
+        </article>
+
+        <article class="story full" id="pbpo" data-cat="research">
+          <div class="meta"><span class="tag">#6 · Alignment · UIUC</span><span>Nov 8</span><span class="caveat">New technique · Preprint</span></div>
+          <h3>PBPO brings RLHF-style alignment to diffusion language models</h3>
+          <p>UIUC researchers introduced <strong>PBPO (Prefix-Block Policy Optimization)</strong>, a new technique enabling RLHF-style training for non-autoregressive diffusion language models — a major step toward bringing alignment methods to an entirely different class of generative AI. Diffusion LLMs generate text in parallel rather than token-by-token, and existing alignment recipes built for autoregressive models did not transfer cleanly. It matters because diffusion models are gaining ground as a faster alternative architecture, and they need the same safety-tuning toolkit as today's mainstream models.</p>
+          <p class="players"><strong>Key players:</strong> UIUC researchers.</p>
+          <div class="sources"><a href="https://buttondown.com/agent-k/archive/llm-daily-november-08-2026/" target="_blank" rel="noopener">LLM Daily ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY NEWS -->
+    <section class="wrap section" data-section="company">
+      <div class="section-head"><div class="section-no">03 / COMPANY NEWS</div><h2>A CFO moves, a security agent ships, and agents take the browser</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="fireworks-wehner" data-cat="company">
+          <div class="meta"><span class="tag">#7 · Executive Move · Fireworks / Meta</span><span>Nov 8</span></div>
+          <h3>Fireworks hires Meta's finance chief Dave Wehner as CFO</h3>
+          <p><strong>Dave Wehner</strong>, who spent eight years as Meta's finance chief, is leaving the company to become CFO of <strong>Fireworks</strong>, the AI inference startup. Fireworks was valued at $17.5 billion in July and is in early talks about another funding round. It matters as a signal of where senior talent and capital are flowing: from Big Tech finance leadership into AI infrastructure startups.</p>
+          <p class="players"><strong>Key players:</strong> Dave Wehner, Fireworks, Meta.</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-08" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+
+        <article class="story side" id="codemender" data-cat="company">
+          <div class="meta"><span class="tag">#8 · Security · Google DeepMind</span><span>Nov 9 · Late-breaking</span><span class="caveat">Company-reported</span></div>
+          <h3>Google DeepMind introduces CodeMender, an AI agent that automates security fixes</h3>
+          <p>Google DeepMind introduced <strong>CodeMender</strong>, an AI agent that can automatically detect and fix security vulnerabilities in software code. It analyses source code, identifies flaws, and generates and verifies patches without developer input. It matters as the next step in the security-agent race — days after OpenAI launched its GPT-6 Cyber model — with agents moving from finding bugs to shipping the fixes themselves.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind.</p>
+          <div class="sources"><a href="https://turbo.gadgets360.com/en/ai/google-deepmind-codemender-ai-agent-automate-code-security-fixes-introduced-9410168?utm_source=website&utm_medium=content&utm_campaign=gadgets360turbo" target="_blank" rel="noopener">Gadgets 360 ↗</a></div>
+        </article>
+
+        <article class="story half" id="opencode-browse" data-cat="company">
+          <div class="meta"><span class="tag">#9 · Developer Tools · OpenCode</span><span>Nov 6, reported Nov 8</span></div>
+          <h3>OpenCode Browse lets an agent drive your real browser</h3>
+          <p>OpenCode said on November 6 that <strong>OpenCode Browse</strong> is available. It lets an agent control the user's own browser, with their open tabs, logins and extensions, working through MCP and a Chrome extension. It matters because browser control is the missing piece for agents that act on the real web — and because it runs in the user's own logged-in browser, it raises the stakes on what an agent can do, and get wrong, with live credentials.</p>
+          <p class="players"><strong>Key players:</strong> OpenCode.</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-08" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+
+        <article class="story half" id="apple-homeview" data-cat="company">
+          <div class="meta"><span class="tag">#10 · Products · Apple</span><span>Nov 8</span><span class="caveat">Single-sourced</span></div>
+          <h3>Apple HomeView may add chatbot support, per iOS 27.3 beta code</h3>
+          <p>Findings in iOS 27.3 beta code suggest Apple <strong>HomeView</strong> may introduce chatbot support, according to The Verge. It matters as a small but telling sign of Apple's plan to put conversational AI across its surfaces — the home app joining Siri as a place where Apple wants an assistant, not just a control panel.</p>
+          <p class="players"><strong>Key players:</strong> Apple.</p>
+          <div class="sources"><a href="https://aitoolly.com/ai-news/2026-11-09" target="_blank" rel="noopener">AIToolly ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING</div><h2>Infrastructure money keeps flowing; IPO hopes cool</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="fal-funding" data-cat="funding">
+          <div class="meta"><span class="tag">#11 · Funding · fal</span><span>Nov 8</span></div>
+          <h3>fal raises $1.3B at a $16B valuation</h3>
+          <p><strong>Fal</strong>, a San Francisco startup running video, image and audio models, raised <strong>$1.3 billion at a $16 billion valuation</strong>. Bessemer Venture Partners led, with Nvidia, Sound Ventures and T. Rowe Price joining. It matters as one of the largest AI infrastructure raises of the year — and as evidence that investors are still paying up for the companies that serve models to developers, even as public AI stocks wobble.</p>
+          <p class="players"><strong>Key players:</strong> fal, Bessemer Venture Partners, Nvidia, Sound Ventures, T. Rowe Price.</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-08" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+
+        <article class="story side" id="groq-round" data-cat="funding">
+          <div class="meta"><span class="tag">#12 · Funding · Groq</span><span>Nov 8</span><span class="caveat">Reported round — not confirmed</span></div>
+          <h3>Nvidia-backed Groq targets $8B valuation in a new funding round</h3>
+          <p>AI chip and systems company <strong>Groq</strong> is reportedly seeking an <strong>$8 billion valuation</strong> as part of a new financing round, alongside a Helsinki data center expansion. It matters because Groq — known for its fast inference chips — is raising into a crowded inference market where fal's $1.3B round landed the same weekend, and the valuation would mark a sharp step up for a hardware challenger to Nvidia.</p>
+          <p class="players"><strong>Key players:</strong> Groq, Nvidia.</p>
+          <div class="sources"><a href="https://aitoolly.com/ai-news/2026-11-09" target="_blank" rel="noopener">AIToolly ↗</a></div>
+        </article>
+
+        <article class="story full" id="anthropic-ipo" data-cat="funding">
+          <div class="meta"><span class="tag">#13 · IPO · Anthropic</span><span>Nov 8</span><span class="caveat">Valuation cut reflects investor expectations reported by Reuters; roadshow timing in question</span></div>
+          <h3>Anthropic IPO valuation expectations cut below $1.5T</h3>
+          <p>Anthropic filed its S-1 for a Nasdaq debut targeted for the week of November 16 at roughly a $2 trillion valuation, but investors have cut expectations <strong>below $1.5 trillion</strong> and Reuters says the roadshow timing is in question. The Financial Times reported on November 6 that a pre-Thanksgiving listing remained planned, with a potential $80–100 billion raise and a $1.25–1.75 trillion valuation range. Anthropic's amended S-1 shows Q3 revenue of $16.956 billion and a net loss of $23.291 billion, including $21.936 billion in losses from changes in the fair value of financing instruments. It matters because the most-watched AI IPO of the year is now a live test of whether public markets will pay frontier-lab prices — and the answer so far is: less than the labs hoped.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic, Reuters, Financial Times.</p>
+          <div class="sources"><a href="https://www.aoyii.com/ai-daily-20261108/" target="_blank" rel="noopener">AOYii AI Daily ↗</a><a href="https://www.aidailyinsights.cn/en/2026-11-08/" target="_blank" rel="noopener">AI Financing Weekly ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">05 / PRODUCTS</div><h2>Open tools for video and on-device monitoring</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="viggle-remake" data-cat="products">
+          <div class="meta"><span class="tag">#14 · Video · Viggle AI</span><span>Nov 7</span><span class="caveat">Community-reported</span></div>
+          <h3>Viggle Remake: an open video animation model</h3>
+          <p>Viggle has released <strong>Viggle Remake</strong> as an open model on HuggingFace, targeting video character animation and motion transfer. It matters as part of the steady open-source push into video generation — character-consistent animation without a closed API.</p>
+          <p class="players"><strong>Key players:</strong> Viggle AI.</p>
+          <div class="sources"><a href="https://buttondown.com/agent-k/archive/llm-daily-november-08-2026/" target="_blank" rel="noopener">LLM Daily ↗</a></div>
+        </article>
+
+        <article class="story side" id="observer-agent" data-cat="products">
+          <div class="meta"><span class="tag">#15 · Privacy · Independent / Open Source</span><span>Nov 7</span><span class="caveat">Community-reported</span></div>
+          <h3>Observer: a local AI agent that watches your phone's camera feed</h3>
+          <p>An open-source, <strong>100% local AI agent</strong> for iOS and Android that uses on-device vision models to monitor real-world scenes and trigger custom alerts. It matters as a privacy-first counterpoint to cloud agents: all processing stays on the device, so the monitoring use case does not require sending your camera feed to anyone's server.</p>
+          <p class="players"><strong>Key players:</strong> Independent developer Roy3838.</p>
+          <div class="sources"><a href="https://buttondown.com/agent-k/archive/llm-daily-november-08-2026/" target="_blank" rel="noopener">LLM Daily ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">06 / POLICY &amp; SAFETY</div><h2>Two lawsuits, one leak, and the training-data question</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="suno-lawsuits" data-cat="policy">
+          <div class="meta"><span class="tag">#16 · Copyright · Suno</span><span>Filed Nov 6, reported Nov 8</span><span class="caveat">Allegations in filed complaints — not court findings</span></div>
+          <h3>Elvis and Eminem rights holders sue Suno over AI training and voice imitation</h3>
+          <p>Elvis Presley's rights holders and <strong>Eight Mile Style</strong>, the publisher of Eminem's catalog, have filed separate lawsuits against AI music company <strong>Suno</strong> in the Northern District of California. The Presley plaintiffs — including Authentic Brands Group and Raleigh Music Publishing — filed a 51-page complaint alleging Suno copied <strong>859 compositions</strong> for training and lets users generate music imitating Presley's voice, invoking Tennessee's <strong>ELVIS Act</strong>, the 2024 law against unauthorized AI use of a performer's voice and likeness. Eight Mile Style's suit covers <strong>269 Eminem compositions</strong> and seeks about <strong>$41 million</strong> in statutory damages; Eminem is not personally a plaintiff. Suno says it prohibits unauthorized use of artists' work and has measures meant to prevent it. These are allegations, not court findings.</p>
+          <p>It matters because it is the first major case to combine a training-data copyright claim with a voice-identity claim under a state likeness law — a two-front test of what AI music companies can legally build on and produce. Suno already faces litigation from Universal, Sony and Warner.</p>
+          <p class="players"><strong>Key players:</strong> Suno, Elvis Presley Enterprises, Authentic Brands Group, Eight Mile Style, Eminem.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/legalindustry/elvis-eminem-copyright-owners-sue-suno-over-ai-training-2026-11-09/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.audiartist.com/elvis-eminem-publishers-sue-suno-ai-music-copyright-2026/" target="_blank" rel="noopener">Audiartist ↗</a></div>
+        </article>
+
+        <article class="story side" id="claude-code-leak" data-cat="policy">
+          <div class="meta"><span class="tag">#17 · Security · Apiiro / Anthropic</span><span>Nov 8</span></div>
+          <h3>Claude Code prompts leaked 2,539 secrets into public GitHub files</h3>
+          <p><strong>Apiiro</strong> found that Claude Code prompts left passwords and other secrets in <strong>1,122 public files — 2,539 secrets in total</strong> — exposed on GitHub. It matters as a sharp reminder that the risk in coding agents is not only what the model writes, but what the workflow around it publishes: credentials pasted into prompts can end up in public repos, and the fix is as much about agent hygiene as model safety.</p>
+          <p class="players"><strong>Key players:</strong> Apiiro, Anthropic (Claude Code).</p>
+          <div class="sources"><a href="https://ai.dosa.dev/blog/today-in-ai-2026-11-08" target="_blank" rel="noopener">Dosa AI Tools ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Sunday, November 8, 2026, plus significant late-breaking items from November 7–9, 2026 — including Google DeepMind's CodeMender announcement on November 9.</li>
+          <li><strong>Apple Siri:</strong> the lead story is single-sourced from Bloomberg's Mark Gurman, based on unnamed sources; Apple has not confirmed any timeline.</li>
+          <li><strong>Suno lawsuits:</strong> the claims against Suno are allegations in filed complaints, not court findings.</li>
+          <li><strong>Anthropic IPO:</strong> the valuation cut reflects investor expectations reported by Reuters; the roadshow timing is in question.</li>
+          <li><strong>Groq:</strong> the $8 billion valuation is a reported financing round, not confirmed.</li>
+          <li><strong>Research claims:</strong> the TCSExam and PSI proof claims are unreviewed research; it is not clear which unreleased Anthropic model PSI used. PBPO is a new research technique from UIUC.</li>
+          <li><strong>Company- and community-reported items:</strong> CodeMender is company-reported by Google DeepMind; the Observer and Viggle Remake items are community-reported.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Sunday, November 8, 2026, plus significant late-breaking items from November 7–9, 2026. Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News Newsletter — November 9, 2026.<br>18 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

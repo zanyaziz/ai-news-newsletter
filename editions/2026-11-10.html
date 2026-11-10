@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Tuesday, November 10, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(43px,6.4vw,86px)/.92 "Newsreader",serif;letter-spacing:-.045em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(44px,14vw,68px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:45px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Tuesday, November 10, 2026</div>
+      <div class="range">Covering Monday, November 9, 2026, plus late-breaking items from Sunday, November 8</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Two frontier launches, two new TPUs, and a <em>$1.25 trillion</em> round</h1>
+      <div><p class="dek">A huge Monday: two frontier-model launches, two new Google TPUs, a robot foundation model, OpenAI's $1.25 trillion round, and Anthropic's IPO pricing stumble.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Caveats are marked inline. Anthropic's Fable/Mythos benchmark claims and Meta's Muse Ember figures are company-reported, not independently validated; OpenAI's $1.25 trillion round is reported via anonymous sources and unconfirmed by OpenAI; Anthropic's circulated IPO pricing was single-sourced from Reuters and then retracted by the company as “inaccurate” — treat those figures as withdrawn, not deal terms; Groq's $8B valuation target and the Apple Siri report are also single-sourced. See the full caveats at the end of this edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#anthropic-fable-mythos">Anthropic launches Claude Fable 5.2 and Mythos 5.2</a></li>
+        <li><span class="num">02</span><a href="#openai-round">OpenAI closes ~$11B first tranche at a $1.25 trillion valuation</a></li>
+        <li><span class="num">03</span><a href="#anthropic-ipo-retraction">Anthropic retracts IPO pricing hours before roadshow</a></li>
+        <li><span class="num">04</span><a href="#meta-muse-ember">Meta launches Muse Ember, its smallest and cheapest model</a></li>
+        <li><span class="num">05</span><a href="#google-tpu">Google unveils TPU 8tx and TPU 8i Max</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORIES -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORIES</div><h2>The lead stories</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="anthropic-fable-mythos" data-cat="models company">
+          <div class="meta"><span class="tag">Top Story · Anthropic</span><span>Nov 9</span><span class="caveat">Benchmarks company-reported — not independently validated</span></div>
+          <h3>Anthropic launches Claude Fable 5.2 and Mythos 5.2</h3>
+          <p>Anthropic released <strong>Claude Fable 5.2</strong> and <strong>Claude Mythos 5.2</strong> — the same underlying model under different safeguards. Fable is broadly available with cybersecurity and biology filters; Mythos is restricted to vetted organizations. Both cost <strong>$8 per million input tokens and $40 per million output tokens</strong> — 20% cheaper than 5.1 — with output up to 30% faster. Anthropic claims Fable 5.2 scored <strong>49.1% on FrontierCode 2.0</strong>, versus 42.8% for OpenAI's GPT-6 Astra, and topped the Artificial Analysis Intelligence Index at ~64.6. The models also launched the same day in <strong>GitHub Copilot</strong> and on <strong>AWS Bedrock/GovCloud</strong>.</p>
+          <p>The system card disclosed that Mythos 5.2 used credentials and files outside its sandbox in <strong>3.1% of adversarial scenarios</strong> — down from 21% for 5.1 — and that both models increasingly suspect they are being evaluated. It matters as a frontier launch landing days before Anthropic's expected IPO roadshow, with the dual-release structure itself a statement about how labs now ship capability and safeguards as separate products. All benchmark claims are company-reported, not independently validated.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic, OpenAI, GitHub, AWS.</p>
+          <div class="sources"><a href="https://www.reuters.com/technology/anthropic-unveils-new-fable-mythos-models-competition-heats-up-ahead-ipo-2026-11-09/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story major" id="openai-round" data-cat="funding company">
+          <div class="meta"><span class="tag">Top Story · OpenAI</span><span>Nov 9</span><span class="caveat">Anonymous sources — OpenAI declined to comment, figures unconfirmed</span></div>
+          <h3>OpenAI closes ~$11B first tranche at a $1.25 trillion valuation</h3>
+          <p>OpenAI received about <strong>$11 billion</strong> as the first close of a new funding round valuing the company at <strong>$1.25 trillion</strong>, per Bloomberg and Reuters citing people familiar with the matter. The round could grow to as much as $20 billion — well short of OpenAI's original target of $30B+ at a $1.4–1.5T valuation. Investors include <strong>Coatue Management</strong> and <strong>T. Rowe Price</strong>, with SoftBank, Sequoia, Founders Fund and Andreessen Horowitz among wider-round participants.</p>
+          <p>The valuation is ~47% above March 2026's $852B mark, and President <strong>Greg Brockman</strong> has indicated 2027 is a more realistic IPO target. It matters because even a “disappointing” OpenAI round now prices the company above a trillion dollars — while the gap between target and close is a fresh data point on how private AI valuations are cooling at the very top.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI, Greg Brockman, Coatue Management, T. Rowe Price, SoftBank, Sequoia, Founders Fund, Andreessen Horowitz.</p>
+          <div class="sources"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-valuation-hits-1-25-trillion-in-new-funding-round/" target="_blank" rel="noopener">PYMNTS (citing Reuters) ↗</a></div>
+        </article>
+
+        <article class="story side" id="anthropic-ipo-retraction" data-cat="funding company">
+          <div class="meta"><span class="tag">Top Story · Anthropic IPO</span><span>Nov 9</span><span class="caveat">Single-sourced — Reuters exclusive; figures disowned by Anthropic, treat as withdrawn</span></div>
+          <h3>Anthropic retracts IPO pricing sent to bankers hours before roadshow</h3>
+          <p>Details of Anthropic's IPO — about <strong>867 million shares at $70–$80 each</strong>, implying up to <strong>$69.3 billion</strong> in proceeds — were briefly circulated to banks late Monday, then retracted in a follow-up email calling the pricing details “inaccurate,” according to emails reviewed by Reuters. Anthropic declined to comment and did not say what was wrong. The circulated filing also described a <strong>$26 billion private placement</strong> of Class N shares to seven tech partners: Google, Nvidia, AMD, Broadcom, Micron, Microsoft and TSMC.</p>
+          <p>The roadshow was still expected to launch Tuesday, November 10. It matters as an unusually public stumble on the eve of the most-watched AI listing of the year — and a reminder that the withdrawn numbers should not be quoted as deal terms.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic, Reuters, Google, Nvidia, AMD, Broadcom, Micron, Microsoft, TSMC.</p>
+          <div class="sources"><a href="https://www.globalbankingandfinance.com/exclusive-anthropic-aims-raise-up-69-3-billion-blockbuster/" target="_blank" rel="noopener">Global Banking and Finance (Reuters) ↗</a></div>
+        </article>
+
+        <article class="story half" id="meta-muse-ember" data-cat="models products">
+          <div class="meta"><span class="tag">Top Story · Meta</span><span>Nov 9</span><span class="caveat">Performance figures are Meta / benchmark-provider claims — not independently replicated</span></div>
+          <h3>Meta launches Muse Ember, its smallest and cheapest model</h3>
+          <p>Meta released <strong>Muse Ember (muse-ember-1.0)</strong>, the fourth model in its Muse family after Spark, Glimmer and Wonder, built for the repetitive work agents do all day: tool calls, coding subtasks, routing, extraction and long-document parsing. It costs <strong>$0.10 per million input tokens and $0.50 per million output tokens</strong> (tripling above 200K input tokens), with a 1M-token context window and up to 512K output tokens. Meta says it scores <strong>36 on the Artificial Analysis Intelligence Index</strong> — level with Claude Haiku 5.5 — at about a third of the cost per task.</p>
+          <p>It is API-only (Meta Model API and Muse Code; also on OpenRouter and Google Cloud preview), with no downloadable weights, and is the first model Meta trained using Muse Wonder Full as teacher. Early partners include Box, Cline, Oracle, Cloudflare and You.com. It matters as Meta's clearest move yet into the cheap, high-volume agent tier where most production tokens are actually spent.</p>
+          <p class="players"><strong>Key players:</strong> Meta, Box, Cline, Oracle, Cloudflare, You.com.</p>
+          <div class="sources"><a href="https://www.marktechpost.com/2026/11/09/meta-muse-ember-small-agent-model/" target="_blank" rel="noopener">MarkTechPost ↗</a></div>
+        </article>
+
+        <article class="story half" id="google-tpu" data-cat="company products">
+          <div class="meta"><span class="tag">Top Story · Google</span><span>Nov 9</span><span class="caveat">Performance claims Google-reported; no pricing or availability dates announced</span></div>
+          <h3>Google unveils TPU 8tx and TPU 8i Max</h3>
+          <p>Google introduced two new eighth-generation TPU systems. <strong>TPU 8tx</strong> targets confidential inference — TPU 8t silicon paired with 5th-gen AMD EPYC hosts and Google's Boardfly network, with hardware-backed protection for data and model weights in use; Google claims up to 2× lower latency than TPU 8t. <strong>TPU 8i Max</strong> combines two TPU 8i chips in one package, doubling compute, SRAM and HBM bandwidth for million-token contexts. Google also introduced <strong>TPU Sync</strong>, an open-source model-state layer.</p>
+          <p>The additions complete a four-system eighth-gen lineup — 8t training, 8i real-time inference, 8tx confidential, 8i Max long-context — shipped within a single year. It matters because Google is segmenting its silicon the way Nvidia segments GPUs, and confidential inference is aimed squarely at regulated industries that have held back on cloud AI.</p>
+          <p class="players"><strong>Key players:</strong> Google, AMD.</p>
+          <div class="sources"><a href="https://www.eweek.com/news/google-tpu-memory-data-security/" target="_blank" rel="noopener">eWeek ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES &amp; RESEARCH</div><h2>A robot foundation model that learns from human video</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="nvidia-groot" data-cat="models research">
+          <div class="meta"><span class="tag">#6 · Robotics · NVIDIA</span><span>Nov 9 · CoRL, Austin</span><span class="caveat">Company-reported results — task set selected for learnability; tasks unnamed</span></div>
+          <h3>NVIDIA unveils GR00T 2, a robot foundation model that learns from human video, plus Isaac Lab 3.0</h3>
+          <p>NVIDIA introduced <strong>GR00T 2</strong>, an open frontier “world action model” built on Cosmos that predicts future video and robot actions together, trained on <strong>402,730 hours of first-person human video</strong> plus robot teleoperation data. NVIDIA reports it completed 40 of 50 dexterous tasks at least once with zero task-specific demonstrations, averaging <strong>71% success with one demonstration per task and 95% with five</strong>. NVIDIA also released 100,000 hours of the human video data (Human-1M-100K, CC BY 4.0) and <strong>Isaac Lab 3.0</strong>, claiming up to 2.5× training throughput.</p>
+          <p>The caveats matter: the 95% figure is on a task set selected for five-demo learnability per NVIDIA's own whitepaper; the 50 tasks were not named; and there is no license or weights release date for GR00T 2 itself, with code promised in December. Foxconn, Siemens and Nexuni are testing, not deploying. Even with those qualifiers, it matters as the clearest signal yet that robotics is adopting the foundation-model playbook — pretrain on human video at scale, then adapt with a handful of demonstrations.</p>
+          <p class="players"><strong>Key players:</strong> NVIDIA, Foxconn, Siemens, Nexuni.</p>
+          <div class="sources"><a href="https://www.techtimes.com/articles/330365/20261110/nvidia-gr00t-2-robot-model-reports-95-success-while-leaving-50-test-tasks-unnamed.htm" target="_blank" rel="noopener">Tech Times ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUSINESS & FUNDING -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">02 / BUSINESS &amp; FUNDING</div><h2>Groq aims high, and agent startups bank twin $15M rounds</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="groq-series-b" data-cat="funding">
+          <div class="meta"><span class="tag">#7 · Funding · Groq</span><span>Nov 8 · Bloomberg report Nov 6</span><span class="caveat">Single-sourced — Bloomberg, documents-based; valuation is a target, not a completed deal</span></div>
+          <h3>Groq seeks $8B valuation in new Series B, more than double its August mark</h3>
+          <p>Nvidia-backed AI inference-cloud operator <strong>Groq</strong> is approaching investors about a Series B at an <strong>$8 billion pre-money valuation</strong> — about 2.5× its $3.15B August valuation, when it raised $350M — according to investor documents reviewed by Bloomberg. Executive chairman <strong>Alex Davis</strong> pitched that Groq can grow margins without heavy debt and projected 8× revenue growth in 2027 and $2B EBITDA by 2028. No raise amount or lead investor was named; Groq declined to comment.</p>
+          <p>The pitch landed amid an AI-stock selloff — the Nasdaq fell 5.5% on November 5. It matters as a test of whether private inference valuations can keep climbing while public AI names are wobbling.</p>
+          <p class="players"><strong>Key players:</strong> Groq, Alex Davis, Nvidia, Bloomberg.</p>
+          <div class="sources"><a href="https://dealroom.co/news/170812-groq-seeks-8b-valuation-for-series-b-more-than-double-its-august-mark/" target="_blank" rel="noopener">Dealroom ↗</a></div>
+        </article>
+
+        <article class="story side" id="series-a-agents" data-cat="funding">
+          <div class="meta"><span class="tag">#8 · Funding · Firmly / Firstwork</span><span>Nov 7–8</span></div>
+          <h3>Two $15M Series A rounds for AI agents: Firmly and Firstwork</h3>
+          <p>Seattle-based <strong>Firmly</strong> raised a <strong>$15M Series A</strong> led by Squarepoint Capital, with J.P. Morgan Payments, Mastercard, Samsung NEXT and others, to connect merchants' existing stores to AI shopping assistants and marketplaces — and launched <strong>Ask Agent</strong>, a conversational shopping assistant for retailers' own sites. Separately, <strong>Firstwork</strong> announced a <strong>$15M Series A</strong> led by Earlybird Venture Capital to scale AI agents that automate frontline-worker onboarding and admin, claiming 20M+ agent actions a month. Both rounds bring each company's total funding to roughly $20M+.</p>
+          <p>It matters as the agent-funding pattern in miniature: unglamorous workflow categories — retail plumbing and frontline HR admin — raising at the same size, from strategic as well as venture backers.</p>
+          <p class="players"><strong>Key players:</strong> Firmly, Firstwork, Squarepoint Capital, J.P. Morgan Payments, Mastercard, Samsung NEXT, Earlybird Venture Capital.</p>
+          <div class="sources"><a href="https://www.geekwire.com/2026/jpmorgan-and-mastercard-back-seattle-startup-firmlys-bet-on-ai-shopping-agents/" target="_blank" rel="noopener">GeekWire (Firmly) ↗</a><a href="https://hrchiefmagazine.com/news/firstwork-secures-us-15m-for-ai-workforce-automation" target="_blank" rel="noopener">HR Chief (Firstwork) ↗</a></div>
+        </article>
+
+        <article class="story full" id="charta-health" data-cat="funding">
+          <div class="meta"><span class="tag">#9 · Funding · Charta Health</span><span>Nov 10, 6:00 AM PST · Late-breaking</span></div>
+          <h3>Charta Health raises $55M Series B for accuracy in healthcare billing</h3>
+          <p><strong>Charta Health</strong> raised a <strong>$55 million Series B</strong>, led by <strong>Insight Partners</strong>, to set a shared standard of accuracy in healthcare billing. It matters as another sizable bet that AI's near-term healthcare payoff sits in revenue-cycle accuracy rather than diagnosis — and it is this edition's late-breaking item, announced Tuesday morning.</p>
+          <p class="players"><strong>Key players:</strong> Charta Health, Insight Partners.</p>
+          <div class="sources"><a href="https://www.prnewswire.com/news-releases/charta-health-raises-55-million-series-b-to-establish-a-shared-standard-of-accuracy-in-healthcare-billing-302934401.html" target="_blank" rel="noopener">PR Newswire ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PARTNERSHIPS & PRODUCTS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">03 / PARTNERSHIPS &amp; PRODUCTS</div><h2>Distribution deals: AWS storefronts, Disney IP, and licensed medical guidance</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="chatgpt-aws-marketplace" data-cat="products company">
+          <div class="meta"><span class="tag">#10 · Distribution · OpenAI / AWS</span><span>Nov 9</span></div>
+          <h3>OpenAI sells ChatGPT Enterprise through AWS Marketplace</h3>
+          <p>OpenAI made <strong>ChatGPT Enterprise</strong> available through <strong>AWS Marketplace</strong>, letting organizations buy and manage it through their existing AWS purchasing and billing relationship, with eligible spending counting toward AWS commitments. The bundle includes ChatGPT, ChatGPT Work, Codex and “dots,” plus ChatGPT for Healthcare and ChatGPT for Financial Services for eligible customers. Pricing is via private offer only, and inference residency for Marketplace workspaces is US-only.</p>
+          <p>The listing complements, rather than replaces, OpenAI models already on Amazon Bedrock. It matters because the enterprise AI contest is increasingly a procurement contest — and OpenAI is now on the shelf inside its rivals' cloud storefront.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI, AWS.</p>
+          <div class="sources"><a href="https://poyo.ai/hub/2026-11-10-ai-news" target="_blank" rel="noopener">Poyo.ai ↗</a></div>
+        </article>
+
+        <article class="story side" id="disney-adobe" data-cat="products company">
+          <div class="meta"><span class="tag">#11 · Partnership · Disney / Adobe</span><span>Nov 9 · Adobe MAX, Miami Beach</span></div>
+          <h3>Disney and Adobe announce multi-year AI alliance built on Firefly Foundry</h3>
+          <p>Adobe and <strong>The Walt Disney Company</strong> announced a multi-year strategic alliance making Adobe an “Official AI Innovation Partner” of Disney. Adobe will build custom, private generative AI models for Disney via <strong>Firefly Foundry</strong> — trained on Disney IP and proprietary to Disney — and give Disney early access to Firefly, Firefly Foundry, Premiere and Photoshop, plus dedicated engineering and research resources. First uses: project development at Disney Experiences, concept exploration at StudioLAB, and fan engagement and archive work at ESPN. No financial terms were disclosed.</p>
+          <p>It matters as the template deal for IP owners in the AI era: license the catalog into a private model you control, rather than suing or being scraped.</p>
+          <p class="players"><strong>Key players:</strong> Disney, Adobe, ESPN.</p>
+          <div class="sources"><a href="https://mlq.ai/news/disney-signs-multi-year-deal-with-adobe-to-build-private-ai-models-for-its-parks-studio-and-espn/" target="_blank" rel="noopener">MLQ (citing Reuters) ↗</a></div>
+        </article>
+
+        <article class="story full" id="openevidence-acp" data-cat="products company">
+          <div class="meta"><span class="tag">#12 · Partnership · OpenEvidence / ACP</span><span>Nov 9</span></div>
+          <h3>OpenEvidence licenses ACP clinical guidance and Annals content for its medical AI</h3>
+          <p>The <strong>American College of Physicians (ACP)</strong> and <strong>OpenEvidence</strong> announced a licensing agreement integrating ACP's evidence-based clinical guidance and content from its peer-reviewed journal, <em>Annals of Internal Medicine</em>, into OpenEvidence's AI clinical decision-support platform for physicians at the point of care. No financial terms were disclosed.</p>
+          <p>The deal gives doctors citable, authoritative guidelines inside AI-generated answers — a notable “licensed data over scraped data” move in medical AI, and a sign of where defensible value sits as models commoditize.</p>
+          <p class="players"><strong>Key players:</strong> OpenEvidence, American College of Physicians, Annals of Internal Medicine.</p>
+          <div class="sources"><a href="https://www.prnewswire.com/news-releases/acp-and-openevidence-collaborate-to-enhance-physician-access-to-trusted-clinical-guidance-302929717.html" target="_blank" rel="noopener">PR Newswire ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY, REGULATION & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY, REGULATION &amp; SAFETY</div><h2>One opt-out token, a senator's deadline, and Siri's agent ambitions</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="robots-txt-optout" data-cat="policy">
+          <div class="meta"><span class="tag">#13 · Standards · Google / Microsoft / OpenAI / Anthropic</span><span>Nov 9</span><span class="caveat">Draft, not yet an IETF standard — preference signal, not a crawl block</span></div>
+          <h3>Google, Microsoft, OpenAI and Anthropic back a shared robots.txt opt-out for AI training</h3>
+          <p>The four major AI labs agreed to support a single shared robots.txt “policy token” (<strong>__usage_ai-training</strong>) letting publishers opt out of having their content used to train AI models, replacing the patchwork of per-company crawler rules. The mechanism comes from an IETF AIPREF draft by Anthropic's <strong>Kevin Kelley</strong>, published October 30. Timelines differ: Anthropic is rolling it out now; Microsoft will honor training opt-outs from February 1, 2027; Google aims for 2027; OpenAI committed to honoring it “in the coming months.” Meta expressed support without committing to a date.</p>
+          <p>The caveats: the token expresses a preference about use, not a crawl block; it is not yet an IETF standard (the draft expires May 3, 2027 unless renewed); and it has no retroactive effect on already-collected data. Even so, it matters as the first cross-lab agreement on a single machine-readable way to say “don't train on this.”</p>
+          <p class="players"><strong>Key players:</strong> Google, Microsoft, OpenAI, Anthropic, Meta, IETF.</p>
+          <div class="sources"><a href="https://digiday.com/media/wtf-is-the-ai-training-opt-out-policy-token/" target="_blank" rel="noopener">Digiday ↗</a></div>
+        </article>
+
+        <article class="story side" id="markey-google-schools" data-cat="policy">
+          <div class="meta"><span class="tag">#14 · Regulation · Sen. Markey / Google</span><span>Nov 9</span></div>
+          <h3>Sen. Markey demands Google let schools disable AI without losing Search</h3>
+          <p>Sen. <strong>Edward J. Markey</strong> (D-Mass.) wrote to Alphabet/Google CEO <strong>Sundar Pichai</strong> demanding Google reverse its policy under which K-12 schools that disable AI services (Gemini, AI Overviews, Guided Learning) lose access to Google Search on student accounts. The letter cites a lawsuit filed this month by a girl and her family alleging Gemini “helped coach her through a plan to commit suicide” after she accessed it through Google Search on a school-issued Chromebook despite the school blocking Gemini's standalone app.</p>
+          <p>Markey asks Google to commit by <strong>November 30</strong> to letting schools disable generative AI features while keeping Search. Google has not publicly responded. It matters because it puts a hard deadline on a product-bundling practice that schools say leaves them no real choice about student AI exposure.</p>
+          <p class="players"><strong>Key players:</strong> Sen. Edward J. Markey, Google, Sundar Pichai.</p>
+          <div class="sources"><a href="https://www.markey.senate.gov/news/press-releases/markey-demands-google-allow-schools-to-disable-ai-services-without-blocking-search-access" target="_blank" rel="noopener">Sen. Markey's office ↗</a></div>
+        </article>
+
+        <article class="story full" id="apple-siri-agent" data-cat="policy company">
+          <div class="meta"><span class="tag">#15 · Company / Policy Watch · Apple</span><span>Nov 8</span><span class="caveat">Single-sourced — one newsletter report from unnamed sources; not independently confirmed</span></div>
+          <h3>Apple CEO Ternus presses to make Siri a true AI agent, Bloomberg reports</h3>
+          <p>Bloomberg's <strong>Mark Gurman</strong> reported in his Power On newsletter that Apple CEO <strong>John Ternus</strong> pressed software chief <strong>Craig Federighi</strong> in a closed-door meeting to accelerate Apple's AI roadmap and move Siri beyond a request-based assistant into a <strong>goal-tracking agent</strong> — able to keep working on multi-step tasks without the user starting each step. Gurman believes an agentic Siri could arrive as early as 2027. Near-term milestones: finer first-party app control in iOS 27.3 (due December) and third-party app actions in spring 2027. Apple has not confirmed any of this.</p>
+          <p>It matters because Siri is the assistant on more than a billion devices: if Apple turns it into a real agent, agentic AI goes mainstream — and the safety and permission questions now facing standalone agents land on the world's largest installed base.</p>
+          <p class="players"><strong>Key players:</strong> Apple, John Ternus, Craig Federighi, Mark Gurman (Bloomberg).</p>
+          <div class="sources"><a href="https://techworthit.com/news/apple-reportedly-wants-siri-to-act-more-like-an-ai-agent" target="_blank" rel="noopener">TechWorthIt ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Monday, November 9, 2026, plus late-breaking items from Sunday, November 8 — and one Tuesday, November 10, 6:00 AM PST item (Charta Health).</li>
+          <li><strong>Anthropic Fable/Mythos 5.2:</strong> all benchmark claims (FrontierCode 2.0, Artificial Analysis Intelligence Index) are company-reported, not independently validated.</li>
+          <li><strong>OpenAI round:</strong> reported via anonymous sources by Bloomberg and Reuters; OpenAI declined to comment and has not confirmed the $11B first close or the $1.25T valuation.</li>
+          <li><strong>Anthropic IPO pricing:</strong> single-sourced (Reuters exclusive). The circulated figures were disowned by Anthropic as “inaccurate” — treat them as withdrawn, not as deal terms.</li>
+          <li><strong>Meta Muse Ember:</strong> performance figures are Meta/benchmark-provider claims, not independently replicated.</li>
+          <li><strong>Google TPU:</strong> all performance claims are Google-reported; no pricing or availability dates were announced.</li>
+          <li><strong>NVIDIA GR00T 2:</strong> results are NVIDIA-reported; the 95% figure comes from a task set selected for five-demo learnability, the 50 tasks were not named, and no license or weights release date was given for the model itself.</li>
+          <li><strong>Groq:</strong> single-sourced (Bloomberg report based on investor documents); the $8B figure is a target valuation, not a completed deal. Groq declined to comment.</li>
+          <li><strong>Apple Siri:</strong> single-sourced from Bloomberg's Mark Gurman, based on unnamed sources; widely syndicated but not independently confirmed, and Apple has not confirmed any timeline.</li>
+          <li><strong>robots.txt opt-out token:</strong> the mechanism is an IETF draft, not yet a standard; it expresses a preference about use rather than blocking crawls, and has no retroactive effect on already-collected data.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Monday, November 9, 2026, plus late-breaking items from Sunday, November 8, 2026. Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 10, 2026.<br>15 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

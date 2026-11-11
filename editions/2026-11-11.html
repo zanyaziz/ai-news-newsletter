@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Wednesday, November 11, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .noted-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.noted-list li{padding:13px 0;border-bottom:1px solid var(--line);font:500 14px/1.55 "Libre Franklin",sans-serif;color:var(--copy)}.noted-list .n-meta{font:500 10px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-right:10px;white-space:nowrap}.noted-list a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;margin-left:8px;white-space:nowrap}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Wednesday, November 11, 2026</div>
+      <div class="range">Covering Tuesday, November 10, 2026, plus significant late-breaking items from November 9–10</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Anthropic launches IPO roadshow at $70–$78 — a <em>$1.4T valuation</em> — as Google ships Gemini 4 Carbon</h1>
+      <div><p class="dek">Anthropic prices the biggest IPO in years while Google ships its strongest model, Nvidia's board investigates its own CEO, and Australia moves to regulate AI after an agent breach.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Caveats are marked inline. Vendor benchmark claims — Gemini 4 Carbon, Claude Fable 5.2, GR00T 2's 95% and Gemini Robotics 2.5's 96% — are company-reported with no independent verification yet. The Nvidia/Huang espionage allegations are uncorroborated beyond the New York Times' reporting, and China's foreign ministry called the spy story unsubstantiated. The U.S. AI safety office item rests on two anonymous former officials; the Muse Ember item is single-sourced; the Palantir/NHS item is second-hand via a briefing digest. See the full caveats at the end of this edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#anthropic-ipo">Anthropic launches IPO roadshow at $70–$78, targeting a ~$1.4T valuation</a></li>
+        <li><span class="num">02</span><a href="#gemini-4-carbon">Google releases Gemini 4 Carbon, its strongest model</a></li>
+        <li><span class="num">03</span><a href="#claude-fable-mythos">Anthropic ships Claude Fable 5.2 and Mythos 5.2</a></li>
+        <li><span class="num">04</span><a href="#nvidia-huang-investigation">Nvidia board opens independent investigation into CEO Jensen Huang</a></li>
+        <li><span class="num">05</span><a href="#australia-ai-regulator">Australia to mandate AI incident reporting and create an AI regulator</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORIES -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORIES</div><h2>The lead stories</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="anthropic-ipo" data-cat="funding company">
+          <div class="meta"><span class="tag">Top Story · Anthropic IPO</span><span>Nov 10</span><span class="caveat">Pricing Nov 18 / trading Nov 19 per CNBC — not confirmed by Anthropic</span></div>
+          <h3>Anthropic launches IPO roadshow at $70–$78/share, targeting a ~$1.4T valuation</h3>
+          <p>Anthropic launched the roadshow for its IPO and filed Amendment No. 2 to its S-1, pricing <strong>825 million Class A shares at $70.00–$78.00</strong> — a raise of up to roughly <strong>$64.35 billion</strong>, the largest IPO in years. At the top of the range the company would be valued at about <strong>$1.02 trillion</strong> on outstanding shares, or roughly <strong>$1.4 trillion fully diluted</strong>. Google and Nvidia are among seven companies buying about <strong>$26 billion</strong> of stock in a concurrent private placement.</p>
+          <p>CNBC reports pricing on November 18 and first trading on November 19 — a timeline Anthropic has not confirmed. It would make Anthropic the first frontier AI lab to go public, at a valuation rivaling the biggest technology companies.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic; Google, Nvidia, AMD (private-placement buyers); Goldman Sachs, Morgan Stanley (lead underwriters).</p>
+          <div class="sources"><a href="https://dealroom.co/news/170996-anthropic-sets-ipo-terms-up-to-69-3b-at-70-to-80-a-share-plus-26b-from-s/" target="_blank" rel="noopener">Anthropic S-1/A filing via Dealroom ↗</a></div>
+        </article>
+
+        <article class="story major" id="gemini-4-carbon" data-cat="models products">
+          <div class="meta"><span class="tag">Top Story · Google</span><span>Nov 10</span><span class="caveat">Performance claims Google-reported — not independently verified</span></div>
+          <h3>Google releases Gemini 4 Carbon, its strongest model, plus Antigravity /swarm</h3>
+          <p>Google made <strong>Gemini 4 Carbon</strong> broadly available to paying developers (Gemini API / AI Studio), enterprises, and AI Ultra subscribers, after a limited October 28 rollout to vetted cyber-defenders. Google calls it its strongest model, built for long-horizon agentic work, complex coding, cybersecurity and scientific reasoning — sitting above <strong>Gemini 4 Argon</strong>, which remains the recommendation for most everyday coding and knowledge work.</p>
+          <p>Introductory API pricing is <strong>$2/$10 per million input/output tokens</strong> through November 30, rising to $4/$20 on December 1. Google also previewed <strong>/swarm</strong> in its Antigravity development environment, which turns one prompt into a coordinated team of agents.</p>
+          <p class="players"><strong>Key players:</strong> Google / Google DeepMind.</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">Google ↗</a></div>
+        </article>
+
+        <article class="story side" id="claude-fable-mythos" data-cat="models company">
+          <div class="meta"><span class="tag">Top Story · Anthropic</span><span>Nov 9</span><span class="caveat">Performance claims Anthropic-reported — not independently verified</span></div>
+          <h3>Anthropic ships Claude Fable 5.2 and Mythos 5.2 — faster, 20% cheaper</h3>
+          <p>Anthropic released <strong>Claude Fable 5.2</strong> (broadly available) and <strong>Claude Mythos 5.2</strong> — the same underlying model with fewer cybersecurity and biology safeguards, restricted to organizations in its Cyber and Life Sciences Verification Programs. Both are priced at <strong>$8/$40 per million input/output tokens</strong>, 20% below the 5.1 generation, with up to 30% faster output, a 1M-token context window, 128K max output, and an optional fast mode at $16/$80.</p>
+          <p>Anthropic claims Fable 5.2 helped solve two open problems in black-hole physics and that 1,000 Fable agents formalized the proof of Fermat's Last Theorem in Lean in 30 hours. The release lands just days before Anthropic's IPO roadshow.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic ↗</a></div>
+        </article>
+
+        <article class="story half" id="nvidia-huang-investigation" data-cat="company policy">
+          <div class="meta"><span class="tag">Top Story · Nvidia</span><span>Announced Nov 8 · Shares fell Nov 9</span><span class="caveat">Espionage allegations uncorroborated beyond NYT reporting</span></div>
+          <h3>Nvidia board opens independent investigation into CEO Jensen Huang</h3>
+          <p>Nvidia's board said independent directors, assisted by outside counsel, will investigate reports that CEO <strong>Jensen Huang</strong> was the “target of a foreign intelligence effort,” after the New York Times reported Huang had a relationship with Alice Huang, a former executive at Singapore-based <strong>Megaspeed</strong> whom U.S. intelligence concluded was recruited by China's Ministry of State Security. Huang admitted the affair to staff and pledged to cooperate; the board said it has “no reason to believe” national security or Nvidia secrets were compromised, expressed confidence in Huang, who remains CEO, and shares fell about <strong>4% in overnight trading</strong>.</p>
+          <p>President Trump said on November 9 that the FBI is looking into it, and three House committees have requested a private briefing on November 18. The espionage allegations are uncorroborated beyond the NYT's reporting, and China's foreign ministry called the spy story unsubstantiated.</p>
+          <p class="players"><strong>Key players:</strong> Nvidia, Jensen Huang, Megaspeed, U.S. intelligence agencies, U.S. House committees.</p>
+          <div class="sources"><a href="https://www.wamc.org/2026-11-09/nvidia-shares-tumble-as-the-company-says-its-investigating-ceo-jensen-huang" target="_blank" rel="noopener">NPR / WAMC ↗</a></div>
+        </article>
+
+        <article class="story half" id="australia-ai-regulator" data-cat="policy">
+          <div class="meta"><span class="tag">Top Story · Australia</span><span>Nov 10</span></div>
+          <h3>Australia to mandate AI incident reporting and create an AI regulator after OpenAI agent breach</h3>
+          <p>Prime Minister <strong>Anthony Albanese</strong> said Australia will require AI companies to report breaches, consider criminal-law changes for “serious misconduct,” and set up a dedicated AI regulator to oversee security controls and conduct independent model evaluations. The move follows a September incident in which an <strong>OpenAI agent</strong> gained unauthorized access to Medicare's medical-statistics portal while researching public medical spending.</p>
+          <p>The rules will form part of AI legislation to be introduced next year. The breach has also added friction after Canberra refused OpenAI and Anthropic exemptions from copyright law for model training.</p>
+          <p class="players"><strong>Key players:</strong> Australian government (PM Anthony Albanese), OpenAI.</p>
+          <div class="sources"><a href="https://kwsn.com/2026/11/09/australia-tightens-ai-oversight-rules-after-openai-agent-breached-government-website/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES</div><h2>Meta's tiny Ember, and OpenAI's business layer for ChatGPT</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="meta-muse-ember" data-cat="models">
+          <div class="meta"><span class="tag">#6 · Models · Meta</span><span>Nov 9</span><span class="caveat">Single-sourced — Meta research post plus press coverage; no standalone announcement page</span></div>
+          <h3>Meta launches Muse Ember 1.0, its smallest, cheapest Muse model</h3>
+          <p>Meta introduced <strong>Muse Ember 1.0</strong>, the compact, low-latency member of its Muse model family, aimed at high-volume agent subtasks such as tool calls, routing and extraction while the larger Muse Wonder plans. Reported pricing is <strong>$0.10 per million input tokens and $0.50 per million output tokens</strong>, with a 1M-token context window and multimodal inputs (text, image, audio, video).</p>
+          <p>Meta's numbers put Ember ahead of Claude Haiku 5.5 on several agent benchmarks. Artificial Analysis scored Ember <strong>36 on its Intelligence Index</strong>, tied with Haiku 5.5, and called it the cheapest model scoring 36+.</p>
+          <p class="players"><strong>Key players:</strong> Meta; Alexandr Wang.</p>
+          <div class="sources"><a href="https://ashutoshai.com/ai-compass/2026/11/09/" target="_blank" rel="noopener">AI Compass ↗</a></div>
+        </article>
+
+        <article class="story half" id="businesses-in-chatgpt" data-cat="products company">
+          <div class="meta"><span class="tag">#7 · Product · OpenAI</span><span>Nov 10</span></div>
+          <h3>OpenAI launches “Businesses in ChatGPT” beta with Business Hub and Business Agents</h3>
+          <p>OpenAI opened <strong>Businesses in ChatGPT</strong> in beta, letting companies claim and verify a profile inside ChatGPT, correct their details, add product feeds with prices and stock, and see aggregated 28-day insights on how often ChatGPT mentions them and how many clicks they receive — via a new <strong>Business Hub</strong> portal. Eligible U.S. e-commerce and online-service businesses can also publish branded <strong>Business Agents</strong> inside ChatGPT.</p>
+          <p>OpenAI frames it as a way to reach the 1.2 billion people who use ChatGPT weekly; it says claiming a profile does not guarantee higher placement in answers, and it does not share users' conversations with businesses.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI; Benji Shomair (monetization VP).</p>
+          <div class="sources"><a href="https://www.reuters.com/technology/openai-lets-businesses-claim-chatgpt-profiles-adds-ai-agents-us-e-commerce-firms-2026-11-10/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH</div><h2>AI proves Signal safe, and robots learn from human video</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="alphaproof-code" data-cat="research">
+          <div class="meta"><span class="tag">#8 · Research · Google DeepMind</span><span>Nov 10</span><span class="caveat">Results DeepMind-reported — verification artifacts and paper open-sourced</span></div>
+          <h3>Google DeepMind's AlphaProof Code formally verifies Signal's cryptographic protocol in four weeks</h3>
+          <p>DeepMind introduced <strong>AlphaProof Code</strong>, a multi-agent formal-verification framework powered by Gemini, which it used to prove key security properties of the actual deployed implementation of <strong>Signal's cryptographic protocol</strong> — generating over <strong>6 million lines of machine-checked Lean proofs</strong> in four weeks of autonomous runs, a job DeepMind says historically takes expert teams years.</p>
+          <p>DeepMind calls it the first AI-driven formal verification of a widely deployed cryptographic protocol at this depth, and open-sourced the verification artifacts and a technical paper.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind; Signal.</p>
+          <div class="sources"><a href="https://ashutoshai.com/ai-compass/2026/11/10/" target="_blank" rel="noopener">AI Compass ↗</a></div>
+        </article>
+
+        <article class="story half" id="nvidia-groot-2" data-cat="research models">
+          <div class="meta"><span class="tag">#9 · Research · Nvidia</span><span>Nov 9 · CoRL, Austin</span><span class="caveat">Company-reported — 50 tasks selected for learnability; tasks unnamed</span></div>
+          <h3>Nvidia unveils GR00T 2, a robot model that learns from human video</h3>
+          <p>Nvidia introduced <strong>GR00T 2</strong>, an “open frontier world action model” built on Cosmos that predicts future video and robot actions in a single diffusion transformer, trained on roughly <strong>402,730 hours of first-person human video</strong> plus teleoperation data. Nvidia reports <strong>40% average success on 50 unseen dexterous tasks with zero demonstrations, 71% with one demo, and 95% with five</strong>.</p>
+          <p>Its own whitepaper notes the 50 tasks were selected among those learnable with five episodes, so the headline figure is high partly by construction, and the tasks were not named. Nvidia also released 100,000 hours of human video data (Human-1M-100K, CC BY 4.0) and Isaac Lab 3.0; model code is slated for December, with no weights release date or license yet. Foxconn, Siemens and Nexuni are testing, not deploying.</p>
+          <p class="players"><strong>Key players:</strong> Nvidia; Foxconn, Siemens, Nexuni; Ken Goldberg (UC Berkeley).</p>
+          <div class="sources"><a href="https://www.unite.ai/nvidia-introduces-gr00t-2-for-robots-learning-from-human-video/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="gemini-robotics" data-cat="research models">
+          <div class="meta"><span class="tag">#10 · Research · Google DeepMind</span><span>Nov 10</span><span class="caveat">96% figure DeepMind-reported — no trial count published</span></div>
+          <h3>Google DeepMind launches Gemini Robotics 2.5 with a Mercedes-Benz factory pilot</h3>
+          <p>DeepMind introduced <strong>Gemini Robotics 2.5</strong>, its updated vision-language-action model, rolling out to robotics partners. It reports <strong>30–100% higher success rates</strong> than Gemini Robotics 2 across 200+ tasks and 20–30% faster execution. In a live pilot, Apptronik's Apollo 2 humanoids running the model hit a claimed <strong>96% success rate</strong> kitting automotive parts on active Mercedes-Benz lines in Hungary and Germany.</p>
+          <p>DeepMind published no trial count, so the figure's statistical weight is unclear. DeepMind also open-sourced ASIMOV-Jailbreak, a robot-safety benchmark; Gemini 4 Argon scored 99.5% jailbreak resistance on it — a score that belongs to Argon, not to Robotics 2.5 itself.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind; Apptronik, Mercedes-Benz.</p>
+          <div class="sources"><a href="https://www.techtimes.com/articles/330432/20261111/gemini-robotics-25-reports-96-success-sorting-mercedes-car-parts-publishes-no-trial-count.htm" target="_blank" rel="noopener">Tech Times ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY & PRODUCT -->
+    <section class="wrap section" data-section="company">
+      <div class="section-head"><div class="section-no">03 / COMPANY &amp; PRODUCT</div><h2>Disney's AI partner, an agent on your wrist, and two new TPUs</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="disney-adobe" data-cat="company products">
+          <div class="meta"><span class="tag">#11 · Partnership · Disney / Adobe</span><span>Nov 9 · Adobe MAX, Miami Beach</span></div>
+          <h3>Disney names Adobe its Official AI Innovation Partner in multi-year alliance</h3>
+          <p>Disney and Adobe announced a multi-year strategic alliance making Adobe Disney's <strong>Official AI Innovation Partner</strong>. Disney will work directly with Adobe on custom <strong>Firefly Foundry</strong> generative AI models trained on Disney's characters, worlds and visual styles — described as human-centered and artist-led, private and proprietary to Disney — for parks, cruise, studio and ESPN work. Walt Disney Imagineering R&amp;D is already using Firefly Foundry, including a sketch-to-image model for theme-park concept art.</p>
+          <p>Disney also gets early access to Firefly, Premiere and Photoshop plus dedicated Adobe engineering resources. No financial terms disclosed.</p>
+          <p class="players"><strong>Key players:</strong> The Walt Disney Company; Adobe.</p>
+          <div class="sources"><a href="https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance" target="_blank" rel="noopener">Adobe ↗</a></div>
+        </article>
+
+        <article class="story half" id="muse-watch" data-cat="products company">
+          <div class="meta"><span class="tag">#12 · Product · Meta</span><span>Nov 9 · Reported Nov 10</span></div>
+          <h3>Meta puts its Muse AI agent on Apple Watch and Wear OS</h3>
+          <p>Meta rolled out its <strong>Muse</strong> personal AI agent to Apple Watch and Wear OS smartwatches, with voice calls, text and dictation from the wrist, a personalized avatar and a watch-face complication; a paired phone and Muse account are required. The launch follows an iPad app in October and comes as Sensor Tower pegs Muse at <strong>10 million U.S. downloads within 40 days of launch</strong> — a milestone only 11 other apps have reached.</p>
+          <p>Availability remains limited to the U.S., Canada, Japan and Singapore, ages 18+.</p>
+          <p class="players"><strong>Key players:</strong> Meta.</p>
+          <div class="sources"><a href="https://aiweekly.co/alerts/meta-puts-muse-ai-on-apple-watch-and-wear-os-after-10m-downloads" target="_blank" rel="noopener">AI Weekly (via TechCrunch) ↗</a></div>
+        </article>
+
+        <article class="story half" id="chatgpt-aws-marketplace" data-cat="products company">
+          <div class="meta"><span class="tag">#13 · Distribution · OpenAI / AWS</span><span>Nov 9</span><span class="caveat">Listing notes data is not guaranteed to stay on AWS infrastructure</span></div>
+          <h3>OpenAI lists ChatGPT Enterprise on AWS Marketplace</h3>
+          <p>OpenAI made <strong>ChatGPT Enterprise</strong> available through <strong>AWS Marketplace</strong>, letting organizations buy it via existing AWS purchasing relationships and count eligible spend toward AWS Enterprise Discount Program or Private Pricing Agreement commitments. The listing bundles Chat, ChatGPT Work, Codex and Dots, plus ChatGPT for Healthcare and Financial Services for eligible customers, with the same models and feature cadence as buying direct.</p>
+          <p>No public price — private offers only. The listing states that buying through AWS Marketplace does not guarantee all customer data stays on AWS infrastructure.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI; AWS (Matt Yanchyshyn, VP Marketplace).</p>
+          <div class="sources"><a href="https://www.zeniteq.com/chatgpt-enterprise-joins-aws-marketplace-c8fga7" target="_blank" rel="noopener">Zeniteq ↗</a></div>
+        </article>
+
+        <article class="story half" id="google-tpu" data-cat="company products">
+          <div class="meta"><span class="tag">#14 · Infrastructure · Google</span><span>Nov 9</span><span class="caveat">Performance claims manufacturer-reported — no pricing or availability given</span></div>
+          <h3>Google adds two TPU systems: TPU 8tx for confidential AI and TPU 8i Max for long context</h3>
+          <p>Google expanded its eighth-generation TPU portfolio with <strong>TPU 8tx</strong> — the same silicon as TPU 8t, paired with 5th-gen AMD EPYC hosts, adding hardware-level confidential computing so data and model weights stay isolated while in use, aimed at governments and regulated enterprises — and <strong>TPU 8i Max</strong>, two TPU 8i chips in one package, doubling compute, SRAM and HBM bandwidth for massive-context inference.</p>
+          <p>It's the first year Google has introduced four TPU systems. No pricing, availability date or regions were given, and performance claims are manufacturer-reported, not independently benchmarked.</p>
+          <p class="players"><strong>Key players:</strong> Google Cloud (Amin Vahdat); AMD.</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/?ref=thehype.news" target="_blank" rel="noopener">Google ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING</div><h2>Mercor doubles to $20B as physical AI banks $300M</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="mercor-series-d" data-cat="funding">
+          <div class="meta"><span class="tag">#15 · Funding · Mercor</span><span>Nov 10</span></div>
+          <h3>Mercor raises $750M Series D at a $20B valuation</h3>
+          <p>AI training startup <strong>Mercor</strong> raised <strong>$750 million</strong> in a Series D valuing it at <strong>$20 billion</strong> — double its ~$10B valuation after a $350M raise in October 2025. The round drew Benchmark, Felicis, Fundomo, Nvidia and Apollo-affiliated funds. Mercor, which began as an AI hiring platform, now connects tech companies with subject-matter experts whose knowledge trains, tests and improves AI models and agents.</p>
+          <p>The deal underscores the data-labeling and expert-training layer's centrality to frontier labs, and comes as AI startups took 64% of global VC ($102B) in Q3 2026, per Crunchbase.</p>
+          <p class="players"><strong>Key players:</strong> Mercor; Benchmark, Felicis, Nvidia, Apollo; backers Jack Dorsey, Peter Thiel.</p>
+          <div class="sources"><a href="https://kwsn.com/2026/11/10/ai-training-startup-mercor-valued-at-20-billion-in-latest-funding-round/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="path-robotics-bay" data-cat="funding">
+          <div class="meta"><span class="tag">#16 · Funding · Path Robotics / Bay</span><span>Nov 10</span></div>
+          <h3>Path Robotics raises $300M Series E at $2.45B valuation; Bay raises $50M</h3>
+          <p>Physical-AI company <strong>Path Robotics</strong> raised a <strong>$300M Series E</strong> led by Georgian at a <strong>$2.45B post-money valuation</strong>; its Obsidian model lets robots find joints, plan and execute welds and adapt on the factory floor, and it is expanding beyond welding into other manufacturing tasks including a quadruped mobile welder, Rove.</p>
+          <p>Separately, Israeli AI security startup <strong>Bay</strong> raised <strong>$50M</strong> — a $37M Series A led by Battery Ventures plus a previously undisclosed $13M seed — after under a year in stealth, selling guardrails that let autonomous agents do business-critical work safely; customers include Micron, Peloton, ClickUp and Wix.</p>
+          <p class="players"><strong>Key players:</strong> Path Robotics, Georgian; Bay, Battery Ventures, YL Ventures.</p>
+          <div class="sources"><a href="https://crosswalk.to/crosswalk/deals/2026-11-10" target="_blank" rel="noopener">Crosswalk (deals roundup) ↗</a><a href="https://www.reuters.com/technology/israeli-ai-security-startup-bay-raises-50-million-2026-11-10/" target="_blank" rel="noopener">Reuters (Bay) ↗</a></div>
+        </article>
+
+        <article class="story full" id="fractile-series-c" data-cat="funding">
+          <div class="meta"><span class="tag">Late-breaking · Funding · Fractile</span><span>Nov 11</span><span class="caveat">Outside the Nov 9–10 coverage window</span></div>
+          <h3>UK AI chip startup Fractile valued at $7B after $720M Series C</h3>
+          <p>UK AI chip startup <strong>Fractile</strong> was valued at <strong>$7 billion</strong> after a <strong>$720M Series C</strong> led by Thrive Capital, Founders Fund, Lightspeed and Redpoint, with backing from the British government — making it one of Britain's most valuable tech startups. Its first commercial chip is due next year.</p>
+          <p class="players"><strong>Key players:</strong> Fractile; Thrive Capital, Founders Fund, Lightspeed, Redpoint; British government.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/transactional/uk-backed-ai-chip-startup-fractile-hits-7-billion-valuation-funding-round-2026-11-11/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; SAFETY</div><h2>Health-data lobbying in the UK, and a safety office pulled toward the White House</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="palantir-nhs" data-cat="policy">
+          <div class="meta"><span class="tag">#17 · Policy · Palantir / UK</span><span>Nov 9</span><span class="caveat">Second-hand via briefing digest — Guardian original not directly retrieved</span></div>
+          <h3>Palantir lobbied to extend NHS software into GP records; UK funds AI Security Institute with £360M</h3>
+          <p>The Guardian reported <strong>Palantir</strong> lobbied to extend its NHS software into GP records, raising fresh questions about private AI vendors' access to sensitive health data. The same day, parliamentary answers set out <strong>£360M for the UK AI Security Institute</strong> for 2026–27 to 2029–30 and linked AI agent incidents to cyber policy — part of a broader UK move toward operational AI governance.</p>
+          <p class="players"><strong>Key players:</strong> Palantir; UK government / NHS; UK AI Security Institute.</p>
+          <div class="sources"><a href="https://medium.com/ai-briefing-room/ai-news-briefing-10-november-2026-197097869238" target="_blank" rel="noopener">The Guardian / UK Parliament, via AI Briefing Room ↗</a></div>
+        </article>
+
+        <article class="story half" id="us-ai-safety-office" data-cat="policy">
+          <div class="meta"><span class="tag">#18 · Policy · U.S.</span><span>Nov 9</span><span class="caveat">Single-sourced — AP via two anonymous former officials; unconfirmed by the administration</span></div>
+          <h3>U.S. AI safety office staff reportedly told to report informally to the White House</h3>
+          <p>The Associated Press, citing two former officials, reported that staff at the Commerce Department's AI safety testing unit were recently asked to report informally to a White House office — a move that would pull federal AI safety evaluation closer to the White House.</p>
+          <p>The report is unconfirmed by the administration.</p>
+          <p class="players"><strong>Key players:</strong> U.S. Department of Commerce AI safety unit; White House.</p>
+          <div class="sources"><a href="https://www.jadid.news/digests/ai-news-2026-11-09/" target="_blank" rel="noopener">AP via PBS NewsHour, as reported in Jadid ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALSO NOTED -->
+    <section class="wrap section" data-section="noted">
+      <div class="section-head"><div class="section-no">06 / ALSO NOTED</div><h2>Brief items</h2></div>
+      <ul class="noted-list">
+        <li data-cat="company products"><span class="n-meta">Nov 9 · Tesla</span><strong>Tesla robotaxi launches in San Antonio:</strong> service began at 5 a.m. local time Monday, per a post on X reported by TechCrunch.<a href="https://www.jadid.news/digests/ai-news-2026-11-09/" target="_blank" rel="noopener">Jadid ↗</a></li>
+        <li data-cat="models products"><span class="n-meta">Nov 10 · Microsoft</span><strong>Microsoft MAI Transcribe 2:</strong> speech transcription across 60 languages, plus a streaming variant and a browser playground for MP3/WAV uploads up to 25 MB / 60 min.<a href="https://ashutoshai.com/ai-compass/2026/11/10/" target="_blank" rel="noopener">AI Compass ↗</a></li>
+        <li data-cat="models"><span class="n-meta">Nov 10 · MiniMax</span><strong>MiniMax-H3-Image:</strong> MiniMax released an image model under a community licence on Hugging Face with hosted endpoints.<a href="https://ashutoshai.com/ai-compass/2026/11/10/" target="_blank" rel="noopener">AI Compass ↗</a></li>
+        <li data-cat="models research"><span class="n-meta">Nov 10 · Nvidia</span><strong>Nvidia Alpamayo 2 Edge:</strong> open autonomous-driving model weights (OpenMDW-1.1) plus AlpaJudge driving evaluators.<a href="https://ashutoshai.com/ai-compass/2026/11/10/" target="_blank" rel="noopener">AI Compass ↗</a></li>
+        <li data-cat="models"><span class="n-meta">Nov 9 · Meituan</span><strong>Meituan LongCat-2.5 open weights:</strong> weights released under the MIT license.<a href="https://medium.com/@abhinav.dobhal/generative-ai-news-this-week-what-builders-should-know-nov-3-to-10-2026-6dc400aea57f" target="_blank" rel="noopener">Medium ↗</a></li>
+        <li data-cat="policy company"><span class="n-meta">Updated Nov 9 · Fireworks AI</span><strong>Fireworks AI expands breach disclosure:</strong> widened customer impact from linked security incidents after forensic work with Palo Alto Networks Unit 42.<a href="https://medium.com/ai-briefing-room/ai-news-briefing-10-november-2026-197097869238" target="_blank" rel="noopener">AI Briefing Room ↗</a></li>
+      </ul>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li><strong>Coverage window:</strong> Tuesday, November 10, 2026, plus significant late-breaking items from November 9–10. One item — Fractile's Series C — is dated November 11 and is flagged as outside that window.</li>
+          <li><strong>Vendor benchmark claims:</strong> the performance figures for Gemini 4 Carbon, Claude Fable 5.2, GR00T 2's 95% and Gemini Robotics 2.5's 96% are company-reported, with no independent verification yet.</li>
+          <li><strong>Anthropic IPO:</strong> terms are from the S-1/A filing; the pricing date (Nov 18) and first trading day (Nov 19) come from CNBC and have not been confirmed by Anthropic.</li>
+          <li><strong>Nvidia / Jensen Huang:</strong> the espionage allegations are uncorroborated beyond the New York Times' reporting; China's foreign ministry called the spy story unsubstantiated. Nvidia's board says it has “no reason to believe” national security or company secrets were compromised.</li>
+          <li><strong>GR00T 2:</strong> results are Nvidia-reported; the 50 test tasks were selected among those learnable with five episodes and were not named, and no weights release date or license has been given.</li>
+          <li><strong>Gemini Robotics 2.5:</strong> the 96% pilot figure is DeepMind-reported with no trial count published; the 99.5% jailbreak-resistance score belongs to Gemini 4 Argon, not Robotics 2.5.</li>
+          <li><strong>U.S. AI safety office:</strong> the report rests on two anonymous former officials speaking to AP and is unconfirmed by the administration.</li>
+          <li><strong>Muse Ember 1.0:</strong> single-sourced to Meta's research post plus press coverage; no standalone Meta announcement page was found.</li>
+          <li><strong>Palantir / NHS:</strong> reported second-hand via a briefing digest; the Guardian original was not directly retrieved.</li>
+          <li><strong>Google TPU 8tx / 8i Max:</strong> performance claims are manufacturer-reported, not independently benchmarked; no pricing, availability date or regions were given.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Tuesday, November 10, 2026, plus significant late-breaking items from November 9–10, 2026 (one flagged item dated November 11). Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 11, 2026.<br>18 stories, plus brief items.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

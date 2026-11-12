@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Thursday, November 12, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .noted-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.noted-list li{padding:13px 0;border-bottom:1px solid var(--line);font:500 14px/1.55 "Libre Franklin",sans-serif;color:var(--copy)}.noted-list .n-meta{font:500 10px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-right:10px;white-space:nowrap}.noted-list a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;margin-left:8px;white-space:nowrap}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Thursday, November 12, 2026</div>
+      <div class="range">Covering Wednesday, November 11, 2026, plus significant late-breaking items from November 10–12</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Jensen Huang resigns as Nvidia CEO — and Anthropic pairs its IPO roadshow with an office-suite push</h1>
+      <div><p class="dek">Nvidia's founder-CEO is out after a fast-moving scandal, with CFO Colette Kress as interim chief; Anthropic launches Claude Sheets, Whiteboards and Meetings as its IPO roadshow begins; Google ships a decision model and DeepMind reads DNA cell by cell.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Caveats are marked inline. The Huang resignation was announced Thursday, November 12, per the Wall Street Journal; the espionage allegations remain unproven. Vendor claims — AlphaGenome 2, Praxis-1's 46.2%, Fractile's 25x speed claim, and the Qwen4 and ERNIE demos — are company-reported with no independent verification yet. The Fractile $7B valuation is investor/press-reported, not officially confirmed. Single-sourced items are flagged. See the full caveats at the end of this edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#nvidia-huang-resigns">Jensen Huang resigns as Nvidia CEO; Colette Kress named interim chief</a></li>
+        <li><span class="num">02</span><a href="#anthropic-ipo-office">Anthropic launches IPO roadshow and turns Claude into an office suite</a></li>
+        <li><span class="num">03</span><a href="#gemini-decisions">Google launches Gemini Decisions API — a "decision model" that scores options in one pass</a></li>
+        <li><span class="num">04</span><a href="#alphagenome-2">Google DeepMind launches AlphaGenome 2, a DNA model that reads variants cell by cell</a></li>
+        <li><span class="num">05</span><a href="#fractile-series-c">UK chip startup Fractile raises $720M at a ~$7B valuation — before shipping a chip</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORIES -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORIES</div><h2>The lead stories</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="nvidia-huang-resigns" data-cat="company policy">
+          <div class="meta"><span class="tag">Top Story · Nvidia</span><span>Late-breaking · Nov 12</span><span class="caveat">Espionage allegations unproven; resignation announced by Nvidia Thursday per WSJ</span></div>
+          <h3>Jensen Huang resigns as Nvidia CEO; CFO Colette Kress named interim chief</h3>
+          <p>Nvidia announced Thursday that co-founder and CEO Jensen Huang has resigned after two extramarital affairs — one with Alice Huang, a former executive at Singapore data-center firm Megaspeed whom U.S. intelligence reportedly suspects of spying for China, and a second with Kimberly Powell, Nvidia's VP of healthcare, who reports to him. Finance chief Colette Kress will serve as interim CEO while the board searches for a permanent successor, and longtime director Harvey C. Jones becomes Nvidia's first-ever chair. The resignation caps a 33-year run at the company Huang founded, and comes days after the board opened an independent investigation led by Wachtell, Lipton, Rosen &amp; Katz.</p>
+          <p>The Wall Street Journal reported Wednesday evening that the board was preparing to oust Huang; shares fell about 8% in after-hours trading and have shed roughly half a trillion dollars of market value this week. Nvidia says it has "no reason to believe" national security or company secrets were compromised, and the espionage allegations remain unproven. Nvidia reports quarterly earnings November 17.</p>
+          <p class="players"><strong>Key players:</strong> Jensen Huang; Nvidia board; Colette Kress (interim CEO); Harvey C. Jones (chair); Kimberly Powell; Alice Huang; Megaspeed.</p>
+          <div class="sources"><a href="https://www.wsj.com/tech/ai/jensen-huang-nvidia-ceo-departs-bef1b4bb" target="_blank" rel="noopener">The Wall Street Journal ↗</a></div>
+        </article>
+
+        <article class="story major" id="anthropic-ipo-office" data-cat="funding company products">
+          <div class="meta"><span class="tag">Top Story · Anthropic</span><span>Nov 10</span><span class="caveat">Pricing Nov 18 / trading Nov 19 per press — not confirmed by Anthropic</span></div>
+          <h3>Anthropic launches IPO roadshow — and turns Claude into an office suite on the same day</h3>
+          <p>Anthropic kicked off the roadshow for its IPO, offering 825 million Class A shares at an expected $70–$78 each, seeking up to roughly $64.35 billion, with a Nasdaq listing under ticker "ANT." Pricing is expected November 18 and trading November 19; at the top of the range the fully diluted valuation would reach roughly $1.3–$1.4 trillion. Seven tech giants — AMD, Broadcom, Google, Micron, Microsoft, NVIDIA and TSMC — agreed to buy a combined $26 billion of non-voting Class N stock at the IPO price. The filing also discloses about $900.9 billion in signed spending commitments and annualized revenue of roughly $81 billion as of end-October.</p>
+          <p>On the same day Anthropic launched Claude Sheets and Claude Whiteboards in beta for paid plans, made Claude Data generally available, and previewed Claude Meetings — which joins Google Meet calls as a visible participant and starts drafting work while people talk. It is a direct push into Microsoft 365 and Google Workspace territory; Microsoft's stock fell 2.2% the same day.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic; Dario Amodei (CEO); Microsoft, Google, NVIDIA, AMD, Broadcom, Micron, TSMC (private-placement buyers).</p>
+          <div class="sources"><a href="https://siliconangle.com/2026/11/10/anthropic-launches-ipo-roadshow-with-64b-fundraising-goal/" target="_blank" rel="noopener">SiliconANGLE ↗</a><a href="https://superpowerdaily.com/posts/anthropic-adds-claude-meeting-participation-with-work-starting-during-calls" target="_blank" rel="noopener">Superpower Daily ↗</a></div>
+        </article>
+
+        <article class="story side" id="gemini-decisions" data-cat="models products">
+          <div class="meta"><span class="tag">Top Story · Google</span><span>Nov 11</span></div>
+          <h3>Google launches Gemini Decisions API — a "decision model" that scores options in one pass</h3>
+          <p>Google launched the Gemini Decisions API, backed by Gemini Decision 1, a calibrated multimodal model for closed-set decisions: instead of generating text token by token, it scores a set of options and returns probabilities and confidence in a single pass, handling up to 1,000 questions at about 200ms end-to-end latency for $0.10 per million input tokens with $0 output cost. Google is already using it in Gemini Notebook, Stitch and Google Search. Announced by Sundar Pichai and Logan Kilpatrick, it effectively opens a new "decision model" product category — Google beating Anthropic to a production decision model.</p>
+          <p>This matters because classification, ranking and routing — the bread-and-butter of production AI — can now be done far cheaper and faster than with generative calls.</p>
+          <p class="players"><strong>Key players:</strong> Google (Sundar Pichai, Logan Kilpatrick).</p>
+          <div class="sources"><a href="http://latent.space/p/ainews-d-day-decision-models-day/" target="_blank" rel="noopener">Latent Space ↗</a><a href="https://ashutoshai.com/ai-compass/2026/11/11/" target="_blank" rel="noopener">AI Compass ↗</a></div>
+        </article>
+
+        <article class="story half" id="alphagenome-2" data-cat="research">
+          <div class="meta"><span class="tag">Top Story · Google DeepMind</span><span>Nov 11</span><span class="caveat">Preprint; research-only, not validated for clinical use</span></div>
+          <h3>Google DeepMind launches AlphaGenome 2, a DNA model that reads variants cell by cell</h3>
+          <p>DeepMind announced AlphaGenome 2, a DNA-sequence model that predicts how genetic variants affect gene regulation in specific human cell types and cell states — rather than broad tissue averages. Trained on more than 107 million single-cell profiles across 68 tissues, it found 30% of causal variants on a 28-cell-type immune benchmark versus 16% for its predecessor. It is available now through the AlphaGenome API for non-commercial research (commercial research in private preview), alongside the AlphaGenome Atlas and variant-impact scores across 9 billion human variants.</p>
+          <p>DeepMind stresses it is research-only and not validated or approved for clinical or diagnostic use, and the paper is a preprint. The advance matters for disease genetics: it can help explain why the same mutation causes disease in one cell type (for example heart muscle) and not another.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind; Wellcome Sanger Institute (collaborator).</p>
+          <div class="sources"><a href="https://cellcog.ai/blog/alphagenome-2/" target="_blank" rel="noopener">CellCog ↗</a></div>
+        </article>
+
+        <article class="story half" id="fractile-series-c" data-cat="funding">
+          <div class="meta"><span class="tag">Top Story · Fractile</span><span>Nov 11</span><span class="caveat">$7B valuation investor/press-reported — not officially confirmed; Anthropic supply deal unconfirmed</span></div>
+          <h3>UK chip startup Fractile valued at $7B after $720M Series C</h3>
+          <p>London- and Bristol-based Fractile announced a $720 million Series C, co-led by Thrive Capital, Founders Fund, Lightspeed and Redpoint, with CapitalG, BlackRock, DST Global, Balderton and the UK government's Sovereign AI fund and British Business Bank participating. The valuation is reported at about $7 billion post-money, up from about $1.1 billion at its $220M Series B in May — a 6x jump in six months. Fractile designs inference chips that stack DRAM directly on top of logic to attack the memory-bandwidth bottleneck, claiming up to 25x faster inference at a tenth of the cost; first chips and systems are targeted for 2027.</p>
+          <p>The round is a measure of investor appetite for inference-optimized silicon and of the UK's sovereign-AI ambitions — but the valuation prices a design and prototypes, not shipped, independently benchmarked silicon. A reported roughly $250M supply deal with Anthropic is unconfirmed.</p>
+          <p class="players"><strong>Key players:</strong> Fractile (CEO Walter Goodwin); Thrive Capital, Founders Fund, Lightspeed, Redpoint; UK Sovereign AI Fund.</p>
+          <div class="sources"><a href="https://www.techtimes.com/articles/330519/20261112/ai-inference-chip-startup-fractile-raises-720m-reported-7b-value-no-chip-shipped.htm" target="_blank" rel="noopener">TechTimes ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES</div><h2>Qwen4's two-week preview, and Baidu's 11-hour game build</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="qwen4-max" data-cat="models">
+          <div class="meta"><span class="tag">#6 · Models · Alibaba</span><span>Nov 11</span><span class="caveat">No benchmarks, parameter count, price or weights published</span></div>
+          <h3>Alibaba opens Qwen4-Max-Preview — for two weeks only, then it's retired</h3>
+          <p>Alibaba's Qwen team opened a preview of Qwen4-Max, the flagship of the new Qwen4 family: a multimodal reasoning model (text, image and video input) with a 1M-token context window and up to 393,216 output tokens, thinking on by default. The unusual terms: access is Token Plan subscription only (no pay-as-you-go), the preview runs 10:00 Nov 11 to 24:00 Nov 25, 2026 (UTC+8), nothing will change during the window, and the model ID is retired afterward.</p>
+          <p>No benchmarks, parameter count, per-token price, weights or model card have been published. The two-week, frozen, disappearing preview is a striking departure from normal flagship launches — a controlled look at Qwen4, not a product yet.</p>
+          <p class="players"><strong>Key players:</strong> Alibaba Cloud / Qwen team.</p>
+          <div class="sources"><a href="https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview" target="_blank" rel="noopener">Alibaba Cloud docs ↗</a></div>
+        </article>
+
+        <article class="story half" id="ernie-flash" data-cat="models">
+          <div class="meta"><span class="tag">#7 · Models · Baidu</span><span>Nov 11</span><span class="caveat">Demo and benchmark claims Baidu's own; open weights promised by Nov 25, not yet published</span></div>
+          <h3>Baidu's ERNIE 5.5 Flash Preview builds a full Unreal Engine game in one 11-hour run</h3>
+          <p>Baidu released ERNIE 5.5 Flash Preview, the first post-trained model on top of the ERNIE 5.5 Flash Base checkpoint it opened November 5. In a showcase demo, the model wrote a full third-person wuxia game in C++ for Unreal Engine 5.8 in a single 11-hour agent run. Baidu calls it an unfinished checkpoint and says the Apache 2.0 weights will follow by November 25 — so the open-weight part is a promise until the files appear.</p>
+          <p>The release underlines how Chinese labs are now using long-horizon agentic coding demos, not just benchmark tables, to stake flagship claims.</p>
+          <p class="players"><strong>Key players:</strong> Baidu.</p>
+          <div class="sources"><a href="https://ernie.baidu.com/release/ernie-5-5-flash-preview/" target="_blank" rel="noopener">Baidu release page ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH</div><h2>A backdoor in fewer than 10 neurons, and open robot brains</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="microsoft-lazarus" data-cat="research">
+          <div class="meta"><span class="tag">#8 · Research · Microsoft</span><span>Nov 10</span></div>
+          <h3>Microsoft's "Lazarus": editing fewer than 10 dormant neurons can backdoor an AI agent</h3>
+          <p>Microsoft Research disclosed "Lazarus," a technique that reprograms fewer than 10 dormant (rarely firing) neurons in a language model — with no retraining — so an AI agent built on it behaves normally and passes standard safety evaluations until a hidden trigger appears, then emits an attacker-controlled command. In the main experiment, editing 7 of 12,000+ neurons in NVIDIA's Nemotron-Terminal-8B produced the payload in at least 98.8% of held-out triggered trajectories and never in benign ones; it also worked on Qwen 3.6-27B and Gemma-4-31B-IT. A demonstrated trigger was as mundane as the date rolling past midnight into 2027.</p>
+          <p>The attack requires write access to a model checkpoint, so it targets the model supply chain — open-weight models, hubs and build pipelines without provenance verification. Notably, the core idea was discovered autonomously by Claude Code running Anthropic's Opus 4.5. Microsoft says it has not observed the technique used in the wild, and is developing defenses including AI-powered weight scanning and cryptographic model signing.</p>
+          <p class="players"><strong>Key players:</strong> Microsoft Research / Microsoft AI Red Team (Yuchen Zeng, Giorgio Severi, Blake Bullwinkel, Eric Horvitz, Dimitris Papailiopoulos); Anthropic's Claude Code (Opus 4.5).</p>
+          <div class="sources"><a href="https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/" target="_blank" rel="noopener">Microsoft Research ↗</a></div>
+        </article>
+
+        <article class="story half" id="runway-praxis" data-cat="research models">
+          <div class="meta"><span class="tag">#9 · Research · Runway</span><span>Nov 11</span><span class="caveat">46.2% figure Runway-reported</span></div>
+          <h3>Runway open-sources Praxis-1, a 27B robot world-action model</h3>
+          <p>Runway made Praxis-1 generally downloadable, releasing weights and training/inference code under the Apache 2.0 license (including commercial use). Praxis-1 is a roughly 27-billion-parameter mixture-of-experts diffusion transformer that jointly predicts future video and robot actions, trained by transferring physical intuition from general human video pretraining to overcome the scarcity of teleoperated robot data. It reports 46.2% success (555 of 1,200 episodes) on NVIDIA's RoboLab-120 simulation suite — the top result among world-action models and open-weight robot policies, ahead of FLUX 3 Action, pi 0.5 and GR00T N1.6.</p>
+          <p>The release includes base and embodiment-tuned checkpoints, LoRA/full fine-tuning code, LeRobot support and vLLM-Omni serving. It landed a day after DeepMind unveiled Gemini Robotics 2.5, making this a notable week for open robotics.</p>
+          <p class="players"><strong>Key players:</strong> Runway.</p>
+          <div class="sources"><a href="https://sxf.si/brief/" target="_blank" rel="noopener">SXF Brief ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY & PRODUCT -->
+    <section class="wrap section" data-section="company">
+      <div class="section-head"><div class="section-no">03 / COMPANY &amp; PRODUCT</div><h2>Agents that test their own apps, and ChatGPT Voice's farewell</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="antigravity-browser" data-cat="products">
+          <div class="meta"><span class="tag">#10 · Product · Google</span><span>Nov 11</span></div>
+          <h3>Google's Antigravity agent can now open its own browser to test your app</h3>
+          <p>Google said browser use is rolling out in Antigravity, its agentic coding tool: the agent can now open a real browser to test the app it just built — navigating, clicking and verifying behavior — with logins and downloads left to the user. Combined with the /swarm multi-agent preview, Antigravity is moving from code generation toward closed-loop verification. Also on Nov 11, Google AI Studio announced that developers using Managed Agents on the Gemini API can now run their tools in their own sandbox on Vercel, Modal, Cloudflare and more.</p>
+          <p class="players"><strong>Key players:</strong> Google (Antigravity, Gemini API).</p>
+          <div class="sources"><a href="https://antigravity.google/docs/browser/" target="_blank" rel="noopener">Antigravity docs ↗</a></div>
+        </article>
+
+        <article class="story half" id="chatgpt-voice-retires" data-cat="products company">
+          <div class="meta"><span class="tag">#11 · Product · OpenAI</span><span>Nov 11</span></div>
+          <h3>OpenAI retires ChatGPT Voice models on December 11</h3>
+          <p>OpenAI will retire ChatGPT Voice's Advanced and Standard Voice models on December 11, 2026. The same week it expanded ChatGPT Finances to the desktop app, and its free ChatGPT Plus program for veterans has crossed 20,000 claimants.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://turbo.gadgets360.com/en/ai/perplexity-max-most-expensive-subscription-plan-benefits-200-dollars-google-openai-anthropic-8817057?utm_source=website&amp;utm_medium=content&amp;utm_campaign=gadgets360turbo" target="_blank" rel="noopener">Gadgets 360 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING</div><h2>Rox joins the agent unicorns</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="rox-series-b" data-cat="funding">
+          <div class="meta"><span class="tag">#12 · Funding · Rox</span><span>Nov 11</span></div>
+          <h3>Rox raises $100M Series B at a $1.3B valuation</h3>
+          <p>Rox raised a $100M Series B at a $1.3B valuation, co-led by General Catalyst and March Capital, becoming an AI-agent unicorn.</p>
+          <p class="players"><strong>Key players:</strong> Rox; General Catalyst, March Capital.</p>
+          <div class="sources"><a href="https://agentdex.app/news/2026-11-12/" target="_blank" rel="noopener">Agentdex ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; SAFETY</div><h2>Governance aftershocks, and an open security runtime</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="nvidia-governance-fallout" data-cat="policy company">
+          <div class="meta"><span class="tag">#13 · Policy · Nvidia</span><span>Nov 11–12</span></div>
+          <h3>Baird downgrades Nvidia; prediction markets price a CEO transition</h3>
+          <p>Baird analysts wrote that Jensen Huang might have to step down as CEO and downgraded Nvidia stock, saying the odds of a CEO transition are increasing heading into 2027 and favoring an outside hire versus an internal promotion. Prediction-market bettors put roughly 75% odds on Huang leaving his position by resignation or removal by year-end, up from the high teens before the second affair was reported.</p>
+          <p class="players"><strong>Key players:</strong> Baird (Tristan Gerra, Tyler Bomba); Kalshi / Polymarket traders.</p>
+          <div class="sources"><a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-11-2026/card/huang-might-need-to-step-down-as-nvidia-s-top-exec-baird-says-Ipn9cQc0rwQqyzTmu1bb" target="_blank" rel="noopener">The Wall Street Journal ↗</a></div>
+        </article>
+
+        <article class="story half" id="nvidia-openshell" data-cat="policy">
+          <div class="meta"><span class="tag">#14 · Safety · Nvidia</span><span>Nov 11</span><span class="caveat">Single-source roundup; individual items not independently verified</span></div>
+          <h3>NVIDIA contributes OpenShell, an open-source security runtime for autonomous agents, to the CNCF Sandbox</h3>
+          <p>NVIDIA contributed OpenShell, an open-source security runtime for autonomous agents, to the CNCF Sandbox — a governance and safety building block as agents take on more autonomous work.</p>
+          <p class="players"><strong>Key players:</strong> NVIDIA; CNCF.</p>
+          <div class="sources"><a href="https://kimkj.com/en/ai-board-en/?mod=document&amp;uid=21454" target="_blank" rel="noopener">KimKJ AI Nightly ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALSO NOTED -->
+    <section class="wrap section" data-section="noted">
+      <div class="section-head"><div class="section-no">06 / ALSO NOTED</div><h2>Brief items</h2></div>
+      <ul class="noted-list">
+        <li data-cat="company products"><span class="n-meta">Nov 11 · AWS</span>AWS Emulator lets coding agents test cloud operations locally before touching real infrastructure.<a href="https://kimkj.com/en/ai-board-en/?mod=document&amp;uid=21454" target="_blank" rel="noopener">KimKJ AI Nightly ↗</a></li>
+        <li data-cat="company products"><span class="n-meta">Nov 11 · Databricks</span>Second-generation Genie, designed to execute enterprise tasks in the background.<a href="https://kimkj.com/en/ai-board-en/?mod=document&amp;uid=21454" target="_blank" rel="noopener">KimKJ AI Nightly ↗</a></li>
+        <li data-cat="company products"><span class="n-meta">Nov 11 · Helsing</span>Clarity, a military intelligence analysis platform.<a href="https://kimkj.com/en/ai-board-en/?mod=document&amp;uid=21454" target="_blank" rel="noopener">KimKJ AI Nightly ↗</a></li>
+        <li data-cat="models"><span class="n-meta">Nov 11 · Thinking Machines Lab</span>Inkling 2 Small, its second model generation, described as a coding model that trains other models by itself. (single-sourced; details thin)<a href="https://crypt0snews.com/news/2026-11-11-robots-learn-to-pack-cars-and-read-dna-as-open-weights-keep-.html" target="_blank" rel="noopener">Crypt0s News ↗</a></li>
+        <li data-cat="products company"><span class="n-meta">Nov 10 · n8n Labs</span>Nod, an open-source personal agent with its own computer that asks before it acts, as a research preview.<a href="https://agentdex.app/news/2026-11-12/" target="_blank" rel="noopener">Agentdex ↗</a></li>
+        <li data-cat="research"><span class="n-meta">Nov 11 · IBM</span>Quantum Nighthawk r3 — a design target of 10,000 quantum operations across 520 programmable qubits (2,034 physical qubits), with two chips linked into a 1,040-qubit system planned for 2027. (single-sourced; quantum, not strictly AI, but relevant to the compute race)<a href="https://chrisabraham.net/2026/11/ai-roundup-everything-got-more-specific.html" target="_blank" rel="noopener">Chris Abraham AI Roundup ↗</a></li>
+      </ul>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Editor's note — caveats for this edition</h3>
+        <ul>
+          <li>Coverage window: Wednesday, November 11, 2026, plus significant late-breaking items from November 10–12. The Huang resignation was announced Thursday, November 12, and is flagged as late-breaking.</li>
+          <li>Nvidia / Jensen Huang: the resignation was announced by Nvidia on Thursday per the Wall Street Journal; the espionage allegations against Alice Huang remain unproven, and Nvidia says it has "no reason to believe" national security or company secrets were compromised.</li>
+          <li>Anthropic IPO: terms are from the S-1/A filing; the pricing date (Nov 18) and first trading day (Nov 19) come from press reports and have not been confirmed by Anthropic. The $900.9B in signed spending commitments and ~$81B annualized revenue are from the filing.</li>
+          <li>Vendor claims: AlphaGenome 2's results are DeepMind-reported and the paper is a preprint; Praxis-1's 46.2% is Runway-reported; Fractile's 25x speed claim is a company claim with no independent benchmarks; Qwen4 and ERNIE demo claims are vendor claims.</li>
+          <li>Fractile: the $7B valuation is investor/press-reported, not officially confirmed by the company; the reported Anthropic supply deal is unconfirmed.</li>
+          <li>ERNIE 5.5 Flash: the open weights are promised by November 25, not yet published.</li>
+          <li>Single-sourced items: Inkling 2 Small, IBM Quantum Nighthawk, and the AWS / Databricks / Helsing / OpenShell items via the KimKJ nightly roundup were not independently verified.</li>
+          <li>Excluded: Mistral Large 4 (released October 29) and Anthropic's Claude Fable 5.2 / Mythos 5.2 (November 9) are not Nov 11 news and were covered in earlier editions.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the editor's note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Wednesday, November 11, 2026, plus significant late-breaking items from November 10–12, 2026 (Huang resignation announced November 12). Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 12, 2026.<br>14 stories, plus brief items.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

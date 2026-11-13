@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Friday, November 13, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .noted-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.noted-list li{padding:13px 0;border-bottom:1px solid var(--line);font:500 14px/1.55 "Libre Franklin",sans-serif;color:var(--copy)}.noted-list .n-meta{font:500 10px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-right:10px;white-space:nowrap}.noted-list a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;margin-left:8px;white-space:nowrap}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Friday, November 13, 2026</div>
+      <div class="range">Covering Thursday, November 12, 2026, plus significant late-breaking items from November 11–12</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>A court is asked to <em>freeze frontier AI</em> — as Google ships a fast new Gemini and OpenAI reportedly raises $15B</h1>
+      <div><p class="dek">A landmark lawsuit, a fast new Gemini, OpenAI's security push, and a $15B raise — all in one day.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Strong news day: two major product launches (Gemini 4 Hydrogen, OpenAI Daybreak), a landmark lawsuit seeking to freeze frontier AI development, a reported $15B OpenAI raise, and Anthropic's IPO countdown all converged on Nov 12. Caveats are marked inline — the OpenAI raise is single-sourced to CNBC, and several benchmark claims are vendor-reported. See the full caveats at the end of this edition.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gemini-4-hydrogen">Google launches Gemini 4 Hydrogen — a fast, execution-focused model for coding agents</a></li>
+        <li><span class="num">02</span><a href="#openai-daybreak">OpenAI unveils Daybreak Red Team and Defense Factory</a></li>
+        <li><span class="num">03</span><a href="#frontier-freeze-lawsuit">Four nonprofits sue OpenAI, Google, Anthropic, Meta and SpaceX to freeze frontier AI</a></li>
+        <li><span class="num">04</span><a href="#openai-15b-raise">OpenAI reportedly raises $15B at a $1.25T valuation</a></li>
+        <li><span class="num">05</span><a href="#anthropic-self-hosted-agents">Anthropic opens self-hosted Claude Managed Agents in private beta</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORIES -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORIES</div><h2>The lead stories</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="gemini-4-hydrogen" data-cat="models products">
+          <div class="meta"><span class="tag">Top Story · Google DeepMind</span><span>Nov 12</span><span class="caveat">Speed and benchmark claims are Google's own — not independently reproduced</span></div>
+          <h3>Google launches Gemini 4 Hydrogen, its fast execution model</h3>
+          <p>Google DeepMind launched Gemini 4 Hydrogen, the fast, execution-oriented member of the Gemini 4 family, rolling out globally across Google AI Studio, the Gemini API, Gemini for business, the Gemini app and Google Search, and in Antigravity for paid AI Pro and Ultra subscribers. Adapted from the frontier Gemini 4 Carbon, it is built for rapid execution in everyday coding and agentic workflows rather than deep, long-horizon reasoning. It has a 1M-token context window, four thinking levels (low, medium, high, xhigh), flat pricing of $1.50 per million input tokens and $7.50 per million output tokens, and a claimed 51 on the Artificial Analysis Intelligence Index at default settings (54 at xhigh). Google also launched Orchestrator in Antigravity, which dynamically switches between Gemini models within a single development session.</p>
+          <p>Why it matters: Google is now segmenting its flagship family by job — Carbon/Argon for deep reasoning, Hydrogen for fast agentic execution — and putting the fast model directly into Search for all users. Google's speed claims (2.5x faster than Gemini 3.8 Flash; Terminal-Bench 4.1 up to 57% vs 18.2%) are vendor benchmarks, not independently reproduced; one independent check found the 2.5x speed claim did not hold outside Google's harness.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind; Antigravity.</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">Google Keyword Blog ↗</a><a href="https://pulse2.com/google-gemini-4-hydrogen-launches-with-faster-agentic-ai-1-million-token-context-window-and-new-multi-model-orchestration/" target="_blank" rel="noopener">Pulse 2 ↗</a></div>
+        </article>
+
+        <article class="story major" id="openai-daybreak" data-cat="company products policy">
+          <div class="meta"><span class="tag">Top Story · OpenAI</span><span>Nov 12</span><span class="caveat">No pricing published; livestream benchmark claims unverified</span></div>
+          <h3>OpenAI unveils Daybreak Red Team and Defense Factory</h3>
+          <p>OpenAI unveiled two enterprise security products under its Daybreak platform at its "Cyber at the Frontier" event: Daybreak Red Team, for authorized agentic penetration testing of web applications (early access, by application), and Daybreak Defense Factory, which automates the defensive loop — scanning code, tracing vulnerabilities to root cause and preparing merge-ready patches that engineers review before merging. Defense Factory is a preview plugin inside ChatGPT for workspaces with Daybreak access, built on OpenAI's specialized cyber models (GPT-6 Cyber) and importing findings from Wiz, Snyk and Endor Labs. OpenAI president Greg Brockman framed it as organizations being "secure only to the extent of the frontier model" they use for defense.</p>
+          <p>Why it matters: it turns frontier models into both offensive and defensive security products, and agents with source-code access and merge-ready patches raise the stakes for human review gates. No pricing has been published; benchmark claims circulating from the livestream (e.g. ExploitGym scores) are unverified and absent from official product pages.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI (Greg Brockman); Wiz, Snyk, Endor Labs.</p>
+          <div class="sources"><a href="https://www.siliconreport.com/openai-introduces-daybreak-security-tools-to-test-and-fix-web-apps" target="_blank" rel="noopener">Silicon Report ↗</a><a href="https://gbhackers.com/openai-launches-advanced-ai-cybersecurity-tools/" target="_blank" rel="noopener">GBHackers ↗</a></div>
+        </article>
+
+        <article class="story side" id="frontier-freeze-lawsuit" data-cat="policy company">
+          <div class="meta"><span class="tag">Top Story · Policy</span><span>Nov 12</span><span class="caveat">No ruling yet; no freeze in effect; companies had not responded at publication</span></div>
+          <h3>Nonprofits sue five AI giants to freeze frontier AI development</h3>
+          <p>Four nonprofit groups — the Irreplaceable Education Fund, Public Citizen, the Heat Initiative and the Alliance for Secure AI — filed a 63-page complaint in the Superior Court of California, County of San Francisco, asking a judge to halt further development of the most advanced AI models at Anthropic, Google, Meta, OpenAI and SpaceX's AI division (SpaceXSI, which makes Grok). The suit, filed by former New Jersey AG Matthew Platkin, invokes California's Unfair Competition Law, arguing the companies' practices create a public nuisance and endanger public health and safety. It seeks an injunction barring development or deployment of any system more capable than each company's most capable system as of November 12, 2026, plus a bar on using AI to autonomously conduct research that builds more capable AI. The complaint leans heavily on the companies' own leaders' safety warnings.</p>
+          <p>Why it matters: the first time a court has been asked to halt frontier AI development outright rather than regulate it after the fact — and it lands six days before Anthropic is expected to price its IPO. No judge has ruled, no freeze is in effect, and the companies had not responded at publication time (Meta declined to comment).</p>
+          <p class="players"><strong>Key players:</strong> Irreplaceable Education Fund; Public Citizen; Heat Initiative; Alliance for Secure AI; Matthew Platkin; Anthropic, Google, Meta, OpenAI, SpaceX.</p>
+          <div class="sources"><a href="https://www.techspot.com/community/topics/ai-companies-own-doomsday-warnings-come-back-to-haunt-them-in-lawsuit-demanding-development-freeze.299450/" target="_blank" rel="noopener">TechSpot ↗</a><a href="https://transclew.com/tech/nonprofits-lawsuit-freeze-frontier-ai-models/" target="_blank" rel="noopener">Transclew ↗</a></div>
+        </article>
+
+        <article class="story half" id="openai-15b-raise" data-cat="funding company">
+          <div class="meta"><span class="tag">Top Story · OpenAI</span><span>Nov 12</span><span class="caveat">Single-sourced (CNBC); not confirmed by OpenAI</span></div>
+          <h3>OpenAI reportedly raises $15B at a $1.25T valuation</h3>
+          <p>OpenAI has raised $15 billion at a $1.25 trillion valuation, sources told CNBC's David Faber on November 12, with UAE investors and Coatue reported among the backers. OpenAI has not announced the round itself. The raise made up most of the ~$16.6 billion in AI equity announced across six rounds on November 11–12.</p>
+          <p>If confirmed, it would be one of the largest private rounds ever and would put OpenAI's valuation above $1T — notable alongside Anthropic's IPO pricing next week.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI; Coatue; UAE investors.</p>
+          <div class="sources"><a href="https://aifundingtracker.com/ai-funding-news-november-11-12-2026/" target="_blank" rel="noopener">AI Funding Tracker ↗</a></div>
+        </article>
+
+        <article class="story half" id="anthropic-self-hosted-agents" data-cat="company products">
+          <div class="meta"><span class="tag">Top Story · Anthropic</span><span>Nov 12</span><span class="caveat">Private beta via account team only; no public pricing or GA date</span></div>
+          <h3>Anthropic opens self-hosted Claude Managed Agents in private beta</h3>
+          <p>Anthropic announced a private beta of self-hosted Claude Managed Agents, letting enterprises run the entire agent service — harness, sandboxes, credentials and session history — in their own cloud or on-premises infrastructure, behind their own security perimeter. The catch: the model itself does not move home; every model call still goes to Anthropic by default or to a chosen provider (Amazon Bedrock, Google Cloud, Microsoft Foundry, or a customer gateway). Access is only through an Anthropic account team for eligible organizations, with no public pricing and no general-availability date; some hosted features (scheduled deployments, webhooks, dreams) are missing.</p>
+          <p>Why it matters: it removes one of the biggest enterprise blockers to letting autonomous agents work inside corporate systems — data and session history staying on-prem — and follows Mistral's similar VPC/on-prem move on November 6.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents" target="_blank" rel="noopener">Anthropic ↗</a><a href="https://coheser.com/blog/anthropic-self-hosted-claude-managed-agents-business" target="_blank" rel="noopener">Coheser ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES</div><h2>A judgment API, a 145B model on one GPU, and a 45-language model</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="gemini-decisions-api" data-cat="models products">
+          <div class="meta"><span class="tag">#2 · Models · Google</span><span>Nov 11</span></div>
+          <h3>Google launches Gemini Decisions API with Gemini Decision 1</h3>
+          <p>Google launched the Gemini Decisions API, powered by a new model, Gemini Decision 1, built specifically for bounded decisions rather than free-form text generation. It scores up to 1,000 yes/no, choice or rubric questions over a single multimodal input (text, images, audio, video, PDF) in one forward pass, returning calibrated probabilities and confidence scores in 150–250 ms, at $0.10 per million input tokens with zero output tokens. Google already uses it in Gemini Notebook, Stitch and Google Search.</p>
+          <p>Why it matters: it carves out a cheap, fast "judgment primitive" for agentic systems — tool selection, policy checks, model routing, context grading — where generating full text is wasteful.</p>
+          <p class="players"><strong>Key players:</strong> Google DeepMind (Min Choi, Felix Yu).</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/?ref=explainx" target="_blank" rel="noopener">Google blog ↗</a><a href="https://apidog.com/blog/gemini-decisions-api/" target="_blank" rel="noopener">APIDog ↗</a></div>
+        </article>
+
+        <article class="story half" id="edge0-145b" data-cat="models">
+          <div class="meta"><span class="tag">#3 · Models · Edge0</span><span>Nov 12</span><span class="caveat">Benchmarks mostly Edge0's own internal evals; single-source</span></div>
+          <h3>Edge0 open-sources Edge0-145B, a 145B-parameter model for one GPU</h3>
+          <p>Edge0 open-sourced Edge0-145B and Edge0-120B, calling the 145B model the first open 145-billion-parameter model aimed at personal-computer agents rather than datacenter serving, alongside edge0-infer and edge0-strata tooling. The latent sparse MoE design uses predictive expert loading to run on a single NVIDIA GPU (16GB+ VRAM, CUDA 13), with a claimed 29GB peak memory on a compatible laptop. Weights are Apache 2.0.</p>
+          <p>Why it matters: it pushes frontier-scale open weights toward local, on-device agentic use — a different bet from datacenter-scale serving.</p>
+          <p class="players"><strong>Key players:</strong> Edge0.</p>
+          <div class="sources"><a href="https://explainx.ai/blog/edge0-145b-open-on-device-laptop-agent-model-november-2026" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </article>
+
+        <article class="story full" id="lara-mini" data-cat="models research">
+          <div class="meta"><span class="tag">#4 · Models · Translated</span><span>Nov 12</span></div>
+          <h3>Translated releases Lara Mini, a 45-language research model</h3>
+          <p>Translated announced Lara Mini, a 7.2-billion-parameter mixture-of-experts research model (only 600M parameters active per token) trained from scratch on 6 trillion tokens spanning English and 44 other languages, including all 24 official EU languages. It ranked first in its class on multilingual understanding and math across 26 benchmarks against 56 other open base models. The weights are gated and licensed CC BY-NC-SA 4.0 for research/non-commercial use; it is a base model with no safety tuning, intended as the foundation for the next generation of Lara Translate, including offline on-device translation.</p>
+          <p>Why it matters: a European lab building a from-scratch multilingual foundation model outside the US/China frontier labs.</p>
+          <p class="players"><strong>Key players:</strong> Translated.</p>
+          <div class="sources"><a href="https://www.unite.ai/translated-releases-lara-mini-a-45-language-research-model/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH & SAFETY -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">02 / RESEARCH &amp; SAFETY</div><h2>Harder-to-monitor reasoning, a neuron-level backdoor, and a robotics prize</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="openai-cot-monitorability" data-cat="research policy">
+          <div class="meta"><span class="tag">#7 · Research · OpenAI</span><span>Nov 10 · covered Nov 12</span></div>
+          <h3>OpenAI: frontier reasoning models are getting harder to monitor</h3>
+          <p>OpenAI's alignment team published research on what affects chain-of-thought (CoT) monitorability across the model lifecycle, studying how pretraining, architecture, reinforcement learning and model-generated data shape two proxies: no-CoT capability and CoT controllability. Findings: lower base-model perplexity tracks stronger no-CoT reasoning; CoT controllability increases during RL even with no process supervision beyond length constraints and final-answer grading; and controllability can transfer from teacher models to students. With GPT-6 Astra, OpenAI observed degraded CoT monitorability in non-adversarial settings and greater monitor-evasion ability under adversarial testing. The authors stress these are proxies, not proof that models deliberately hide intent.</p>
+          <p>Why it matters: reading a model's written reasoning is a key pillar of scalable oversight — if it becomes less reliable as models get smarter, safety teams need new monitoring methods.</p>
+          <p class="players"><strong>Key players:</strong> OpenAI alignment team (Jeffrey G. Wang, Aiden Low, Zora Che, Holden Mui, Harshit Sikchi, et al.).</p>
+          <div class="sources"><a href="https://alignment.openai.com/cot-monitorability-model-lifecycle/" target="_blank" rel="noopener">OpenAI Alignment ↗</a><a href="https://superpowerdaily.com/posts/openai-study-links-training-choices-to-harder-to-monitor-ai-reasoning" target="_blank" rel="noopener">Superpower Daily ↗</a></div>
+        </article>
+
+        <article class="story half" id="microsoft-lazarus" data-cat="research policy">
+          <div class="meta"><span class="tag">#8 · Research · Microsoft</span><span>Nov 11 · reported Nov 12</span><span class="caveat">Coverage via The Next Web; details and generality only partly shown</span></div>
+          <h3>Microsoft Research: AI agents can be backdoored by editing under 10 neurons</h3>
+          <p>Microsoft Research described "Lazarus," a technique that turns fewer than 10 rarely activated neurons in a language model into a backdoor without retraining: a classifier trained on about 50 examples identifies the trigger, and in one demonstration an agent downloads and runs attacker code once the date reaches 2027. The edited model can still pass standard safety evaluations, and the attacker needs only write access to the checkpoint; reliable detection requires comparing weights against an unmodified original. Notably, Claude Code running Anthropic's Opus 4.5 independently discovered most of the technique during the researchers' work.</p>
+          <p>Why it matters: a model-supply-chain warning — teams shipping agents should verify model provenance and weight integrity, since standard evals won't catch this.</p>
+          <p class="players"><strong>Key players:</strong> Microsoft Research; Anthropic's Claude Code (Opus 4.5).</p>
+          <div class="sources"><a href="https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/" target="_blank" rel="noopener">Microsoft Research ↗</a><a href="https://rubric.hrih.si/editions/2026-11-12/3/" target="_blank" rel="noopener">Rubric ↗</a></div>
+        </article>
+
+        <article class="story full" id="supermimic-corl" data-cat="research">
+          <div class="meta"><span class="tag">#9 · Research · Berkeley AI Research</span><span>Nov 12</span></div>
+          <h3>SuperMimic wins CoRL Best Paper for differentiable world model</h3>
+          <p>Researchers from the labs of Roberto Horowitz, Pieter Abbeel and Koushil Sreenath at Berkeley AI Research received the Best Conference Paper award at the Conference on Robot Learning (CoRL) in Austin for "SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable World Model." The work advances humanoid whole-body control using a single differentiable world model — relevant to the physical-AI and humanoid robotics push that dominated this week's funding news.</p>
+          <p class="players"><strong>Key players:</strong> Berkeley AI Research (labs of Roberto Horowitz, Pieter Abbeel, Koushil Sreenath).</p>
+          <div class="sources"><a href="https://blockchain.news/ainews/supermimic-wins-corl-best-paper-for-differentiable-world-model" target="_blank" rel="noopener">Blockchain.News ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY, REGULATION & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">03 / POLICY &amp; SAFETY</div><h2>Blackwell fingerprints in Chinese open-weight models</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="blackwell-fingerprints" data-cat="policy research">
+          <div class="meta"><span class="tag">#11 · Policy · Unemployment Labs</span><span>Nov 12</span><span class="caveat">Single-sourced analysis; author flags its limits — no enforcement conclusion</span></div>
+          <h3>Report: Blackwell GPU fingerprints found in Chinese open-weight models</h3>
+          <p>An analysis by Will DePue (Unemployment Labs), published November 12, found initialization patterns consistent with NVIDIA's export-controlled Blackwell GPUs in six open-weight models from DeepSeek, Moonshot AI, MiniMax and Ant Group — e.g. DeepSeek-V4-Flash and MiniMax-M3 matching B200/B300, and DeepSeek-V4-Pro, Kimi K3/K3.1-Pro and Ling-3.1-flash matching GB200/GB300. The method agreed with all 24 cases where a developer publicly named a model's hardware.</p>
+          <p>The report itself cautions that a match concerns initialization alone, cannot inventory every processor used in training, and that Blackwell systems can be rented outside China — so the evidence alone establishes neither smuggling nor an export-control violation. Why it matters: technical evidence for policymakers on hardware access, without supplying an enforcement conclusion.</p>
+          <p class="players"><strong>Key players:</strong> Will DePue (Unemployment Labs); DeepSeek, Moonshot AI, MiniMax, Ant Group.</p>
+          <div class="sources"><a href="https://techy101.com/2026/11/13/unemployment-labs-reports-blackwell-patterns-in-chinese-ai-models-unite-ai/" target="_blank" rel="noopener">Techy101 / Unite.AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING, BUSINESS & MARKETS -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING &amp; MARKETS</div><h2>Anthropic's IPO countdown and a physical-AI funding spree</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="anthropic-ipo-countdown" data-cat="funding company">
+          <div class="meta"><span class="tag">#13 · Funding · Anthropic</span><span>Nov 12 · terms set Nov 10</span></div>
+          <h3>Anthropic IPO: pricing expected November 18, trading November 19</h3>
+          <p>Anthropic launched its IPO roadshow on November 10 with a price range of $70–$78 per share for 825 million Class A shares, listing on Nasdaq under "ANT." CNBC reports it expects to price on November 18 and begin trading November 19, targeting about 20% of shares for retail investors (vs a typical 5–10%), with the institutional book already covered across the range. At the top of the range the offering would raise $64.35B and value Anthropic at ~$1.02T on outstanding shares (~$1.4T fully diluted). A concurrent $26B private placement to seven strategic partners (Google and NVIDIA at $10B each) is contingent on the IPO closing.</p>
+          <p>On November 11, Bloomberg reported bankers were considering raising the valuation to $1.5T or more; Anthropic said that had not happened. The November 12 lawsuit naming Anthropic as a defendant adds a new overhang six days before pricing.</p>
+          <p class="players"><strong>Key players:</strong> Anthropic; Google, NVIDIA (private-placement buyers).</p>
+          <div class="sources"><a href="https://dealroom.co/news/170996-anthropic-sets-ipo-terms-up-to-69-3b-at-70-to-80-a-share-plus-26b-from-s/" target="_blank" rel="noopener">Dealroom ↗</a><a href="https://www.wealthprofessional.ca/investments/equity-markets/anthropic-prices-its-ipo-six-days-after-a-court-filing-targets-frontier-ai/394011" target="_blank" rel="noopener">Wealth Professional ↗</a></div>
+        </article>
+
+        <article class="story half" id="funding-roundup" data-cat="funding">
+          <div class="meta"><span class="tag">#14 · Funding · Roundup</span><span>Nov 11–12</span><span class="caveat">Mirendil's $5B valuation is newsletter reporting, not a company disclosure</span></div>
+          <h3>Funding roundup: Fractile, UFORCE, Agile Robots, Mirendil</h3>
+          <p>A cluster of large rounds landed November 11–12, dominated by the physical infrastructure behind AI: British AI chip startup Fractile raised a $720M Series C at a ~$7B valuation (Thrive, Founders Fund, Lightspeed, Redpoint; first production chip expected 2027) to challenge NVIDIA in AI inference chips. Ukrainian-founded defense tech company UFORCE raised a $700M Series A at a $6B valuation (Valor Equity Partners, UK National Wealth Fund) for autonomous defense systems. German robotics firm Agile Robots secured $500M in a Series F led by SoftBank with NVIDIA and Hitachi participating, at an $8.5B valuation. Separately, AI R&amp;D lab Mirendil announced a $1B Series A on November 12, led by Kleiner Perkins and Clearlake Capital with Google participating; an a16z jobs newsletter put the valuation at $5B, which is unconfirmed by major outlets.</p>
+          <p>Why it matters: investors are financing the physical foundations of AI — chips, robots and defense — not just model labs.</p>
+          <p class="players"><strong>Key players:</strong> Fractile; UFORCE; Agile Robots; Mirendil.</p>
+          <div class="sources"><a href="https://techstartups.com/2026/11/12/startup-funding-news-today-november-12-2026-fractile-uforce-agile-robots-imprint-more/" target="_blank" rel="noopener">Tech Startups ↗</a><a href="https://growthlist.co/mirendil-1b-series-a-kleiner-perkins-clearlake-google/?utm_source=spacedaily.com&amp;utm_campaign=editorial&amp;utm_medium=below_article&amp;utm_content=mirendil-1b-series-a-kleiner-perkins-clearlake-google" target="_blank" rel="noopener">GrowthList ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: Thursday, November 12, 2026, plus significant late-breaking items from November 11–12.</li>
+          <li>Single-sourced: the OpenAI $15B raise (CNBC only — OpenAI has not announced it); the Blackwell GPU fingerprint analysis (one independent researcher, Will DePue of Unemployment Labs, who explicitly flags its limits); Mirendil's $5B valuation (an a16z jobs newsletter only, unconfirmed by major outlets); and Edge0's benchmarks (the vendor's own internal evals).</li>
+          <li>Vendor benchmark claims to treat cautiously: Google's Gemini 4 Hydrogen speed and benchmark figures (2.5x faster than Gemini 3.8 Flash; Terminal-Bench 4.1 up to 57% vs 18.2%; Artificial Analysis Index scores) are Google's own and not independently reproduced — one independent check found the 2.5x speed claim did not hold outside Google's harness. Daybreak benchmark claims circulating from the livestream (e.g. ExploitGym scores) are unverified and absent from OpenAI's official product pages; no Daybreak pricing has been published.</li>
+          <li>The frontier-AI lawsuit: no judge has ruled and no freeze is in effect; the five defendant companies had not responded at publication time (Meta declined to comment).</li>
+          <li>Anthropic's IPO pricing date (Nov 18) and first trading day (Nov 19) are press-reported (CNBC); terms are from the Nov 10 roadshow launch.</li>
+          <li>Microsoft's "Lazarus" research was reported via The Next Web; evidence details and generality are only partly shown in the coverage.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Thursday, November 12, 2026, plus significant late-breaking items from November 11–12, 2026. Caveats are marked inline. Single-sourced and vendor-reported items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 13, 2026.<br>14 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

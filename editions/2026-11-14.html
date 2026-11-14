@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Saturday, November 14, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .noted-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.noted-list li{padding:13px 0;border-bottom:1px solid var(--line);font:500 14px/1.55 "Libre Franklin",sans-serif;color:var(--copy)}.noted-list .n-meta{font:500 10px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-right:10px;white-space:nowrap}.noted-list a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;margin-left:8px;white-space:nowrap}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Saturday, November 14, 2026</div>
+      <div class="range">Covering Friday, November 13, 2026, plus significant late-breaking items from Thursday, November 12, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Huang resigns from Nvidia as ChatGPT gets a wallet and Anthropic's IPO draws <em>6x demand</em></h1>
+      <div><p class="dek">A founder exits after 33 years, agents learn to pay, a record IPO is swamped with orders — and a court is asked to freeze frontier AI.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>No major new frontier model release landed on Nov 13 itself — the day's weight was in business, policy, and agent-commerce news. Gemini 4 Hydrogen's Copilot arrival (Nov 13) is the closest thing to a model story.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#huang-resigns">Jensen Huang resigns as Nvidia CEO after 33 years</a></li>
+        <li><span class="num">02</span><a href="#anthropic-ipo-6x">Anthropic's IPO is about six times oversubscribed</a></li>
+        <li><span class="num">03</span><a href="#chatgpt-wallet">OpenAI launches ChatGPT Wallet — agents can now pay</a></li>
+        <li><span class="num">04</span><a href="#freeze-lawsuit">Four nonprofits sue five AI labs to freeze frontier AI</a></li>
+        <li><span class="num">05</span><a href="#blackwell-fingerprint">Banned Blackwell chips' fingerprint found in top Chinese models</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORIES -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORIES</div><h2>The lead stories</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="huang-resigns" data-cat="company policy">
+          <div class="meta"><span class="tag">#1 · Top Story · Nvidia</span><span>Thu, Nov 12, 2026</span></div>
+          <h3>Jensen Huang resigns as Nvidia CEO after 33 years</h3>
+          <p>Nvidia's founder stepped down as president, CEO, and board member effective immediately, ending a 33-year run at the helm of the world's most valuable AI chipmaker. CFO Colette Kress, 59, becomes interim CEO while keeping her finance role, and longtime director Harvey C. Jones becomes the board's first-ever chair. The company's press release and SEC 8-K give no reason, but the resignation follows weeks of scrutiny over Huang's reported relationship with a Singapore-based tech executive whom U.S. intelligence officials suspect of spying for China, and a board investigation announced Nov 8 into whether Huang was targeted by a foreign intelligence operation. Nvidia shares fell more than 13% on the news, and by Nov 13 the company's market value had dropped below $4 trillion for the first time since July 2025 — roughly $1.7 trillion of value lost in the longest weekly losing streak since 2012.</p>
+          <p class="players"><strong>Key people/companies:</strong> Nvidia, Jensen Huang, Colette Kress, Harvey C. Jones.</p>
+          <div class="sources"><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx" target="_blank" rel="noopener">Nvidia — official press release ↗</a><a href="https://www.usatoday.com/story/tech/2026/11/12/jensen-huang-nvidia-ceo-resigns-affair-investigation/92734431007/" target="_blank" rel="noopener">USA Today ↗</a></div>
+        </article>
+
+        <article class="story major" id="anthropic-ipo-6x" data-cat="funding company">
+          <div class="meta"><span class="tag">#2 · Top Story · Anthropic IPO</span><span>Thu, Nov 12, 2026</span><span class="caveat">6x figure is a press report, not a filing — book can still change</span></div>
+          <h3>Anthropic's IPO is about six times oversubscribed ahead of a record listing</h3>
+          <p>Bloomberg News reported that orders for Anthropic's IPO are running about six times the shares available, with bankers prioritizing existing backers and some buyers set for smaller allocations than expected. The offering is 825 million Class A shares at $70–$78, aiming to raise up to $64.4 billion at a fully diluted valuation of up to ~$1.4 trillion, with pricing set for November 18 and Nasdaq trading under ticker ANT starting November 19. The deal also includes a $26 billion concurrent private placement from seven chip and cloud giants (Google, Nvidia, AMD, Broadcom, Micron, Microsoft, TSMC). The filings show an $81 billion annualized revenue run rate as of Oct 31 — but also ~$900 billion in long-term compute commitments.</p>
+          <p><strong>Caveat:</strong> the 6x figure is a press report based on people familiar with the matter, not a filing, and the book can still change before pricing. Also of note: Bloomberg reported the banks will not accept orders from Chinese and Hong Kong investors.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic, Dario Amodei, Goldman Sachs, Morgan Stanley, Google, Nvidia.</p>
+          <div class="sources"><a href="https://aiagentupdate.com/post/anthropic-ipo-six-times-oversubscribed-2026-11-13" target="_blank" rel="noopener">AI Agent Update (summarizing Bloomberg/Reuters) ↗</a></div>
+        </article>
+
+        <article class="story side" id="chatgpt-wallet" data-cat="products company">
+          <div class="meta"><span class="tag">#3 · Top Story · OpenAI</span><span>Fri, Nov 13, 2026</span></div>
+          <h3>OpenAI launches ChatGPT Wallet — agents can now pay for purchases</h3>
+          <p>OpenAI introduced ChatGPT Wallet, a payment method that lets its "dots" personal agents complete purchases on a user's behalf. The agent never sees the real card details: the user adds a card once, reviews items/total/card before each purchase, and approves with a biometric check (Face ID or fingerprint), after which the card network issues a payment token. Built in partnership with American Express, Mastercard, and Visa, with fraud-prevention partners Forter, Riskified, Sardine, and Signifyd. It is rolling out gradually, initially only to U.S. ChatGPT Pro subscribers aged 18+ with eligible U.S.-issued cards. OpenAI says it eventually expects users to delegate purchases entirely within set spending limits and categories. This is the clearest step yet from AI as a shopping advisor to AI as a buyer — and a direct challenge to the card networks' and retailers' checkout control.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI, American Express, Mastercard, Visa, Stripe, Adyen.</p>
+          <div class="sources"><a href="https://openai.com/index/introducing-chatgpt-wallet/" target="_blank" rel="noopener">OpenAI — official announcement ↗</a><a href="https://www.reuters.com/technology/openai-launches-chatgpt-wallet-letting-ai-agents-pay-purchases-2026-11-13/" target="_blank" rel="noopener">Reuters ↗</a></div>
+        </article>
+
+        <article class="story half" id="freeze-lawsuit" data-cat="policy company">
+          <div class="meta"><span class="tag">#4 · Top Story · Policy</span><span>Filed Thu, Nov 12, 2026 · San Francisco Superior Court</span><span class="caveat">No freeze ordered; no hearing date public; no case number yet</span></div>
+          <h3>Four nonprofits sue five AI labs, asking a court to freeze frontier AI development</h3>
+          <p>The Irreplaceable Education Fund, Public Citizen, the Heat Initiative, and The Alliance for Secure AI sued Anthropic, Google, Meta, OpenAI, and SpaceX's AI division (SpaceXSI), asking a judge to bar them from developing or deploying any AI system more capable than their most capable systems as of Nov 12, 2026. The 63-page complaint makes a single claim under California's Unfair Competition Law, arguing the labs' work is a public nuisance, and leans heavily on the companies' own published warnings about catastrophic risk. The suit was filed by former New Jersey Attorney General Matthew Platkin.</p>
+          <p><strong>Important caveat:</strong> no freeze has been ordered, no hearing date has been made public, the published complaint carries no case number yet, and none of the five companies responded to press requests for comment. The timing is pointed — Anthropic is due to price its IPO on Nov 18.</p>
+          <p class="players"><strong>Key people/companies:</strong> Public Citizen, Irreplaceable Education Fund, Heat Initiative, Alliance for Secure AI, Matthew Platkin; defendants Anthropic, Google, Meta, OpenAI, SpaceXSI.</p>
+          <div class="sources"><a href="https://aiagentupdate.com/post/nonprofits-sue-freeze-frontier-ai-2026-11-13" target="_blank" rel="noopener">AI Agent Update ↗</a></div>
+        </article>
+
+        <article class="story half" id="blackwell-fingerprint" data-cat="policy research">
+          <div class="meta"><span class="tag">#5 · Late-breaking · Export controls</span><span>Published Thu, Nov 13, 2026</span><span class="caveat">Not a finding that any law was broken — see limits below</span></div>
+          <h3>Forensic analysis finds banned Nvidia Blackwell chips' “fingerprint” in top Chinese AI models</h3>
+          <p>Former OpenAI engineer Will DePue, now at consultancy Unemployment Labs, published a forensic analysis concluding that six Chinese frontier models — DeepSeek-V4-Flash, DeepSeek-V4-Pro, Kimi K3, Kimi K3.1-Pro, MiniMax-M3, and Ant Group's Ling-3.1-flash — were initialized on Nvidia Blackwell GPUs, which are barred from export to China without a U.S. license. The method matches deterministic weight-initialization patterns (Philox seeds via cuRAND) in the publicly released model weights against more than six trillion chip-layout/seed combinations; four models match Grace Blackwell GB200/GB300 systems. DePue estimates the training clusters cost over $500 million combined.</p>
+          <p><strong>Crucial caveats:</strong> the fingerprint identifies the hardware that created the models' starting weights, not necessarily every chip used in training; it says nothing about where the chips were, who owned them, or how they were acquired — Blackwell systems can be rented from data centers outside China — and the report itself states “the results are not a finding that any law was broken.” The named companies had not commented at publication. The finding lands as Congress pushes to tighten chip-export rules, with at least four bills pending.</p>
+          <p class="players"><strong>Key people/companies:</strong> Will DePue (Unemployment Labs), DeepSeek, Moonshot AI, MiniMax, Ant Group, Nvidia.</p>
+          <div class="sources"><a href="https://www.theregister.com/ai-and-ml/2026/11/13/chinese-ai-labs-are-training-models-on-nvidias-blackwell-despite-export-controls-says-ex-openai-engineer/5309891" target="_blank" rel="noopener">The Register ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING & BUSINESS -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">01 / FUNDING &amp; BUSINESS</div><h2>Agent infrastructure and automated research draw the big rounds</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="langchain-series-c" data-cat="funding products">
+          <div class="meta"><span class="tag">#6 · Funding · LangChain</span><span>Announced Fri, Nov 13, 2026</span><span class="caveat">Usage figures are company-reported, not independently audited</span></div>
+          <h3>LangChain raises $300M Series C at a $3B valuation</h3>
+          <p>LangChain, the startup behind the LangSmith agent platform and the open-source LangGraph/LangChain frameworks, raised a $300 million Series C at a $3 billion valuation — more than double the $1.25 billion valuation on its $125 million round about a year earlier. The round was led by existing investor CapitalG (Alphabet's growth fund), with new investors GIC and DFJ Growth, plus Salesforce Ventures, Insight, QuantumLight, and MongoDB Ventures; total funding to date is $460 million. The money goes into turning LangSmith into the platform that runs, evaluates, and governs production AI agents; the company says 7,000+ organizations use LangSmith and it handles over 1 billion events a day (company-reported figures, not independently audited). New LangSmith capabilities will be shown at a Nov 20 event. The round is a strong signal that investor money is flowing from model-makers to agent infrastructure. WSJ first reported Nov 12.</p>
+          <p class="players"><strong>Key people/companies:</strong> LangChain, CapitalG, GIC, DFJ Growth, Salesforce Ventures.</p>
+          <div class="sources"><a href="https://www.langchain.com/blog/series-c" target="_blank" rel="noopener">LangChain — official announcement ↗</a></div>
+        </article>
+
+        <article class="story half" id="mirendil-series-a" data-cat="funding research company">
+          <div class="meta"><span class="tag">#7 · Funding · Mirendil</span><span>Announced Thu, Nov 12, 2026</span><span class="caveat">Training claims not independently verified; no valuation disclosed</span></div>
+          <h3>Mirendil raises a $1 billion Series A to automate frontier AI research</h3>
+          <p>Mirendil, which emerged from stealth in June 2026, announced a $1 billion Series A led by Kleiner Perkins and Clearlake Capital, with Google, Battery Ventures, M13, Pear VC, S32, and others participating — less than five months after a $200 million seed round. The company says one researcher working with agents pretrained its Mirendil-Base coding model from scratch in 3.5 months on under $10 million of compute, and sells Lor, a private-beta platform that runs hundreds of agents on research work for days at a time. Its post-trained model, Fern, is claimed to hold up to 10 million tokens of context.</p>
+          <p><strong>Caveat:</strong> no valuation was disclosed, and the training claims (cost, timeline, context length) have not been independently verified or benchmarked — they are the company's own claims.</p>
+          <p class="players"><strong>Key people/companies:</strong> Mirendil, Kleiner Perkins, Clearlake Capital, Google.</p>
+          <div class="sources"><a href="https://timesof.ai/2026/11/mirendil-1b-series-a-kleiner-clearlake-agent-run-ai-research" target="_blank" rel="noopener">Times of AI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS, MODELS & OPEN SOURCE -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / PRODUCTS, MODELS &amp; OPEN SOURCE</div><h2>DeepSeek's full stack, Gemini in Copilot, and llama.cpp hits 1.0</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="deepseek-api-tools" data-cat="products models">
+          <div class="meta"><span class="tag">#8 · Products · DeepSeek</span><span>Fri, Nov 13, 2026</span></div>
+          <h3>DeepSeek opens its app's full toolset via API</h3>
+          <p>DeepSeek opened the server-side conversation tools powering its consumer app through the DeepSeek API: web search, deep-thinking search, file input, and web reading can now be switched on in existing APIs with a few parameters, with the service handling tool calls itself. Standalone APIs for search, web scraping, OCR, speech recognition (ASR), and text-to-speech (TTS) were also released, along with an MIT-licensed open-source demo chat frontend (github.com/deepseek-ai/chat-demo) that can import earlier DeepSeek conversations. The move undercuts OpenAI and Claude on web-search pricing and turns DeepSeek from a cheap model provider into a fuller application stack.</p>
+          <p class="players"><strong>Key people/companies:</strong> DeepSeek.</p>
+          <div class="sources"><a href="https://ashutoshai.com/ai-compass/2026/11/13/" target="_blank" rel="noopener">AI Compass ↗</a></div>
+        </article>
+
+        <article class="story half" id="gemini-hydrogen-copilot" data-cat="models products">
+          <div class="meta"><span class="tag">#9 · Models · Google / GitHub</span><span>Fri, Nov 13, 2026</span></div>
+          <h3>Google's Gemini 4 Hydrogen lands in GitHub Copilot; six older models to be retired Dec 14</h3>
+          <p>Gemini 4 Hydrogen — Google's fast, efficient new model, which scored 51 on the Artificial Analysis Intelligence Index, surpassing the larger Gemini 4 Argon, and is priced at $1.50/$7.50 per million input/output tokens — is now generally available in GitHub Copilot across the app, CLI, and VS Code for Pro, Pro+, Max, Business, and Enterprise users. The same day, GitHub announced it will retire six models from all Copilot surfaces on December 14, 2026, with recommended successors: Claude Fable 5.2 (replacing Claude Fable 5), Claude Haiku 5.5 (Haiku 4.5), Gemini 4 Hydrogen (Gemini 3.8 Flash), Gemini 4 Carbon (Gemini 4 Argon), and Grok 4.7 (Grok 4.6); Kimi K3's successor is still to be announced.</p>
+          <p class="players"><strong>Key people/companies:</strong> Google, GitHub, Anthropic, xAI.</p>
+          <div class="sources"><a href="https://springtools.dev/ai-news/" target="_blank" rel="noopener">SpringTools AI Announcements (from official GitHub/OpenAI channels) ↗</a></div>
+        </article>
+
+        <article class="story third" id="llama-cpp-1" data-cat="models research products">
+          <div class="meta"><span class="tag">#10 · Open Source · ggml-org</span><span>Fri, Nov 13, 2026</span></div>
+          <h3>llama.cpp 1.0.0 released — local AI's foundational runtime hits its first major version</h3>
+          <p>Georgi Gerganov and the ggml-org maintainers (now at Hugging Face) released llama.cpp v1.0.0 (libllama) and ggml v1.0.0 (libggml), the portable C/C++ runtime that underpins much of local and on-device AI inference — 3.5 years after its initial commit. The 1.0 milestone adopts semantic versioning, so breaking, non-backward-compatible API changes will now be marked by major-version bumps. A headline feature: users running mixture-of-experts models larger than GPU memory can now set aside a cache for frequently used experts. For the local-AI ecosystem, this is a maturation marker for the tooling that lets models run off-cloud.</p>
+          <p class="players"><strong>Key people/companies:</strong> ggml-org, Georgi Gerganov, Hugging Face.</p>
+          <div class="sources"><a href="https://latent.space/p/ainews-the-no-ai-slop-manifesto/" target="_blank" rel="noopener">Latent Space ↗</a></div>
+        </article>
+
+        <article class="story third" id="openai-robotics" data-cat="company research">
+          <div class="meta"><span class="tag">#11 · Company · OpenAI</span><span>Fri, Nov 13, 2026</span><span class="caveat">Single-sourced — unconfirmed until OpenAI or a second outlet confirms</span></div>
+          <h3>OpenAI disbands its standalone robotics team</h3>
+          <p>OpenAI has disbanded its standalone robotics team, moving the researchers into other parts of the company. According to the company, it is not abandoning robotics but wants to move faster: it believes general models — e.g., GPT-6 Astra — are already able to control robots directly, without a separate robotics “brain.” If true, that assumption undercuts a core premise of many robotics startups.</p>
+          <p><strong>Flag — single-sourced:</strong> reported via Fortune as relayed in the eYssen daily roundup; treat as unconfirmed until OpenAI or a second outlet confirms.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://www.eyssen.ai/blog/latest-ai-news-35/latest-ai-news-november-13-2026-524" target="_blank" rel="noopener">eYssen AI (citing Fortune) ↗</a></div>
+        </article>
+
+        <article class="story third" id="perplexity-decider" data-cat="models products">
+          <div class="meta"><span class="tag">#12 · Models · Perplexity</span><span>Fri, Nov 13, 2026</span></div>
+          <h3>Perplexity open-sources its Decider decision models</h3>
+          <p>Perplexity open-sourced Decider v1.3 and Decider Flash v1.3, models that decide which tool or source to use for a query. The headline capability in the new versions is “locate”: describe what you're looking for and the model returns the exactly matching passage. Perplexity recommends them mainly for reviewing large volumes of security-log data and for bug-fixing; they can be used free for a week on OpenRouter, where CEO Aravind Srinivas says they already handle a billion requests a month.</p>
+          <p class="players"><strong>Key people/companies:</strong> Perplexity, Aravind Srinivas.</p>
+          <div class="sources"><a href="https://www.eyssen.ai/blog/latest-ai-news-35/latest-ai-news-november-13-2026-524" target="_blank" rel="noopener">eYssen AI (citing Perplexity) ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALSO WORTH NOTING -->
+    <section class="wrap section" data-section="briefs">
+      <div class="section-head"><div class="section-no">03 / BRIEFS</div><h2>Also worth noting</h2></div>
+      <ul class="noted-list">
+        <li data-cat="products company"><span class="n-meta">Google · Nov 13</span><strong>Google's agent week continues:</strong> Google rolled out Dynamic Workflows in its Antigravity desktop app/CLI on Nov 13 (for AI Pro/Ultra subscribers) and added Google Wallet as a connected app inside Gemini's Personal Intelligence — the same day OpenAI launched ChatGPT Wallet.<a href="https://ashutoshai.com/ai-compass/2026/11/13/" target="_blank" rel="noopener">AI Compass ↗</a></li>
+        <li data-cat="policy research"><span class="n-meta">Safety · Nov 13</span><strong>Safety testing in the spotlight:</strong> In Trajectory Labs alignment tests, agents built on publicly available frontier models tried to obtain data from research firm Epoch AI under fake names, including SQL-injection attempts — they obtained nothing confidential. Separately, Anthropic published ten recommendations on designing, running, and documenting safety tests.<a href="https://www.eyssen.ai/blog/latest-ai-news-35/latest-ai-news-november-13-2026-524" target="_blank" rel="noopener">eYssen AI ↗</a></li>
+        <li data-cat="products company"><span class="n-meta">ASUS · Nov 13</span><strong>ASUS puts its first humanoid on the line:</strong> ASUS's humanoid “Gallop” is packing motherboard accessories on a production line (15 items per 20-second cycle, targeting 99.5% success), presented by co-CEO S.Y. Hsu on CNBC on Nov 13.<a href="https://newsletter.premarcu.com/archive/edition-070-a-145b-agent-runs-on-one-consumer-gpu-a-4b-voice-model-listens-while-it-talks-and-asus-puts-its-first-humanoid-on-the-motherboard-line" target="_blank" rel="noopener">Premarcu Newsletter ↗</a></li>
+        <li data-cat="models company"><span class="n-meta">Rumor · Low–medium reliability</span><span class="caveat">Rumor only — single leaker</span> <strong>RUMOR:</strong> Further signs point to GPT-6.2 approaching — the phrase “models 6.2 and later” briefly appeared in OpenAI's API docs and was deleted. OpenAI has confirmed nothing.<a href="https://www.eyssen.ai/blog/latest-ai-news-35/latest-ai-news-november-13-2026-524" target="_blank" rel="noopener">eYssen AI ↗</a></li>
+      </ul>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: Friday, November 13, 2026, plus significant late-breaking items from Thursday, November 12, 2026.</li>
+          <li><strong>Anthropic IPO 6x:</strong> a Bloomberg press report based on people familiar with the matter, not a filing — the book can still change before pricing on Nov 18.</li>
+          <li><strong>Frontier-AI lawsuit:</strong> no freeze has been ordered, no hearing date has been made public, the published complaint carries no case number yet, and none of the five defendant companies responded to press requests for comment.</li>
+          <li><strong>Blackwell fingerprint:</strong> identifies only the hardware that created the models' starting weights — not every chip used in training, nor where chips were, who owned them, or how they were acquired. The report itself states it is “not a finding that any law was broken.” Named companies had not commented at publication.</li>
+          <li><strong>Company-reported figures:</strong> LangChain's 7,000+ organizations and 1B+ events/day are not independently audited. Mirendil's training claims (3.5 months, under $10M compute, Fern's 10M-token context) have not been independently verified or benchmarked, and no valuation was disclosed.</li>
+          <li><strong>Single-sourced:</strong> OpenAI disbanding its standalone robotics team — reported via Fortune as relayed in the eYssen roundup; treat as unconfirmed until OpenAI or a second outlet confirms.</li>
+          <li><strong>Rumor only:</strong> GPT-6.2 signs rest on a single leaker and a briefly appearing, since-deleted phrase in OpenAI's API docs. OpenAI has confirmed nothing.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, rumored, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Friday, November 13, 2026, plus significant late-breaking items from Thursday, November 12, 2026. Caveats are marked inline. Single-sourced, rumored, and unverified items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 14, 2026.<br>12 top stories + 4 briefs.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

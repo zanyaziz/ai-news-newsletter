@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Monday, November 16, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .noted-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.noted-list li{padding:13px 0;border-bottom:1px solid var(--line);font:500 14px/1.55 "Libre Franklin",sans-serif;color:var(--copy)}.noted-list .n-meta{font:500 10px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-right:10px;white-space:nowrap}.noted-list a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;margin-left:8px;white-space:nowrap}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Monday, November 16, 2026</div>
+      <div class="range">Covering Sunday, November 15, 2026, plus significant late-breaking items from the last 48 hours (Sat Nov 14 – Mon Nov 16 morning)</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Alibaba unveils <em>Qwen4-Max</em></h1>
+      <div><p class="dek">A 2.4-trillion-parameter flagship with built-in safety checks leads a light weekend dominated by the Nvidia–Huang fallout and Anthropic's IPO countdown.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>It was a light news weekend overall — the cycle was dominated by the Qwen4-Max launch, the Nvidia/Huang fallout, and the Anthropic IPO countdown, with several major stories (Blackwell forensics, Cursor breach, OpenAI robotics reorg) landing Friday Nov 13 and carrying into the weekend.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#qwen4-max">Alibaba unveils Qwen4-Max, a 2.4T-parameter flagship</a></li>
+        <li><span class="num">02</span><a href="#anthropic-ipo">Anthropic's IPO is ~6x oversubscribed</a></li>
+        <li><span class="num">03</span><a href="#blackwell-fingerprints">Blackwell fingerprints in six Chinese models</a></li>
+        <li><span class="num">04</span><a href="#cursor-attack">Cursor traces supply-chain attack to Fireworks AI key</a></li>
+        <li><span class="num">05</span><a href="#musk-nvidia">Musk warns Nvidia could lose “handshake” deals</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        <button class="filter" data-filter="company" aria-pressed="false">Company News</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- LEAD STORY -->
+    <section class="wrap section" data-section="lead">
+      <div class="section-head"><div class="section-no">LEAD STORY</div><h2>The lead story</h2></div>
+      <div class="lead-grid">
+        <article class="story full major" id="qwen4-max" data-cat="models company">
+          <div class="meta"><span class="tag">Lead · Alibaba · Qwen</span><span>Sun, Nov 15, 2026</span><span class="caveat">Benchmarks are Alibaba's own — not yet independently verified</span></div>
+          <h3>Alibaba unveils Qwen4-Max, a 2.4-trillion-parameter flagship with built-in safety checks</h3>
+          <p>Alibaba launched Qwen4-Max, its new flagship model, saying it handles complex professional and scientific work — 3D modeling, game development, precision manufacturing, finance, law, healthcare and frontier science — better than its predecessor while using fewer tokens and costing less. The 2.4-trillion-parameter model activates only ~71 billion parameters per token, with a 1-million-token context window.</p>
+          <p>Training included security checks alongside coding tests, with strengthened safeguards against misuse in cybercrime and hazardous materials, and internal testing found no evidence of significant high-risk capabilities. The flagship itself is closed-source, but smaller Qwen4 models will arrive as open weights soon. It follows Moonshot AI's 3-trillion-parameter Kimi K3.1 Pro last month; Alibaba's Hong Kong shares rose 1.2% on Monday morning.</p>
+          <p><strong>Caveat:</strong> benchmark claims are Alibaba's own and not yet independently verified.</p>
+          <p class="players"><strong>Key people/companies:</strong> Alibaba (Qwen team).</p>
+          <div class="sources"><a href="https://kwsn.com/2026/11/15/alibaba-unveils-new-flagship-ai-model-with-safety-upgrades/" target="_blank" rel="noopener">Reuters via KWSN ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES & RESEARCH -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">01 / MODEL RELEASES &amp; RESEARCH</div><h2>Voice models that search, and robots without a robotics team</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="hy-realtime" data-cat="models products">
+          <div class="meta"><span class="tag">#1 · Models · Tencent Hunyuan</span><span>Fri, Nov 13, 2026</span><span class="caveat">Single-sourced; benchmarks company-reported</span></div>
+          <h3>Tencent's Hunyuan team ships Hy Realtime, a voice model that can chat, sing and search on its own</h3>
+          <p>Tencent Hunyuan released Hy Realtime, a real-time conversational voice model that decides for itself when a spoken question needs a web search, runs the search and speaks the answer in one process — and can sing on request (co-designed with Tencent Music's TME Lingyin AI team). It is live in Yuanbao voice calls and Tencent customer service, with a Tencent Cloud API promised soon.</p>
+          <p><strong>Caveat:</strong> single-sourced to Tencent's own WeChat announcement as restated by Chinese press; benchmark claims are company-reported and not independently evaluated. The Cloud API is not yet generally available.</p>
+          <p class="players"><strong>Key people/companies:</strong> Tencent (Hunyuan team), Tencent Music Entertainment.</p>
+          <div class="sources"><a href="https://www.tech360.tv/tencent-s-voice-model-decides-when-to-search-and-can-sing" target="_blank" rel="noopener">Tech360 ↗</a></div>
+        </article>
+
+        <article class="story half" id="openai-robotics" data-cat="research company">
+          <div class="meta"><span class="tag">#2 · Research · OpenAI</span><span>Fri, Nov 13, 2026 · Fortune</span><span class="caveat">Headline benchmark is simulation-only, most-scaffolded setup</span></div>
+          <h3>OpenAI disbands its standalone robotics team, betting GPT-6 Astra can run robots directly</h3>
+          <p>OpenAI folded its standalone robotics team into the rest of the company for the second time in six years: researchers move into Chief Research Officer Mark Chen's main research org, and applied robotics/hardware staff into President Greg Brockman's Applied organization. OpenAI confirmed the reorganization to Fortune, saying general-purpose models including GPT-6 Astra can now be applied to robot control directly — citing an Nvidia study in which an Astra-powered agent scored 74.8% on the simulated RoboLab-120 manipulation benchmark versus 51.0% for the best specialist model.</p>
+          <p>OpenAI disputes the “disbanded” framing, insisting the robotics program and roadmap are unchanged, with a humanoid demo still targeted for 2027. The same week, Runway released Praxis-1, a 27-billion-parameter open-weight robot world-action model — the opposite bet.</p>
+          <p><strong>Caveat:</strong> the 74.8% figure is the most scaffolded “agentic” setup in simulation only; direct-control scored 66.3%, and the lowest Astra configuration scored ~50%, roughly level with the specialist. No headcount has been reported.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI (Mark Chen, Greg Brockman, Sam Altman), Runway, Nvidia.</p>
+          <div class="sources"><a href="https://madrobot.blog/2026/11/13/openai-disbands-robotics-team-gpt-6-astra/" target="_blank" rel="noopener">MadRobot ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY NEWS & FUNDING -->
+    <section class="wrap section" data-section="company">
+      <div class="section-head"><div class="section-no">02 / COMPANY NEWS &amp; FUNDING</div><h2>Anthropic's IPO countdown and the Nvidia fallout</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="anthropic-ipo" data-cat="funding company">
+          <div class="meta"><span class="tag">#3 · Funding · Anthropic IPO</span><span>Nov 13–14, 2026</span><span class="caveat">6x figure is press reporting, not a filing</span></div>
+          <h3>Anthropic's IPO is ~6x oversubscribed ahead of Wednesday pricing; Chinese investors shut out</h3>
+          <p>Demand for Anthropic's Nasdaq IPO is running about six times the shares available, Bloomberg reported, putting the Claude maker on course for one of the largest stock-market debuts ever — 825 million shares at $70–$78, raising up to $64.4 billion at a fully diluted valuation of up to ~$1.4 trillion, plus a $26 billion concurrent private placement from seven chip/cloud partners (Google and Nvidia at $10B each). Pricing is expected Wednesday, November 18, with trading under ticker ANT beginning Thursday, November 19.</p>
+          <p>Separately, Bloomberg reported banks have refused orders from institutional investors in mainland China and Hong Kong, tied to US arms-export (ITAR) rules — Anthropic's amended prospectus notes some of its AI products could fall under arms-export controls. Annualized revenue hit $81 billion by late October, up from $71 billion in September.</p>
+          <p><strong>Caveat:</strong> the 6x figure is a press report citing people familiar with the matter, not a filing; the book can still move before pricing.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic (Dario Amodei), Goldman Sachs, Morgan Stanley, Google, Nvidia, AMD, Microsoft, TSMC, Broadcom, Micron.</p>
+          <div class="sources"><a href="https://www.nextfor.ai/news/anthropic-ipo-six-times-oversubscribed" target="_blank" rel="noopener">NextFor ↗</a></div>
+        </article>
+
+        <article class="story side" id="musk-nvidia" data-cat="company funding">
+          <div class="meta"><span class="tag">#4 · Company · Nvidia</span><span>Nov 14–15, 2026</span><span class="caveat">A prediction — no deal confirmed lost</span></div>
+          <h3>Musk warns Nvidia could lose “handshake” supply deals without Huang; Nvidia reports earnings Tuesday</h3>
+          <p>Elon Musk warned on X that Nvidia risks losing critical supply-chain agreements after Jensen Huang's resignation, saying many deals “were a handshake with Jensen, not a written contract” and that “without Jensen, at least some of those critical deals will be lost.” Huang resigned November 12 after 33 years as CEO; CFO Colette Kress is interim CEO.</p>
+          <p>The Financial Times reported Sunday that Huang has discussed a return with confidants, while a “Stand with Jensen” petition has passed 100,000+ signatures (Musk signed it). Nvidia shares have fallen to ~$163, wiping out roughly $573 billion in market value in a week. Nvidia reports fiscal Q3 results Tuesday, November 17, against its own guidance of $108 billion in revenue.</p>
+          <p><strong>Caveat:</strong> no specific supplier agreement has been confirmed lost; Musk's warning is a prediction, and his own companies (Tesla, SpaceX, xAI) are major Nvidia customers with a direct stake.</p>
+          <p class="players"><strong>Key people/companies:</strong> Elon Musk, Jensen Huang, Colette Kress (Nvidia interim CEO), Nvidia board.</p>
+          <div class="sources"><a href="https://www.billionaires.africa/2026/11/16/american-billionaire-elon-musk-warns-nvidia-will-lose-critical-deals-without-huang/" target="_blank" rel="noopener">Billionaires.Africa ↗</a></div>
+        </article>
+
+        <article class="story half" id="claude-manufacturing" data-cat="products company">
+          <div class="meta"><span class="tag">#5 · Products · Anthropic</span><span>Fri, Nov 13, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>Anthropic launches Claude for Manufacturing as its enterprise product blitz continues</h3>
+          <p>Alongside its IPO roadshow, Anthropic launched Claude for Manufacturing — a plugin with 17 pre-configured skills covering quoting, quality investigations, maintenance diagnosis, purchasing, design and production reporting for factory-floor workers. It extends a rapid enterprise push that also includes Claude Meetings (beta, joining Google Meet calls as a participant), self-hosted Claude Managed Agents in private beta, and the Claude Sheets/Whiteboards/Data office suite launched November 10.</p>
+          <p>The same window saw a roughly ten-hour login/authentication outage across Claude.ai, Console, Code and Cowork on November 13 (API reportedly unaffected).</p>
+          <p><strong>Caveat:</strong> single-sourced (OpenTools summary of Business Insider reporting); details on pricing and availability beyond the launch were not independently confirmed.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://opentools.ai/news/anthropic-ipo-6x-oversubscribed-1-4-trillion-valuation-nov-19" target="_blank" rel="noopener">OpenTools ↗</a></div>
+        </article>
+
+        <article class="story half" id="microsoft-outage" data-cat="products company">
+          <div class="meta"><span class="tag">#6 · Company · Microsoft</span><span>Sat, Nov 14, 2026 · Outage began Nov 12</span></div>
+          <h3>Microsoft 365 fully restored after day-long global outage; cause was a network upgrade, not AI or cyberattack</h3>
+          <p>Microsoft confirmed full restoration of Outlook, Teams, Copilot and other Microsoft 365 services on Saturday, November 14, ending a global outage that lasted roughly 30 hours and hit users in 74 countries, including government, healthcare, aviation and finance. Microsoft attributed the failure to a problem introduced during an earlier network-capacity upgrade that surfaced after a later network change, and explicitly ruled out a cyberattack or involvement by AI agents.</p>
+          <p>Copilot Chat had failed to load or reach email, calendars and files. Microsoft extended the email timeout window to 48 hours to protect delayed messages and promised a full post-incident report (incident MO1550821).</p>
+          <p class="players"><strong>Key people/companies:</strong> Microsoft, Charles Lamanna (EVP, Copilot, Agents and Platform).</p>
+          <div class="sources"><a href="https://khusoko.com/2026/11/14/microsoft-outage-ends-outlook-teams-copilot-restored/" target="_blank" rel="noopener">Associated Press via Khusoko ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SAFETY & SECURITY -->
+    <section class="wrap section" data-section="safety">
+      <div class="section-head"><div class="section-no">03 / SAFETY &amp; SECURITY</div><h2>Chip fingerprints, a supply-chain attack, and an AI-enabled breach</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="blackwell-fingerprints" data-cat="policy research">
+          <div class="meta"><span class="tag">#7 · Safety · Export controls</span><span>Report Nov 12 · Reproduced Nov 14</span><span class="caveat">Does not establish where the chips were or a violation</span></div>
+          <h3>Forensic report: six leading Chinese AI models carry the fingerprint of export-controlled Nvidia Blackwell GPUs</h3>
+          <p>Will DePue, a former OpenAI researcher who now runs the nonprofit Unemployment Labs, published checkpoint forensics showing six open-weight models released since April 2026 — DeepSeek-V4-Flash and V4-Pro, Moonshot AI's Kimi K3 and K3.1-Pro, MiniMax-M3, and Ant Group's Ling-3.1-flash — carry numerical fingerprints matching Nvidia Blackwell GPUs (148 or 152 streaming multiprocessors), chips the US bars from export to China without a license. The method was validated against 24 control models and independently reproduced on November 14 by SXZ.io/Transclew, which reran the public code and confirmed the mechanism.</p>
+          <p>Crucially, the report does not establish where the chips were, how access was obtained, or whether export controls were violated — Blackwell capacity can be rented in data centers outside China, and remote access is largely outside current export rules.</p>
+          <p><strong>Caveat:</strong> the report calls evidence “conclusive” only for DeepSeek-V4-Flash's starting weights and “strong” for the six; two models (V4-Pro, K3.1-Pro) are not in the public verification package. None of the four labs had publicly responded as of November 14.</p>
+          <p class="players"><strong>Key people/companies:</strong> Will DePue (Unemployment Labs), DeepSeek, Moonshot AI, MiniMax, Ant Group, Nvidia.</p>
+          <div class="sources"><a href="https://dailymech.com/articles/chinese-ai-models-blackwell-fingerprints-depue-checkpoint-forensics.html" target="_blank" rel="noopener">DailyMech ↗</a><a href="https://transclew.com/tech/chinese-ai-models-nvidia-blackwell-chip-fingerprint/" target="_blank" rel="noopener">Transclew ↗</a></div>
+        </article>
+
+        <article class="story side" id="cursor-attack" data-cat="policy products">
+          <div class="meta"><span class="tag">#8 · Security · Cursor</span><span>Update Nov 13 · Attack Oct 29</span><span class="caveat">“Exposed by Fireworks” is Cursor's account</span></div>
+          <h3>Cursor traces its Claude Code supply-chain attack to an exposed key at inference vendor Fireworks AI</h3>
+          <p>Cursor published a detailed update on its October security incident, tracing it to an access key it had issued to inference vendor Fireworks AI that was exposed at Fireworks. An attacker used the key to copy historical coding-agent traces from a shared read-only storage bucket, found unredacted credentials inside some traces, and on October 29 placed tampered copies of Anthropic's Claude Code extension (versions 2.1.312 and 2.1.313) into the cache serving Cursor's VS Code extension marketplace for about 11 hours, potentially reaching up to 5,000 users. The modified extension reportedly collected system info, installed an attacker-controlled SSH key and set up persistence.</p>
+          <p>Cursor says traces from under 0.05% of users and API credentials from under 0.01% of customers were exposed; it has moved all inference off Fireworks, revoked the key, rotated credentials and rebuilt the marketplace. Last attacker activity seen was November 1.</p>
+          <p><strong>Caveat:</strong> the claim that the key was “exposed by Fireworks” is Cursor's account; Fireworks' own security bulletins (last updated November 9) do not mention Cursor. Anthropic's official extension and the upstream Open VSX registry were not compromised.</p>
+          <p class="players"><strong>Key people/companies:</strong> Cursor, Fireworks AI, Anthropic (Claude Code).</p>
+          <div class="sources"><a href="https://incidenture.com/2026/cursor-fireworks-ai-supply-chain-attack/" target="_blank" rel="noopener">Incidenture ↗</a><a href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener">Cursor ↗</a></div>
+        </article>
+
+        <article class="story full" id="luxor-attack" data-cat="policy company">
+          <div class="meta"><span class="tag">#9 · Security · Luxor</span><span>Nov 14–15, 2026</span><span class="caveat">Single-sourced / company claim</span></div>
+          <h3>AI-enabled attack hits Bitcoin miner Luxor</h3>
+          <p>Luxor Technology confirmed attackers broke into Commander, its mining fleet-management platform, on Saturday evening and redirected a subset of customers' hashrate to the OCEAN pool. CEO Nick Hansen called it a sophisticated AI-enabled vector but did not detail how AI was used; a dozen-plus accounts were affected, no data leaked, patched within two hours, full compensation pledged. Early social claims of 64,000 machines were not confirmed by Luxor.</p>
+          <p><strong>Caveat:</strong> single-sourced/company claim.</p>
+          <p class="players"><strong>Key people/companies:</strong> Luxor Technology, Nick Hansen.</p>
+          <div class="sources"><a href="https://chrisabraham.net/2026/11/ai-roundup-the-week-gets-priced.html" target="_blank" rel="noopener">Monday AI Roundup ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & REGULATION -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">04 / POLICY &amp; REGULATION</div><h2>AI search meets competition law</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="google-overviews" data-cat="policy company">
+          <div class="meta"><span class="tag">#10 · Policy · Google</span><span>Nov 15–16, 2026</span><span class="caveat">Scholarly argument, not a ruling — single-sourced summary</span></div>
+          <h3>Legal scholars warn Google's AI Overviews may breach competition law; UK regulator sets December 3 deadline</h3>
+          <p>Legal scholars warned in reporting published Monday that Google's AI-generated search overviews may breach US and EU competition law, arguing the summaries tie search visibility to the use of publisher data for training — publishers' work fuels the answer, the answer keeps the reader, and the loop reinforces Google's market power as self-preferencing. The News Media Alliance called the practice a threat to journalism's sustainability, and European publishers have filed competition complaints citing reduced traffic.</p>
+          <p>In parallel, Google's Search Console counts impressions for AI Overviews and AI Mode but not clicks, and the UK Competition and Markets Authority has given Google until December 3 to provide publishers with impressions, clicks and click-through rates for AI search features for UK users. Google is also testing sponsored results below AI Overviews.</p>
+          <p><strong>Caveat:</strong> single-sourced summary; this is a scholarly argument, not a ruling — no court has adopted the tying theory.</p>
+          <p class="players"><strong>Key people/companies:</strong> Google, News Media Alliance, UK Competition and Markets Authority.</p>
+          <div class="sources"><a href="https://chrisabraham.net/2026/11/ai-roundup-the-week-gets-priced.html" target="_blank" rel="noopener">Monday AI Roundup ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CULTURE -->
+    <section class="wrap section" data-section="culture">
+      <div class="section-head"><div class="section-no">05 / CULTURE</div><h2>AI takes the stage</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="ai-music-awards" data-cat="products company">
+          <div class="meta"><span class="tag">#11 · Culture · Music</span><span>Fri, Nov 14, 2026</span></div>
+          <h3>First US AI Music Awards crown virtual performer Xania Monet</h3>
+          <p>The first AI Music Awards ceremony in the US, held Friday at the Mayan Theater in downtown Los Angeles, celebrated songs created at least partly with generative AI. The top prizes — AI artist, song and album of the year — all went to Xania Monet, an AI-generated avatar known for “How Was I Supposed to Know?”, created by songwriter Telisha “Nikki” Jones, who says she wrote all the lyrics and used AI to set them to music. Billboard said the R&B song was the first by an AI-based act to earn a spot on one of its radio charts.</p>
+          <p>Winners were chosen by members of the Sonic Intelligence Academy, which verifies tracks as fully AI-generated, AI-assisted or human+AI hybrid by disclosure rather than detection. The field remains contested: training-data lawsuits are unresolved, and the ceremony itself ran late with technical difficulties.</p>
+          <p class="players"><strong>Key people/companies:</strong> Xania Monet / Telisha “Nikki” Jones, Sonic Intelligence Academy (Timirah and Mia James).</p>
+          <div class="sources"><a href="https://kwsn.com/2026/11/14/new-awards-show-celebrates-ai-music-and-its-creators/" target="_blank" rel="noopener">Reuters via KWSN ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALSO NOTED -->
+    <section class="wrap section" data-section="briefs">
+      <div class="section-head"><div class="section-no">06 / BRIEFS</div><h2>Also noted</h2></div>
+      <ul class="noted-list">
+        <li data-cat="policy company"><span class="n-meta">Authorship · Nov 14</span><strong>Guardian investigation into AI authorship:</strong> a detailed Guardian investigation examined how generative AI is affecting authors, publishers, literary prizes and self-publishing.<a href="https://medium.com/ai-briefing-room/ai-news-briefing-15-november-2026-f35ebd9bb5fe" target="_blank" rel="noopener">Source ↗</a></li>
+        <li data-cat="company policy"><span class="n-meta">South Africa · Nov 14–21</span><strong>Ramaphosa's Silicon Valley AI visit:</strong> South Africa's President Ramaphosa began a week-long Silicon Valley AI visit (Nov 14–21), with engagements at Google, Cisco, Stanford and Microsoft's Experiential Centre, plus a “Building the African AI Economy” gathering.<a href="https://www.todaysw.com/2026/11/15/ramaphosa-arrives-in-california-for-week-long-artificial-intelligence-engagements/" target="_blank" rel="noopener">Source ↗</a></li>
+      </ul>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>The week ahead</h3>
+        <ul>
+          <li><strong>Tuesday, Nov 17:</strong> Nvidia reports fiscal Q3 results (~4:20 PM ET) — its first since Huang's resignation, guided at $108B revenue.</li>
+          <li><strong>Wednesday, Nov 18:</strong> Anthropic is expected to price its IPO.</li>
+          <li><strong>Thursday, Nov 19:</strong> ANT begins trading on Nasdaq.</li>
+        </ul>
+      </div>
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: primarily Sunday, November 15, 2026, plus significant late-breaking items from the last 48 hours (Sat Nov 14 – Mon Nov 16 morning).</li>
+          <li><strong>Qwen4-Max (lead):</strong> benchmark claims are Alibaba's own and not yet independently verified.</li>
+          <li><strong>Hy Realtime (#1):</strong> single-sourced to Tencent's own WeChat announcement as restated by Chinese press; benchmarks company-reported; the Tencent Cloud API is not yet generally available.</li>
+          <li><strong>OpenAI robotics (#2):</strong> the 74.8% RoboLab-120 figure is the most scaffolded “agentic” setup in simulation only; direct-control scored 66.3% and the lowest Astra configuration ~50%. No headcount reported.</li>
+          <li><strong>Anthropic IPO (#3):</strong> the ~6x oversubscription figure is a press report citing people familiar with the matter, not a filing; the book can still move before pricing.</li>
+          <li><strong>Musk / Nvidia (#4):</strong> no specific supplier agreement has been confirmed lost; the warning is a prediction from an interested party.</li>
+          <li><strong>Claude for Manufacturing (#5):</strong> single-sourced (OpenTools summary of Business Insider reporting); pricing and availability details not independently confirmed.</li>
+          <li><strong>Blackwell fingerprints (#7):</strong> evidence “conclusive” only for DeepSeek-V4-Flash's starting weights, “strong” for the six; the report does not establish where the chips were or whether export controls were violated; none of the four labs had publicly responded as of Nov 14.</li>
+          <li><strong>Cursor / Fireworks (#8):</strong> the “exposed by Fireworks” claim is Cursor's account; Fireworks' bulletins do not mention Cursor. Anthropic's official extension and Open VSX were not compromised.</li>
+          <li><strong>Luxor (#9) and Google AI Overviews (#10):</strong> single-sourced; the Luxor “AI-enabled” characterization is the company's claim, and the Overviews item is a scholarly argument, not a ruling.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, rumored, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: primarily Sunday, November 15, 2026, plus significant late-breaking items from the last 48 hours (Sat Nov 14 – Mon Nov 16 morning). Caveats are marked inline. Single-sourced and unverified items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 16, 2026.<br>12 stories + 2 briefs.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

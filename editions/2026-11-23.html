@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Monday, November 23, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .review-list{list-style:none;margin:0;padding:0}.review-list li{border-top:1px solid var(--line);padding:18px 0}.review-list li:first-child{border-top:1px solid var(--ink)}.review-list h3{font:700 22px/1.08 "Newsreader",serif;letter-spacing:-.015em;margin:0 0 8px}.review-list p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 10px;color:var(--copy)}.review-list p strong{color:var(--ink)}.review-list .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:8px}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Monday, November 23, 2026</div>
+      <div class="range">Covering Sunday, November 22, 2026, plus significant late-breaking items from Friday, November 20 through Monday, November 23, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Anthropic slides <em>~9% after its record IPO</em> as tech stocks sell off</h1>
+      <div><p class="dek">Anthropic fell 8.5% on its second day of trading as the Nasdaq gave up all its 2026 gains — the clearest stress test yet of AI valuations. Elsewhere, a quiet Sunday brought two genuinely new releases: Z.ai’s loop-transformer flagship GLM-5.4 and Sarvam’s single-GPU open-weight 105B, plus an MIT method that teaches a tiny model to design analog chips.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Sunday, Nov 22 was a comparatively quiet news day; this edition’s spine is Friday, Nov 20 follow-ups plus two genuinely new Nov 22–23 releases (Sarvam-105B-1711, Z.ai GLM-5.4, MIT SLIC).</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#anthropic-slide">Anthropic shares slide ~9% the day after its record IPO as tech stocks sell off</a></li>
+        <li><span class="num">02</span><a href="#glm-54">Z.ai launches GLM-5.4, its first Loop Transformer flagship, with vision</a></li>
+        <li><span class="num">03</span><a href="#sarvam-105b">India’s Sarvam releases Sarvam-105B-1711 — an open-weight 105B that runs on a single GPU</a></li>
+        <li><span class="num">04</span><a href="#tencent-hy4">Tencent ships full Hy4 open weights — a 770B flagship with a $50M license catch</a></li>
+        <li><span class="num">05</span><a href="#mit-slic">MIT’s SLIC trains a tiny model to design analog chips as well as frontier LLMs</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Chips</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Business</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Culture</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- BUSINESS & MARKETS -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">01 / BUSINESS &amp; MARKETS</div><h2>The IPO meets its first sell-off</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="anthropic-slide" data-cat="funding">
+          <div class="meta"><span class="tag">#1 · Company / Markets · Anthropic</span><span>Fri, Nov 20, 2026</span></div>
+          <h3>Anthropic shares slide ~9% the day after its record IPO as tech stocks sell off</h3>
+          <p>Anthropic (Nasdaq: ANT) fell 8.5% on its second day of trading, closing at $88.91 — still 7% above its $83 IPO price but down 20% from its $111.50 opening print, when it briefly topped a $2 trillion valuation. The slide came amid a broad tech rout: the Nasdaq fell 5.3% on Friday and gave up all its 2026 gains.</p>
+          <p>Underwriters exercised their overallotment in full, lifting total IPO proceeds to about $93.5 billion — the largest IPO on record — plus a $26 billion private placement to Google, Microsoft and Nvidia, for a total haul near $120 billion. <strong>Why it matters:</strong> the whiplash is the clearest stress test yet of AI valuations, and the next overhang is lock-up releases, with up to 315 million shares freed on day one and up to 1.7 billion more after annual results.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic (Nasdaq: ANT); Google; Microsoft; Nvidia; Nasdaq.</p>
+          <div class="sources"><a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11202026-12266027" target="_blank" rel="noopener">Investopedia ↗</a><a href="https://techxplore.com/news/2026-11-anthropic-falls-day-ipo.pdf" target="_blank" rel="noopener">TechXplore ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODEL RELEASES</div><h2>The densest open-weight week of the year</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="glm-54" data-cat="models">
+          <div class="meta"><span class="tag">#2 · Models · Z.ai (Zhipu)</span><span>Mon, Nov 23, 2026 · Late-breaking</span><span class="caveat">Vendor claims only — no benchmarks yet</span></div>
+          <h3>Z.ai launches GLM-5.4, its first Loop Transformer flagship, with vision — subscription-first, no benchmarks yet</h3>
+          <p>Z.ai (Zhipu) released GLM-5.4, its first flagship built on a Loop Transformer: it runs 28 layers of its roughly 750B-parameter GLM-5 base twice for deeper reasoning without adding parameters, adds vision input for the first time in the mainline flagship, and offers a 1M-token context. It is live now for GLM Coding Plan subscribers, with 50% more weekly quota than GLM-5.3. No benchmark scores, API pricing, parameter table or open-weight date have been published.</p>
+          <p><strong>Why it matters:</strong> the first flagship-scale deployment of the loop-transformer idea, with Z.ai claiming intelligence comparable to 2T–3T-parameter models from a ~750B base; the subscription-first, benchmark-free launch is a notable shift in how Chinese labs ship. <strong>Caveat:</strong> benchmark and capability claims are vendor claims only — no independent scores exist yet.</p>
+          <p class="players"><strong>Key people/companies:</strong> Z.ai (Zhipu).</p>
+          <div class="sources"><a href="https://www.testingcatalog.com/z-ai-launches-glm-5-4-its-first-loop-transformer-model/" target="_blank" rel="noopener">TestingCatalog ↗</a><a href="https://www.unite.ai/z-ais-glm-5-4-uses-iterative-depth-without-adding-parameters/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+
+        <article class="story side" id="sarvam-105b" data-cat="models">
+          <div class="meta"><span class="tag">#3 · Models · Sarvam AI</span><span>Sun, Nov 22, 2026</span><span class="caveat">Benchmarks vendor-reported</span></div>
+          <h3>India’s Sarvam releases Sarvam-105B-1711, an open-weight 105B model that runs on a single GPU</h3>
+          <p>Bengaluru-based Sarvam AI released Sarvam-105B-1711, an open-weight checkpoint of its 105B-parameter mixture-of-experts model (10.3B active per token), retrained with reinforcement learning on upgraded B200 infrastructure. Weights are on Hugging Face under Apache 2.0 in BF16 (198 GB) and a 65 GB NVFP4 build that Sarvam says fits on a single 96 GB RTX PRO 6000 Blackwell GPU.</p>
+          <p>Sarvam says average scores across eight conversational-agent benchmarks rose from 42.6 to 73.9, and blended API pricing fell from $0.44 to $0.15 per million tokens. <strong>Why it matters:</strong> the strongest open-weight enterprise-agent release of the weekend and a milestone for India’s domestic AI effort — a capable, cheap, single-GPU-deployable model aimed at high-volume customer support and voice agents, under a permissive license. <strong>Caveat:</strong> all benchmark scores are Sarvam’s own, not independently reproduced.</p>
+          <p class="players"><strong>Key people/companies:</strong> Sarvam AI; Hugging Face.</p>
+          <div class="sources"><a href="https://web.sarvam.dev/blogs/sarvam-105b-1711" target="_blank" rel="noopener">Sarvam AI ↗</a><a href="https://www.unite.ai/sarvam-ai-releases-open-weight-105b-checkpoint-for-enterprise-agents/" target="_blank" rel="noopener">Unite.AI ↗</a></div>
+        </article>
+
+        <article class="story half" id="tencent-hy4" data-cat="models">
+          <div class="meta"><span class="tag">#4 · Models · Tencent</span><span>Fri, Nov 20, 2026</span><span class="caveat">Benchmarks vendor-reported</span></div>
+          <h3>Tencent ships full Hy4 open weights — a 770B flagship, under a license with a $50M catch</h3>
+          <p>Tencent published the full weights of Hy4, its flagship Hunyuan mixture-of-experts model: 770B total parameters, 49B active per token, natively multimodal (text, image, video), 1M-token context, with instruct, FP8 and base checkpoints plus an 82-page system card, on Hugging Face, ModelScope and GitCode.</p>
+          <p>The catch is the license: the custom Tencent Hy License v1.0, whose Section 10 requires a separate written license for model-as-a-service operators above $50M annual revenue or 100M monthly users. <strong>Why it matters:</strong> the largest open-weight model ever released, arriving the same week as Inkling 2 Mini and Sarvam-105B-1711 — the densest open-weight week of the year — but the custom license and 8-GPU hardware requirement mean it is open in name for most builders. <strong>Caveat:</strong> all benchmark claims are Tencent’s own, not independently reproduced.</p>
+          <p class="players"><strong>Key people/companies:</strong> Tencent (Hunyuan); Hugging Face; ModelScope; GitCode.</p>
+          <div class="sources"><a href="https://technode.com/2026/11/20/tencent-releases-hy4-model-weights-with-million-token-context/" target="_blank" rel="noopener">TechNode ↗</a><a href="https://gpujournal.ai/story/tencent-hy4-open-weights-nov-20" target="_blank" rel="noopener">GPU Journal ↗</a></div>
+        </article>
+
+        <article class="story half" id="inkling-ollama" data-cat="models products">
+          <div class="meta"><span class="tag">#5 · Models · Thinking Machines Lab</span><span>Released Fri, Nov 20 · Ollama Sun, Nov 22, 2026</span><span class="caveat">Local-benchmark claim unverified</span></div>
+          <h3>Thinking Machines’ Inkling 2 Mini reaches laptops via Ollama; early local-benchmark claims surface</h3>
+          <p>Thinking Machines Lab’s Inkling 2 Mini — a 26.4B-parameter looped-transformer MoE (3.4B active per token, ~20 GB footprint, Apache 2.0) that runs offline on a 32 GB MacBook Pro or a single GPU — gained day-two distribution on Nov 22, when Ollama’s 0.40.17 pre-release listed it for Macs with 32 GB+ unified memory. The model was #1 trending on Hugging Face at launch.</p>
+          <p><strong>Why it matters:</strong> frontier-adjacent agentic coding that runs on a laptop under a permissive license; the Ollama packaging turns a Hugging Face release into something most developers can actually run. <strong>Caveat:</strong> a Nov 22 claim on X that Inkling 2 Mini hit 10.04x on the KernelBench-Mega board is a single unaudited post, not yet on the public leaderboard — treat as unverified.</p>
+          <p class="players"><strong>Key people/companies:</strong> Thinking Machines Lab; Ollama; Hugging Face.</p>
+          <div class="sources"><a href="https://venturebeat.com/technology/thinking-machines-wows-with-inkling-2-mini-looped-transformer-model-that-runs-locally-on-laptops" target="_blank" rel="noopener">VentureBeat ↗</a><a href="https://explainx.ai/blog/inkling-2-mini-thinking-machines-cyberbench-laptop-november-2026" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH BREAKTHROUGHS -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">03 / RESEARCH BREAKTHROUGHS</div><h2>Small models, proven kernels</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="mit-slic" data-cat="research infra">
+          <div class="meta"><span class="tag">#6 · Research · MIT</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>MIT’s SLIC trains a tiny model to design analog chips as well as frontier LLMs — locally</h3>
+          <p>MIT researchers unveiled SLIC (Small LM Iterating on Circuits), a training method that teaches a small, few-billion-parameter language model to design analog integrated circuits as well as or better than frontier LLMs. Using multi-turn reinforcement learning with verifiable rewards against a circuit simulator, a 4B-parameter SLIC model reached 87.1% in-distribution Pass@1 on four-specification amplifier tasks within eight turns — 48.5 points above the 763B DeepSeek-V4.1-Flash Think — and beat GPT-6-Astra at the four-turn horizon (74.9% vs 67.1%).</p>
+          <p>Because the model is small and locally deployable, chipmakers can train on confidential foundry data without sending it to hosted services. The paper will be presented at NeurIPS 2026. <strong>Why it matters:</strong> analog chip design is one of the last bastions of expert human engineering, and the result is a striking counterexample to the scale-equals-capability narrative.</p>
+          <p class="players"><strong>Key people/companies:</strong> MIT; NeurIPS 2026.</p>
+          <div class="sources"><a href="https://news.mit.edu/2026/ai-driven-technique-could-help-engineers-design-analog-chips-faster-and-less-expensive-1123" target="_blank" rel="noopener">MIT News ↗</a><a href="https://arxiv.science/abs/2611.13452" target="_blank" rel="noopener">arXiv ↗</a></div>
+        </article>
+
+        <article class="story side" id="tensorlean" data-cat="research infra">
+          <div class="meta"><span class="tag">#7 · Research · CertiK / Columbia</span><span>Fri, Nov 20, 2026</span><span class="caveat">Bug severity unconfirmed</span></div>
+          <h3>TensorLean brings mathematical proof to AI GPU kernels — and finds 25 bugs in DeepSeek and FlashAttention code</h3>
+          <p>Researchers from CertiK and Columbia University introduced TensorLean, a formal-verification framework that mathematically proves production GPU kernels compute what they should, using machine-checkable proofs written in Lean over compiled NVIDIA PTX code. Applied to more than 100 production kernels, it found 25 bugs — two in DeepSeek kernels and 23 in FlashAttention implementations.</p>
+          <p><strong>Why it matters:</strong> a silent numerical bug in a kernel can waste millions of dollars of compute or subtly corrupt a model, and TensorLean is the first serious attempt to bring aerospace-grade verification to the lowest layer of the AI stack. <strong>Caveat:</strong> the announcement did not include a full bug list or reproducible proof package, so the severity of the 25 bugs is unconfirmed.</p>
+          <p class="players"><strong>Key people/companies:</strong> CertiK; Columbia University; DeepSeek; NVIDIA.</p>
+          <div class="sources"><a href="http://hackernoon.com/certik-and-columbia-university-bring-math-proofs-to-the-gpu-code-behind-every-large-ai-model" target="_blank" rel="noopener">HackerNoon ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="wrap section" data-section="funding2">
+      <div class="section-head"><div class="section-no">04 / FUNDING</div><h2>$5 billion, no product</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="pragmatik-labs" data-cat="funding">
+          <div class="meta"><span class="tag">#8 · Funding · Pragmatik Labs</span><span>Fri, Nov 20, 2026</span><span class="caveat">Single-sourced</span></div>
+          <h3>Ex-Qwen chief’s Pragmatik Labs hits a $5 billion valuation just three months after its first round</h3>
+          <p>Pragmatik Labs (p7k), the Shanghai AI startup founded by former Alibaba Qwen lead Lin Junyang, closed a new funding round valuing it at $5 billion — 2.5x the $2 billion valuation from its first financing in August. The new round raised only tens of millions of dollars, with new investors HyT Capital, CDH Investments and automaker Geely joining prior backers Gaorong Ventures, HSG, Tencent and the Shanghai Future Industry Fund. The company, incorporated May 13, 2026, has released no product yet.</p>
+          <p><strong>Why it matters:</strong> a $5B valuation for a six-month-old, pre-product lab is the purest signal yet of the talent-driven funding frenzy around former Qwen leadership. <strong>Caveat:</strong> single-sourced at origin (Bloomberg, unnamed sources); the company has not confirmed the round publicly.</p>
+          <p class="players"><strong>Key people/companies:</strong> Pragmatik Labs (p7k); Lin Junyang; HyT Capital; CDH Investments; Geely; Gaorong Ventures; HSG; Tencent; Shanghai Future Industry Fund.</p>
+          <div class="sources"><a href="https://technode.com/2026/11/20/ex-qwen-chiefs-pragmatik-labs-raises-funding-at-5-billion-valuation/" target="_blank" rel="noopener">TechNode ↗</a><a href="https://www.pymnts.com/news/investment-tracker/2026/ex-alibaba-ai-chief-junyang-lin-drives-startup-pragmatik-labs-to-5-billion-valuation/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & REGULATION -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; REGULATION</div><h2>Disclosure, not a ban</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="china-disclosure" data-cat="policy">
+          <div class="meta"><span class="tag">#9 · Policy · US Government</span><span>Wed, Nov 18, 2026 · Circulated Nov 21–22</span><span class="caveat">Single-sourced</span></div>
+          <h3>US weighs forcing companies to publicly disclose their use of Chinese AI models</h3>
+          <p>The Trump administration is considering requiring US companies to publicly disclose their use of Chinese AI models — posting the information on their own websites — according to Reuters, citing three people familiar with the matter. Treasury and the White House Office of Science and Technology Policy have discussed the idea, which would apply to companies such as Airbnb (whose AI customer-service agent reportedly runs on Alibaba’s Qwen).</p>
+          <p><strong>Why it matters:</strong> the first concrete policy proposal targeting the already-widespread enterprise use of Chinese open-weight models inside US products; disclosure rather than a ban keeps the administration’s deregulatory posture intact while putting model-supply-chain choices in public view. <strong>Caveat:</strong> single-sourced at origin (Reuters, three unnamed people); neither Treasury nor OSTP commented, and no formal proposal exists yet.</p>
+          <p class="players"><strong>Key people/companies:</strong> US Treasury; White House Office of Science and Technology Policy; Airbnb; Alibaba (Qwen).</p>
+          <div class="sources"><a href="https://www.lapost.com/content/trump-administration-weighs-forcing-us-firms-to-disclose-chinese-ai-use" target="_blank" rel="noopener">Reuters via LA Post ↗</a><a href="https://www.pymnts.com/news/artificial-intelligence/2026/trump-administration-weighs-naming-and-shaming-us-firms-using-chinese-ai/" target="_blank" rel="noopener">PYMNTS ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY & PARTNERSHIPS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">06 / COMPANY &amp; PARTNERSHIPS</div><h2>An MoU with no money attached</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="openai-chile" data-cat="products">
+          <div class="meta"><span class="tag">#10 · Company · OpenAI</span><span>Tue, Nov 17, 2026 · In week’s roundups Nov 21–22</span></div>
+          <h3>OpenAI for Chile: AI in public services, civil-servant training and startups — no spending commitment</h3>
+          <p>OpenAI and Chile’s Ministry of Science, Technology, Knowledge and Innovation signed a memorandum of understanding — “OpenAI for Chile” — to explore AI adoption in public administration, AI literacy and upskilling for civil servants, and support for local AI startups. Signed by CEO Sam Altman and Minister Ximena Lincolao.</p>
+          <p>The MoU sets no investment or purchasing commitment; a joint task force will agree priorities and a workplan, and the initial phase has no cost to the Chilean state. <strong>Why it matters:</strong> the latest template for OpenAI’s government-by-government expansion — and a notably modest one: an MoU with no money attached, framed as exploration rather than deployment.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI; Sam Altman; Chile Ministry of Science, Technology, Knowledge and Innovation; Ximena Lincolao.</p>
+          <div class="sources"><a href="https://openai.com/index/introducing-openai-for-chile/" target="_blank" rel="noopener">OpenAI ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WEEK IN REVIEW -->
+    <section class="wrap section" data-section="review">
+      <div class="section-head"><div class="section-no">07 / WEEK IN REVIEW</div><h2>Nov 17–18, for continuity</h2></div>
+      <ul class="review-list">
+        <li data-cat="models">
+          <div class="meta"><span class="tag">Models · OpenAI</span><span>Tue, Nov 17, 2026</span></div>
+          <h3>OpenAI released GPT-6.2 Astra and Sol</h3>
+          <p>Astra is the frontier model for professional work ($8/$40 per M tokens, 20% cheaper than GPT-6 Astra); Sol is the everyday model at $2/$10. Both ship with tighter safeguards for higher-risk cybersecurity assistance and a “Critical” cyber preparedness rating.</p>
+          <div class="sources"><a href="https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531" target="_blank" rel="noopener">OpenAI Community ↗</a></div>
+        </li>
+        <li data-cat="models">
+          <div class="meta"><span class="tag">Models · Google</span><span>Wed, Nov 18, 2026</span></div>
+          <h3>Google launched Gemini 4 Neon</h3>
+          <p>A mid-tier model between Carbon and Hydrogen, 1M-token context, #3 overall on the Artificial Analysis Intelligence Index (61) and #1 on its Coding Agent Index (58.6), priced $3/$15 per M tokens.</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">Google Blog ↗</a></div>
+        </li>
+        <li data-cat="models">
+          <div class="meta"><span class="tag">Models · Microsoft</span><span>Tue, Nov 17, 2026</span><span class="caveat">Figures vendor-reported</span></div>
+          <h3>Microsoft announced seven MAI models at Ignite</h3>
+          <p>MAI Code 2, Code 2 Flash, Cyber 2 Flash, Image 2.7, Realtime 1, Dragon Copilot Transcribe (MAI Transcribe 2) and Decision 1.1 — all pitched on cost-per-task vs OpenAI/Anthropic flagships, running on the Maia 200 accelerator. All figures are Microsoft’s own, unverified.</p>
+          <div class="sources"><a href="https://www.thurrott.com/a-i/microsoft-ai/343999/ignite-2026-microsoft-ai-announces-7-new-models" target="_blank" rel="noopener">Thurrott ↗</a></div>
+        </li>
+        <li data-cat="research infra">
+          <div class="meta"><span class="tag">Research · OpenAI / AMD</span><span>Wed, Nov 18, 2026</span><span class="caveat">Figures vendor-reported</span></div>
+          <h3>OpenAI says its models improved AMD’s flagship GPU designs by up to 14% PPA</h3>
+          <p>Models rewrote SystemVerilog RTL; some changes already taped out. All figures are OpenAI’s; AMD has not published separate confirmation.</p>
+          <div class="sources"><a href="https://wccftech.com/openai-models-deliver-up-to-14-ppa-gains-on-amd-flagship-gpu-designs-with-some-changes-already-sent-to-manufacturing/" target="_blank" rel="noopener">Wccftech ↗</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: Sunday, November 22, 2026, plus significant late-breaking items from Friday, November 20 through Monday, November 23, 2026.</li>
+          <li><strong>Z.ai GLM-5.4:</strong> no benchmark scores, API pricing, parameter table or open-weight date have been published; capability claims (intelligence comparable to 2T–3T-parameter models) are vendor claims only, with no independent scores yet.</li>
+          <li><strong>Sarvam-105B-1711:</strong> all benchmark scores (the 42.6 → 73.9 average across eight conversational-agent benchmarks) are Sarvam’s own, not independently reproduced.</li>
+          <li><strong>Tencent Hy4:</strong> all benchmark claims are Tencent’s own, not independently reproduced; the custom Hy License v1.0 requires a separate written license for model-as-a-service operators above $50M annual revenue or 100M monthly users.</li>
+          <li><strong>Inkling 2 Mini:</strong> the Nov 22 claim on X of a 10.04x KernelBench-Mega result is a single unaudited post, not yet on the public leaderboard — treat as unverified.</li>
+          <li><strong>TensorLean:</strong> the announcement did not include a full bug list or reproducible proof package, so the severity of the 25 reported bugs is unconfirmed.</li>
+          <li><strong>Pragmatik Labs:</strong> single-sourced at origin (Bloomberg, unnamed sources); the company has not confirmed the $5B round publicly.</li>
+          <li><strong>US disclosure of Chinese AI use:</strong> single-sourced at origin (Reuters, three unnamed people); neither Treasury nor OSTP commented, and no formal proposal exists yet.</li>
+          <li><strong>Week in Review:</strong> Microsoft’s MAI model figures and OpenAI’s “up to 14% PPA” AMD claim are the vendors’ own; AMD has not published separate confirmation of the PPA figure.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, rumored, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Sunday, November 22, 2026, plus significant late-breaking items from November 20–23, 2026. Caveats are marked inline. Single-sourced and unverified items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 23, 2026.<br>10 stories + Week in Review.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

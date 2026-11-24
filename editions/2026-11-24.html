@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Tuesday, November 24, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .review-list{list-style:none;margin:0;padding:0}.review-list li{border-top:1px solid var(--line);padding:18px 0}.review-list li:first-child{border-top:1px solid var(--ink)}.review-list h3{font:700 22px/1.08 "Newsreader",serif;letter-spacing:-.015em;margin:0 0 8px}.review-list p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 10px;color:var(--copy)}.review-list p strong{color:var(--ink)}.review-list .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:8px}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Tuesday, November 24, 2026</div>
+      <div class="range">Covering Monday, November 23, 2026, plus significant late-breaking items from Sunday, November 22, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Nvidia reinstates Jensen Huang — <em>and adds nearly $1 trillion</em></h1>
+      <div><p class="dek">Eleven days after Jensen Huang resigned, Nvidia’s board brought him back as CEO and the stock surged roughly 30–34%. The same day brought the first state lawsuits over Grok’s sexualized imagery, two competing AI-written proofs of VP ≠ VNP that no human has checked, and Amazon’s reported ~$7.5B grab for Decart’s optimization tech.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>A heavy Monday: a CEO reversal at the world’s most important chip company, a landmark AI-safety lawsuit, and a cluster of machine-written mathematics — including a verified Riemann Hypothesis proof whose Nov 20 release sits just outside the window but whose verification and coverage landed Nov 21–23. Caveats are flagged inline throughout.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#nvidia-huang">Nvidia reinstates Jensen Huang as CEO, 11 days after his resignation</a></li>
+        <li><span class="num">02</span><a href="#grok-lawsuits">Virginia and Oregon sue SpaceX over Grok generating child sexual abuse imagery</a></li>
+        <li><span class="num">03</span><a href="#vp-vnp">Anthropic and OpenAI post competing VP ≠ VNP proofs — neither human-checked</a></li>
+        <li><span class="num">04</span><a href="#riemann">Claude-assisted proof of the Riemann Hypothesis — verification lands, coverage peaks</a></li>
+        <li><span class="num">05</span><a href="#amazon-decart">Amazon acquires Decart’s AI optimization tech in reported ~$7.5B deal</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Chips</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Business</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Culture</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- COMPANY & LEADERSHIP -->
+    <section class="wrap section" data-section="leadership">
+      <div class="section-head"><div class="section-no">01 / COMPANY &amp; LEADERSHIP</div><h2>The fastest CEO reversal in tech history</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="nvidia-huang" data-cat="funding infra">
+          <div class="meta"><span class="tag">#1 · Company / Leadership · Nvidia</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Nvidia reinstates Jensen Huang as CEO</h3>
+          <p>Nvidia’s board unanimously reinstated Jensen Huang as president, CEO and director, effective immediately — just 11 days after he resigned amid revelations of extramarital affairs, including one with a woman U.S. officials suspect of working for Chinese intelligence. The board said it was satisfied with Huang’s candor and, after input from senior U.S. government officials, is confident his return poses no national security risk.</p>
+          <p>Shares surged roughly 30–34%, adding nearly $1 trillion in market value; the reversal followed pressure from President Trump and other administration officials. <strong>Why it matters:</strong> the episode puts the governance of the AI era’s most systemically important company — and the role of government pressure in a board’s decision — under a spotlight that an ongoing independent committee review will keep lit. Interim CEO Colette Kress returns to the CFO role.</p>
+          <p class="players"><strong>Key people/companies:</strong> Jensen Huang; Colette Kress; Nvidia board; President Trump.</p>
+          <div class="sources"><a href="https://www.wsj.com/articles/nvidia-board-reinstates-jensen-huang-as-ceo-a6b49914" target="_blank" rel="noopener">Wall Street Journal ↗</a><a href="https://www.cnn.com/2026/11/23/tech/nvidia-reinstates-jensen-huang-ceo?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & REGULATION -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">02 / POLICY &amp; REGULATION</div><h2>States take Grok to court</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="grok-lawsuits" data-cat="policy">
+          <div class="meta"><span class="tag">#2 · Policy / Regulation / Safety · SpaceX / xAI</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Virginia and Oregon sue SpaceX over Grok generating child sexual abuse imagery</h3>
+          <p>The attorneys general of Virginia (Jay Jones) and Oregon (Dan Rayfield) filed the first state lawsuits against Elon Musk’s SpaceX Super Intelligence Corp — parent of X, xAI and Grok — alleging Grok’s image-generation “spicy mode” let users turn ordinary photos into sexualized images and videos, including of children, while the company misled consumers about its safeguards.</p>
+          <p>The suits cite a Center for Countering Digital Hate study estimating Grok generated ~3 million sexualized images on X between Dec 29, 2025 and Jan 8, 2026, including ~23,000 appearing to depict children. The states seek civil penalties (up to $2,500 per violation in Virginia), injunctions, restitution and disgorgement of profits. <strong>Why it matters:</strong> the first state-level legal test of a generator’s liability for sexualized imagery of real people — and children — with remedies that could force product changes well beyond two states.</p>
+          <p class="players"><strong>Key people/companies:</strong> Jay Jones (Virginia AG); Dan Rayfield (Oregon AG); Elon Musk; SpaceX Super Intelligence Corp; X; xAI; Grok; Center for Countering Digital Hate.</p>
+          <div class="sources"><a href="https://www.reuters.com/legal/government/virginia-oregon-sue-musks-spacex-over-grok-ais-creation-child-sexual-abuse-2026-11-23/" target="_blank" rel="noopener">Reuters ↗</a><a href="https://www.barchart.com/story/news/8964435/sexual-images-from-elon-musk-s-ai-chatbot-harmed-consumers-ags-argue" target="_blank" rel="noopener">AP via Barchart ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESEARCH BREAKTHROUGHS -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">03 / RESEARCH BREAKTHROUGHS</div><h2>Machines write the proofs now</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="vp-vnp" data-cat="research">
+          <div class="meta"><span class="tag">#3 · Research · Anthropic / OpenAI</span><span>Mon, Nov 23, 2026</span><span class="caveat">AI-discovered — neither proof human-checked</span></div>
+          <h3>Anthropic and OpenAI post competing VP ≠ VNP proofs — both AI-discovered, neither human-checked</h3>
+          <p>Anthropic posted a 70-page paper credited solely to an internal Claude research model claiming a proof of VP ≠ VNP — Valiant’s 1979 conjecture, the algebraic analogue of P vs NP — with a Lean 4 formalization spanning 324 files. Anthropic states plainly that no human mathematician has checked the proof; Lean verifies internal logical consistency, not whether the formal statements match the English claims.</p>
+          <p>Hours later OpenAI posted its own 30-page proof in its public math repo, saying its model obtained the result on Nov 6. <strong>Why it matters:</strong> two frontier labs claiming the same landmark result within hours is a new kind of scientific race — but both proofs are machine-checked and unverified by humans, and neither settles Boolean P vs NP.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic (Claude research model); OpenAI; Lean 4.</p>
+          <div class="sources"><a href="https://fourweekmba.com/ai-claude-written-paper-claims-vp-vnp-with-a-lean-proof/" target="_blank" rel="noopener">FourWeekMBA ↗</a><a href="https://officechai.com/ai/openai-vp-vnp-proof-hours-after-anthropic-claude/" target="_blank" rel="noopener">OfficeChai ↗</a><a href="https://aiweekly.co/alerts/anthropic-publishes-claude-authored-vp-vnp-proof-unverified" target="_blank" rel="noopener">AI Weekly ↗</a></div>
+        </article>
+
+        <article class="story side" id="riemann" data-cat="research">
+          <div class="meta"><span class="tag">#4 · Research · Anthropic</span><span>Released Fri, Nov 20 · Verified Sat, Nov 21 · Coverage Mon, Nov 23, 2026</span><span class="caveat">Release outside 48-hour window — see note</span></div>
+          <h3>Claude-assisted proof of the Riemann Hypothesis — verification lands, coverage peaks</h3>
+          <p>Anthropic mathematician Levent Alpöge released a formal Lean proof of the Riemann Hypothesis (and the Generalized Riemann Hypothesis), developed with Claude over ~six weeks, as ~17 million lines across 175,187 Lean files. On Nov 21 the Lean Focused Research Organization and Mathlib Initiative announced independent verification with “full confidence” the proof is correct.</p>
+          <p>The proof itself is not yet understood by humans — no natural-language version exists yet — and the Clay Mathematics Institute still lists the hypothesis as unsolved. <strong>Caveat:</strong> the underlying release is Nov 20, outside the strict 48-hour window; it is included because verification and mainstream coverage landed Nov 21–23.</p>
+          <p class="players"><strong>Key people/companies:</strong> Levent Alpöge; Anthropic (Claude); Lean Focused Research Organization; Mathlib Initiative; Clay Mathematics Institute.</p>
+          <div class="sources"><a href="https://www.wsj.com/tech/ai/riemann-hypothesis-anthropic-math-levent-alpoge-75351bcb" target="_blank" rel="noopener">Wall Street Journal ↗</a><a href="https://www.usatoday.com/story/tech/2026/11/21/ai-claude-riemann-hypothesis-math-mystery/92901494007/" target="_blank" rel="noopener">USA Today ↗</a><a href="https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis" target="_blank" rel="noopener">Wikipedia ↗</a></div>
+        </article>
+
+        <article class="story full" id="deepmind-quantum" data-cat="research infra">
+          <div class="meta"><span class="tag">#5 · Research · Google DeepMind</span><span>Mon, Nov 23, 2026</span><span class="caveat">Estimates — not run on quantum hardware</span></div>
+          <h3>Google DeepMind: Gemini agent teams find formally verified quantum algorithms, up to 290× cheaper</h3>
+          <p>Google DeepMind and Google Quantum AI used teams of Gemini 4 agents to design quantum circuits and formally verify them in the Lean 4 theorem prover, reporting a 290× cost reduction for a quantum arcsin routine and 2.5–12× improvements for simulations relevant to fusion energy, photochemistry and drug metabolism — for example, fusion memory cut from 5,650 to 4,338 error-corrected qubits. The team open-sourced its Lean library, problem specifications and verified solutions on GitHub.</p>
+          <p><strong>Why it matters:</strong> verified-by-construction quantum algorithms could shrink the hardware bar for useful quantum computing — if the estimates hold. <strong>Caveat:</strong> the figures are resource estimates against author-constructed baselines for future error-corrected machines, not runs on quantum hardware.</p>
+          <p class="players"><strong>Key people/companies:</strong> Google DeepMind; Google Quantum AI; Gemini 4; Lean 4.</p>
+          <div class="sources"><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank" rel="noopener">Google DeepMind ↗</a><a href="https://arxiv.org/html/2611.09822v3" target="_blank" rel="noopener">arXiv ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">04 / MODEL RELEASES</div><h2>Looping layers, no benchmarks</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="glm-54" data-cat="models">
+          <div class="meta"><span class="tag">#6 · Model Release · Z.ai (Zhipu AI)</span><span>Mon, Nov 23, 2026</span><span class="caveat">No benchmark table — capability claim unverified</span></div>
+          <h3>Z.ai launches GLM-5.4, a 750B “Loop Transformer” flagship</h3>
+          <p>Chinese lab Z.ai (Zhipu AI) launched GLM-5.4, its first flagship built on a Loop Transformer: it runs the same 28 layers of the ~750B-parameter GLM-5 base twice per forward pass, which the company says reaches intelligence levels comparable to 2T–3T-parameter models without adding parameters. It is available now via the GLM Coding Plan, ZCode and Z.ai Chat, with vision support and 50% more weekly quota than GLM-5.3; API access and open weights are promised after safety review, with no date.</p>
+          <p><strong>Why it matters:</strong> if looping depth really substitutes for raw scale, it changes the cost math for frontier-class models. <strong>Caveat:</strong> Z.ai published no benchmark table for GLM-5.4, so the headline capability claim is unverified; the only quantitative evidence is an ablation on a 30B model.</p>
+          <p class="players"><strong>Key people/companies:</strong> Z.ai (Zhipu AI).</p>
+          <div class="sources"><a href="https://www.techrepublic.com/article/news-zai-glm-5-4-loop-transformer/" target="_blank" rel="noopener">TechRepublic ↗</a><a href="https://dealroom.co/news/175167-z-ai-s-glm-5-4-loops-layers-to-rival-2-3t-models-at-750b-parameters/" target="_blank" rel="noopener">Dealroom ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPANY ANNOUNCEMENTS & DEALS -->
+    <section class="wrap section" data-section="deals">
+      <div class="section-head"><div class="section-no">05 / COMPANY &amp; DEALS</div><h2>Amazon buys speed for Trainium</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="amazon-decart" data-cat="funding infra">
+          <div class="meta"><span class="tag">#7 · Company / M&amp;A · Amazon / Decart</span><span>Mon, Nov 23, 2026</span><span class="caveat">~$7.5B price Bloomberg-reported, not confirmed</span></div>
+          <h3>Amazon acquires Decart’s AI optimization tech in reported ~$7.5B deal to boost Trainium</h3>
+          <p>Amazon agreed to acquire the technology behind Israeli startup Decart’s Optimization Stack (DOS) — software that helps AI models run efficiently across Nvidia, Google and Amazon hardware — plus Decart’s three co-founders and research team. The deal is aimed at squeezing more performance from Amazon’s Trainium chips as it prepares to sell them to outside customers as a Nvidia competitor.</p>
+          <p>Amazon did not disclose terms; Bloomberg reported ~$7.5B. It is an asset purchase, not a full acquisition — Decart’s world models (e.g. Oasis) are not included. <strong>Why it matters:</strong> Amazon is buying the software layer that makes non-Nvidia silicon competitive, a direct bet that optimization — not just chips — decides who can challenge Nvidia.</p>
+          <p class="players"><strong>Key people/companies:</strong> Amazon (Trainium); Decart; Nvidia; Google.</p>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/" target="_blank" rel="noopener">TechCrunch ↗</a><a href="https://assets.theregister.com/2026/11/23/202619/" target="_blank" rel="noopener">The Register ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCT LAUNCHES -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">06 / PRODUCT LAUNCHES</div><h2>Agents ship code, guard servers, read your wallet</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="claude-ship" data-cat="products">
+          <div class="meta"><span class="tag">#8 · Product Launch · Anthropic</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Anthropic launches Claude Ship: AI agents that review, fix and approve pull requests</h3>
+          <p>Anthropic launched Claude Ship, a suite of three agents for GitHub-hosted Team and Enterprise customers: Code Review (generally available since October), PR Steward (beta — pushes fixes for failing checks, conflicts and review feedback) and Claude Approvals (beta — applies a team-written approval policy file, like a smarter CODEOWNERS). A new /ship command in Claude Code can push a branch, open a PR, review it and watch it for up to seven days.</p>
+          <p>Anthropic says its own Claude Code team more than doubled merged PRs June–September with 40%+ fewer reversions. <strong>Why it matters:</strong> Ship moves agents from writing code to owning the whole merge pipeline — review, repair and approval included. Eligible Enterprise orgs can claim at least $10,000 in credits by Jan 15, 2027.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic; Claude Code; GitHub.</p>
+          <div class="sources"><a href="https://claude.com/resources/articles/introducing-claude-ship" target="_blank" rel="noopener">Anthropic ↗</a><a href="https://dev.to/delimitter/anthropic-launches-claude-ship-ai-agents-that-review-fix-and-approve-pull-requests-1ij3" target="_blank" rel="noopener">DEV ↗</a></div>
+        </article>
+
+        <article class="story side" id="google-personal-intelligence" data-cat="products">
+          <div class="meta"><span class="tag">#9 · Product Launch · Google</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Google expands Search Personal Intelligence to Wallet, Drive and the Gemini app</h3>
+          <p>Google began rolling out Wallet connections for Personal Intelligence in Search’s AI Mode, letting opt-in users get answers informed by spending patterns and credit-card rewards — read-only; AI Mode cannot move or invest money. Drive and Gemini-app connections follow in the coming weeks, joining Gmail, Calendar and Photos, so Search can draw on documents, spreadsheets, PDFs and prior Gemini chats. A new Personalization icon shows what personal context shaped an answer.</p>
+          <p><strong>Why it matters:</strong> the move deepens the privacy stakes of AI search, bringing bank-linked spending and private files into search results — personalization and exposure now scale together.</p>
+          <p class="players"><strong>Key people/companies:</strong> Google; Gemini; Google Wallet; Google Drive.</p>
+          <div class="sources"><a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank" rel="noopener">Google Blog ↗</a><a href="https://www.neowin.net/news/google-search-can-now-use-your-wallet-data-and-drive-files-to-personalize-search-results/" target="_blank" rel="noopener">Neowin ↗</a></div>
+        </article>
+
+        <article class="story full" id="shirudo" data-cat="products infra">
+          <div class="meta"><span class="tag">#10 · Product Launch / Security · OpenAI / Cisco</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>OpenAI and Cisco launch Shirudo, open-source AI runtime shields for unpatched Linux</h3>
+          <p>OpenAI and Cisco launched Shirudo (Japanese for “shield”), an open-source Linux runtime that lets AI agents write, test and deploy temporary eBPF-based “shields” blocking exploits on live systems without reboots while teams prepare real patches. Shields are cryptographically signed, TPM-verified, and retire when the patch lands. In a demo, a Codex-generated shield blocked a Java4Shell exploit against a running Elasticsearch service without interruption.</p>
+          <p>Built as an agent-centric rewrite of Cisco/Isovalent’s Tetragon and BSD 2-Clause licensed, Shirudo turns the patching gap — the window attackers exploit most — into an agent task. A technical webinar is set for Dec 15. <strong>Why it matters:</strong> runtime self-defense by agents, shipped as open source by two of the biggest names in AI and networking.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI (Codex); Cisco; Isovalent (Tetragon).</p>
+          <div class="sources"><a href="https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html" target="_blank" rel="noopener">The Hacker News ↗</a><a href="https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/" target="_blank" rel="noopener">BleepingComputer ↗</a><a href="https://github.com/shirudo-dev/shirudo" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">07 / FUNDING</div><h2>One confirmed seed round</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="supertake" data-cat="funding">
+          <div class="meta"><span class="tag">#11 · Funding · Supertake</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Supertake raises $20M seed to turn market predictions into stock portfolios</h3>
+          <p>Supertake raised a $20M seed round to build AI agents that turn market predictions into stock portfolios. The startup is led by ex-Coinbase AI leaders.</p>
+          <p><strong>Why it matters:</strong> small in size, but notable as the day’s only confirmed AI funding announcement alongside the Decart deal — a sign of investor appetite for agent-managed money, even on a day dominated by mega-deals and lawsuits.</p>
+          <p class="players"><strong>Key people/companies:</strong> Supertake; ex-Coinbase AI leaders.</p>
+          <div class="sources"><a href="https://www.mediocresecurity.com/ai-landscape/funding/" target="_blank" rel="noopener">Mediocre Security ↗</a><a href="https://www.newscast.tech/category/startups" target="_blank" rel="noopener">Newscast ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- IN BRIEF -->
+    <section class="wrap section" data-section="brief">
+      <div class="section-head"><div class="section-no">08 / IN BRIEF</div><h2>Nov 22–23, in short</h2></div>
+      <ul class="review-list">
+        <li data-cat="funding">
+          <div class="meta"><span class="tag">Funding · Pragmatik Labs</span><span>Sun, Nov 22, 2026</span><span class="caveat">Single-source — reported, not confirmed</span></div>
+          <h3>Pragmatik Labs closes a round at a $5B valuation</h3>
+          <p>Shanghai agent lab founded by former Alibaba Qwen lead Lin Junyang closed a round at a $5B valuation, 2.5× its August mark. Single-source; treat as reported, not confirmed.</p>
+          <div class="sources"><a href="https://www.newscast.tech/category/startups" target="_blank" rel="noopener">Newscast ↗</a></div>
+        </li>
+        <li data-cat="research">
+          <div class="meta"><span class="tag">Research &amp; Culture · Meta</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Meta AI chief Alexandr Wang: “superintelligence is arriving”</h3>
+          <p>Wang posted that “superintelligence is arriving,” warning models will soon automate all AI research and that it is “hard to imagine” humanity keeping control; the post prompted calls in Congress for a pause.</p>
+          <div class="sources"><a href="https://www.aibriefing.dev/" target="_blank" rel="noopener">AI Briefing ↗</a></div>
+        </li>
+        <li data-cat="research models">
+          <div class="meta"><span class="tag">Research · Meta</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Meta backs open-weight models for medical research</h3>
+          <p>Meta is funding and providing access to open-weight models — Muse Glimmer, SAM3, DINOv3, Brain2Qwerty v2 — for university-led medical research.</p>
+          <div class="sources"><a href="https://aiunderstanding.org/news/topics/models" target="_blank" rel="noopener">AI Understanding ↗</a></div>
+        </li>
+        <li data-cat="products models">
+          <div class="meta"><span class="tag">Products · AWS</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>AWS Strands Decider v2</h3>
+          <p>Five open-weight models for routine agent decisions, plus native Claude Code, Codex and Kiro CLI support in the Strands Box sandbox.</p>
+          <div class="sources"><a href="https://aiunderstanding.org/news/topics/models" target="_blank" rel="noopener">AI Understanding ↗</a></div>
+        </li>
+        <li data-cat="products funding">
+          <div class="meta"><span class="tag">Company · OpenAI / University of California</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>University of California buys ChatGPT for all 10 campuses</h3>
+          <p>UC will pay OpenAI $1.2M/year for ChatGPT Edu and Codex, despite faculty leaders urging a slower rollout.</p>
+          <div class="sources"><a href="https://aifrontier.news/" target="_blank" rel="noopener">AI Frontier ↗</a></div>
+        </li>
+        <li data-cat="funding">
+          <div class="meta"><span class="tag">Funding · Cognition</span><span>Mon, Nov 23, 2026</span><span class="caveat">Reported — unconfirmed</span></div>
+          <h3>Cognition reportedly in talks to raise $2B at a $75B valuation</h3>
+          <p>Reported talks only; neither the round nor the valuation is confirmed.</p>
+          <div class="sources"><a href="https://www.newscast.tech/category/startups" target="_blank" rel="noopener">Newscast ↗</a></div>
+        </li>
+        <li data-cat="products">
+          <div class="meta"><span class="tag">Products · OpenAI</span><span>Nov 23–24, 2026</span></div>
+          <h3>OpenAI OpenWorks pays local experts to coach small businesses</h3>
+          <p>OpenWorks pays up to $8,000/month for local experts to coach small businesses on ChatGPT — a 20-city pilot with free ChatGPT Business for owners.</p>
+          <div class="sources"><a href="https://explainx.ai/news" target="_blank" rel="noopener">ExplainX ↗</a></div>
+        </li>
+        <li data-cat="models">
+          <div class="meta"><span class="tag">Models · Roundup</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Also released Nov 23: five more open models</h3>
+          <p>Baidu ERNIE 5.5 Flash Preview (280B, Apache 2.0 open weights); InclusionAI Ling-3.2-air (124B MoE, MIT) plus open medical models LingSante-3.1; Ideogram 4.6 image model (up to 4096×4096); Tencent Hy-MT3 translation family (102 languages); Aleph Alpha Kolibri 1.1 (75B English-German MoE, Apache 2.0).</p>
+          <div class="sources"><a href="https://postcutoff.com/news/model-release/" target="_blank" rel="noopener">PostCutoff ↗</a><a href="https://www.startrise.io/models/" target="_blank" rel="noopener">Startrise ↗</a><a href="https://superpowerdaily.com/signals/model-launches" target="_blank" rel="noopener">Superpower Daily ↗</a><a href="https://beevr.ai/blog/open-source-ai-models-november-2026" target="_blank" rel="noopener">Beevr ↗</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: Monday, November 23, 2026, plus significant late-breaking items from Sunday, November 22, 2026.</li>
+          <li><strong>VP ≠ VNP proofs:</strong> both the Anthropic (70-page, 324 Lean files) and OpenAI (30-page) proofs are AI-discovered and machine-checked, but neither has been checked by a human mathematician; Lean verifies internal logical consistency, not whether the formal statements match the English claims. Neither settles Boolean P vs NP.</li>
+          <li><strong>Riemann Hypothesis proof:</strong> released Nov 20 — outside the strict 48-hour window — and included because independent verification (Nov 21) and major coverage (Nov 23) landed in-window. The proof is not yet understood by humans, no natural-language version exists, and the Clay Mathematics Institute still lists the hypothesis as unsolved.</li>
+          <li><strong>DeepMind quantum algorithms:</strong> the 290× and 2.5–12× figures are resource estimates against author-constructed baselines for future error-corrected machines, not runs on quantum hardware.</li>
+          <li><strong>GLM-5.4:</strong> Z.ai published no benchmark table; the claim of intelligence comparable to 2T–3T-parameter models is unverified, and the only quantitative evidence is an ablation on a 30B model.</li>
+          <li><strong>Amazon–Decart:</strong> the ~$7.5B price is Bloomberg-reported and not confirmed by Amazon, which did not disclose terms; the deal is an asset purchase and excludes Decart’s world models (e.g. Oasis).</li>
+          <li><strong>Pragmatik Labs:</strong> the $5B valuation round is single-sourced — reported, not confirmed. <strong>Cognition:</strong> the reported $2B raise at a $75B valuation is unconfirmed.</li>
+          <li><strong>Funding context (outside the Nov 22–23 window — not new):</strong> DeepSeek’s ~$15B round closed Nov 17 and was reported Nov 19–20 by Caixin, at a ~$85–92B post-money valuation with investors including Tencent and CATL, ahead of a planned STAR Market IPO. Nov 23 coverage focused on founder Liang Wenfeng’s fortune reaching an estimated $55B (Bloomberg Billionaires Index). Sources: <a href="https://af.net/realtime/deepseek-secures-100-billion-yuan-ahead-of-planned-star-market-ipo/" target="_blank" rel="noopener">AF ↗</a> · <a href="https://cryptobriefing.com/deepseek-founder-wealth-55-billion/" target="_blank" rel="noopener">Crypto Briefing ↗</a></li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, rumored, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Monday, November 23, 2026, plus significant late-breaking items from Sunday, November 22, 2026. Caveats are marked inline. Single-sourced and unverified items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 24, 2026.<br>11 stories + In Brief.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

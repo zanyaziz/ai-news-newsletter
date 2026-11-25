@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Wednesday, November 25, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Wednesday, November 25, 2026</div>
+      <div class="range">Covering Tuesday, November 24, 2026, plus significant late-breaking items from Monday, November 23, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>GPT-6 designs proteins that <em>bound in the lab</em></h1>
+      <div><p class="dek">OpenAI’s GPT-6.2 designed novel minibinders with reasoning and code alone — and 35 of 322 bound their targets in wet-lab tests. The same day brought a $1.75B Sierra round at $30B, MCP past 700 million monthly downloads, a doubled Devin coding model, and New York’s five-year ban on AI chatbot toys.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>A research-heavy Tuesday: a general model doing real protein design, an unreviewed claim that the matrix multiplication exponent is exactly 9/4, and a new DeepMind exam showing frontier models are right far less often than single-attempt scores suggest. Company-reported figures and unreviewed preprints are flagged inline throughout.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#gpt6-proteins">OpenAI’s GPT-6 designs proteins that bound targets in real lab tests</a></li>
+        <li><span class="num">02</span><a href="#mcp-700m">Anthropic’s MCP tops 700 million monthly downloads</a></li>
+        <li><span class="num">03</span><a href="#sierra">Sierra raises $1.75B at a $30B valuation</a></li>
+        <li><span class="num">04</span><a href="#swe-21">Cognition’s SWE-2.1 doubles Devin’s coding benchmarks</a></li>
+        <li><span class="num">05</span><a href="#ny-toy-ban">New York bans AI chatbot toys for five years</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Chips</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Business</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Culture</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- RESEARCH BREAKTHROUGHS -->
+    <section class="wrap section" data-section="research">
+      <div class="section-head"><div class="section-no">01 / RESEARCH BREAKTHROUGHS</div><h2>A general model walks into a wet lab</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="gpt6-proteins" data-cat="research">
+          <div class="meta"><span class="tag">#1 · Research Breakthrough · OpenAI</span><span>Tue, Nov 24, 2026</span><span class="caveat">Unreviewed preprint — pipeline not end-to-end</span></div>
+          <h3>OpenAI’s GPT-6 designs proteins that bound targets in real lab tests</h3>
+          <p>OpenAI published a preprint, “GPT-6 as a Universal Foundation Model for Protein Biology,” showing its GPT-6.2 model can design novel protein structures and amino-acid sequences using only reasoning and general-purpose code — without a specialized biology model generating the designs. In wet-lab testing with research partner Onava, <strong>35 of 322 designed minibinders (10.9%) showed evidence of binding</strong> across five targets: PD-L1, IL-7Rα, TrkA, VEGF-A and IL-17A.</p>
+          <p>OpenAI itself cautions the pipeline is not end-to-end: specialist models (SolubleMPNN, ESMFold2, Boltz-2) still supplied sequences and filtered candidates, and whole-protein structure prediction remains weak (TM-score 0.38 vs. 0.93 for ESMFold2). <strong>Why it matters:</strong> if general models can do meaningful protein design, it could compress drug-discovery timelines — but this is early lab signal, not a medicine.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI; GPT-6.2; research partner Onava.</p>
+          <div class="sources"><a href="https://www.cryptopolitan.com/gpt-6-models-design-proteins-reasoning-code/" target="_blank" rel="noopener">OpenAI via Cryptopolitan ↗</a><a href="https://theparameter.ai/a/gpt-6-protein-design/" target="_blank" rel="noopener">The Parameter ↗</a><a href="https://aiweekly.co/alerts/openais-gpt-62-hits-109-wet-lab-rate-on-new-minibinders" target="_blank" rel="noopener">AI Weekly ↗</a></div>
+        </article>
+
+        <article class="story side" id="matrix-exponent" data-cat="research">
+          <div class="meta"><span class="tag">#6 · Research Breakthrough · OpenAI</span><span>Tue, Nov 24, 2026</span><span class="caveat">Unreviewed preprint</span></div>
+          <h3>OpenAI preprint claims the matrix multiplication exponent is exactly 9/4</h3>
+          <p>OpenAI posted a preprint, “The matrix multiplication exponent is nine fourths,” claiming the long-debated exponent ω is exactly 9/4 (2.25) over every field — pairing a known upper bound with a new matching lower bound (at least ⌈n<sup>9/4</sup>/2⌉ nonscalar gates for n×n matrices). The best human-derived upper bound had been about 2.37, so a tight 2.25 would resolve a decades-old question in theoretical computer science.</p>
+          <p><strong>Caveats:</strong> the paper is unreviewed, OpenAI’s own repository calls its manuscripts “raw research data” that may have issues, and the accompanying Lean formalization covers only division-free circuits — narrower than the main claim. No practical speed-up follows directly; the result concerns formal arithmetic circuits, not wall-clock algorithms.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI (openai/math repository).</p>
+          <div class="sources"><a href="https://interestingengineering.com/culture/openai-exact-2-25-matrix-multiplication-exponent" target="_blank" rel="noopener">Interesting Engineering ↗</a><a href="https://aiweekly.co/alerts/openai-preprint-claims-matrix-multiplication-exponent-is-94" target="_blank" rel="noopener">AI Weekly ↗</a></div>
+        </article>
+
+        <article class="story full" id="humanitys-first-exam" data-cat="research">
+          <div class="meta"><span class="tag">#9 · Research / Benchmarks · Google DeepMind</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>Google DeepMind launches “Humanity’s First Exam” to test whether LLMs are reliably right</h3>
+          <p>Google DeepMind launched Humanity’s First Exam (HFE) on Kaggle, a 544-prompt benchmark across 20 foundational capabilities that tests whether models can answer simple, everyday text and image questions consistently — not just once. Under its strict family pass<sup>4</sup> scoring (a model must get all four variants of a question family right), the top five frontier models average just <strong>85.6%</strong>, despite scoring 96–98% on single attempts; GPT-6.2 Astra leads the public leaderboard at 90.7%. About three-quarters of errors stem from image interpretation.</p>
+          <p>A three-week Kaggle competition runs through December 15 inviting submissions of everyday prompts that frontier models still get wrong. <strong>Why it matters:</strong> the gap matters for agentic deployments, where one wrong answer in sixteen attempts can break a workflow.</p>
+          <p class="players"><strong>Key people/companies:</strong> Google DeepMind (research scientist Oran Kelly); Kaggle; OpenAI (GPT-6.2 Astra); Google (Gemini 4 Neon).</p>
+          <div class="sources"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/" target="_blank" rel="noopener">Google — The Keyword ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODEL RELEASES -->
+    <section class="wrap section" data-section="models">
+      <div class="section-head"><div class="section-no">02 / MODEL RELEASES</div><h2>Code, video, and a 27B model in 5.9 GB</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="swe-21" data-cat="models">
+          <div class="meta"><span class="tag">#4 · Model Release · Cognition</span><span>Tue, Nov 24, 2026</span><span class="caveat">Benchmarks company-reported</span></div>
+          <h3>Cognition releases SWE-2.1, doubling Devin’s coding benchmarks</h3>
+          <p>Cognition released SWE-2.1, a coding model trained with pure reinforcement learning on Moonshot AI’s open-weight Kimi K3 (2.8T parameters). On Cognition’s own benchmarks it roughly doubles its predecessor: Terminal-Bench 4.1 from 24.2 to 50.0, FrontierCode 2.0 from 24.1 to 41.3, and ExploitBench from 36.1% to 80%. Two variants shipped alongside: SWE-2.1 Cyber (relaxed guardrails, for Devin Security defensive scans) and SWE-2.1 Ultrafast (served on Cerebras at ~10× speed, ~600 tokens/sec).</p>
+          <p>The model is available only inside Devin (Desktop, Cloud, CLI) — no public API or weights — and is free for Devin Pro/Max/Teams users until December 8, 2026. <strong>Caveat:</strong> all benchmark figures are company-reported and not independently reproduced; SWE-2.1 still trails Claude Opus 5.5 and Gemini 4 Neon on Cognition’s own coding table.</p>
+          <p class="players"><strong>Key people/companies:</strong> Cognition; Devin; Moonshot AI (Kimi K3); Cerebras.</p>
+          <div class="sources"><a href="https://cognition.com/blog/swe-2-1" target="_blank" rel="noopener">Cognition ↗</a></div>
+        </article>
+
+        <article class="story side" id="magi-2" data-cat="models products">
+          <div class="meta"><span class="tag">#8 · Model Release · Sand AI</span><span>Tue, Nov 24, 2026</span><span class="caveat">Vendor-reported — parameter count disputed</span></div>
+          <h3>Sand AI launches MAGI-2, a 480B-parameter video model with native audio</h3>
+          <p>Sand AI launched MAGI-2, its flagship video generation model: a mixture-of-experts system with ~480 billion total parameters (~28B active), trained on roughly 4 trillion tokens, generating up to 30 seconds of 1080p, 25fps video with synchronized native audio (dialogue, foley, music) in a single pass, plus up to 20 image/video/audio references and video editing.</p>
+          <p>It is available exclusively through Higgsfield (website and API) at $0.08 per second ($2.40 for a 30-second clip); open weights are promised but not yet released. <strong>Caveat:</strong> Higgsfield’s own pages disagree on the parameter count (480B on the product page vs. 400B in the launch announcement for the promised open-weight version), and benchmark claims (second place on its Video Arena) are vendor-reported.</p>
+          <p class="players"><strong>Key people/companies:</strong> Sand AI; Higgsfield.</p>
+          <div class="sources"><a href="https://top10ai.com/magi-2/" target="_blank" rel="noopener">Top10AI ↗</a><a href="https://www.thecodew.com/2026/11/ai-watch-november-25.html" target="_blank" rel="noopener">The Code W ↗</a></div>
+        </article>
+
+        <article class="story full" id="ternary-bonsai" data-cat="models">
+          <div class="meta"><span class="tag">#11 · Open-Weight Model Release · PrismML</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>PrismML shrinks a 27B coding model to 5.9 GB with ternary weights</h3>
+          <p>PrismML released Ternary Bonsai 2.5 27B, an open-weight model based on Qwen3.8-27B that compresses every weight to −1, 0 or +1 (1.76 bits per weight), cutting memory from 53.8 GB to <strong>5.93 GB</strong> while keeping the 262K context window — small enough to run on a consumer GPU or a Mac with 24 GB of unified memory.</p>
+          <p>Capability loss is modest on agentic tool calling (77.7 → 77.2) but larger on coding (SWE-bench Verified 80.6 → 75.6). Released under Apache 2.0 on Hugging Face, it pushes capable agentic coding models onto local hardware — a boon for private, offline knowledge work.</p>
+          <p class="players"><strong>Key people/companies:</strong> PrismML; Qwen (Alibaba).</p>
+          <div class="sources"><a href="https://af.net/realtime/prismml-releases-ternary-bonsai-2-5-27b-using-5-9gb-memory/" target="_blank" rel="noopener">AF.net ↗</a><a href="https://weightsandtakes.com/" target="_blank" rel="noopener">Weights &amp; Takes ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AGENT INFRASTRUCTURE & PRODUCTS -->
+    <section class="wrap section" data-section="infra-products">
+      <div class="section-head"><div class="section-no">03 / AGENT INFRASTRUCTURE &amp; PRODUCTS</div><h2>The plumbing becomes the product</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="mcp-700m" data-cat="infra products">
+          <div class="meta"><span class="tag">#2 · Agent Infrastructure · Anthropic</span><span>Tue, Nov 24, 2026</span><span class="caveat">Figures company-reported</span></div>
+          <h3>Anthropic’s MCP tops 700 million monthly downloads, adds autonomous-agent features</h3>
+          <p>Anthropic reported that its Model Context Protocol (MCP) — the open standard for connecting AI models to external tools and data, launched in November 2024 — now exceeds <strong>700 million monthly SDK downloads</strong>, up from roughly 90 million a year ago, with more than 10,000 MCP connectors available for Claude. The company also made Tasks (background jobs) and Elicitation (pausing to ask the user a question) generally available, and put Skills over MCP into public beta, all aimed at letting agents work more independently.</p>
+          <p><strong>Why it matters:</strong> the numbers cement MCP as the de facto agent-infrastructure standard — and Anthropic as an infrastructure provider, not just a model vendor. Download figures are company-reported, not independently verified.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic; Claude.</p>
+          <div class="sources"><a href="https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/" target="_blank" rel="noopener">The Decoder ↗</a></div>
+        </article>
+
+        <article class="story side" id="agent-retrieval" data-cat="products infra">
+          <div class="meta"><span class="tag">#10 · Product Launch / Enterprise · Google Cloud</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>Google Cloud collapses RAG pipelines into one API call with Agent Retrieval</h3>
+          <p>Google Cloud added managed ingestion and SearchDocuments to Agent Retrieval (formerly Vector Search 2.0), now in public preview. Developers point a data store at files in Cloud Storage and the service parses, chunks and embeds them with Gemini Embedding 2 — no custom ingestion pipeline — then SearchDocuments returns cited passages with page numbers or video timestamps in a single API call.</p>
+          <p>In Google’s tests, 18 Alphabet investor PDFs became searchable with page citations in about 9 minutes, and 19 minutes of video became searchable by visuals and spoken audio in 0.3–0.5 seconds per query. It turns a multi-week enterprise RAG build into a managed service, though pricing and regions at GA are still to come.</p>
+          <p class="players"><strong>Key people/companies:</strong> Google Cloud; Vertex AI; Gemini Embedding 2.</p>
+          <div class="sources"><a href="https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/" target="_blank" rel="noopener">Google Developers Blog ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING & COMPANY LAUNCHES -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">04 / FUNDING &amp; COMPANY LAUNCHES</div><h2>Agents, forecasters, and robots raise big</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="sierra" data-cat="funding">
+          <div class="meta"><span class="tag">#3 · Funding · Sierra</span><span>Mon, Nov 23, 2026</span><span class="caveat">Figures company-reported</span></div>
+          <h3>Sierra raises $1.75B Series F at a $30B valuation</h3>
+          <p>Enterprise AI agent company Sierra announced it is raising a <strong>$1.75 billion Series F at a $30 billion valuation</strong> — roughly double its May valuation — co-led by Greenoaks and Lightspeed Venture Partners, with all prior lead investors (Benchmark, Sequoia, GV, Tiger Global) participating again. Sierra, co-founded by Bret Taylor and Clay Bavor, says it has surpassed $400 million in annual recurring revenue in about two and a half years and serves nearly half the Fortune 50.</p>
+          <p><strong>Why it matters:</strong> the round is a marker of investor appetite for outcome-priced enterprise agents — Sierra charges per resolved customer interaction rather than per seat or token. Figures are company-reported.</p>
+          <p class="players"><strong>Key people/companies:</strong> Sierra (Bret Taylor, Clay Bavor); Greenoaks; Lightspeed Venture Partners; Benchmark; Sequoia; GV; Tiger Global.</p>
+          <div class="sources"><a href="https://www.corpuschrististar.com/stories/ai-agent-provider-sierra-closes-175b-investment-amid-rapid-revenue-growth,2281042" target="_blank" rel="noopener">SiliconANGLE via Corpus Christi Star ↗</a><a href="https://www.cmswire.com/contact-center/sierra-hits-30b-valuation-on-175b-series-f/" target="_blank" rel="noopener">CMSWire ↗</a></div>
+        </article>
+
+        <article class="story side" id="epochal" data-cat="funding">
+          <div class="meta"><span class="tag">#7 · Funding / Company Launch · Epochal AI</span><span>Tue, Nov 24, 2026</span><span class="caveat">Funding single-sourced — reported, not confirmed</span></div>
+          <h3>Three ex-xAI co-founders launch Epochal with $100M to teach AI to predict the future</h3>
+          <p>Epochal AI launched with $100 million in funding personally provided by CEO Guodong Zhang, a machine-learning researcher who co-founded xAI. He founded Epochal earlier in 2026 with fellow xAI co-founders Zihang Dai and Manuel Kroiss after xAI was folded into SpaceX in February. Its first product, Time Portal, lets AI agents practice forecasting by browsing the web as it looked on a past date — an archive of over 1 trillion pages spanning 30+ years — so predictions can be scored against outcomes that already happened without hindsight leakage.</p>
+          <p>The launch underscores both the race to build predictive AI and the continuing exodus of xAI’s founding team (nine of twelve founders have reportedly left). <strong>Caveat:</strong> the $100M figure was reported by Bloomberg citing an unnamed source; an Epochal spokesperson declined to discuss funding.</p>
+          <p class="players"><strong>Key people/companies:</strong> Epochal AI (Guodong Zhang, Zihang Dai, Manuel Kroiss); xAI; SpaceX.</p>
+          <div class="sources"><a href="https://www.siliconreport.com/epochal-ai-launches-with-100-million-in-funding" target="_blank" rel="noopener">SiliconANGLE via Silicon Report ↗</a><a href="https://theoutpost.ai/news-story/three-xai-co-founders-bet-100-million-that-ai-should-learn-the-past-one-day-at-a-time-34091/" target="_blank" rel="noopener">The Outpost ↗</a></div>
+        </article>
+
+        <article class="story full" id="embo" data-cat="funding">
+          <div class="meta"><span class="tag">#12 · Funding · Embo</span><span>Mon, Nov 23, 2026</span><span class="caveat">Single-sourced — reported, not confirmed</span></div>
+          <h3>Embo raises $110M seed for robot AI</h3>
+          <p>Embo, a robotics AI startup, raised a $110 million seed round led by Andreessen Horowitz, Khosla Ventures and DST Global, with participation from NVIDIA’s venture arm NVentures. The outsized seed reflects the rush of capital into physical AI and robotics foundation models.</p>
+          <p><strong>Caveat:</strong> single-sourced — only confirmed via funding trackers citing the round; no primary announcement or major-outlet article was verified in this research pass. Treat figures as reported, not confirmed.</p>
+          <p class="players"><strong>Key people/companies:</strong> Embo; Andreessen Horowitz; Khosla Ventures; DST Global; NVentures.</p>
+          <div class="sources"><a href="https://digestai.news/funding" target="_blank" rel="noopener">DigestAI Funding Tracker ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">05 / POLICY &amp; SAFETY</div><h2>New York draws a line on chatbot toys</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="ny-toy-ban" data-cat="policy">
+          <div class="meta"><span class="tag">#5 · Policy / Regulation / Safety · New York</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>New York bans AI chatbot toys for five years</h3>
+          <p>Governor Kathy Hochul signed bill S.9408A/A.11144B, placing a five-year moratorium on the manufacture, distribution and sale of toys with embedded or integrated AI chatbots in New York — the second state after California to take such a step. The law covers talking stuffed animals, dolls and robots that use the internet to hold conversations with children, following watchdog testing in which some toys discussed sexually explicit topics and told children where to find dangerous items at home.</p>
+          <p>It takes effect 90 days after signing (around February 22, 2027), so the toys remain legal through this holiday shopping season; violators face civil penalties up to $15,000 per day, enforced by the state attorney general. <strong>Why it matters:</strong> the first broad state-level product ban aimed squarely at conversational AI for children — and a template other states can copy.</p>
+          <p class="players"><strong>Key people/companies:</strong> Gov. Kathy Hochul; NY State Sen. Andrew Gounardes; Assemblymember Rebecca Kassay.</p>
+          <div class="sources"><a href="https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot" target="_blank" rel="noopener">NY Governor’s Office ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: Tuesday, November 24, 2026, plus significant late-breaking items from Monday, November 23, 2026 (Sierra’s Series F and Embo’s seed).</li>
+          <li><strong>GPT-6 protein design:</strong> unreviewed preprint. The pipeline is not end-to-end — specialist models (SolubleMPNN, ESMFold2, Boltz-2) still supplied sequences and filtered candidates — and whole-protein structure prediction remains weak (TM-score 0.38 vs. 0.93 for ESMFold2). Early lab signal, not a medicine.</li>
+          <li><strong>Matrix multiplication exponent:</strong> unreviewed preprint. OpenAI’s repository calls its manuscripts “raw research data” that may have issues, and the Lean formalization covers only division-free circuits — narrower than the main claim of ω = 9/4 over every field.</li>
+          <li><strong>Company-reported figures:</strong> Anthropic’s 700M monthly MCP downloads and 10,000+ connectors, Sierra’s $400M+ ARR and Fortune 50 penetration, and Cognition’s SWE-2.1 benchmark gains are all company-reported and not independently verified or reproduced.</li>
+          <li><strong>MAGI-2:</strong> Higgsfield’s pages disagree on parameter count (480B product page vs. 400B in the launch announcement for the promised open-weight version); Video Arena placement is vendor-reported. Open weights are promised, not yet released.</li>
+          <li><strong>Epochal:</strong> the $100M figure was reported by Bloomberg citing an unnamed source; an Epochal spokesperson declined to discuss funding. <strong>Embo:</strong> the $110M seed is single-sourced via funding trackers only — no primary announcement or major-outlet article verified; treat as reported, not confirmed.</li>
+          <li><strong>Excluded from this edition:</strong> Nvidia’s $30B OpenAI investment was widely re-reported Nov 24 but closed February 27, 2026 (part of a $110B round at a $730B pre-money valuation) — not a Nov 23–24 event. Linq’s $90M Series B (Nov 18) and Midjourney Niji 8 (single tracker entry, not independently verified) were also held out. Sources: <a href="https://www.fool.com/investing/2026/11/24/sam-altmans-openai-took-a-30-billion-investment/" target="_blank" rel="noopener">Motley Fool ↗</a> · <a href="https://www.notacompany.com/archive/2026-11-24-ai-chat-the-company-cant-read?utm_source=rss&" target="_blank" rel="noopener">Not A Company ↗</a></li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, rumored, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Tuesday, November 24, 2026, plus significant late-breaking items from Monday, November 23, 2026. Caveats are marked inline. Single-sourced and unverified items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 25, 2026.<br>12 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>

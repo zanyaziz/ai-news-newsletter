@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>AI News — Thursday, November 26, 2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Franklin:ital,wght@0,500;0,650;0,800;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap');
+    :root{--paper:#f4f0e8;--ink:#12213c;--muted:#596172;--line:#c7c1b6;--accent:#d6492f;--soft:#e8e2d8;--white:#fffdf8;--copy:#27334a;--copy-soft:#303a4d;--note-copy:#374155}
+    @media(prefers-color-scheme:dark){:root{--paper:#111722;--ink:#f2eee6;--muted:#aeb6c5;--line:#4a5260;--accent:#ff745d;--soft:#202936;--white:#fffaf2;--copy:#d8dce5;--copy-soft:#c6ccd7;--note-copy:#d8dce5}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Franklin",sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--accent)} button,input{font:inherit}
+    .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:30}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .edition{padding:28px 0 15px;border-bottom:1px solid var(--ink);display:flex;gap:18px;justify-content:space-between;align-items:flex-end}.edition .stamp{font:500 12px/1.35 "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}.edition .range{font:500 12px/1.35 "DM Mono",monospace;color:var(--muted);text-align:right}
+    .hero{padding:34px 0 28px;border-bottom:4px double var(--ink);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:44px;align-items:end}.hero h1{font:700 clamp(40px,5.6vw,74px)/.96 "Newsreader",serif;letter-spacing:-.04em;margin:0;max-width:900px;text-wrap:balance}.hero h1 em{font-style:italic;color:var(--accent)}.dek{font:500 18px/1.48 "Libre Franklin",sans-serif;margin:0 0 6px;padding-left:20px;border-left:5px solid var(--accent);max-width:440px}
+    .editor-note{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--copy-soft)}.editor-note strong{font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px}
+    .top-stories{padding:30px 0 32px;border-bottom:1px solid var(--ink)}.top-stories-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:18px}.top-stories h2{font:700 32px/1 "Newsreader",serif;letter-spacing:-.02em;margin:0}.top-stories-head span{font:500 10px/1.4 "DM Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.top-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.top-list li{padding:16px 15px;border-right:1px solid var(--line);min-width:0}.top-list li:last-child{border-right:0}.top-list .num{display:block;font:500 10px/1 "DM Mono",monospace;color:var(--accent);margin-bottom:9px}.top-list a{font:700 18px/1.12 "Newsreader",serif;text-decoration:none}
+    .toolrow{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:sticky;top:0;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);z-index:10}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:7px 11px;border-radius:999px;cursor:pointer;font:650 12px/1 "Libre Franklin",sans-serif}.filter[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.search{position:relative;width:230px}.search input{width:100%;height:34px;border:0;border-bottom:1px solid var(--ink);background:transparent;padding:4px 24px 4px 4px;color:var(--ink);outline:none;font-size:13px}.search input::placeholder{color:var(--muted)}.search svg{position:absolute;right:3px;top:8px;width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+    .section{padding:44px 0;border-bottom:1px solid var(--ink)}.section-head{display:grid;grid-template-columns:165px 1fr;gap:25px;align-items:start;margin-bottom:28px}.section-no{font:500 12px/1.4 "DM Mono",monospace;color:var(--accent)}.section h2{font:700 clamp(31px,4vw,52px)/1 "Newsreader",serif;letter-spacing:-.025em;margin:0}.lead-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px 24px}.story{border-top:1px solid var(--ink);padding-top:14px;min-width:0}.story.major{grid-column:span 7}.story.side{grid-column:span 5}.story.third{grid-column:span 4}.story.half{grid-column:span 6}.story.full{grid-column:1/-1}.story .meta{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font:500 11px/1.4 "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:9px}.tag{color:var(--accent)}.caveat{display:inline-block;background:var(--accent);color:var(--white);padding:3px 6px;font:500 9px/1.2 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}.story h3{font:700 28px/1.02 "Newsreader",serif;letter-spacing:-.018em;margin:0 0 10px}.story.major h3{font-size:clamp(33px,4.2vw,54px)}.story p{font:500 14px/1.56 "Libre Franklin",sans-serif;margin:0 0 13px;color:var(--copy)}.story p strong{color:var(--ink)}.players{font-size:12px !important;color:var(--muted) !important}.players strong{color:var(--ink)}.sources{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.sources a{font:500 10px/1 "DM Mono",monospace;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+    .note-box{display:grid;grid-template-columns:210px 1fr;gap:30px;padding:28px;background:var(--soft);margin-top:32px}.note-box h3{font:700 24px/1.05 "Newsreader",serif;margin:0}.note-box ul{margin:0;padding-left:18px;font-size:13px;color:var(--note-copy)}.note-box li+li{margin-top:8px}.note-box a{font-weight:650}.legend{font:500 11px/1.5 "DM Mono",monospace;color:var(--muted);margin-top:16px}.legend .caveat{margin-right:7px;vertical-align:1px}.footer{padding:30px 0 48px;display:flex;justify-content:space-between;gap:30px;color:var(--muted);font:500 11px/1.55 "DM Mono",monospace}.footer div:last-child{text-align:right;min-width:210px}.hidden{display:none!important}.no-results{display:none;padding:60px 0;text-align:center;font:600 24px/1.2 "Newsreader",serif}.no-results.show{display:block}
+    @media(max-width:900px){.top-list{grid-template-columns:repeat(2,1fr)}.top-list li{border-bottom:1px solid var(--line)}.top-list li:nth-child(2n){border-right:0}.top-list li:last-child{border-bottom:0}}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,680px)}.hero{grid-template-columns:1fr;gap:24px;padding-top:28px}.hero h1{font-size:clamp(40px,12vw,62px)}.dek{font-size:16px;max-width:none}.toolrow{grid-template-columns:1fr;gap:10px;position:static}.search{width:100%}.section{padding:34px 0}.section-head{grid-template-columns:1fr;gap:7px}.lead-grid{grid-template-columns:1fr;gap:30px}.story.major,.story.side,.story.third,.story.half,.story.full{grid-column:auto}.story.major h3{font-size:38px}.story h3{font-size:28px}.note-box{grid-template-columns:1fr;gap:16px;padding:21px}.footer{flex-direction:column}.footer div:last-child{text-align:left}}
+    @media(max-width:520px){.top-stories-head{display:block}.top-stories-head span{display:block;margin-top:7px}.top-list{grid-template-columns:1fr}.top-list li,.top-list li:nth-child(2n){border-right:0;border-bottom:1px solid var(--line)}}
+    @media(max-width:430px){.edition{align-items:flex-start;flex-direction:column}.edition .range{text-align:left}.filters{gap:6px}.filter{padding:7px 9px}.hero h1{font-size:42px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<div id="ain-archive-bar" style="position:sticky;top:0;z-index:9999;background:#111827;color:#f9fafb;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 16px;font-size:14px;"><a href="../index.html" style="color:#93c5fd;text-decoration:none;">&larr; All editions &mdash; AI News Newsletter archive</a></div>
+
+  <div class="progress" id="progress"></div>
+  <main>
+    <div class="wrap edition">
+      <div class="stamp">AI News — Thursday, November 26, 2026</div>
+      <div class="range">Covering Wednesday, November 25, 2026, plus significant late-breaking items from November 24–25, 2026</div>
+    </div>
+
+    <div class="wrap hero" id="lead">
+      <h1>Two states sue SpaceX over Grok’s <em>non-consensual imagery</em></h1>
+      <div><p class="dek">Oregon and Virginia say Grok was marketed as safe while its “spicy mode” generated millions of sexualized images — including of children. A quieter Nov. 25 brought no new frontier-model launch, but a $44B security merger, Claude apps you can install, India’s sovereign models, and NIO’s new world model.</p></div>
+    </div>
+
+    <div class="wrap editor-note"><strong>Editor’s note</strong>Nov. 25 was a comparatively quiet day — no new frontier-model launch from the big U.S. labs. The news was rollouts and fallout: product ships from Anthropic, OpenAI and Meta, sovereign-AI launches in India, and the continuing aftershocks of Nov. 23’s Grok lawsuits and CrowdStrike–Zscaler deal, plus Nvidia’s CEO saga. Vendor-reported figures and single-sourced items are flagged inline.</div>
+
+    <section class="wrap top-stories" aria-labelledby="top-stories-title">
+      <div class="top-stories-head"><h2 id="top-stories-title">Top stories today</h2><span>Ranked by significance</span></div>
+      <ol class="top-list">
+        <li><span class="num">01</span><a href="#grok-lawsuit">Oregon and Virginia sue SpaceX over Grok’s non-consensual sexual imagery</a></li>
+        <li><span class="num">02</span><a href="#crowdstrike-zscaler">CrowdStrike to buy Zscaler in a $44 billion deal</a></li>
+        <li><span class="num">03</span><a href="#jensen-huang-apology">Jensen Huang apologizes a day after his shock reinstatement at Nvidia</a></li>
+        <li><span class="num">04</span><a href="#anthropic-ipo-price">Anthropic shares fall below their $83 IPO price</a></li>
+        <li><span class="num">05</span><a href="#claude-desktop-apps">Claude artifacts can now become installable desktop apps</a></li>
+      </ol>
+    </section>
+
+    <div class="wrap toolrow" aria-label="Newsletter controls">
+      <div class="filters" aria-label="Filter stories">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="policy" aria-pressed="false">Policy &amp; Safety</button>
+        <button class="filter" data-filter="models" aria-pressed="false">Model Releases</button>
+        <button class="filter" data-filter="products" aria-pressed="false">Products</button>
+        <button class="filter" data-filter="infra" aria-pressed="false">Infrastructure &amp; Chips</button>
+        <button class="filter" data-filter="funding" aria-pressed="false">Funding &amp; Business</button>
+        <button class="filter" data-filter="research" aria-pressed="false">Research &amp; Culture</button>
+      </div>
+      <label class="search"><span style="position:absolute;clip:rect(0 0 0 0)">Search stories</span><input id="search" type="search" placeholder="Search this issue…" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></label>
+    </div>
+
+    <div class="wrap no-results" id="noResults">No stories match that search.</div>
+
+    <!-- POLICY & SAFETY -->
+    <section class="wrap section" data-section="policy">
+      <div class="section-head"><div class="section-no">01 / POLICY &amp; SAFETY</div><h2>States test whether safety claims are actionable</h2></div>
+      <div class="lead-grid">
+        <article class="story full" id="grok-lawsuit" data-cat="policy">
+          <div class="meta"><span class="tag">#1 · Policy / Lawsuits · SpaceX / xAI</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>Oregon and Virginia sue SpaceX over Grok’s non-consensual sexual imagery</h3>
+          <p>Two state attorneys general filed coordinated consumer-protection lawsuits against SpaceX — parent of X and xAI/Grok — alleging the companies marketed Grok as safe while its image generator produced sexualized images of people, including children, without consent, via a promoted “spicy mode.”</p>
+          <p>The suits cite a Center for Countering Digital Hate estimate of <strong>~3 million sexualized images Grok created and posted on X between Dec. 29, 2025 and Jan. 8, 2026, including ~23,000 appearing to depict children</strong>. It is the most direct state-level legal challenge yet to an AI lab’s safety claims, and the AGs frame it as a template for holding AI companies accountable where federal regulation is absent.</p>
+          <p class="players"><strong>Key people/companies:</strong> SpaceX / X Corp / xAI (now “SpaceX Super Intelligence”), Elon Musk; Oregon AG Dan Rayfield; Virginia AG Jay Jones.</p>
+          <div class="sources"><a href="https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-takes-legal-action-against-grok-for-failing-to-block-child-exploitation/" target="_blank" rel="noopener">Oregon DOJ ↗</a><a href="https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform" target="_blank" rel="noopener">Virginia AG ↗</a><a href="https://www.engadget.com/2325111/two-states-sue-spacex-over-sexually-explicit-grok-deepfakes/" target="_blank" rel="noopener">Engadget ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FUNDING, MARKETS & LEADERSHIP -->
+    <section class="wrap section" data-section="funding">
+      <div class="section-head"><div class="section-no">02 / FUNDING, MARKETS &amp; LEADERSHIP</div><h2>A record merger, a boardroom reversal, and an IPO reality check</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="crowdstrike-zscaler" data-cat="funding">
+          <div class="meta"><span class="tag">#2 · M&amp;A · CrowdStrike / Zscaler</span><span>Mon, Nov 23, 2026</span></div>
+          <h3>CrowdStrike to buy Zscaler in a $44 billion all-stock deal</h3>
+          <p>The largest cybersecurity acquisition ever would unite endpoint security (CrowdStrike Falcon) with zero-trust network security (Zscaler) explicitly to defend the AI era — CEO George Kurtz’s pitch is that “safety is required to let AI in.” Zscaler shareholders get 1.135 CrowdStrike shares each (~$260.41/share, a 34% premium); the combined company would top <strong>$10B in recurring revenue</strong>.</p>
+          <p>CrowdStrike shares fell ~9% on the news despite strong earnings. The deal needs shareholder and regulatory approval and is expected to close in the second half of CrowdStrike’s fiscal 2028.</p>
+          <p class="players"><strong>Key people/companies:</strong> CrowdStrike (George Kurtz); Zscaler (Jay Chaudhry, who will lead the Zscaler business and join CrowdStrike’s board).</p>
+          <div class="sources"><a href="https://techcrunch.com/2026/11/23/crowdstrike-to-acquire-zscaler-for-44-billion/" target="_blank" rel="noopener">TechCrunch ↗</a><a href="https://www.wsj.com/business/deals/crowdstrike-to-buy-zscaler-in-43-9-billion-stock-swap-4c926031" target="_blank" rel="noopener">WSJ ↗</a></div>
+        </article>
+
+        <article class="story side" id="jensen-huang-apology" data-cat="funding">
+          <div class="meta"><span class="tag">#3 · Leadership · Nvidia</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>Jensen Huang apologizes to Nvidia staff a day after his shock reinstatement</h3>
+          <p>Nvidia CEO Jensen Huang apologized to employees in an hour-long company-wide meeting on Tuesday, saying he is in therapy — one day after the board unanimously reinstated him just 11 days after he resigned over extramarital affairs, including one with a woman U.S. officials feared was a Chinese intelligence asset.</p>
+          <p>The reinstatement followed direct pressure from President Trump, who called the board and vouched for Huang; Nvidia shares soared more than 30% on Monday, their third-best day on record. Open questions remain about board independence, a still-running independent probe, and Huang’s scheduled Capitol Hill testimony in December.</p>
+          <p class="players"><strong>Key people/companies:</strong> Nvidia, Jensen Huang, President Donald Trump, VP JD Vance; Sen. Elizabeth Warren criticized the reinstatement.</p>
+          <div class="sources"><a href="https://www.cnn.com/2026/11/24/tech/jensen-huang-apologies-employees-therapy?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN ↗</a><a href="https://www.cnn.com/2026/11/23/politics/trump-administration-jensen-huang-reinstated?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN — Trump pressure ↗</a></div>
+        </article>
+
+        <article class="story full" id="anthropic-ipo-price" data-cat="funding">
+          <div class="meta"><span class="tag">#4 · Markets · Anthropic</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>Anthropic shares fall below their IPO price a week after the biggest IPO ever</h3>
+          <p>Anthropic (NASDAQ: ANT) closed Nov. 24 at about <strong>$81, below its $83 IPO price</strong>, after debuting Nov. 19 at $111.50 and closing day one up 17% at $97.17. The slide is a reality check on the record $81.3B IPO — the largest ever, valuing the Claude maker at ~$1.5T fully diluted — as investors weigh $33.2B in nine-month revenue (up ~1,200% year over year) against a return to a $567M operating loss in Q3 and roughly $895B in compute purchase commitments and leases.</p>
+          <p>The stock recovered to ~$82.79 by the Nov. 25 close. Underwriters’ overallotment took total raised above $93B.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic.</p>
+          <div class="sources"><a href="https://www.fool.com/investing/2026/11/26/anthropic-stock-fell-below-its-ipo-price-is-it-a-buy-or-is-more-downside-just-ahead/?source=iedfolrf0000001" target="_blank" rel="noopener">Motley Fool ↗</a><a href="https://www.cnn.com/2026/11/18/investing/anthropic-ipo-wall-street-ai?cid=external-feeds_iluminar_meta" target="_blank" rel="noopener">CNN — Debut ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & ROLLOUTS -->
+    <section class="wrap section" data-section="products">
+      <div class="section-head"><div class="section-no">03 / PRODUCTS &amp; ROLLOUTS</div><h2>Apps you can install, models everywhere you work</h2></div>
+      <div class="lead-grid">
+        <article class="story major" id="claude-desktop-apps" data-cat="products">
+          <div class="meta"><span class="tag">#5 · Product · Anthropic / Claude</span><span>Tue, Nov 24, 2026</span></div>
+          <h3>Claude artifacts can now become installable desktop apps</h3>
+          <p>Anthropic’s new “Install as app” beta lets users turn Claude artifacts — interactive tools built by describing them in chat — into standalone Mac and Windows apps with their own icon, window, notifications, menu-bar/system-tray presence and global shortcuts, no packaging, code signing or API key required. It is the closest a mainstream chatbot has come to letting non-programmers ship software, and it is available even on the free plan.</p>
+          <p><strong>Caveats:</strong> apps only run online while signed in to Claude, every Claude call draws down plan usage, Anthropic does not review apps before installation (three permission tiers up to full computer access), and Linux, web and mobile are not supported.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic; Claude.</p>
+          <div class="sources"><a href="https://winbuzzer.com/2026/11/26/claude-lets-you-install-ai-built-tools-as-mac-and-windows-apps-xcxwbn/" target="_blank" rel="noopener">WinBuzzer ↗</a><a href="https://wccftech.com/anthropics-claude-can-now-build-installable-windows-and-mac-apps-without-a-single-line-of-code-even-on-its-free-plan/" target="_blank" rel="noopener">Wccftech ↗</a><a href="https://www.siliconreport.com/anthropic-makes-claude-artifacts-available-as-desktop-apps" target="_blank" rel="noopener">Silicon Report ↗</a></div>
+        </article>
+
+        <article class="story side" id="gpt62-sol-rollout" data-cat="models products">
+          <div class="meta"><span class="tag">#8 · Rollout · OpenAI / Microsoft</span><span>Nov 24–25, 2026</span></div>
+          <h3>GPT-6.2 Sol rolls out to ChatGPT chat and across Microsoft Copilot</h3>
+          <p>OpenAI’s chat-tuned GPT-6.2 Sol is rolling out to ChatGPT Plus, Pro, Business and Enterprise users, with internal tests showing image understanding jumping from 47.4% to 71.7%. Simultaneously, Microsoft announced GPT-6.2 Sol rolling out globally across Copilot Chat, Copilot Cowork and Copilot Studio, plus integration into Copilot in Excel, PowerPoint and Word, with GPT-6.2 Astra available through Copilot Cowork and Studio.</p>
+          <p>It is the fastest Microsoft has shipped a new OpenAI flagship across its productivity suite. <strong>Note:</strong> GPT-6.2 Astra/Sol themselves launched Nov. 17 — outside this window; this item is the rollout.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI; Microsoft.</p>
+          <div class="sources"><a href="https://turbo.gadgets360.com/en/ai/anthropic-claude-microsoft-365-teams-outlook-onedrive-mcp-connector-enterprise-search-news-9473659" target="_blank" rel="noopener">Gadgets 360 ↗</a><a href="https://hexagonitsolutions.com/ai-news.php" target="_blank" rel="noopener">Hexagon IT Solutions ↗</a></div>
+        </article>
+
+        <article class="story half" id="chatgpt-health-android" data-cat="products">
+          <div class="meta"><span class="tag">#9 · Product · OpenAI</span><span>Wed, Nov 25, 2026</span></div>
+          <h3>ChatGPT Health comes to Android</h3>
+          <p>OpenAI extended ChatGPT Health — its health assistant that connects medical records and activity data — to Android via Google’s Health Connect, letting users link Garmin, Oura, WHOOP and other wearables and fitness apps so ChatGPT can surface patterns in sleep, exercise and daily habits. Health data also feeds OpenAI’s personal Dots agents for reminders and suggestions.</p>
+          <p>Available to eligible logged-in U.S. users 18+ on Free, Go, Plus and Pro plans; rollout is gradual. Health features are among the most sensitive uses of personal data in consumer AI, so the Android expansion materially widens the audience sharing health records with a chatbot.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI.</p>
+          <div class="sources"><a href="https://www.gadgets360.com/ai/news/openai-brings-chatgpt-health-to-android-lets-users-connect-wearables-fitness-apps-12379196" target="_blank" rel="noopener">Gadgets 360 ↗</a></div>
+        </article>
+
+        <article class="story half" id="meta-muse" data-cat="products">
+          <div class="meta"><span class="tag">#11 · Product · Meta</span><span>Nov 24–25, 2026</span></div>
+          <h3>Meta’s Muse arrives in Instagram DMs; UK rollout continues</h3>
+          <p>Meta’s Muse personal AI agent is now integrated into Instagram direct messages — users can share a post with Muse and ask it to act, e.g. adding a place to a trip itinerary or finding a deal on a product — and Muse has also come to Apple Watch.</p>
+          <p>The same week, Muse rolled out in the UK (from Nov. 24, for users 18+ on iOS, Android, web and WhatsApp), pitched as a Christmas-shopping helper. It is Meta’s push to put its agent where its users already spend time rather than in a standalone app.</p>
+          <p class="players"><strong>Key people/companies:</strong> Meta; Muse.</p>
+          <div class="sources"><a href="https://turbo.gadgets360.com/en/ai/anthropic-claude-microsoft-365-teams-outlook-onedrive-mcp-connector-enterprise-search-news-9473659" target="_blank" rel="noopener">Gadgets 360 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS & GLOBAL AI -->
+    <section class="wrap section" data-section="models-global">
+      <div class="section-head"><div class="section-no">04 / MODELS &amp; GLOBAL AI</div><h2>World models on the road, sovereign models at home</h2></div>
+      <div class="lead-grid">
+        <article class="story half" id="nio-world-model" data-cat="models">
+          <div class="meta"><span class="tag">#6 · World Model · NIO</span><span>Wed, Nov 25, 2026</span><span class="caveat">Vendor-reported — unverified</span></div>
+          <h3>NIO unveils World Model 3.0 and NOMI Intelligence 4.0</h3>
+          <p>NIO’s third-generation driving world model claims 5x training efficiency, 7x the training data of NWM 2.5, 78% lower chassis-control latency and 54% lower whole-vehicle control latency, with 40% fewer driver interventions in complex scenarios — achieved largely by 4D spatiotemporal compression that cuts onboard attention compute 36x.</p>
+          <p>Alongside it, NOMI Intelligence 4.0 turns the in-car assistant into an agent that perceives the cabin, plans and executes tasks itself. Regulatory filings in China start in December, with rollout to four vehicle systems (Banyan, Cedar, Cedar S, ONVO Coconut+) on approval. All performance figures are vendor-reported and independently unverified.</p>
+          <p class="players"><strong>Key people/companies:</strong> NIO (founder/CEO William Li; SVP Ren Shaoqing, autonomous driving).</p>
+          <div class="sources"><a href="https://cnevpost.com/2026/11/25/nio-goes-all-in-on-ai-12th-anniversary-tech-day/" target="_blank" rel="noopener">CnEVPost ↗</a><a href="https://autonews.gasgoo.com/articles/news/nio-unveils-nwm-30-nomi-intelligence-40-at-nio-in-2026-2125871552910209025" target="_blank" rel="noopener">Gasgoo ↗</a></div>
+        </article>
+
+        <article class="story half" id="india-chariot-patram" data-cat="models research">
+          <div class="meta"><span class="tag">#7 · Sovereign AI · India</span><span>Wed, Nov 25, 2026</span></div>
+          <h3>India launches homegrown Chariot-1; BharatGen ships Patram 1.5</h3>
+          <p>Two IndiaAI Mission-backed launches in one day mark India’s sovereign-AI push turning into shipping products. Chariot AI’s Chariot-1 is an 11B-parameter mixture-of-experts LLM (4B active) plus text-to-speech, built from scratch in India for English and 10 Indian languages, with speech reasoning, TTS and STT; it was inaugurated in New Delhi by MeitY Secretary S. Krishnan.</p>
+          <p>The same day, government-backed BharatGen launched Patram 1.5, a 7B open-weight (Apache 2.0) vision-language model for reading messy, handwritten and mixed-language Indian documents, with promptable OCR and an “abstention” feature so it declines rather than guesses on unclear pages — aimed at banks, hospitals and government offices that can run it on-premises.</p>
+          <p class="players"><strong>Key people/companies:</strong> Chariot Artificial Intelligence (co-founders Parth Sarthi and Suvrat Bhooshan, ex-Google DeepMind/Meta FAIR); BharatGen; IndiaAI Mission / MeitY.</p>
+          <div class="sources"><a href="https://inc42.com/buzz/indiaai-mission-backed-chariot-ai-unveils-11-bn-parameter-llm-speech-models/" target="_blank" rel="noopener">Inc42 — Chariot-1 ↗</a><a href="https://www.thehindubusinessline.com/info-tech/bharatgen-launches-indian-vision-language-model-patram-15/article71745752.ece" target="_blank" rel="noopener">Hindu BusinessLine — Patram 1.5 ↗</a><a href="https://cio.eletsonline.com/artificial-intelligence/chariot-1-foundation-model/77143/" target="_blank" rel="noopener">Elets CIO ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INFRASTRUCTURE, SECURITY & DEVELOPER TOOLS -->
+    <section class="wrap section" data-section="infra">
+      <div class="section-head"><div class="section-no">05 / INFRASTRUCTURE, SECURITY &amp; DEVELOPER TOOLS</div><h2>Agents patch Linux, rewrite APIs, and ship tools</h2></div>
+      <div class="lead-grid">
+        <article class="story third" id="shirudo" data-cat="infra">
+          <div class="meta"><span class="tag">#10 · Security · OpenAI / Cisco</span><span>Mon, Nov 23, 2026</span><span class="caveat">Single-aggregator sourcing</span></div>
+          <h3>OpenAI and Cisco launch Shirudo, open-source shields for Linux</h3>
+          <p>Shirudo is an open-source runtime that protects running Linux systems while patches are being prepared: AI agents (built around Codex) investigate a vulnerability, generate a temporary eBPF “shield,” and a human approves it before deployment — blocking exploitation without restarts or downtime. OpenAI demonstrated it blocking a Java4Shell exploit against a running Elasticsearch service.</p>
+          <p>It addresses the “patch gap” — the window between disclosure and a deployable fix — and is an early example of AI agents writing and deploying live security mitigations under human sign-off. <strong>Caveat:</strong> detail is drawn from Gadgets 360’s roundup and social coverage; treat as reported, not independently verified.</p>
+          <p class="players"><strong>Key people/companies:</strong> OpenAI; Cisco (Isovalent team).</p>
+          <div class="sources"><a href="https://turbo.gadgets360.com/en/ai/openai-chatgpt-overhaul-ai-superapp-ahead-of-ipo-report-11615670?utm_source=website&utm_medium=content&utm_campaign=gadgets360turbo" target="_blank" rel="noopener">Gadgets 360 ↗</a></div>
+        </article>
+
+        <article class="story third" id="anthropic-rust" data-cat="infra">
+          <div class="meta"><span class="tag">#12 · Engineering · Anthropic</span><span>Wed, Nov 25, 2026</span><span class="caveat">Single-source via aggregator</span></div>
+          <h3>Anthropic migrates Claude’s Messages API to Rust — using Claude agents to verify it</h3>
+          <p>Anthropic published details of rewriting its production Messages API from Python to Rust, using teams of Claude agents to verify correctness by hunting down and fixing differences between the two implementations.</p>
+          <p>The migration is a notable dogfooding story: the hard part was not generating the code but defining “correct” for a live system where users rely on edge cases outside the test suite. It also signals how frontier labs now use their own agents for large-scale, high-stakes engineering migrations.</p>
+          <p class="players"><strong>Key people/companies:</strong> Anthropic; Katelyn Lesse discussed agent-driven engineering at Anthropic in a Nov. 25 interview with The Pragmatic Engineer.</p>
+          <div class="sources"><a href="https://naravel.com/briefing/daily-brief-2026-11-26/" target="_blank" rel="noopener">Naravel Daily Brief (citing Anthropic) ↗</a></div>
+        </article>
+
+        <article class="story third" id="dev-tool-wave" data-cat="infra products models">
+          <div class="meta"><span class="tag">#13 · Developer Tools</span><span>Wed, Nov 25, 2026</span><span class="caveat">Single-source aggregator</span></div>
+          <h3>Developer-tool wave: Perplexity Time Machine, Pydantic Pax, SWE-2.1, Niji 8</h3>
+          <p>A cluster of Nov. 25 releases shows the agentic-developer stack maturing fast. Perplexity’s Time Machine adds a date cutoff to its Search and Context APIs so agents can see the web as it was on a chosen date (up to 365 days back) — useful for reproducible research and backtesting. Pydantic released Pax, its official terminal coding agent, alongside a beta of Pydantic AI Harness, ahead of a planned 1.0.</p>
+          <p>Cognition shipped SWE-2.1, a major upgrade to its SWE-2 coding model trained with RL on Kimi K3, available in Devin. And Midjourney launched Niji 8, its newest anime model. Individually modest; together they show coding agents, agent search infrastructure and creative models all shipping on the same day.</p>
+          <p class="players"><strong>Key people/companies:</strong> Perplexity; Pydantic; Cognition (Devin); Midjourney.</p>
+          <div class="sources"><a href="https://www.theaitierlist.com/new/" target="_blank" rel="noopener">The AI Tier List ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="note-box">
+        <h3>Caveats &amp; single-source flags</h3>
+        <ul>
+          <li>Coverage window: Wednesday, November 25, 2026, plus significant late-breaking items from November 24–25, 2026. A few Nov. 23 items (Grok lawsuits, CrowdStrike–Zscaler, Shirudo) are included where the story developed on Nov. 24–25. Nov. 25 was a quiet day with no new frontier-model launch.</li>
+          <li><strong>NIO World Model 3.0:</strong> all performance figures (5x training efficiency, 7x data, latency and intervention reductions) are vendor-reported and independently unverified.</li>
+          <li><strong>Shirudo:</strong> single-aggregator sourcing — detail drawn from Gadgets 360’s roundup and social coverage; launch date Nov. 23 per OpenAI’s announcement as cited by FrontierWire/StacksMesh. Treat details as reported, not independently verified.</li>
+          <li><strong>Anthropic Rust migration:</strong> single-source via a daily-brief aggregator (Naravel) citing Anthropic’s own blog; the underlying post is on anthropic.com.</li>
+          <li><strong>Developer-tool wave:</strong> single-source aggregator (The AI Tier List’s running release log); individual launches not independently verified in this pass.</li>
+          <li><strong>GPT-6.2 Sol rollout:</strong> GPT-6.2 Astra/Sol launched Nov. 17 — outside this window. This edition covers only the Nov. 24–25 rollout to ChatGPT and Microsoft Copilot.</li>
+          <li><strong>Context, not Nov. 25 news:</strong> Gemini 4 Neon launched Nov. 18; Anthropic’s record IPO priced Nov. 18–19 ($81.3B, ~$1.5T valuation, NASDAQ: ANT) — see the Nov. 24 follow-up above. The authors’ copyright suit (filed Nov. 17) and the SAFE AI Act outline (Nov. 19) had no new Nov. 24–25 development and are not presented as new.</li>
+          <li><strong>Excluded as unverified:</strong> “NATO taps OpenAI Daybreak,” “OpenAI internal agents complete half of 2–4h research tasks,” and “California bans Waymo from freeways” appeared only in a single Nov. 25 LinkedIn roundup with no primary source and no corroboration — held out.</li>
+        </ul>
+      </div>
+      <p class="legend"><span class="caveat">Caveat</span>Flags mark claims that are reported, single-sourced, vendor-reported, rumored, or still unconfirmed — check the note above before citing them elsewhere.</p>
+    </div>
+
+    <footer class="wrap footer">
+      <div>Coverage window: Wednesday, November 25, 2026, plus significant late-breaking items from November 24–25, 2026. Caveats are marked inline. Single-sourced and unverified items are flagged as such.<br><a href="https://zanyaziz.github.io/ai-news-newsletter/" target="_blank" rel="noopener">Browse the newsletter archive ↗</a></div>
+      <div>AI News — November 26, 2026.<br>13 stories.</div>
+    </footer>
+  </main>
+  <script>
+    const filters=[...document.querySelectorAll('.filter')];
+    const stories=[...document.querySelectorAll('[data-cat]')];
+    const sections=[...document.querySelectorAll('[data-section]')];
+    const search=document.getElementById('search');
+    const noResults=document.getElementById('noResults');
+    let active='all';
+    function apply(){
+      const q=search.value.trim().toLowerCase();let shown=0;
+      stories.forEach(s=>{const cats=(s.dataset.cat||'').split(' ');const okCat=active==='all'||cats.includes(active);const okText=!q||s.textContent.toLowerCase().includes(q);const show=okCat&&okText;s.classList.toggle('hidden',!show);if(show)shown++});
+      sections.forEach(sec=>{const inside=[...sec.querySelectorAll('[data-cat]')];sec.classList.toggle('hidden',inside.length>0&&!inside.some(x=>!x.classList.contains('hidden')))});
+      noResults.classList.toggle('show',shown===0);
+    }
+    filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply()}));
+    search.addEventListener('input',apply);
+    const progress=document.getElementById('progress');
+    addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+  </script>
+</body>
+</html>
